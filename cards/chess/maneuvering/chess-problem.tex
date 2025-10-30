@@ -1,0 +1,10 @@
+\ifdefined\chessproblem
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\chessproblem}[3]{
+        \subsection*{#1. #2}
+        \chessboard[
+            setfen=#3,
+        ]
+    }
+\fi

@@ -1,0 +1,41 @@
+\ifdefined\conquestNunn
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\conquestNunn}[1]{
+	\chessproblem{#1}{Conquest - Nunn}{5rk1/pp3ppp/5b2/2p1pb2/3q4/2NP2P1/PPP3KP/R2QR3 b - - 0 1}
+
+    }
+\fi
+
+\ifdefined\conquestNunnAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\conquestNunnAnswer}[1]{
+		\subsection*{#1. Conquest - Nunn}
+ \chessboard[
+        setfen=5rk1/pp3ppp/5b2/2p1pb2/3q4/2NP2P1/PPP3KP/R2QR3 b - - 0 1,
+ 	markstyle=circle,
+ 	linewidth=0.1em,
+ 	markfields={g2},
+	markstyle=border,
+ 	markfields={f5}
+        ]
+	\begin{itemize}
+		\item{Where are the weaknesses?}
+
+		White king as well as his main diagonal is weak.
+		\item{Which is the worst-placed piece?}
+
+		The light square bishop does nothing
+		\item{Whas is my opponent's idea?}
+
+		He can only wait passively.
+	\end{itemize}
+
+	By answering the template question above, the correct move is \symbishop d7, improving the piece as well as exploiting the white's weakness on the main diagonal.
+    }
+\fi
+
+
+
+
