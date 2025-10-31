@@ -1,0 +1,14 @@
+﻿*.aux
+*.bbl
+*.bcf
+main.blg
+main.idx
+main.ilg
+main.ind
+main.lof
+main.log
+main.lot
+main.pdf
+main.ptc
+main.run.xml
+main.toc
