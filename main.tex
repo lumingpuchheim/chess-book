@@ -101,10 +101,11 @@
 %----------------------------------------------------------------------------------------
 
 \pagestyle{empty} % Disable headers and footers for the following pages
-
-
 \newcommand{\Color}[1]{\hypersetup{linkcolor=#1}\color{#1}}
+
+\titlespacing*{\part}{10em}{0em}{0em}
 % Optionally change font style
+\renewcommand{\cftpartfont}{\Large\bfseries\Color{ocre}} 
 \renewcommand{\cftchapfont}{\Large\bfseries\Color{ocre}} 
 \renewcommand{\cftsecfont}{\large}  % Bold section font
 \renewcommand{\cftsubsecfont}{\large\itshape} % Italic subsection font
@@ -124,6 +125,7 @@
 \cleardoublepage % Start the following content on a new page
 
 % Define section and subsection colors
+\partfont{\color{ocre}\Huge}
 \chapterfont{\color{ocre}}
 \sectionfont{\color{ocre}}
 \subsectionfont{\color{ocre}}
@@ -131,8 +133,8 @@
 %----------------------------------------------------------------------------------------
 %	Main Content
 %----------------------------------------------------------------------------------------
-%\part{Life}
-\chapter{Chess History}
+\part*{Chess and Everything}
+\chapter{Chess (and) History}
 \section{Diplomacy with Chess}
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
@@ -163,6 +165,20 @@
 \end{figure}
 \input{cards/history/agony_of_a_winning_position}
 
+\section{``I drank coffee''}
+\input{cards/history/i_drank_coffee}
+
+\section{The Fatal Glance: The Story of Orpheus and Eurydice}
+\input{cards/history/the_fatal_glance}
+
+\section{The youngest World Champion}
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.5\textwidth]{cards/history/ding_blunders.jpg} % Include the figure image
+	\caption{Figure caption.}
+	\label{fig:placeholder} % Unique label used for referencing the figure in-text
+\end{figure}
+\input{cards/history/ding_lost_wcc} \index{Risk, Uncertainty}
 
 \chapter{Chess and Life}
 \section{Life as Chess Game}
@@ -173,6 +189,13 @@
 \section{Meditation}
 \input{cards/life/meditation} \index{Meditation}
 \input{cards/life/meditation_and_chess}
+
+
+\section{Risk and Uncertainty}
+\input{cards/life/risk_and_uncertainty} \index{Risk, Uncertainty}
+\section{Tal's Play}
+\input{cards/history/tal}\index{Risk, Uncertainty}
+
 
 \section{O Fortuna}
 \input{cards/life/o_fortuna}
@@ -209,8 +232,8 @@
 \subsection{Heuristic in Chess} \index{Heuristics!Chess}
 \input{cards/life/heuristic_in_chess}
 
-%\part{Let's play some Chess}
-\chapter{Chess Play}
+\part*{Chess Play}
+\chapter{Positional Play}
 \section{Simple Chess} \index{Simple Chess}
 We finally get down to business! Most chess books on the market are filled with endless variations. Yet for any human being, it is impossible to calculate all those lines, visualize every position, and then evaluate them accurately. Use such analysis as a standard only leads to frustration and stress.
 
