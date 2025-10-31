@@ -59,7 +59,8 @@
 
 \usepackage{chessboard}
 \usepackage{skak}
-
+\usepackage{sectsty}
+\usepackage{tocloft}
 
 %----------------------------------------------------------------------------------------
 
@@ -104,11 +105,22 @@
 
 \pagestyle{empty} % Disable headers and footers for the following pages
 
+
+\newcommand{\Color}[1]{\hypersetup{linkcolor=#1}\color{#1}}
+% Optionally change font style
+\renewcommand{\cftchapfont}{\Large\bfseries\Color{ocre}} 
+\renewcommand{\cftsecfont}{\large}  % Bold section font
+\renewcommand{\cftsubsecfont}{\large\itshape} % Italic subsection font
+\renewcommand{\cftsecpagefont}{\large}   % Page numbers for sections
+\renewcommand{\cftsubsecpagefont}{\large} % Page numbers for subsections
+
+\begingroup % start a TeX group
+\color{ocre}% or whatever color you wish to use
 \tableofcontents % Output the table of contents
-
 \listoffigures % Output the list of figures, comment or remove this command if not required
-
 \listoftables % Output the list of tables, comment or remove this command if not required
+\endgroup
+
 
 \pagestyle{fancy} % Enable default headers and footers again
 
@@ -212,7 +224,6 @@ World champions such as Capablanca, Petrosian and Karpov all advocated this styl
 
 This chapter presents an array of positional chess problems designed to enhance your strategic thinking. Each problem can be approached using the thinking template outlined earlier. The aim is to cultivate efficient problem-solving skills while minimizing oversight in variations. As you work through each challenge, take the time to jot down your thoughts. This practice will allow you to identify any gaps in your reasoning by comparing your solutions with the provided answers.
 \input{cards/chess/thinking_template}
-
 \subsection{Visualization the Three Questions}
 \input{cards/chess/visualization-board}
 
@@ -285,11 +296,6 @@ This chapter presents an array of positional chess problems designed to enhance 
 
 %------------------------------------------------
 
-\chapter{Appendix Chapter Title}
-
-\section{Appendix Section Title}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget est euismod pretium.
 
 %------------------------------------------------
 
