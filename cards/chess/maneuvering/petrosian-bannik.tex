@@ -1,0 +1,39 @@
+\ifdefined\petrosianBannik
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\petrosianBannik}[1]{
+	\chessproblem{#1}{Petrosian - Bannik}{3r3r/ppk1b2p/1np2p2/4p1pP/2P1N3/1P2B1p1/P3PP2/2KR3R w - - 0 1}
+    }
+\fi
+
+\ifdefined\petrosianBannikAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\petrosianBannikAnswer}[1]{
+	\subsection*{#1. Petrosian - Bannik}
+ \chessboard[
+        setfen=3r3r/ppk1b2p/1np2p2/4p1pP/2P1N3/1P2B1p1/P3PP2/2KR3R w - - 0 1,
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={f6,e6},
+	markstyle=border,
+ 	linewidth=0.05em,
+ 	markfields={e3},
+        ]
+	\begin{itemize}
+		\item{Where are the weaknesses?}
+
+		Black has weakness on e6 and f6.
+		\item{Which is the worst-placed piece?}
+
+		The bishop on e3 is inactive
+		\item{Whas is my opponent's idea?}
+
+		Black has no active plan so White can choose his own maneuver.
+	\end{itemize}
+	The best move is \symbishop c5 exchange the inactive bishop and exploit Black's weakness on f6 by moving the king to e6. Let's see what Petrosian has to say about this position. More than the move it's his comments that made a deep impression.
+	\begin{quote}
+		``In deciding on this move, it was imperative to weigh all the pros and cons thourouly. The move looks illogical as White is voluntarily exchanging his good bishop for his opponents bad one, instead of swapping the bishop for knight and securing his preponderance. However, if you probe into the position a little more deeper, it becomes obvious that after a possible exchange of rooks on the d-file and the transfer of king to e6, Black would cover his vulnerable points and create an impregnable formation. The role played in this by the the bad bishop would be of no small importance. After 1.\symbishop c5 symrook xd1 2.\symrook xd1 \symbishop xc5 3.\symknight xc5 White was threatening infiltration on e6 and after 3...\symrook e8 4.\symknight e4 \symrook e6 5.g4 He was clearly better as the f6 pawn is very weak.'' \cite{Petrosian:2015}
+	\end{quote}
+    }
+\fi

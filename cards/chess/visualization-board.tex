@@ -10,13 +10,17 @@ Let us look at an example
  \chessboard[
         setfen=3r2k1/p4pbp/b3p3/npqpP1pP/8/2P3P1/P3QPBN/R3R1K1 w - - 0 1,
  	markstyle=circle,
- 	linewidth=0.1em,
+ 	linewidth=0.05em,
  	markfields={g5, f6},
 	markstyle=border,
 	markfields={g2},
 	pgfstyle=straightmove,
  	markmove=h7-h6
         ]
+
+Black has weakness on g5 and f6. All his pieces are bad. White's worst piece is the bishop on g2.
+
+Black intends to play h6 to protect his biggest weakness: g5 pawn. To prevent this move White can play h6 himself and then \symqueen h5 attack the weak pawn on g5.
 
 
 
