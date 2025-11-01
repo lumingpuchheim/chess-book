@@ -1,0 +1,185 @@
+\section{Ding, Liren - Gukesh D, World Championship Match, Round 12}
+It was the 12th game of a 14-game match, and Ding found himself trailing by one point after his recent loss. Playing with the white pieces, he knew he needed to make a strong move to regain momentum. In a strategic decision, he opted for a rather calm opening, setting the stage for the challenges that lay ahead. 
+
+\newchessgame[
+ id=main,
+ storefen=example,
+ event={Ding - Gukesh World Championship Match},
+ white={Ding, Liren},
+ black={Gukesh D},
+ round={12}]
+ \mainline{1. c4 e6 2. g3 d5 3. Bg2 Nf6 4. Nf3 d4 5. O-O Nc6 6. e3 Be7 7. d3 dxe3 8. Bxe3 e5 9. Nc3 O-O 10. Re1 h6}
+
+ \chessboard[
+   	pgfstyle=straightmove,
+ 	markmove=d3-d4
+ ]
+
+ Ding Liren is known for his solid, strategic approach to chess. He excels in positional play and endgames, often outmaneuvering opponents with his patience and precision. Here the position is calm and it's all about piece maneuvering. 
+
+
+He thought for long time for his next move to provoke. 
+
+ \mainline[level=1]{
+11. a3 } 
+In this position, White wanted to push d3-d4. His knight on f3 is critical for the break through and should not be exchanged.  \variation[invar]{11.h3} is a good alternative.
+
+\mainline{11...a5}
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove=d3-d4,
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={b5},
+ ]
+
+It was understandable that Gukesh wanted to prevent b4 with this move. However comparing to the previous position,
+he had one serious weakness on b5 which White can easily exploit with his knight.
+
+Black would love to move his knight on c6 to play c6, guarding the weakness on b5 and restrict the bishop on g2.
+He cannot do so because the knight must guard e5. We can also understand Ding's next move, which keeps the 
+presure on e5 by preventing Black to play \variation{11...Bg4}, exchanging the knight on f3 and releasing the pressure
+on his e5 pawn.
+
+\mainline[level=1]{12. h3} 
+
+\resumechessgame
+A direct \variation[invar]{12.d4 exd4 13. Nxd4 Nxd4 14. Bxd4 c6 15. c5} according to engine. The position opens up and White had some advantage.
+
+ \chessboard[
+        setfen=r1bq1rk1/1p2bpp1/2p2n1p/p1P5/3B4/P1N3P1/1P3PBP/R2QR1K1 b - - 0 15
+        ]
+
+I don't know if the position favors White. After exchanging some pieces, Black should have more room to maneuver than the 
+several moves ago, where he had a cramped position. Chess law states it is better to avoid exchanging when one has space advantage. This is exactly the case for White.
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove=d3-d4,
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={b5},
+ ]
+
+It is instructive to observe the position here. White still has his trumps: d3-d4 and outpost on b5 and Black can do nothing to parry. So there is no need for White to rush. With h3, White deprives Black from placing a bishop or knight on
+g4. White slowly improves his position and Black has no counter attack. 
+
+\resumechessgame[id=main]
+\mainline[level=1]{12...Be6 13. Kh2} 
+
+No need to rush! Prophylaxis against \symqueen d7.
+
+\mainline{13...Rb8}
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove={d3-d4,e5-e4},
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={b5},
+ ]
+
+Here White has more options. Here again \variation{14. d4 exd4 15. Nxd4 Nxd4 16. Bxd4 c6 17. c5} loses his advantage. White loses his trump b5 now because c6 pawn guards it. 
+\variation{14. Nb5 Nh7 15. Qd2 Ng5 16. Nxg5 hxg5 17. Rad1} 
+
+\chessboard[
+        setfen=1r1q1rk1/1pp1bpp1/2n1b3/pN2p1p1/2P5/P2PB1PP/1P1Q1PBK/3RR3 b - - 1 17,
+	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={e4},
+        ]
+White keeps the advantage because Black has now a new weakness on e4.
+
+Ding's next move is prophylaxis against any Black potential e4 thrust.
+\mainline[level=1]{14. Qc2 Re8} 
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove={d3-d4,e5-e4},
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={b5},
+ ]
+
+\mainline{ 15. Nb5}
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove={d3-d4,e5-e4},
+ ]
+
+Finally the move! White achieves his goal on b5. Now White is preparing d4. 
+
+\mainline{15... Bf5}
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove={d3-d4,e5-e4},
+ 	markstyle=border,
+ 	linewidth=0.05em,
+ 	markfields={a1},
+ ]
+
+The rook on a1 is not so active. It can move to d1 to support the d3-d4 thrust. The next
+move is logical. Even World Chess Champion game can be so simple!
+
+\mainline{16. Rad1 Nd7}
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove={d3-d4,e7-g5},
+ ]
+
+White wants to play d4 and prevent Black from playing \variation[invar]{16...Bg5}. His next move is logical.
+
+\mainline[level=1]{ 17. Qd2 Bg6} 
+
+White has prepared everything. It is now the time!
+
+\chessboard[
+   	pgfstyle=straightmove,
+ 	markmove={d3-d4},
+ ]
+
+\mainline{18. d4 e4}
+
+The only move. \variation[invar]{18...exd4 19. Bf4! Rc8 20. Nfxd4 Nxd4 21. Qxd4 Nc5 22. Nxc7!} White wins easily.
+
+\chessboard[
+ 	markstyle=border,
+ 	linewidth=0.05em,
+ 	markfields={f3},
+	pgfstyle=straightmove,
+ 	markmove={f3-g1, g1-e2, e2-f4},
+ ]
+
+\mainline[level=1]{ 19. Ng1 Nb6 20. Qc3 Bf6
+21. Qc2 a4 22. Ne2 Bg5} 
+
+\chessboard[
+	pgfstyle=straightmove,
+ 	markmove={e2-f4},
+ ]
+
+\mainline{ 23. Nf4 Bxf4 24. Bxf4 Rc8 25. Qc3 Nb8}
+
+\chessboard[
+	pgfstyle=straightmove,
+ 	markmove={d4-d5},
+ ]
+
+\mainline{26. d5 Qd7 27. d6 c5 28. Nc7 Rf8 29. Bxe4 Nc6} 
+(\variation[invar]{29...Bxe4 30. Rxe4 Nc6 31. Bxh6 gxh6 32. Rg4+ Kh7 33. Qg7#})
+
+\mainline[level=1]{ 30. Bg2 Rcd8
+31. Nd5 Nxd5 32. cxd5 Nb8 } 
+
+\chessboard
+
+Gukesh could have resigned here.
+
+\mainline{33. Qxc5 Rc8 34. Qd4 Na6 35. Re7 Qb5
+36. d7 Rc4 37. Qe3 Rc2 38. Bd6 f6 39. Rxg7+} Black resigned.
+
+ \chessboard

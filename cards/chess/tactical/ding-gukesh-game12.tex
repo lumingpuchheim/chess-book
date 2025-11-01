@@ -1,0 +1,82 @@
+\subsection*{Some Side Lines}
+It is instructive and even entertaining to play against a computer, even in a tactical winning position. Lots of new ideas can be learned.
+\subsection*{Position 0}
+
+\newchessgame[
+        setfen=1nrqr1k1/1pp2pp1/1n4bp/1N1P4/p1P1pB2/P1Q3PP/1P3PBK/3RR3 b - - 0 26,
+	moveid=26b
+        ]
+\chessboard
+
+Instead of \variation{26...Qd7}, the computer plays \mainline{26... Na6 27.d6 c6 28. Nc7 Nxc7 29. dxc7 Qe7}
+
+\chessboard
+
+\subsection*{Position 1}
+
+
+\mainline{30. Rd4! c5 31. Rdxe4 Bxe4 32. Rxe4 Qd7}
+
+It is amazing to see the whole game including this side line in Petrosian style. 
+First we see a positional play, then we see an exchange sacrifice!
+
+\subsection*{Position 2}
+There are at least two alternatives, both leads to winning.
+
+\chessboard
+
+\mainline{33. Bxh6! gxh6 \xskakcomment{Here some calculation is required.}} 
+
+\chessboard
+
+Watch how a queen and a rook attack together and collect material. Black is defenceless. 
+
+\mainline{34. Rg4 Kf8 35. Rg7 Ke7 36. Rf4 Kd6 37. Rxf7 Re7 38. Qxh6 Kxc7 39. Qf4 Kd8 40. Rf8 Re8 41. Qf6 Qe7 42. Qxb6 Qc7 43. Rxe8 Rxe8}
+
+\chessboard
+
+First White plays like Petrosian with patient maneuver and exchange sacrifice. Then he sacrifices a biship for an attack like Kasparov! Who would play like this? Anyway, we are only studying.
+
+White has a clear material advantage. 
+
+\subsection*{Position 3}
+
+Instead of a sacrifice, we choose to win ``normally'' by exchanging the rooks from Position 2:
+
+\newchessgame[
+        setfen=4r1k1/1pPq1pp1/1n5p/2p5/p1P2B2/P1Q3PP/1P3PBK/8 w - - 0 34,
+	moveid=34w,
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={f2},
+        ]
+\chessboard
+
+\mainline{34. g4!}
+
+It is important to keep in mind not to rush. White wants to play g4, \symbishop g3 to protect the pawns around his king.
+
+\mainline{34... Nc6 35. Bg3 b6 36. Qf3 Rf8 37. Qd5 Qf8} 
+
+ \chessboard[
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={h7},
+        ]
+
+Watch how the queen and the bishops attack the castled king to force an exchange favorable to White.
+
+\mainline{38. Be4 Ne7 39. Qe5 Nc8}
+
+ \chessboard[
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={h7},
+        ]
+
+\mainline{40. Qf5 g6 41. Qf6 Qe6 42. Qxe6 fxe6 43. Bxg6}
+
+ \chessboard[
+        ]
+
+White has material advantage.
