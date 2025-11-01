@@ -37,7 +37,7 @@
 	11pt, % Default font size, select one of 10pt, 11pt or 12pt
 	fleqn, % Left align equations
 	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
-	%oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
+	oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
 ]{LegrandOrangeBook}
 
 % Book information for PDF metadata, remove/comment this block if not required 
@@ -58,7 +58,7 @@
 \chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
 \usepackage{chessboard}
-\usepackage{skak}
+\usepackage{xskak}
 \usepackage{sectsty}
 \usepackage{tocloft}
 
@@ -207,6 +207,8 @@
 \section{Hamlet}
 \input{cards/life/hamlet}
 
+\section{Gordian's Knot}
+\input{cards/mythology/gordians_knot}
 
 \chapter{Chess and Thinking}
 
@@ -247,6 +249,8 @@ This chapter presents an array of positional chess problems designed to enhance 
 \subsection{Visualization the Three Questions}
 \input{cards/chess/visualization-board}
 
+\section{Prophylaxis} \index{Prophylaxis}
+\input{cards/chess/prophylaxis}
 
 \section{Excercises}
 \nocite{Dvoretsky:2016}
@@ -264,6 +268,10 @@ This chapter presents an array of positional chess problems designed to enhance 
 \conquestNunnAnswer{1}
 \fischerKeresAnswer{2}
 \petrosianBannikAnswer{3}
+
+\chapter{Annotations}
+\input{cards/chess/annotations/ding_gukesh_game12}
+\input{cards/chess/tactical/ding-gukesh-game12}
 
 %----------------------------------------------------------------------------------------
 
