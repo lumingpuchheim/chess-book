@@ -25,9 +25,13 @@ There are at least two alternatives, both leads to winning.
 
 \chessboard
 
-\mainline{33. Bxh6! gxh6 \xskakcomment{Here some calculation is required.}} 
+\mainline{33. Bxh6! gxh6 \xskakcomment{ Here some calculation is required.}} 
 
-\chessboard
+ \chessboard[
+ 	markstyle=circle,
+ 	linewidth=0.05em,
+ 	markfields={h6,b6},
+        ]
 
 Watch how a queen and a rook attack together and collect material. Black is defenceless. 
 
@@ -46,11 +50,12 @@ Instead of a sacrifice, we choose to win ``normally'' by exchanging the rooks fr
 \newchessgame[
         setfen=4r1k1/1pPq1pp1/1n5p/2p5/p1P2B2/P1Q3PP/1P3PBK/8 w - - 0 34,
 	moveid=34w,
+        ]
+ \chessboard[
  	markstyle=circle,
  	linewidth=0.05em,
  	markfields={f2},
         ]
-\chessboard
 
 \mainline{34. g4!}
 
