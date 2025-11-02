@@ -1,0 +1,44 @@
+\ifdefined\bebchukBakulin
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\bebchukBakulin}[1]{
+	\chessproblem{#1}{Bebchuk - Bakulin}{r1b1k2r/bpp1nppp/p2p1q2/P2P4/7P/1N6/1PP1QPP1/R1B1KB1R w - - 0 1}
+    }
+\fi
+
+\ifdefined\bebchukBakulinAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\bebchukBakulinAnswer}[1]{
+	\subsection*{#1. Bebchuk - Bakulin}
+ 	\chessboard[
+        	setfen=r1b1k2r/bpp1nppp/p2p1q2/P2P4/7P/1N6/1PP1QPP1/R1B1KB1R w - - 0 1,
+ 		markstyle=circle,
+ 		linewidth=0.05em,
+ 		markfields={e8,e7,f6},
+ 		markstyle=border,
+ 		linewidth=0.05em,
+ 		markfields={a1},
+        ]
+
+	\begin{itemize}
+		\item{Where are the weaknesses?}
+
+		Black needs to castle. His e-file is weak and his queen is in danger.
+		\item{Which is the worst-placed piece?}
+
+		The rook on a1 is inactive. 
+		\item{Whas is my opponent's idea?}
+
+		He wants to castle.
+	\end{itemize}
+
+	Try to catch the queen doesnt work \variation[invar]{1.Bg5 Qe5} since White must exchange the queen. 
+	\symrook a4 is a natural idea, intending \symrook e4 catching the queen.
+	
+	\variation[level=1]{1. Ra4 O-O 2. Rf4 Bf5 3. g4 Rae8 4. Kd1 Qe5 5. Qxe5 dxe5 6. Rxf5 Nxf5 7. gxf5 Rd8 8. Bg2 Bxf2 9. Ke2} 
+
+	White has some advantage. Black could have tried \symbishop f5. Let's play \symrook a4 and let Black find the right defence.
+	
+    }
+\fi
