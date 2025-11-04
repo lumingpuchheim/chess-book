@@ -1,0 +1,37 @@
+\ifdefined\shortSokolov
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\shortSokolov}[1]{
+	\chessproblem{#1}{Short - Sokolov}{r4rk1/pp1qnpbp/2pb1p1/4p3/1PP1P3/P1N1P1P1/1B2QPBP/R4RK1 w - - 0 1}
+    }
+\fi
+
+\ifdefined\shortSokolovAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\shortSokolovAnswer}[1]{
+		\subsection*{#1. Short - Sokolov}
+		\chessboard[
+			setfen=r2q1rk1/1b3ppp/p1nppb2/4P3/5P2/PNp1B3/1PP1B2P/3RQRK1 b - - 0 1,
+		]
+
+        \begin{itemize}
+            \item{Who has a static advantage?}
+
+            White has static advantage because after normal play, he can simply play \symqueen xc3. 
+            He can double his rooks on the d-file. If Black responds with d5, White can attack freely along 
+            the g-file.
+            \item{Which play shall I choose?}
+
+            I must therefore choose a dynamic play. 
+            \item{Whas is the move?}
+
+            \symknight xe5.
+        \end{itemize}
+
+        Black has c3 pawn as an asset. White extends too much on the kingside and Black must exploit it. 
+
+        After \variation[invar]{1...Nxe5 2.fxe5 Bxe5 3.bxc3 Rc8!}, Black has enough compensation.
+	
+    }
+\fi

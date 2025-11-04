@@ -1,0 +1,15 @@
+\ifdefined\dynamicchessproblem
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dynamicchessproblem}[3]{
+        \subsection*{#1. #2}
+        \chessboard[
+            setfen=#3,
+        ]
+	\begin{itemize}
+		\item{Who has a static advantage?}
+		\item{Which play shall I choose?}
+		\item{Whas is the move?}
+	\end{itemize}
+    }
+\fi
