@@ -1,0 +1,113 @@
+\section{Anatoly Karpov - Garry Kasparov, FIDE World Championship Match 1984/85, Round 3}
+\epigraph{An impulsive, nervous reaction, the preceding game would appear to have put me in a not altogether correct
+frame of mind, such that I could solve all my problems immediately with the help of a `sharp' pawn sacrifice}{\textit{Garry Kasparov}}
+
+
+% My first annotation without books and computers. I chose this game
+% because it is quite short. The strategic win from Karpov is also instructive according
+% to chessgames.com
+
+% I am happy with the result that I found out 12... Nc5 was bad. 
+% I didnt figure out 16... d5 was explicitly because my analysis was not thourough enough and I 
+% turned to books too early..
+
+% The winning of Karpov was instructive. I should have taken more time.
+\newchessgame[
+ id=main,
+ event={FIDE World Championship Match 1984/85},
+ white={Karpov, Anatoly},
+ black={Kasparov, Garry},
+ round={3}]
+
+\mainline{1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nb5 d6 6.c4 Nf6 7.N1c3
+a6 8.Na3 Be7 9.Be2 O-O 10.O-O b6 } 
+
+\chessboard[
+  markstyle=circle,
+  linewidth=0.05em,
+  markfields={b6},
+]
+
+Black has weakness on b6. The next moves of White are logical, attacking 
+the weakness and developing his pieces.
+
+
+\mainline{11.Be3 Bb7} 
+Black has a so-called hedgehog position. Typically Black wants to play 
+b6-b5 and d6-d5 to free himself. With White's Maroczy bind (c4 and e4 pawns),
+he can stop Blacking from playing d5. With White's next move, he stops both b5 and d5 break.
+
+\chessboard[
+    pgfstyle=straightmove,
+    linewidth=0.05em,
+    markmove={b6-b5, d6-d5},
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={b6},
+]
+
+\mainline{12. Qb3}
+
+\chessboard
+
+b6 pawn is under attack. \variation[invar]{12... Nd7} is a natural move.
+after \variation[invar]{13. Rad1 \xskakcomment{ Preventing Nc5 with \symbishop xc5. The bishop on
+b7 is unprotected..} Qc7 \xskakcomment{intending \symknight c5}} Black is still in the game.
+
+\mainline[level=1]{12... Na5?} 
+
+Kasparov chose to force the matter. After this move White has 3 vs 1 
+on the queenside and Black has a backward pawn on the d-file.
+
+\chessboard
+
+\variation{13. Bxb6 Nxb3 14. Bxd8 Rfxd8 15. axb3 Nxe4 16. Nxe4 Bxe4} is not good enough because
+Black's bishop pair gives him enough chance to defend.
+
+\mainline{ 13.Qxb6
+Nxe4 14.Nxe4 Bxe4 15.Qxd8 Bxd8} (\variation[invar]{15... Rxd8 16. Bb6} This is by the way another
+drawback of the move \variation{12... Na5}) 
+
+
+\mainline[level=1]{ 16.Rad1} 
+
+\chessboard
+
+% I wrote "This position must be estimated carefully before Black's 12th move."
+% Actually Kasparov has expected only 16. Rfd1 in his preparation and was instantaneously nervous after
+% seeing this move. If he could not foresee such a move, I shouldnt expect myself
+% to foresee it on the board. 
+
+
+\mainline{16... d5?}
+
+It is understandable that Black has a static disadvantage. \quote{An impulsive, nervous reaction, the
+preceding game would appear to have put
+me in a not altogether correct frame of
+mind, such that I could solve all my
+problems immediately with the help of a
+`sharp' pawn sacrifice} \cite{Kasparov:2008}
+
+
+
+\variation[invar]{16... Be7 17. Nb1 \xskakcomment{ (improving his worst piece) } Rac8} Black can still hold on.
+
+\chessboard
+
+\mainline{ 17.f3 Bf5 }
+
+\chessboard
+
+\mainline{18.cxd5
+exd5 19.Rxd5 Be6 20.Rd6 Bxa2 21.Rxa6 Rb8 }
+
+\chessboard
+
+\mainline{22.Bc5! Re8 23.Bb5! }
+Notice how Karpov used bishops to win tempi and protect
+the b2 pawn from the b8 rook. Also note how the Black knight on a5 is doomed by the b5 bishop. 
+
+
+\mainline{23... Re6
+24.b4 Nb7 25.Bf2 Be7 26.Nc2 Bd5 27.Rd1 Bb3 28.Rd7! Rd8} (\variation[invar]{28... Bxc2 29. Rxe6}) \mainline[level=1]{29.Rxe6
+Rxd7 30.Re1 Rc7 31.Bb6} 1-0
