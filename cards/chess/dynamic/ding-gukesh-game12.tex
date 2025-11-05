@@ -1,0 +1,38 @@
+\ifdefined\dingGukeshGameTwelve
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dingGukeshGameTwelve}[1]{
+	\chessproblem{#1}{Ding - Gukesh}{1r1qr1k1/1ppnbpp1/2n4p/pN2pb2/2P5/P2PBNPP/1P1Q1PBK/3RR3 b - - 10 17}
+    }
+\fi
+
+\ifdefined\dingGukeshGameTwelveAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dingGukeshGameTwelveAnswer}[1]{
+		\subsection*{#1. Ding - Gukesh}
+		\chessboard[
+			setfen=1r1qr1k1/1ppnbpp1/2n4p/pN2pb2/2P5/P2PBNPP/1P1Q1PBK/3RR3 b - - 10 17,
+            pgfstyle=straightmove,
+			markmove={d3-d4},
+		]
+
+        \begin{itemize}
+            \item{Who has a static advantage?}
+
+            White has static advantage because he can play d4 improving his position gradually while
+            Black has no clear plan
+            \item{Which play shall I choose?}
+
+            I must therefore choose a dynamic play. 
+            \item{Whas is the move?}
+
+            \symknight c5.
+        \end{itemize}
+
+        After the move, White must sacrifice an exchange to keep his advantage: \variation[invar]{17... Nc5 18. d5 Nd3 19. d5 Nxe1 20. Qxe1 Nd4 21. Nfxd4 exd4 22. Nxd4 Bh7 23. Qxa5 Bg5 24. Bxg5 hxg5 25. Qd2} Black has more space to maneuver.
+
+        In the actual game, Gukesh chose \variation[level=1]{17...Bg6} and had a passive decision. He lost the game quickly.
+	
+    }
+\fi

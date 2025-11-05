@@ -1,0 +1,44 @@
+\ifdefined\zlotnikLopes
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\zlotnikLopes}[1]{
+	\chessproblem{#1}{Zlotnik - Lopes}{r1b1kb1r/ppp3qp/3p1pp1/2nN4/2P2B2/6P1/PP2PPBP/R2QK2R w - - 0 1}
+    }
+\fi
+
+\ifdefined\zlotnikLopesAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\zlotnikLopesAnswer}[1]{
+		\subsection*{#1. Zlotnik - Lopes}
+        \newchessgame[
+            setfen=r1b1kb1r/ppp3qp/3p1pp1/2nN4/2P2B2/6P1/PP2PPBP/R2QK2R w - - 0 1,
+            moveid=1w
+        ]
+		\chessboard[		
+			markstyle=circle,
+			linewidth=0.05em,
+			markfields={f6, g7, h8, c7},
+			markstyle=border,
+			linewidth=0.05em,
+			markfields={f4},
+		]
+
+		\begin{itemize}
+			\item{Where are the weaknesses?}
+
+			The pawns on f6, queen on g7 and rook on h8 are vulnerable. Pawn on c7 is also under attack. The black queen is busy with protecting two weaknesses c7 and f6.
+			\item{Which is the worst-placed piece?}
+
+			The bishop on f4 is inactive. 
+			\item{Whas is my opponent's idea?}
+
+			A plan is hard to plan. He may want to castle.
+		\end{itemize}
+
+		\symbishop d2 is the right move.
+
+        The bishop on f4 does nothing and should be moved to c3, controlling the main diagonal and attacking
+        the weaknesses.
+    }
+\fi
