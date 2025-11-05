@@ -1,0 +1,91 @@
+\section{Boris Spassky - Tigran Vartanovich Petrosian, World Championship Match 1969 Game 5}
+
+
+\newchessgame[
+ id=main,
+ event={Petrosian - Spassky World Championship Match},
+ white={Boris Spassky},
+ black={Tigran Petrosian},
+ round={5}]
+
+\mainline{
+    1. c4 Nf6 2. Nc3 e6 3. Nf3 d5 4. d4 c5 5. cxd5 Nxd5 6. e4 Nxc3
+    7. bxc3 cxd4 8. cxd4}
+    
+\chessboard [
+    markstyle=border,
+    linewidth=0.05em,
+    markfields={c8},
+]
+
+I don't like Black's position. White already has a static advantage
+because his pawn formation is better and Black has a passive
+light square bishop.
+
+On the other hand, White has some natural moves to develop:
+\symbishop c4, O-O, \symrook ad1, \symrook fe1 etc.
+
+It is however difficult to recommend any dynamic play for Black here.
+
+\mainline{8... Bb4+ 9. Bd2 Bxd2+ 10. Qxd2 O-O 11. Bc4
+    Nc6 12. O-O b6 13. Rad1 Bb7 14. Rfe1} 
+    
+\chessboard [
+    pgfstyle=straightmove,
+    linewidth=0.05em,
+    markmove={d4-d5},
+]
+
+\mainline {14... Rc8 } 
+
+White is planning the d5 thrust to create a central passed pawn.
+Black could also tried
+\variation[invar]{14... Na5 15. Bf1 Rc8 16. d5 Nc4 17. Bxc4 Rxc4}
+    \variation{18. d6 Rxe4 19. Ne5 Rxe1 20. Rxe1 Bd5\xskakcomment{Black can defend the ending}}
+
+% 2025. 11.5: I wrote the following during my own analysis. 
+% the conclusion is premature because I miss error on Black's next move
+% "Now White has a straight forward move, his light square bishop can
+% exchange an important defender, Black's light square bishop 
+% while the Black's knight can't help too much in the defense."
+
+\chessboard [
+	pgfstyle=straightmove,
+    linewidth=0.05em,
+ 	markmove={d4-d5},
+]
+
+
+% 2025. 11.5: In my analysis, I saw the knight stuck at a5 for a long time.
+% I failed to point out, that 16... Na5 is an error.
+\mainline[level=1]{15. d5}
+
+\chessboard
+% 2025. 11.5: I missed the error completely. Alas, it is a critical position and I failed to 
+% see it. 
+Black should have played \varriation[invar]{15... Na5}
+\variation{16. dxe6 Nxc4? 17. exf7+ Kh8 18. Qxd8 Rcxd8 19. Rxd8 Rxd8 20. e5} White wins.
+\variation{16. dxe6 Qxd2 17. exf7+ Kh8 18. Nxd2 Nxc4 19. Nxc4 Rxc4 20. e5 Bc8 21. e6 Bxe6 22. Rxe6} equal.
+Petrosian didn't like \variation{16. Bd3 exd5 17. e5! Nc4 18. Qf4} White has an attack. Indeed, Polugaevsky won a brilliant game
+against Tal later. Black must find the only defense \symrook c6.
+
+\mainline{15... exd5 16. Bxd5
+    Na5 17. Qf4} 
+
+
+\chessboard
+
+Black has a desperate position. He cannot defend the d5 passed pawn.
+White could also play \symqueen f5, \symknight g5 attack the h7 pawn.
+    
+
+\mainline{17... Qc7 18. Qf5 Bxd5 19. exd5 Qc2 20. Qf4 Qxa2 21. d6
+    Rcd8 22. d7 Qc4 23. Qf5 h6 24. Rc1 Qa6 25. Rc7 b5}
+   
+\chessboard
+    
+\mainline{26. Nd4 Qb6
+    27. Rc8 Nb7 28. Nc6 Nd6 29. Nxd8 Nxf5 30. Nc6 
+}
+1-0
+
