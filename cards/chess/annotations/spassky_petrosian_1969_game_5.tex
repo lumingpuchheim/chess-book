@@ -1,5 +1,8 @@
-\section{Boris Spassky - Tigran Vartanovich Petrosian, World Championship Match 1969 Game 5}
-
+\section{Boris Spassky - Tigran Petrosian, World Championship Match 1969 Game 5}
+\epigraph{My forte was the middlegame. I had a good feeling for the 
+critical moments of the play. This undoubtedly compensated for my lack of opening preparation
+ and, possibly, not altogether perfect play in the endgame. In my games things often did 
+ not reach the endgame!}{\textit{Boris Spassky}}
 
 \newchessgame[
  id=main,
@@ -55,31 +58,42 @@ Black could also tried
  	markmove={d4-d5},
 ]
 
+Time to push the pawn!
 
-% 2025. 11.5: In my analysis, I saw the knight stuck at a5 for a long time.
-% I failed to point out, that 16... Na5 is an error.
 \mainline[level=1]{15. d5}
 
 \chessboard
-% 2025. 11.5: I missed the error completely. Alas, it is a critical position and I failed to 
-% see it. 
-Black should have played \varriation[invar]{15... Na5}
+% 2025. 11.5: In my analysis, I saw the knight stuck at a5 for a long time.
+% I failed to doubt this move although the move per se was ok.
+% 2025. 11.5: I failed to pay attention to the critical position. The move itself was ok. 
+
+Black could also \variation[invar]{15... Na5}
 \variation{16. dxe6 Nxc4? 17. exf7+ Kh8 18. Qxd8 Rcxd8 19. Rxd8 Rxd8 20. e5} White wins.
 \variation{16. dxe6 Qxd2 17. exf7+ Kh8 18. Nxd2 Nxc4 19. Nxc4 Rxc4 20. e5 Bc8 21. e6 Bxe6 22. Rxe6} equal.
 Petrosian didn't like \variation{16. Bd3 exd5 17. e5! Nc4 18. Qf4} White has an attack. Indeed, Polugaevsky won a brilliant game
-against Tal later. Black must find the only defense \symrook c6.
+against Tal later. Black must find the only defense \variation{18... Rc6}.
 
-\mainline{15... exd5 16. Bxd5
-    Na5 17. Qf4} 
-
+\mainline[level=1]{15... exd5 16. Bxd5
+    Na5 17. Qf4 Qc7 18. Qf5} 
 
 \chessboard
 
-Black has a desperate position. He cannot defend the d5 passed pawn.
-White could also play \symqueen f5, \symknight g5 attack the h7 pawn.
-    
+% I missed the error. So did Kasparov. 
+% We must always pay attention to non forced exchanges, since it changed the dynamics
 
-\mainline{17... Qc7 18. Qf5 Bxd5 19. exd5 Qc2 20. Qf4 Qxa2 21. d6
+\mainline{18... Bxd5?}
+
+This move is bad because it helps White to push his pawn
+without a tempo and create a threat. 
+After the text move Black has a desperate position. He cannot defend the d5 passed pawn.
+In defense it is always important not
+to help the attacker. 
+
+White is threatening to play \symknight g5.
+Black must parry this threat first before the second one is created. 
+A direct \variation{18... h6} would have been better and White has only a slight advantage. 
+
+\mainline{ 19. exd5 Qc2 20. Qf4 Qxa2 21. d6
     Rcd8 22. d7 Qc4 23. Qf5 h6 24. Rc1 Qa6 25. Rc7 b5}
    
 \chessboard
@@ -89,3 +103,10 @@ White could also play \symqueen f5, \symknight g5 attack the h7 pawn.
 }
 1-0
 
+% Lessons learned:
+% Always pay attention to critical positions: change of pawn formation, unforced exchange, imbalance etc.
+
+% Playing the game with Stockfish, I see the evaluation increases gradually in 
+% the opening. It is hard to tell which move is wrong.
+% The intuition is correct, White has an easy opening because he has lots of moves.
+% Black should seek dynamic play, but where is it??
