@@ -43,8 +43,8 @@ It is however difficult to recommend any dynamic play for Black here.
 
 White is planning the d5 thrust to create a central passed pawn.
 Black could also tried
-\variation[invar]{14... Na5 15. Bf1 Rc8 16. d5 Nc4 17. Bxc4 Rxc4}
-    \variation{18. d6 Rxe4 19. Ne5 Rxe1 20. Rxe1 Bd5\xskakcomment{Black can defend the ending}}
+\variation[invar]{14... Na5 15. Bf1 Rc8 16. d5 exd5 17. exd5 Qd6 \xskakcomment{Black can defend the ending}}
+% I am very happy to find the sequence above!
 
 % 2025. 11.5: I wrote the following during my own analysis. 
 % the conclusion is premature because I miss error on Black's next move
@@ -103,10 +103,19 @@ A direct \variation{18... h6} would have been better and White has only a slight
 }
 1-0
 
+\subsection*{Lessons Learned}
 % Lessons learned:
-% Always pay attention to critical positions: change of pawn formation, unforced exchange, imbalance etc.
+Always pay attention to critical positions: change of pawn formation  (\variation{15... exd5}), 
+unforced exchange (\variation{18... Bxd5?}).
+Often an unnoticiable automatic move in such positions is wrong. The awareness of
+such moments is crucial. Being aware of this, it is then possible to find 
+better moves in these positions. Like Spassky said, with a good feeling for the
+critical moments of the play, sometimes things do not reach the endgame!
 
-% Playing the game with Stockfish, I see the evaluation increases gradually in 
-% the opening. It is hard to tell which move is wrong.
-% The intuition is correct, White has an easy opening because he has lots of moves.
+Playing the game with Stockfish, I see the evaluation increases gradually in 
+the opening. It is hard to tell which move is wrong.
+The intuition is correct, White has an easy opening because he has lots of moves.
+
+
+
 % Black should seek dynamic play, but where is it??
