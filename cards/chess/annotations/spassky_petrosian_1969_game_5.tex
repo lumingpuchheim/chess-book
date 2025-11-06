@@ -4,6 +4,8 @@ critical moments of the play. This undoubtedly compensated for my lack of openin
  and, possibly, not altogether perfect play in the endgame. In my games things often did 
  not reach the endgame!}{\textit{Boris Spassky}}
 
+\keywords{Middlegame, Critical Position, Passed Pawn}
+
 \newchessgame[
  id=main,
  event={Petrosian - Spassky World Championship Match},
@@ -91,22 +93,23 @@ to help the attacker.
 
 White is threatening to play \symknight g5.
 Black must parry this threat first before the second one is created. 
-A direct \variation{18... h6} would have been better and White has only a slight advantage. 
+A direct \variation[invar]{18... h6} would have been better and White has only a slight advantage. 
 
-\mainline{ 19. exd5 Qc2 20. Qf4 Qxa2 21. d6
+\mainline[level=1]{ 19. exd5 Qc2 20. Qf4 Qxa2 21. d6
     Rcd8 22. d7 Qc4 23. Qf5 h6 24. Rc1 Qa6 25. Rc7 b5}
    
 \chessboard
     
-\mainline{26. Nd4 Qb6
+\mainline[level=1]{26. Nd4 Qb6
     27. Rc8 Nb7 28. Nc6 Nd6 29. Nxd8 Nxf5 30. Nc6 
 }
 1-0
 
 \subsection*{Lessons Learned}
 % Lessons learned:
-Always pay attention to critical positions: change of pawn formation  (\variation{15... exd5}), 
-unforced exchange (\variation{18... Bxd5?}).
+Always pay attention to critical positions: change of pawn formation  (\variation[invar]{15... exd5}), 
+unforced exchange (\variation[invar]{18... Bxd5?}).
+
 Often an unnoticiable automatic move in such positions is wrong. The awareness of
 such moments is crucial. Being aware of this, it is then possible to find 
 better moves in these positions. Like Spassky said, with a good feeling for the
