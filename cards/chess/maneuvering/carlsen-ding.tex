@@ -1,0 +1,54 @@
+\ifdefined\carlsenDing
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\carlsenDing}[1]{
+	\chessproblem{#1}{Carlsen - Ding}{2kr2r1/pp1b1pp1/1qn1pn1p/3p4/1P6/B1PB1N2/P3QPPP/R4RK1 b - - 0 15}
+    }
+\fi
+
+\ifdefined\carlsenDingAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\carlsenDingAnswer}[1]{
+	\subsection*{#1. Carlsen - Ding}
+    \newchessgame[
+        setfen=2kr2r1/pp1b1pp1/1qn1pn1p/3p4/1P6/B1PB1N2/P3QPPP/R4RK1 b - - 0 15,
+        moveid=15b
+    ]
+ 	\chessboard[     
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove={b4-b5},
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={e5},
+        markstyle=border,
+        linewidth=0.05em,
+        markfields={d7},
+        ]
+
+	\begin{itemize}
+		\item{Where are the weaknesses?}
+
+		e5 square will be weak after White plays b5 driving away the knight on c6.
+		\item{Which is the worst-placed piece?}
+
+		The bishop on d7 is inactive. 
+		\item{Whas is my opponent's idea?}
+
+		b5.
+	\end{itemize}
+
+	White threatens to play b5 to drive away the knight on c6 and then controls the e5 square with his knight:
+Once White achieves his goal, Black has a desperate position. Therefore he must react now!
+
+Understanding White's idea, Black can play \variation[invar]{15... e5 16. b5 e4 17. bxc6 Qxc6 18. Ne5 Qc7 
+19. Nxf7 Bg4 20. Qe3 Qxf7 21. Bc2} 
+
+    In the actual game, Ding chose to play \mainline[level=1]{15... Kb8? 16. b5 \xskakcomment{ Of course!}} White has an
+    advantage and wins the game in a few moves.
+	
+    }
+\fi
+
+

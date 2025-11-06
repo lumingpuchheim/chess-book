@@ -1,0 +1,146 @@
+\section{Magnus Carlsen - Ding Liren, Magnus Carlsen Chess Tour Finals}
+% \keywords{London System, French Defence, Square Play, Diagonal Play}
+
+\epigraph{ In difficult positions I make moves that do 
+not lose by force.}{\textit{Anatoly Karpov}}
+
+\keywords{London System, French Defence, Square Play, Diagonal Play}
+
+\newchessgame[
+ id=main,
+ event={Magnus Carlsen Chess Tour Finals},
+ white={Magnus Carlsen},
+ black={Ding Liren},
+ round={1}]
+
+ \mainline{
+    1. d4 Nf6 2. Nf3 d5 3. Bf4 c5 4. e3 e6 5. c3 Bd6 6. Nbd2}
+    
+\chessboard[
+    markstyle=border,
+    linewidth=0.05em,
+    markfields={c8},
+]
+
+A typical London System opening: with a hidden cunning idea. We 
+reach the first critical moment of the game. White offers a pawn sacrifice. Black 
+has more options to choose from. 
+
+\begin{enumerate}
+    \item{Decline the sacrifice}
+
+    Black has a pawn stucture similar
+    to French Defence. His light squared bishop is not active. He could
+    choose to proceed with a normal French Defence setup:
+    \variation[invar]{6... Bxf4 7. exf4 Qb6 8. Qc2 Qc7 9. g3 b6 10. Bg2 Bg7}
+
+    \chessboard[
+        setfen=rn2k2r/pbq2ppp/1p2pn2/2pp4/3P1P2/2P2NP1/PPQN1PBP/R3K2R w KQkq - 2 11
+    ]
+    \item{Accept the sacrifice, take on c3}
+
+    \variation[invar]{6... cxd4 7. Bxd6 dxc3} White has compensation and can play \variation[invar]
+    {8.Qa4+} or \variation[invar]{8.Ba3} as in the game.
+
+    \chessboard[
+        setfen=rnbqk2r/pp3ppp/3Bpn2/3p4/8/2p1PN2/PP1N1PPP/R2QKB1R w KQkq - 0 8
+    ]
+
+    \item{Accept the sacrifice, take on e3}
+
+    As in the current game:    
+\end{enumerate}
+    
+\mainline[level=1]{6... cxd4 7. Bxd6 dxe3 8. Ba3 exd2+ 9. Qxd2}
+
+\chessboard[
+    pgfstyle=straightmove,
+    linewidth=0.05em,
+    markmove={d2-g5},
+    markstyle=border,
+    linewidth=0.05em,
+    markfields={c8},
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={g7},
+]
+
+
+Here another critical moment.
+
+Let us first list the static advantages for White:
+\begin{itemize}
+    \item{Bishop pair}
+    \item{Better King safety}
+    \item{Black has an inactive bishop on c8.}
+    \item{Black has weakness on the dark squares.}
+\end{itemize}
+Dynamically White has lead in development for a sacrificed pawn.
+
+Black has however a complete pawn structure. He can castle after some moves. So his
+position is still defendable.
+
+White intends to play \variation[invar]{10. Qg5} threatens the g7 pawn. One move is to play
+\variation[invar]{10... Ne4 11. Qe3 Qb6 12. Nd4 f6}.
+Black can move his king to f7:
+
+\chessboard[
+    setfen=r1b4r/pp3kpp/1qn1pp2/3p4/3Nn3/B1PBQ3/PP3PPP/R4RK1 w - - 4 14
+]
+
+In the game, Ding chose to play 9... \symknight c6. This move is per se not bad. 
+He must however play accurately afterwards
+
+\mainline[level=1]{9... Nc6 10. Qg5 Rg8 11. Bd3 h6
+12. Qe3 Qb6 13. Qe2 Bd7 14. O-O O-O-O 15. b4} 
+
+\chessboard[
+    pgfstyle=straightmove,
+    linewidth=0.05em,
+    markmove={b4-b5},
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={e5},
+    markstyle=border,
+    linewidth=0.05em,
+    markfields={d7},
+]
+
+Another critical moment.
+White threatens to play b5 to drive away the knight on c6 and then controls the e5 square with his knight:
+Once White achieves his goal, Black has a desperate position. Therefore he must react now!
+
+Understanding White's idea, Black can play \variation[invar]{15... e5 16. b5 e4 17. bxc6 Qxc6 18. Ne5 Qc7 
+19. Nxf7 Bg4 20. Qe3 Qxf7 21. Bc2}. This move also activates the bishop on d7 as a bonus.
+
+\chessboard[
+    setfen=2kr2r1/pp3qp1/5n1p/3p4/4p1b1/B1P1Q3/P1B2PPP/R4RK1 b - - 1 21
+]
+
+Black equalizes.
+
+In the game, Ding's move is a serious mistake. 
+\mainline[level=1]{15... Kb8? 16. b5 \xskakcomment{ Of course!} Na5
+17. Ne5 Be8 18. Bb4 Rc8 19. a4} 
+
+\chessboard
+
+Black is passive but has no weaknesses. He should have waited (e.g. \variation[invar]{19... Qc7}) and
+let White to prove his advantage. Here it is important
+to remember what Karpov said: in difficult positions I make moves that do 
+not lose by force.
+
+After the text move, White wins quickly.
+\mainline[level=1]{19... Ne4 20. Bxe4 dxe4 21. Qxe4 f6
+22. Qh7 Nb3 23. Qxg8 Nxa1 24. Qxe8 \xskakcomment{ 1-0}
+ }
+
+ \chessboard
+
+ % 2025. 11.6: I am happy to find the critical positions on my own: 15... Kb8
+ \subsection*{Lessons Learned}
+ \begin{itemize}
+    \item{Knowledge in other openings with similar pawn structure
+ can help to find the right idea.}
+    \item{Don't make moves that lose by force in difficult positions.}
+ \end{itemize}
