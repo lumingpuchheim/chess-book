@@ -62,6 +62,7 @@
 \usepackage{sectsty}
 \usepackage{tocloft}
 \usepackage{epigraph}
+\usepackage{multicol}
 
 %----------------------------------------------------------------------------------------
 
@@ -260,8 +261,8 @@ This chapter presents an array of positional chess problems designed to enhance 
 \input{cards/chess/visualization-board}
 
 
+%\begin{multicols}{2}
 
-\section{Excercises}
 \nocite{Dvoretsky:2016}
 \nocite{Aagaard:2002}
 \input{cards/chess/maneuvering/chess-problem}
@@ -275,26 +276,29 @@ This chapter presents an array of positional chess problems designed to enhance 
 \input{cards/chess/maneuvering/zlotnik-lopes}
 \input{cards/chess/maneuvering/carlsen-ding}
 
-\conquestNunn{1}
-\fischerKeres{2}
-\petrosianBannik{3}
-\bebchukBakulin{4}
-\gelfandAnand{5}
-\morovicKarpov{6}
-\sanakoevLungdal{7}
-\zlotnikLopes{8}
-\carlsenDing{9}
+\begin{multicols}{2}
+	\section{Excercises}
+	\conquestNunn{1}
+	\fischerKeres{2}
+	\petrosianBannik{3}
+	\bebchukBakulin{4}
+	\gelfandAnand{5}
+	\morovicKarpov{6}
+	\sanakoevLungdal{7}
+	\zlotnikLopes{8}
+	\carlsenDing{9}
 
-\section{Answers}
-\conquestNunnAnswer{1}
-\fischerKeresAnswer{2}
-\petrosianBannikAnswer{3}
-\bebchukBakulinAnswer{4}
-\gelfandAnandAnswer{5}
-\morovicKarpovAnswer{6}
-\sanakoevLungdalAnswer{7}
-\zlotnikLopesAnswer{8}
-\carlsenDingAnswer{9}
+	\section{Answers}
+	\conquestNunnAnswer{1}
+	\fischerKeresAnswer{2}
+	\petrosianBannikAnswer{3}
+	\bebchukBakulinAnswer{4}
+	\gelfandAnandAnswer{5}
+	\morovicKarpovAnswer{6}
+	\sanakoevLungdalAnswer{7}
+	\zlotnikLopesAnswer{8}
+	\carlsenDingAnswer{9}
+\end{multicols}
 
 \chapter{Dynamic Play}
 \input{cards/chess/dynamic/dynamic-chess-problem}
