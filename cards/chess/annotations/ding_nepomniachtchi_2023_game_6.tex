@@ -1,0 +1,324 @@
+\section{Ding, Liren - Ian Nepomniachtchi 2023 World Championship Game 6}
+\begin{multicols}{2}
+    \newchessgame[      
+        id=main,
+        event={FIDE World Championship 2023},
+        white={Ding, Liren},
+        black={Nepomniachtchi, Ian},
+        round={6}]
+    \mainline[level=1]{1. d4 Nf6 2. Nf3 d5 3. Bf4 c5 4. e3 Nc6 5. Nbd2 cxd4
+    6. exd4 Bf5 7. c3 e6} 
+    
+    \chessboard[
+    ]
+    
+    Modern chess is full of subtlties. The position is actually a reversed
+    Queens Gambit Declined Exchange Variation. Typically after 
+    \variation[invar]{1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. cxd5 exd5 5. Bg5 Be7 6. e3 c6}
+    
+    \chessboard[
+        setfen=r1bqk2r/pp1nbppp/2p2n2/3p2B1/3P4/2NBP3/PP3PPP/R2QK1NR w KQkq - 2 8
+    ]
+    
+    We have a so-called Karlsbad structure. White has the following typical ideas:
+
+    \begin{itemize}
+        \item{Minority Attack}
+
+        White advances his queenside pawns with the main purpose of creating weaknesses in black’s structure.
+
+        \chessboard[
+            setfen=8/pp3ppp/2p5/3p4/3P4/4P3/PP3PPP/8 w KQkq - 2 8,
+            pgfstyle=straightmove,
+            linewidth=0.05em,
+            markmove={b2-b4, b4-b5, b5-c6, b7-c6},
+        ]
+        
+        \item{Playing for the e3-e4 push}
+
+        This can be done with or without the support of the f pawn (by pushing f3) then e4.
+    
+        \chessboard[
+            setfen=8/pp3ppp/2p5/3p4/3P4/4P3/PP3PPP/8 w KQkq - 2 8,
+            pgfstyle=straightmove,
+            linewidth=0.05em,
+            markmove={e3-e4},
+        ]   
+    \end{itemize}
+    
+    Black must defend accordingly. His ideas are
+    \begin{itemize}
+        \item{Moving the knight from g8 to e4}
+        \item{Moving the knight from b8 to c4 via d7 and b6.}
+    \end{itemize}
+    
+    We will see in this game Ding adopts both Black's idea in Queens Gambit Declined Exchange Variation.  
+    Personally I am not a fan of Black's opening. If in Queen's Gambit
+    Declined Exchange Variation, Black can defind well. With one more
+    tempo and color reversed, White should have some advantage. How can Black still
+    defend? 
+
+    Let's go back to the current game.
+
+    \chessboard[
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove={e6-e5},
+    ]
+
+    The position is static and slow, meaning both players must
+    seek plans episode after episode to improve their positions.
+
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        It is still too hard to tell.
+        \item{Which is the worst-placed piece?}
+       
+        The bishop on f1 must be developed, then castling.
+        \item{Whas is my opponent's idea?}
+    
+        He wants to play e5 to free himself.
+    \end{itemize}
+
+    Understanding these, White should develop his bishop and then castle.
+    He should also pay attention to Black's e5 thrust. So \symrook e1 is natural.
+
+    \mainline[level=1]{ 8. Bb5}
+
+    \chessboard[
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove={e6-e5},
+    ]
+
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        It is still too hard to tell.
+        \item{Which is the worst-placed piece?}
+       
+        The bishop on f8 must be developed, then castling.
+        \item{Whas is my opponent's idea?}
+    
+        Not clear yet.
+    \end{itemize}
+
+    White has a strong bishop outside its pawn chain on f4. Exchanging it
+    with \symbishop d6 and develop is logical. The next a few moves are natural.
+
+    \mainline[level=1]{ 8...Bd6 9. Bxd6 Qxd6 10. O-O O-O
+    11. Re1 h6} 
+    
+    \chessboard [
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={c5, e5},
+        markstyle=border,
+        linewidth=0.05em,
+        markfields={a1, d2},
+        pgfstyle=straightmove,
+        markmove={e6-e5},
+    ]
+    
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        c5 and e5 are weak. White may have knights to occupy these
+        squares.
+        \item{Which is the worst-placed piece?}
+       
+        Not clear, not the rook on a1 or the knight on d2.
+        \item{Whas is my opponent's idea?}
+    
+        e5 thrust
+    \end{itemize}
+    
+    \mainline{ 12. Ne5} 
+    
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        c5 and e5 are weak. White may have knights to occupy these
+        squares.
+        \item{Which is the worst-placed piece?}
+       
+        Not clear, either the rook on a1 or the knight on d2.
+        \item{Whas is my opponent's idea?}
+    
+        e5 thrust
+    \end{itemize}
+    
+    \chessboard [
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={c5, e5},
+    ]
+
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        c5 and e5 are weak squares.
+        \item{Which is the worst-placed piece?}
+       
+        Not clear.
+        \item{Whas is my opponent's idea?}
+    
+        \symbishop xc6 then occupy c5 with his knight.
+    \end{itemize}
+
+    \mainline{12... Ne7 } 
+    
+    % TODO:
+    % r4rk1/pp2npp1/3qpn1p/1B1pNb2/3P4/2P5/PP1N1PPP/R2QR1K1 w - - 2 13
+    % play out!
+
+
+    \mainline{13. a4 a6}
+    This move is per se ok. Black starts however a wrong plan that
+    his position soon deteriorates.
+
+    \mainline{ 14. Bf1}
+    
+    \chessboard [
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={c5},
+        markstyle=border,
+        linewidth=0.05em,
+        markfields={a1, d2},
+        pgfstyle=straightmove,
+        markmove={a4-a5},
+    ]
+
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        c5 is weak.
+        \item{Which is the worst-placed piece?}
+       
+        Not clear.
+        \item{Whas is my opponent's idea?}
+    
+        a5 fixing the pawn structure.
+    \end{itemize}
+
+    Focus on the position only, \variation[invar]{14... a5} is the right move.
+    Ironically, the opponent's plan \variation[invar]{15. a5} exists
+    only since Black's last move. It is also psychologically difficult to play
+    \variation[invar]{14... a5}, admitting \variation[invar]{13... a6} was a wrong
+    plan. 
+
+    \mainline[level=1]{14...  Nd7?} 
+    
+    \mainline{ 15. Nxd7 Qxd7} Natural moves!.
+    \mainline{16. a5!} We know White's plan already.
+    
+    
+    \mainline{16... Qc7} 
+    
+    \chessboard
+
+    White intends to install his knight on c5. A direct \variation[invar]{17. Nb3}
+    would be answered with \variation[invar]{17... Nc6}. Black can
+    also assault with \variation[invar]{18... Bc2}. White cannot improve his position.
+
+    The queen on c7 is a defender for White's idea. So he tries to exchange it.
+    Ding did it skillfully.
+
+    \mainline[level=1]{ 17. Qf3 Rfc8 18. Ra3!} 
+    
+    \mainline[level=1]{18... Bg6 19. Nb3 Nc6} \mainline[level=1]{ 20. Qg3} 
+    
+    \chessboard
+
+    Here Black could have defended patiently by playing \variation[invar]{20... Qxg3 21. hxg3 Bf5 22. Nc5 Rc7}.
+    His position is quite solid.
+    
+    Nepo choose however an active plan by coutering with e5 in the center. His pieces
+    are however too passive for such a dynamic plan. White gets the upper hand soon.
+    \mainline[level=1]{20... Qe7
+    21. h4!}  A typical pawn move to remove back rank weakness in a better position
+    before an attack.
+    
+    
+    \mainline{ 21... Re8 22. Nc5 e5?} 
+    Result of a wrong plan.
+    
+    \mainline[level=1]{23. Rb3 Nxa5 24. Rxe5 Qf6 25. Ra3 Nc4
+    26. Bxc4 dxc4 } 
+    
+    \chessboard
+
+    Black should have forseen and estimated this position before he started 
+    his plan coutering in the center on his 20th move. His moves 
+    are forced while White may still have some improvements.
+
+    Who has a better position? Obviously White. He has a full control of 
+    the center. Had Nepo estimated this position correctly, he would have 
+    chosen a different plan. 
+    
+    \chessboard
+    \mainline{27. h5?  } 
+    
+    \variation[invar]{27. Nxb7 Rxe5 28. dxe5 Qb6 29. Nd6 Qxb2 30. Nxc4 } would be winning.
+    Note White should keep his strong knight to attack the Black king.
+
+    Missed an opportunity!
+    \variation{27... Rxe5 28. dxe5 Qd8 \xskakcomment{ This move is hard to see.} 29. Qf3 Qd2 30. hxg6 Qe1+ 31. Kh2 Qxe5+ 32. Kg1 Qe1+ 33. Kh2 Qe5+ 34. g3 \xskakcomment{ Otherwise perpetual check} Qxc5 35. Qxf7+ Kh8 }
+    would have saved the game.
+    \mainline[level=1]{ 27... Bc2? 28. Nxb7 Qb6 29. Nd6 Rxe5 30. Qxe5 Qxb2}
+
+    \chessboard
+
+    In this position, White can use process of elimination to find the best move.
+
+    \variation[invar]{31. Nxc4?! Qc1+ 32. Kh2 Bd3 33. Qe3 Qd1 34. Ne5 Qxh5+ 35. Qh3 Qxh3+ 36. gxh3 }
+    Black has good chance to defend. 
+
+    \chessboard [
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={f7},
+        markstyle=border,
+        linewidth=0.05em,
+        markfields={a3}
+    ]
+
+    \begin{itemize}
+        \item{Where are the weaknesses?}
+    
+        f7 pawn.
+        \item{Which is the worst-placed piece?}
+       
+        The rook on a3.
+        \item{Whas is my opponent's idea?}
+    
+        Not clear
+    \end{itemize}
+
+    Black has weakness on f7. \symrook a5-c5-c7 is natural to attack it.
+    By the way, White's rook is attacked. There is no other way to parry the threat.
+
+    \mainline[level=1]{ 31. Ra5! Kh7 32. Rc5 Qc1+ 33. Kh2 f6 34. Qg3 a5 35. Nxc4 a4
+    36. Ne3 Bb1 37. Rc7 Rg8 38. Nd5 Kh8 39. Ra7 a3 40. Ne7 Rf8
+    41. d5 a2 42. Qc7 Kh7 43. Ng6 Rg8 44. Qf7 \xskakcomment{ 1-0}}
+    \chessboard
+    \end{multicols}
+
+
+\subsection*{Lessons Learned}
+A very deep game played by Ding. He has an advantage in the middle game and 
+waits patiently until Nepo took inmature measures.
+
+The London system can become a Queen's gambit exchange variation reversed.
+This suggests the question of how to handle a Queen's gambit exchange variation.
+
+One example of an answer is that both sides have chances, both sides have their 
+own prospects for attack and it is the player who has the greater knowledge and 
+skill (and so who can, for example, employ resources that are less obvious than 
+the resources which the opponent can employ) who will get the better of it.
+
+When defending, one must choose between passive and active defense.
+One can only use active defense when one has practical chances to defend.
+Otherwise, an active defense is just  suicide.
