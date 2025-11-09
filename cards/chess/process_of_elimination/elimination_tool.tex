@@ -1,0 +1,16 @@
+\ifdefined\poechessproblem
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\poechessproblem
+    }[3]{
+        \subsection*{#1. #2}
+        \chessboard[
+            setfen=#3,
+        ]
+	\begin{itemize}
+		\item{What are the candidate moves?}
+		\item{Which move can be eliminated?}
+		\item{Whas is the move?}
+	\end{itemize}
+    }
+\fi
