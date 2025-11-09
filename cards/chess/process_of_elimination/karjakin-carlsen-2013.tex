@@ -14,6 +14,14 @@
     }
 \fi
 
+\ifdefined\karjakinCarlsenThree
+\else
+    \newcommand{\karjakinCarlsenThree}[1]{
+	\poechessproblem{#1}{Karjakin - Carlsen}{6k1/1b4p1/2q1r2p/4Bp2/1Pp5/6PP/1QB4K/6R1 b - - 2 39}
+    }
+\fi
+
+
 \ifdefined\karjakinCarlsenOneAnswer
     % The command is already defined, do nothing.
 \else
@@ -106,6 +114,38 @@
             \item{What is the move?}
 
             \variation[invar]{31. Re3} 
+        \end{itemize}
+    }
+\fi
+
+
+\ifdefined\karjakinCarlsenThreeAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\karjakinCarlsenThreeAnswer}[1]{
+		\subsection*{#1. Karjakin - Carlsen}
+        \newchessgame[
+            setfen=6k1/1b4p1/2q1r2p/4Bp2/1Pp5/6PP/1QB4K/6R1 b - - 2 39,
+            moveid=39w
+        ]
+        \chessboard
+        \begin{itemize}
+            \item{What are the candidate moves?}
+
+            White must stop from being mated along the main diagonal.
+            \variation[invar]{39. Kg1} and \variation[invar]{39. Be4} are the candidate moves.
+
+            \item{Which move can be eliminated?}
+
+            Karjakin should have eliminated \variation[invar]{39. Rg1} first. 
+            \variation[invar]{39. Rg1 Qd5 40. Bd1 Rxe5 41. Qf2 c3 } His pieces 
+            are passive. His pawn on b4 will fall soon while Black has a strong 
+            passed pawn.
+        
+            \item{What is the move?}
+
+            \variation[invar]{39. Be4}. After \variation[invar]{39. Be4 fxe4 40. Re3} 
+            he can still defend.
         \end{itemize}
     }
 \fi
