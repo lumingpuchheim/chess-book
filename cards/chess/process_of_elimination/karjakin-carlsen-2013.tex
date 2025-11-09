@@ -1,0 +1,113 @@
+\ifdefined\karjakinCarlsenOne
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\karjakinCarlsenOne}[1]{
+	\poechessproblem{#1}{Karjakin - Carlsen}{r4bk1/1bq2pp1/4rn1p/4N3/BPp1P3/2B4P/1Q3PP1/3RR1K1 w - - 1 29}
+    }
+\fi
+
+\ifdefined\karjakinCarlsenTwo
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\karjakinCarlsenTwo}[1]{
+	\poechessproblem{#1}{Karjakin - Carlsen}{4r1k1/1bq2pp1/3brn1p/4N3/1Pp1PP2/2B4P/1QB3P1/3RR1K1 w - - 1 31}
+    }
+\fi
+
+\ifdefined\karjakinCarlsenOneAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\karjakinCarlsenOneAnswer}[1]{
+		\subsection*{#1. Karjakin - Carlsen}
+        \newchessgame[
+            setfen=r4bk1/1bq2pp1/4rn1p/4N3/BPp1P3/2B4P/1Q3PP1/3RR1K1 w - - 1 29,
+            moveid=29w
+        ]
+        \chessboard[
+            setfen=r4bk1/1bq2pp1/4rn1p/4N3/BPp1P3/2B4P/1Q3PP1/3RR1K1 w - - 1 29,
+            markstyle=circle,
+            linewidth=0.05em,
+            markfields={c4, e4, e5},
+        ]
+        \begin{itemize}
+            \item{What are the candidate moves?}
+
+            White's bishop is being attacked. He must play either \variation[invar]{29. Bb5} or \variation[invar]{29. Bc2}.
+            \item{Which move can be eliminated?}
+            \variation[invar]{29. Bc2 Rae8 30. f4 Bd6} 
+
+            \chessboard
+
+            White has weakness on e5 and e4. Black only needed to double his 
+            rooks on the e-file and use his pieces to target the e5 square.
+
+            However, it is difficult for White to find a right plan. He has 
+            already weakened his king safety with his king side pawn movements. He will
+            also have to play g3 at some point to further weaken his king. 
+
+            Therefore we eliminate \variation[invar]{29. Bc2}.
+            \item{Whas is the move?}
+
+            \variation[invar]{29. Bb5}. For example after 
+            \variation[invar]{29. Bb5 Ba6 30. Ra1 Bb7 31. Rxa8 Bxa8 
+                32. Bxc4 Rxe5 33. Bxf7+ Qxf7 34. Bxe5 Nxe4 } White has a playable position
+        \end{itemize}
+    }
+\fi
+
+\ifdefined\karjakinCarlsenTwoAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\karjakinCarlsenTwoAnswer}[1]{
+		\subsection*{#1. Karjakin - Carlsen}
+        \newchessgame[
+            setfen=4r1k1/1bq2pp1/3brn1p/4N3/1Pp1PP2/2B4P/1QB3P1/3RR1K1 w - - 1 31,
+            moveid=31w
+        ]
+        \chessboard[
+            setfen=4r1k1/1bq2pp1/3brn1p/4N3/1Pp1PP2/2B4P/1QB3P1/3RR1K1 w - - 1 31,
+            markstyle=circle,
+            linewidth=0.05em,
+            markfields={e4,e5},
+            pgfstyle=straightmove,
+            linewidth=0.05em,
+            markmove={f6-h5},
+        ]
+        \begin{itemize}
+            \item{What are the candidate moves?}
+
+            \begin{itemize}
+                \item{Where are the weaknesses?}
+            
+                e4 and e5.
+                \item{Which is the worst-placed piece?}
+               
+                Not clear.
+                \item{What is my opponent's idea?}
+            
+                He wants to play \symknight h5 to attack the f4 pawn.
+            \end{itemize}
+
+            When Black plays \symknight h5, White must play g3. As prophylaxis,
+            it is a good idea to protect the g3 pawn first. There are two options
+            \variation[invar]{31. Kh2} and \variation[invar]{31. Re3}.
+
+            \item{Which move can be eliminated?}
+
+            Karjakin should have eliminated \variation[invar]{31. Kh2} first. 
+            His king is on the save diagonal as the Black queen and bishop.
+            Therefore we eliminate \variation[invar]{31. Kh2}.
+            \variation[invar]{31. Re3} is the right move.
+
+            \variation[invar]{31. Re3 Nh5 32. g3 g5} 
+            (\variation{32...f6 33. Nxc4 Bxf4 34. gxf4 Nxf4 35. Bb3 \xskakcomment{ Black king
+            is now exposed, White has advantage.}}) \variation {33. Ba4 R8e7 34. Qe2} White is all right.
+        
+            \item{Whas is the move?}
+
+            \variation[invar]{31. Re3} 
+        \end{itemize}
+    }
+\fi
+
+
