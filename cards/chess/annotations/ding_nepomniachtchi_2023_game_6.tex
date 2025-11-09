@@ -244,16 +244,39 @@
     before launching an attack.
     
     
-    \mainline{ 21... Re8 22. Nc5 e5?} 
-    Result of a wrong plan.
+    \mainline{ 21... Re8 22. Nc5}
     
+    \chessboard
+
+    Let's assess the static balance of the position:
+    \begin{itemize}
+        \item{King Safety}
+
+        Both kings are quite safe.
+        \item{Material Correlation}
+
+        The material is completely equal.
+        \item{Pawn Structure}
+
+        Pawn structures are similar. Neither part has a clear advantage.
+    \end{itemize}
+
+    Black doesn't need to choose dynamic play yet. However, if he 
+    chooses a dynamic play, he must estimate the position a few
+    moves after his play correctly.
+
+    \mainline{22... e5?} 
+    Result of a wrong estimation. 
+    Nepo is a dynamic player and he doesn't want to defend passively. Solid play like \variation[invar]{22... Rac8} is better.
+    
+
     \mainline[level=1]{23. Rb3 Nxa5 24. Rxe5 Qf6 25. Ra3 Nc4
     26. Bxc4 dxc4 } 
     
     \chessboard
 
     Black should have foreseen and estimated this position before he started 
-    his plan of countering in the center on his 20th move. His moves 
+    his plan of countering in the center on his 22nd move. His moves 
     are forced while White may still have some improvements.
 
     Who has a better position? Obviously White. He has full control of 
@@ -261,6 +284,7 @@
     chosen a different plan. 
     
     \chessboard
+
     \mainline{27. h5?  } 
     
     \variation[invar]{27. Nxb7 Rxe5 28. dxe5 Qb6 29. Nd6 Qxb2 30. Nxc4 } would be winning.
@@ -304,8 +328,13 @@
 
     \mainline[level=1]{ 31. Ra5! Kh7 32. Rc5 Qc1+ 33. Kh2 f6 34. Qg3 a5 35. Nxc4 a4
     36. Ne3 Bb1 37. Rc7 Rg8 38. Nd5 Kh8 39. Ra7 a3 40. Ne7 Rf8
-    41. d5 a2 42. Qc7 Kh7 43. Ng6 Rg8 44. Qf7 \xskakcomment{ 1-0}}
+    41. d5! \xskakcomment{ Starting a mating attack by cutting of Black king's retreat on e6} } \mainline{41... a2 42. Qc7 Kh7 43. Ng6 Rg8 44. Qf7 \xskakcomment{ 1-0}}
     \chessboard
+    
+    Black cannot defend \variation[invar]{45. Qxg8+! Kxg8 46. Ra8+ Kf7 47. Rf8# }
+    \variation[invar]{44... Bxg6 45. hxg6+ Kh8 46. Qxg8+! Kxg8 47. Ra8#}
+
+    Black resigns.
     \end{multicols}
 
 
