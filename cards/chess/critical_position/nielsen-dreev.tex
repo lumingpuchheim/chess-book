@@ -1,0 +1,53 @@
+\ifdefined\nielsenDreev
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\nielsenDreev}[1]{
+	    \dynamicchessproblem{#1}{Nielsen - Dreev}{r4rk1/pp1nb1p1/2p1p2p/5q1P/3PQBN1/8/PPP2P2/1K1R3R w - - 0 1}
+    }
+\fi
+
+\ifdefined\nielsenDreevAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\nielsenDreevAnswer}[1]{
+		\subsection*{#1. Nielsen - Dreev}
+		\chessboard[
+			setfen=r4rk1/pp1nb1p1/2p1p2p/5q1P/3PQBN1/8/PPP2P2/1K1R3R w - - 0 1,
+            markstyle=circle,
+            linewidth=0.05em,
+            markfields={h5, f2},
+            pgfstyle=straightmove,
+            linewidth=0.05em,
+            markmove={e6-e5},
+        ]
+
+        \begin{itemize}
+            \item{Who has a static advantage?}
+
+            Black has the static advantage. His pawn structure is better because
+            White has weaknesses on h5 and f2. 
+
+            Black also intends to play e5 at some point
+            to remove his weak e6 pawn. 
+
+            \item{Which play shall I choose?}
+
+            I must therefore choose a dynamic play. 
+
+            \item{Whas is the move?}
+            Note Black can neutralize White's aggression on the king side 
+            since he has enough defenders. (queen, rook, bishop) 
+            
+            White can choose to exchange the queens and change the dynamic 
+            of the game by playing
+
+            \variation[invar]{19. Qxf5 Rxf5 20. Bxh6 gxh6 21. Nxh6+ Kh7 22. Nxf5 exf5 23. d5 
+            \xskakcomment{ White has a rook and two pawns for the minor pieces. He also
+            has a passed pawn}}
+            (\variation{23... exd5 24. Rxd5 \xskakcomment{ Black loses his f5 pawn.}}) 
+        \end{itemize}
+
+        In the actual game, Nielsen chooses \variation{19. Qe2}, has to therefore
+        defend an inferior position with no counter play and loses the game.
+    }
+\fi
