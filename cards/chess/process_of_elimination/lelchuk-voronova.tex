@@ -1,31 +1,25 @@
-\ifdefined\lelchukVoronova
+\ifdefined\lelchukVoronovaPOE
     % The command is already defined, do nothing.
 \else
-    \newcommand{\lelchukVoronova}[1]{
+    \newcommand{\lelchukVoronovaPOE}[1]{
 	\poechessproblem{#1}{Lelchuk - Voronova}{1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2}
     }
 \fi
 
-\ifdefined\lelchukVoronovaOne
+\ifdefined\lelchukVoronovaOnePOE
     % The command is already defined, do nothing.
 \else
-    \newcommand{\lelchukVoronovaOne}[1]{
+    \newcommand{\lelchukVoronovaOnePOE}[1]{
 	\poechessproblem{#1}{Lelchuk - Voronova}{1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6}
     }
 \fi
 
 
-\ifdefined\lelchukVoronovaAnswer
+\ifdefined\lelchukVoronovaAnswerPOE
     % The command is already defined, do nothing.
 \else
-    \newcommand{\lelchukVoronovaAnswer}[1]{
-		\subsection*{#1. Lelchuk - Voronova}
-        \newchessgame[
-            1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2
-        ]
-        \chessboard[
-            1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2,
-        ]
+    \newcommand{\lelchukVoronovaAnswerPOE}[1]{
+        \poechessanswer{#1}{Lelchuk - Voronova}{1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2}
         \begin{itemize}
             \item{What are the candidate moves?}
 
@@ -45,17 +39,11 @@
     }
 \fi
 
-\ifdefined\lelchukVoronovaAnswerOne
+\ifdefined\lelchukVoronovaAnswerOnePOE
     % The command is already defined, do nothing.
 \else
-    \newcommand{\lelchukVoronovaAnswerOne}[1]{
-		\subsection*{#1. Lelchuk - Voronova}
-        \newchessgame[
-            1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6
-        ]
-        \chessboard[
-            1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6
-        ]
+    \newcommand{\lelchukVoronovaAnswerOnePOE}[1]{
+        \poechessanswer{#1}{Lelchuk - Voronova}{1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6}
         \begin{itemize}
             \item{What are the candidate moves?}
 

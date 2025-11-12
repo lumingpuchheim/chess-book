@@ -14,3 +14,15 @@
 	\end{itemize}
     }
 \fi
+
+\ifdefined\poechessanswer
+
+\else
+    \newcommand{\poechessanswer
+    }[3]{
+        \subsection*{#1. #2}
+        \chessboard[
+            setfen=#3,
+        ]
+    }
+\fi
