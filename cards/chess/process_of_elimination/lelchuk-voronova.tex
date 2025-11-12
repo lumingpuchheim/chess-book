@@ -1,0 +1,71 @@
+\ifdefined\lelchukVoronova
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\lelchukVoronova}[1]{
+	\poechessproblem{#1}{Lelchuk - Voronova}{1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2}
+    }
+\fi
+
+\ifdefined\lelchukVoronovaOne
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\lelchukVoronovaOne}[1]{
+	\poechessproblem{#1}{Lelchuk - Voronova}{1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6}
+    }
+\fi
+
+
+\ifdefined\lelchukVoronovaAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\lelchukVoronovaAnswer}[1]{
+		\subsection*{#1. Lelchuk - Voronova}
+        \newchessgame[
+            1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2
+        ]
+        \chessboard[
+            1b1qnr2/4pQ1p/pp1r1ppk/2p1N3/P4P2/2P5/2P3PP/3R1R1K b - - 1 2,
+        ]
+        \begin{itemize}
+            \item{What are the candidate moves?}
+
+            White threats to play \variation[invar]{3. Ng4+ Kh5 4. Qxh7+ Kxg4 5. h3}
+
+        To parry the threat, Black may play \variation[invar]{2... fxe5}, \variation[invar]{2... Rxf7} or \variation[invar]{2...Rh8}.
+            \item{Which move can be eliminated?}
+            
+            Further calculation eliminates the first two:
+        
+            \variation[invar]{2... fxe5 3. Qxf8+ Kh5 4. g4+ Kxg4 5. Rg1 Kf3 6. fxe5+} White has huge material advantage.
+            \variation[invar]{2... Rxf7 3. Nxf7+ Kg7 4. Nxg8} White has the exchange up.
+            \item{What is the move?}
+
+            Therefore Black must play \variation[invar]{2... Rh8}.
+        \end{itemize}
+    }
+\fi
+
+\ifdefined\lelchukVoronovaAnswerOne
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\lelchukVoronovaAnswerOne}[1]{
+		\subsection*{#1. Lelchuk - Voronova}
+        \newchessgame[
+            1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6
+        ]
+        \chessboard[
+            1b1q3r/4pQ1p/pp1n1pp1/2pR3k/P4P2/2P1N3/2P3PP/7K b - - 2 6
+        ]
+        \begin{itemize}
+            \item{What are the candidate moves?}
+
+            \variation[invar]{6... e5} and \variation[invar]{6... f5}.
+            \item{Which move can be eliminated?}
+            
+            \variation[invar]{6... f5} loses immediately after \variation[invar]{6... f5 7. g4+ Kh6 8. Rxd6 exd6 9. Nxf5+  gxf5 10. g5+}.
+            \item{What is the move?}
+
+            Therefore Black must play \variation[invar]{6... e5}.
+        \end{itemize}
+    }
+\fi
