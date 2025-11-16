@@ -1,0 +1,41 @@
+\ifdefined\dingNepomniachtchiGameFour
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dingNepomniachtchiGameFour}[1]{
+	    \dynamicchessproblem{#1}{Ding - Nepomniachtchi}{4r1k1/p1p1r1pp/1p1nPp1q/2pP3b/2P2p2/2Q2B1P/P2NRPP1/4R1K1 b - - 2 25}
+    }
+\fi
+
+\ifdefined\dingNepomniachtchiGameFourAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dingNepomniachtchiGameFourAnswer}[1]{
+		\subsection*{#1. Ding - Nepomniachtchi}
+		\chessboard[
+			setfen=4r1k1/p1p1r1pp/1p1nPp1q/2pP3b/2P2p2/2Q2B1P/P2NRPP1/4R1K1 b - - 2 25,
+		]
+
+        \begin{itemize}
+            \item{Who has the static advantage?}
+
+            White has the static advantage because his passed pawns in the center are strong.
+            \item{Which play shall I choose?}
+            I shall choose a static play
+
+            The main asset of White is the passed pawns, which have been blocked by the Black rooks.
+
+            The rooks on the e-file are not doing much because there is no open file. The knights are 
+            important pieces. The Black knight keeps an eye on e4 so that the rooks cannot attack the 
+            f4 pawn. 
+
+            I have a holdable position because I have only on weakness and White must find a way
+            to prove his advantage. Therefore I choose a static play without changing the position.
+            \item{Whas is the move?}
+
+            At some point, White may play \symrook e4 to attack the f4 pawn and exchange the Black knight.
+
+            Alternatively, White may play \symknight e4 to exchange the Black knight. In either case, e4 is 
+            an important square and must be protected in advance. \variation[invar]{25... Bg6} is a good move.
+        \end{itemize}
+	}
+\fi 
