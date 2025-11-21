@@ -1,0 +1,44 @@
+\ifdefined\arnasonMiles
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\arnasonMiles}[1]{
+	\dynamicchessproblem{#1}{Arnason - Miles}{5r2/8/p1B1qp2/2p1p1nk/1pP1P1R1/8/PP2Q3/6K1 w - - 0 36}
+    }
+\fi
+
+\ifdefined\arnasonMilesAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\arnasonMilesAnswer}[1]{
+		\subsection*{#1. Arnason - Miles}
+        \newchessgame[
+            setfen=5r2/8/p1B1qp2/2p1p1nk/1pP1P1R1/8/PP2Q3/6K1 w - - 0 36,
+	        moveid=36w
+        ]
+        \chessboard
+
+        \begin{itemize}
+            \item{Who has a static advantage?}
+
+            Black enjoys a static advantage thanks to his healthy extra pawn.
+            With best play he should be able to convert.
+            \item{Which plan should I choose?}
+
+            I therefore need to look for dynamic resources. 
+            \item{What is the move?}
+
+            \symrook xg5!
+        \end{itemize}
+
+        After 
+        \mainline{
+        36. Rxg5+ Kxg5 37. Qd2+ Kg6 38. Qg2+ Kf7 39. Bd5 Qxd5 40. exd5 Rg8 41. Qxg8+ Kxg8 }
+
+        \chessboard
+
+        The resulting position is no worse than the initial one.
+        White remains a pawn down, but his protected passed pawn grants him counterplay.
+        Black still has to demonstrate a concrete route to victory. 
+	
+    }
+\fi
