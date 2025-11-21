@@ -1,0 +1,20 @@
+[Event "Tilburg Interpolis"]
+[Site "Tilburg NED"]
+[Date "1982.09.30"]
+[Round "1"]
+[White "Anatoly Karpov"]
+[Black "Robert Huebner"]
+[Result "1-0"]
+[GameId "hUsZh8HF"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[Variant "Standard"]
+[TimeControl "-"]
+[ECO "B19"]
+[Opening "Caro-Kann Defense: Classical Variation, Spassky Variation"]
+[Termination "Unknown"]
+[Annotator "lichess.org"]
+
+1. e4 { [%eval 0.18] } 1... c6 { [%eval 0.23] } 2. d4 { [%eval 0.25] } 2... d5 { [%eval 0.24] } 3. Nd2 { [%eval 0.23] } 3... dxe4 { [%eval 0.31] } 4. Nxe4 { [%eval 0.28] } 4... Bf5 { [%eval 0.25] } 5. Ng3 { [%eval 0.14] } 5... Bg6 { [%eval 0.3] } 6. h4 { [%eval 0.33] } 6... h6 { [%eval 0.14] } 7. Nf3 { [%eval 0.14] } 7... Nd7 { [%eval 0.2] } 8. h5 { [%eval 0.35] } { B19 Caro-Kann Defense: Classical Variation, Spassky Variation } 8... Bh7 { [%eval 0.33] } 9. Bd3 { [%eval 0.28] } 9... Bxd3 { [%eval 0.39] } 10. Qxd3 { [%eval 0.36] } 10... Ngf6 { [%eval 0.5] } 11. Bf4 { [%eval 0.52] } 11... e6 { [%eval 0.62] } 12. O-O-O { [%eval 0.56] } 12... Be7 { [%eval 0.54] } 13. Ne5 { [%eval 0.37] } 13... O-O { [%eval 0.3] } 14. c4 { [%eval 0.0] } 14... c5 { [%eval 0.18] } 15. d5?! { (0.18 → -0.42) Inaccuracy. Ne4 was best. } { [%eval -0.42] } (15. Ne4 Qa5 16. Nxd7 Nxd7 17. Qg3 Kh8 18. Kb1 cxd4 19. Rxd4 Qf5 20. Qf3 Nc5) 15... Nxe5 { [%eval -0.45] } 16. Bxe5 { [%eval -0.45] } 16... Ng4 { [%eval -0.34] } 17. Bxg7 { [%eval -0.82] } 17... Kxg7 { [%eval -0.91] } 18. Qe2 { [%eval -0.96] } 18... Bg5+? { (-0.96 → 0.30) Mistake. f5 was best. } { [%eval 0.3] } (18... f5 19. dxe6 Qc7 20. Qf3 Kg8 21. Rd7 Bg5+ 22. Kb1 Qc6 23. Qxc6 bxc6 24. f4) 19. Kb1 { [%eval 0.41] } 19... Nf6 { [%eval 0.25] } 20. dxe6 { [%eval 0.17] } 20... Qc8 { [%eval 0.25] } 21. e7 { [%eval 0.0] } 21... Re8 { [%eval -0.12] } 22. Rd6 { [%eval -0.57] } 22... Qg4?! { (-0.57 → 0.31) Inaccuracy. Bf4 was best. } { [%eval 0.31] } (22... Bf4 23. Rxf6) 23. Qe5? { (0.31 → -0.92) Mistake. Qxg4 was best. } { [%eval -0.92] } (23. Qxg4 Nxg4) 23... Kg8? { (-0.92 → 0.36) Mistake. Kh7 was best. } { [%eval 0.36] } (23... Kh7) 24. Re1 { [%eval -0.07] } 24... Nd7?? { (-0.07 → 4.05) Blunder. Nxh5 was best. } { [%eval 4.05] } (24... Nxh5) 25. Rxd7 { [%eval 4.07] } 25... Qxd7 { [%eval 3.85] } 26. Nf5 { [%eval 3.72] } 26... f6 { [%eval 4.45] } 27. Qd5+ { [%eval 4.26] } 27... Qxd5 { [%eval 3.78] } 28. cxd5 { [%eval 3.81] } 28... Bf4 { [%eval 3.98] } 29. g3 { [%eval 4.01] } 29... Bc7 { [%eval 3.84] } 30. Kc2 { [%eval 3.72] } 30... b5 { [%eval 4.09] } 31. Nxh6+ { [%eval 3.76] } 31... Kh7 { [%eval 4.57] } 32. Nf5 { [%eval 4.49] } 32... Rg8 { [%eval 5.41] } 33. d6 { [%eval 5.05] } 33... Ba5 { [%eval 6.02] } 34. Re6 { [%eval 5.81] } 34... Rg5 { [%eval 6.45] } 35. Rxf6 { [%eval 7.38] } 35... Rxh5 { [%eval 8.6] } 36. d7 { [%eval 8.43] } 36... Rh2 { [%eval 41.52] } 37. Ne3?! { (41.52 → 7.11) Inaccuracy. Rh6+ was best. } { [%eval 7.11] } { White wins. } (37. Rh6+) 1-0
+
+
