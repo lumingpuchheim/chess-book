@@ -1,0 +1,51 @@
+\ifdefined\dingAronian
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dingAronian}[1]{
+        \chessproblem{#1}{Ding - Aronian}{1r1q1rk1/3nbppp/2p1pn2/ppP5/1PpP4/P1N1P3/RB2QPPP/4NRK1 w - - 0 16}
+    }
+\fi
+
+\ifdefined\dingAronianAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\dingAronianAnswer}[1]{
+        \subsection*{#1. Ding - Aronian}
+        \newchessgame[
+            setfen=1r1q1rk1/3nbppp/2p1pn2/ppP5/1PpP4/P1N1P3/RB2QPPP/4NRK1 w - - 0 16,
+            moveid=16w
+        ]
+        \chessboard[
+            markstyle=circle,
+            linewidth=0.05em,
+            markfields={d6},
+            pgfstyle=straightmove,
+            markmove={e4-e5, e3-e4},
+        ]
+
+        \begin{itemize}
+            \item{Where are the weaknesses?}
+    
+            d6 square is weak.
+            \item{Which is the worst-placed piece?}
+    
+            Here we are talking about how to regroup the pieces. 
+            White must find a way to exploit the weakness on d6.
+            This can be done by placing the bishop on f4, the knight on e4. 
+            The pawn on e3 must be placed on e5 at some point.
+
+            \item{What is my opponent's idea?}
+            
+            He may look for counterplay along the a-file.
+            He may also attack the d4 pawn. Therefore both of them must be protected.
+        \end{itemize}
+
+        It is always important to remember, don't rush!
+
+        \mainline[level=1]{16. e4 Rb7 17. Nc2 Nb8 18. Raa1 Qc8 19. Rad1 Rd8 20. Bc1 Na6 21. Bf4 Rbd7 22. h3 Ne8 23. Qe3 Bf6 24. e5! Be7 25. Ne4!
+ Nac7 26. Nd6}
+ 
+        \chessboard
+
+    }
+\fi
