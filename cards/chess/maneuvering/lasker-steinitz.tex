@@ -1,0 +1,35 @@
+\ifdefined\laskerSteinitz
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\laskerSteinitz}[1]{
+	\chessproblem{#1}{Lasker - Steinitz}{4r2n/1p2qpkP/p1p3p1/3p4/8/3Br3/PPPQ4/2K2R1R w - - 1 29}
+    }
+\fi
+
+\ifdefined\laskerSteinitzAnswer
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\laskerSteinitzAnswer}[1]{
+	\subsection*{#1. Lasker - Steinitz}
+ 	\chessboard[
+        setfen=4r2n/1p2qpkP/p1p3p1/3p4/8/3Br3/PPPQ4/2K2R1R w - - 1 29,
+    ]
+
+	\begin{itemize}
+		\item{Where are the weaknesses?}
+
+		White has potential back-rank weakness before starting an attack.
+
+		\item{What is my opponent's idea?}
+
+		He wants to activate his knight at the corner.
+	\end{itemize}
+
+    \variation{29. a3} is the right move. 
+
+    White intends to play both \symking b1 and a3, but the order matters critically. 
+    Calculating the optimal sequence through brute force is practically impossible here. 
+    However, by comparing the consequences of each move, one can deduce that a3 must be played first, 
+    because \symking b1 creates a potential back-rank weakness that restricts White's options.
+
+    }
