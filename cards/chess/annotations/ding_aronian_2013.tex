@@ -1,0 +1,69 @@
+\section{Ding Liren - Levon Aronian, Alekhine Memorial 2013}
+
+\begin{multicols}{2}
+    \newchessgame
+\mainline[level=1]{1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 a6 5. e3 e6 6. c5 Nbd7 7. b4 b6 8. Bb2 a5 9. a3 Be7 10. Bd3 O-O 11. O-O Ba6 12. Ne1} 
+
+\chessboard
+
+\mainline{12...Bc4?}
+
+Black has less space, therefore he should exchange the bishops. \variation[invar]{12...Bxd3} would have been better.
+Aronian overestimates his passed pawn. The pawn has no future in the middle game because
+it is blocked by the White pieces. On the other hand, he gives up the center.
+White will soon have the initiative because he will occupy the center with e3-e4 thrust.
+
+\mainline[level=1]{13. Bxc4 dxc4 14. Qe2 Rb8 15. Ra2 b5}
+
+\chessboard[
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={d6},
+    pgfstyle=straightmove,
+    markmove={e4-e5, e3-e4},
+]
+
+Black has created a protected passed pawn as he has planned. The price is however too high. 
+White occupies the center and can maneuver freely while Black can only sit and wait in restricted space.
+
+It is instructive to see how White exploits the weakness on d6:
+\begin{enumerate}
+    \item{Protect the d4 pawn}
+    \item{Target d6 with bishop and knight}
+    \item{Occupy d6 with the knight}
+\end{enumerate}
+
+It is also important to remember, don't rush!
+
+\mainline[level=1]{16. e4 Rb7 17. Nc2 Nb8 18. Raa1 Qc8 19. Rad1 Rd8 20. Bc1 Na6 21. Bf4 Rbd7 22. h3 Ne8 23. Qe3 Bf6 24. e5! Be7 25. Ne4!
+ Nac7 26. Nd6}
+ 
+ \chessboard
+
+ Look at the position. White dominates the center while Black is cramped in his own half.
+
+\mainline[level=1]{26... Qa8 27. Qg3 Nd5 28. Ne3 Nc3 29. Rde1 Bxd6 30. exd6 Ne4 31. Qh4 Nd2}
+
+\chessboard
+
+\mainline[level=1]{32. Nd5! Nxf1 33. Nb6! Qa7 34. Rxf1 Nf6 35. Be5 Nd5 36. Nxd5 exd5}
+
+% TODO: create a tactical problem
+\chessboard[
+    setfen=3r2k1/q2r1ppp/2pP4/ppPpB3/1PpP3Q/P6P/5PP1/5RK1 w - - 0 37
+]
+
+The final blow!
+\mainline[level=1]{37. Bxg7 Kxg7 38. Qg5+ Kf8 39. Qf6 Kg8 40. Qg5+ Kf8 41. Qf6 Kg8 42. Re1 axb4 43. Re5 h6 44. Rh5 Qxa3 45. Qxh6 f6 46. Qxf6 \xskakcomment{ 1-0}
+}
+
+\end{multicols}
+
+\subsection*{Lessons Learned}
+It is crucial to carefully weigh the advantages and disadvantages of any strategic decision.
+Giving up control of the center in exchange for a protected but immobile passed pawn is rarely a good trade.
+The center provides flexibility and initiative, while a blocked passed pawn offers little practical value in the middlegame.
+
+When liquidating an advantage while the opponent has no counterplay, thorough preparation is essential. 
+One must protect all weaknesses and eliminate any potential counterplay before delivering the final blow. 
+Rushing to convert an advantage can allow the opponent to generate unexpected complications.
