@@ -2,6 +2,8 @@
 
 \epigraph{The hardest game to win is a won game}{\textit{Emanuel Lasker}}
 
+\keywords{Intermediate moves, Prophylaxis}
+
 \begin{multicols}{2}
 
 \newchessgame[
@@ -138,18 +140,43 @@ he is up three pawns and White fails to start an attack on h-file.
 \mainline[level=1]{24. gxh7+! Kxh7 25. Bd3+ Kg8 26. h5 Re8 27. h6 g6 28. h7+ Kg7}
 
 \chessboard[
-    setfen=4r2n/1p3pkP/p1p3p1/3pq3/8/3Br3/PPPQ4/1K3R1R w - - 3 30
+    setfen=4r2n/1p2qpkP/p1p3p1/3p4/8/3Br3/PPPQ4/2K2R1R w - - 1 29
 ]
 
 % TODO: add a prophylaxis problem
-\mainline[level=1]{29. Kb1! }
+\mainline[level=1]{29. Kb1?! }
 
 \emph{One of Lasker's characteristic ``changes of rhythm''. As long as his opponent
 has not yet created any direct threats, White has a little time to make the useful
 prophylaxy moves. In the ensuing complications, Black will no longer be able to exploit tactical resources involving
 the enemy king's vulnerability. Such play requires both a healthy evaluating capacity andtremendous coolnesss.} (Dvoretsky)
 
-\mainline[level=1]{29...Qe5 30. a3!}
+This move has a good idea. However \variation[invar]{29. a3} first is more accurate.
+
+\chessboard[
+    markstyle=border,
+    linewidth=0.05em,
+    markfields={h8},
+]
+
+Black is playing practically one piece down, since his knight
+is at the corner. Activating the knight urgent now.
+
+\mainline[level=1]{29...Qe5} 
+\variation[invar]{29... f6! 30. Qf2 \xskakcomment{ (\symqueen h2 is now impossible, due to back rank
+weekness.)} Qe6 31. Ka2 Nf7} The knight is finally free again. We also see
+why White's last move is an inaccuracy. If \variation[invar]{29. a3} has been played first,
+White can play \variation[invar]{30. Qh2} after \variation[invar]{29... f6}.
+
+This subtlety was also overlooked by Kasparov and Dvoretsky. 
+White intends to play both \symking b1 and a3, but the order matters. 
+Calculating the optimal sequence through brute force is practically impossible here. 
+However, by comparing the consequences of each move, one can deduce that a3 must be played first, 
+because \symking b1 creates a potential back-rank weakness that restricts White's options.
+
+\mainline[level=1]{ 30. a3!}
+
+Note that White's king castling is quite solid. The bishop on d3 protects the c2 pawn and e2 square, making Black's invasion on the second rank impossible. Black needs two tempi (c5 and then c4) to break this defense, which allows White to take his time to maneuver his queen.
 
 \emph{In this game there is something of the `Tal' element: White's attack is rather abstract,
 but it will not come to an end - all the time some threats arise!} (Kasparov)
@@ -164,7 +191,7 @@ how can you play this way when two pawns are down?} (Kasparov)
     markstyle=circle,
     linewidth=0.05em,
     markfields={g6},
-    markstyle=square,
+    markstyle=border,
     linewidth=0.05em,
     markfields={h8},
     pgfstyle=straightmove,
@@ -237,7 +264,7 @@ how can you play this way when two pawns are down?} (Kasparov)
 \chessboard
 
 \emph{I believe it was exactly here that Steinitz made the decisive error:
-unlike the other commentators, I fail to see where Black could havesaved himself after this.}
+unlike the other commentators, I fail to see where Black could havesaved himself after this.} (Dvoretsky)
 
 This assessment is exaggerated; only after Black's next move does White obtain a tangible advantage.
 
@@ -253,7 +280,7 @@ This assessment is exaggerated; only after Black's next move does White obtain a
 The queen is under attack and it feels natural to move her immediately.
 Yet both Kasparov and Dvoretsky overlooked
 \variation[invar]{37... Re1+ 38. Ka2 Qe2 39. Rxd5+ Kc6 40. Rc5+ Kb6 41. Qxe2 R1xe2 42. Rc4}.
-Once the queens come off, White’s attack evaporates and the passed pawn is firmly blockaded.
+Once the queens come off, White's attack evaporates and the passed pawn is firmly blockaded.
 The position should be equal. 
 
 \mainline[level=1]{ 38. Rxe8 Qxe8 39. Rxf6+ Kc5 40. Qh6 Re7 41. Qh2 Qd7 42. Qg1+ d4 43. Qg5+ Qd5 44. Rf5 Qxf5 45. Qxf5+ Kd6 46. Qf6+ \xskakcomment{ 1-0}}
@@ -274,4 +301,4 @@ However, the true cause of Steinitz's defeat was not his physical condition, but
 
 One must refrain from playing automatic moves and pay special attention to intermediate moves. In this game, Steinitz's \variation[invar]{23... d5} appeared natural---it closed the center and gained a tempo by attacking the bishop. However, it failed to account for the intermediate move \variation[invar]{24. gxh7+!}, which completely changed the evaluation of the position. Automatic moves often overlook tactical nuances that can turn a winning position into a losing one.
 
-Before launching an attack, it is essential to play some quiet moves prophylactically, removing any potential counterattack in advance. Lasker's \variation[invar]{29. Kb1!} and \variation[invar]{30. a3!} exemplify this principle. These seemingly passive moves eliminated tactical resources involving the enemy king's vulnerability, allowing White to proceed with his attack without fear of back-rank or back-rank-related tactics. Such prophylactic thinking requires both accurate evaluation and tremendous composure, especially when material is down.
+Before launching an attack, it is essential to play some quiet moves prophylactically, removing any potential counterattack in advance. Lasker's \variation[invar]{29. Kb1} and \variation[invar]{30. a3!} exemplify this principle. These seemingly passive moves eliminated tactical resources involving the enemy king's vulnerability, allowing White to proceed with his attack without fear of back-rank or back-rank-related tactics. Such prophylactic thinking requires both accurate evaluation and tremendous composure, especially when material is down.
