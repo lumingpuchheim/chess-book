@@ -12,3 +12,7 @@ main.pdf
 main.ptc
 main.run.xml
 main.toc
+main.fdb_latexmk
+main.fls
+texput.log
+example.log
