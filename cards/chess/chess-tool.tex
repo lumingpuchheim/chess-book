@@ -1,0 +1,31 @@
+% Macro to display chess game information in a rectangular box
+% Usage: \chessgameinfo{event}{white}{black}{round}{date}{result}
+% Optional parameters can be left empty: \chessgameinfo{Event}{White}{Black}{}{}{}
+% Example: \chessgameinfo{FIDE World Championship 2023}{Ding, Liren}{Nepomniachtchi, Ian}{6}{2023.04.15}{1-0}
+\newcommand{\chessgameinfo}[6]{%
+    \vspace{0.5em}
+    \begin{center}
+    \begin{tikzpicture}
+        \node[rectangle, 
+              draw=ocre, 
+              fill=ocre!5, 
+              line width=1pt,
+              rounded corners=5pt,
+              inner xsep=12pt,
+              inner ysep=10pt,
+              text width=0.45\textwidth,
+              align=left] (box) {
+            \textbf{\textcolor{ocre}{Game Information}}\\[0.8em]
+            \begin{tabular}{@{}l@{\hspace{0.5cm}}l@{}}
+                \textbf{Event:} & #1 \\
+                \ifstrempty{#4}{}{\textbf{Round:} & #4 \\}
+                \ifstrempty{#5}{}{\textbf{Date:} & #5 \\}
+                \textbf{White:} & #2 \\
+                \textbf{Black:} & #3 \\
+                \ifstrempty{#6}{}{\textbf{Result:} & #6 \\}
+            \end{tabular}
+        };
+    \end{tikzpicture}
+    \end{center}
+    \vspace{0.5em}%
+}
