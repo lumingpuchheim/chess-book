@@ -1,8 +1,38 @@
 \newpage
 
-\chessgameinfo{Correspondence}{Ming}{Marius}{}{2025.01.17-2025.02.26}{1-0}
+\multicols{2}
+    \chessgameinfo{Correspondence Chess 960}{Ming}{Marius}{}{2025.01.17-2025.02.26}{1-0}
 
-\newchessgame[
-    setfen=rnnkqbbr/pppppppp/8/8/8/8/PPPPPPPP/RNNKQBBR w HAha - 0 1,
-]
-\chessboard
+    \newchessgame[
+        setfen=rnnkqbbr/pppppppp/8/8/8/8/PPPPPPPP/RNNKQBBR w HAha - 0 1,
+    ]
+    \chessboard
+
+    The position is quite similar to the standard opening position:
+    queen and king are in the middle while the rooks are on the edges.
+
+
+    \mainline[level=1]{1. e4 e5 2. Bc4?!} 
+    
+    I dislike this move when I am annotating now. During the game, I was 
+    thinking of a setup like London System:
+
+    \chessboard[setfen=8/8/8/8/2B1P3/2NPBP2/PPP1N1PP/R2KQ2R ]
+
+    Schematic thinking per se is never bad. However, such a setup that requires lots of tempi can be
+    disturbed easily. 
+
+    Observing the opening position: it is mandatory to move e- and f-pawns to develop the 
+    bishops. \variation[invar]{2. f4} with the spirit of queen's gambit is called. 
+    The engine recommends \variation[invar]{2. f4 f6 3. Nc3 Nc6 4. Nd3 Nd6 5. O-O-O O-O-O 6. g3 h5 7. Kb1 Kb8 8. Bf2 }
+
+    \chessboard[setfen=2krqbbr/pppp2pp/2nn1p2/4p3/4PP2/2NN4/PPPP2PP/2KRQBBR w - - 6 6]
+
+    \mainline{2... Nd6! 3. Bb3 f6!}
+    
+    Marius just played some natural moves to refute my idea. What now? I was
+    unwilling to exchange since I had used already some tempi for this unfortunate
+    bishop. 
+
+    \mainline{4. Nc3 Nc6 5. f3 Be6 6. N1e2 O-O-O 7. d3 Qg6 8. Qf2 Kb8 9. d4 exd4 10. Nxd4 Nxd4 11. Qxd4 b6 12. Qf2 Nc4 13. O-O-O Bc5 14. Qe2 Qg5+ 15. Kb1 Ne3 16. Qa6 c6 17. Bxe3 Bxe3 18. Rd3 Bxb3 19. axb3 d6 20. Rhd1 Bc5 21. Qa4 Kb7 22. b4 b5 23. Qa5 Bb6 24. Qa2 Rd7 25. Qe6 Rhd8 26. g3 Qe5 27. Qxe5 fxe5 28. Ne2 Kc7 29. f4 d5 30. exd5 Rxd5 31. Rxd5 Rxd5 32. Rxd5 cxd5 33. fxe5 a5 34. bxa5 Bxa5 35. Nd4 b4 36. Ne6+ Kd7 37. Nxg7 Bc7 38. e6+ Ke7 39. Nf5+ Kxe6 40. Nd4+ Kf6 41. Ka2 Bd6 42. Kb3 h5 43. Nc6 Kg5 44. Nxb4 Bxb4 45. Kxb4 Kg4 46. Kc5 Kh3 47. b4 }
+\end{multicols}
