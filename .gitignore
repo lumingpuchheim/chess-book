@@ -20,3 +20,9 @@ example.log
 *.fls
 *.log
 *.toc
+*.pdf
+*.idx
+*.ilg
+*.ind
+*.xml
+*.ptc
