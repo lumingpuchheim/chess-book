@@ -38,7 +38,7 @@
 	fleqn, % Left align equations
 	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
 	oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
-]{LegrandOrangeBook}
+]{../LegrandOrangeBook}
 
 % Book information for PDF metadata, remove/comment this block if not required 
 \hypersetup{
@@ -49,11 +49,11 @@
 	pdfcreator={LaTeX}, % Content creator field
 }
 
-\addbibresource{sample.bib} % Bibliography file
+\addbibresource{../sample.bib} % Bibliography file
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
 
-\chapterimage{zen-stone.jpg} % Chapter heading image
+\chapterimage{../Images/zen-stone.jpg} % Chapter heading image
 \chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
 \chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
@@ -73,7 +73,7 @@
 %----------------------------------------------------------------------------------------
 
 \titlepage % Output the title page
-	{\includegraphics[width=\paperwidth]{background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+	{\includegraphics[width=\paperwidth]{../Images/background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
 	{ % Title(s) and author(s)
 		\centering\sffamily % Font styling
 		{\Huge\bfseries Chess, Life and Anything Else\par} % Book title
@@ -140,101 +140,101 @@
 \section{Diplomacy with Chess}
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
-	\includegraphics[width=0.5\textwidth]{cards/history/franklin_play_howe.jpg} % Include the figure image
+	\includegraphics[width=0.5\textwidth]{../cards/history/franklin_play_howe.jpg} % Include the figure image
 	\caption{Quiet Tension and Concentration}
 	\label{fig:franklin} % Unique label used for referencing the figure in-text
 \end{figure}
-\input{cards/history/franklin_play_howe}
+\input{../cards/history/franklin_play_howe}
 
 \section{Steinitz's Tragedy}
-\input{cards/history/steinitz}
+\input{../cards/history/steinitz}
 
 \section{Boris Spassky's Nirvana}
 \subsection{Nirvana}
-\input{cards/life/nirvana}
+\input{../cards/life/nirvana}
 \subsection{How Spassky became World Champion}
-\input{cards/history/spassky}
+\input{../cards/history/spassky}
 
 \section{1984 Karpov - Kasparov World Championship}
-\input{cards/history/kasparov_karpov_match}
+\input{../cards/history/kasparov_karpov_match}
 
 \section{Anony of a Winning Position}
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
-	\includegraphics[width=0.5\textwidth]{cards/history/ivanchuk_cry.jpg} % Include the figure image
+	\includegraphics[width=0.5\textwidth]{../cards/history/ivanchuk_cry.jpg} % Include the figure image
 	\caption{Heartbreak after a Game}
 	\label{fig:ivanchuk_cry} % Unique label used for referencing the figure in-text
 \end{figure}
-\input{cards/history/agony_of_a_winning_position}
+\input{../cards/history/agony_of_a_winning_position}
 
 \section{``I drank coffee''}
-\input{cards/history/i_drank_coffee}
+\input{../cards/history/i_drank_coffee}
 
 \section{The Fatal Glance: The Story of Orpheus and Eurydice}
-\input{cards/history/the_fatal_glance}
+\input{../cards/history/the_fatal_glance}
 
 \section{The youngest World Champion}
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
-	\includegraphics[width=0.5\textwidth]{cards/history/ding_blunders.jpg} % Include the figure image
+	\includegraphics[width=0.5\textwidth]{../cards/history/ding_blunders.jpg} % Include the figure image
 	\caption{Face palm after a Blunder.}
 	\label{fig:ding_blunders} % Unique label used for referencing the figure in-text
 \end{figure}
-\input{cards/history/ding_lost_wcc} \index{Risk, Uncertainty}
+\input{../cards/history/ding_lost_wcc} \index{Risk, Uncertainty}
 
 \chapter{Chess and Life}
 \section{Life as Chess Game}
-\input{cards/life/life_as_chess_game}
+\input{../cards/life/life_as_chess_game}
 \section{Present Moment}
-\input{cards/life/present_moment}
+\input{../cards/life/present_moment}
 
 \section{Meditation}
-\input{cards/life/meditation} \index{Meditation}
-\input{cards/life/meditation_and_chess}
+\input{../cards/life/meditation} \index{Meditation}
+\input{../cards/life/meditation_and_chess}
 
 
 \section{Risk and Uncertainty}
-\input{cards/life/risk_and_uncertainty} \index{Risk, Uncertainty}
+\input{../cards/life/risk_and_uncertainty} \index{Risk, Uncertainty}
 \section{Tal's Play}
-\input{cards/history/tal}\index{Risk, Uncertainty}
+\input{../cards/history/tal}\index{Risk, Uncertainty}
 
 
 \section{O Fortuna}
-\input{cards/life/o_fortuna}
-\input{cards/life/o_fortuna_history}
+\input{../cards/life/o_fortuna}
+\input{../cards/life/o_fortuna_history}
 
 \section{Stress} \index{Stress}
-\input{cards/life/stress}
+\input{../cards/life/stress}
 
 \section{Hamlet}
-\input{cards/life/hamlet}
+\input{../cards/life/hamlet}
 
 \section{Gordian's Knot}
-\input{cards/mythology/gordians_knot}
+\input{../cards/mythology/gordians_knot}
 
 \chapter{Chess and Thinking}
 
 \section{Chess and Computer}
-\input{cards/life/chess_and_computer}
+\input{../cards/life/chess_and_computer}
 
 \section{Perception and Decision Stages}
-\input{cards/life/perception} \index{Chess Perception}
+\input{../cards/life/perception} \index{Chess Perception}
 
 \section{Chunk}
-\input{cards/life/chunks} \index{Chunks}
+\input{../cards/life/chunks} \index{Chunks}
 \subsection{Daedalus and the Labyrinth}
-\input{cards/life/daedalus}
+\input{../cards/life/daedalus}
 
 \section{Satisficing}
-\input{cards/life/satisficing} \index{Satisficing}
+\input{../cards/life/satisficing} \index{Satisficing}
 \section{Heuristic} \index{Heuristics}
-\input{cards/life/heuristic}
+\input{../cards/life/heuristic}
 
 \subsection{Heuristic in Life} \index{Heuristics!Life}
-\input{cards/life/heuristic_in_life}
+\input{../cards/life/heuristic_in_life}
 
 \subsection{Heuristic in Chess} \index{Heuristics!Chess}
-\input{cards/life/heuristic_in_chess}
+\input{../cards/life/heuristic_in_chess}
 
 \part*{Chess Play}
 \chapter{Positional Play}
@@ -245,17 +245,17 @@ A far more practical approach is to play from the present position, relying on o
 
 World champions such as Capablanca, Petrosian and Karpov all advocated this style. In their writings, they valued intuition, simplicity and sound judgment over endless calculation. Their success shows that chess, like life is best played one clear move at a time. 
 \section{Prophylaxis} \index{Prophylaxis}
-\input{cards/chess/prophylaxis}
+\input{../cards/chess/prophylaxis}
 
 \section{Schematic Thinking} \index{Thinking!Schematic Thinking}
-\input{cards/chess/schematic_thinking}
+\input{../cards/chess/schematic_thinking}
 
 \section{Thinking Template} \index{Thinking!Three Questions} \label{sec:thinking-template}
 
 This chapter presents an array of positional chess problems designed to enhance your strategic thinking. Each problem can be approached using the thinking template outlined earlier. The aim is to cultivate efficient problem-solving skills while minimizing oversight in variations. As you work through each challenge, take the time to jot down your thoughts. This practice will allow you to identify any gaps in your reasoning by comparing your solutions with the provided answers.
-\input{cards/chess/thinking_template}
+\input{../cards/chess/thinking_template}
 \subsection{Visualization the Three Questions}
-\input{cards/chess/visualization-board}
+\input{../cards/chess/visualization-board}
 
 
 %\begin{multicols}{2}
@@ -264,19 +264,19 @@ This chapter presents an array of positional chess problems designed to enhance 
 \nocite{Aagaard:2002}
 
 
-\input{cards/chess/maneuvering/chess-problem}
-\input{cards/chess/maneuvering/conquest-nunn}
-\input{cards/chess/maneuvering/fischer-keres}
-\input{cards/chess/maneuvering/petrosian-bannik}
-\input{cards/chess/maneuvering/bebchuk-bakulin}
-\input{cards/chess/maneuvering/gelfand-anand}
-\input{cards/chess/maneuvering/morovic-karpov}
-\input{cards/chess/maneuvering/sanakoev-lungdal}
-\input{cards/chess/maneuvering/zlotnik-lopes}
-\input{cards/chess/maneuvering/carlsen-ding}
-\input{cards/chess/maneuvering/lelchuk-voronova}
-\input{cards/chess/maneuvering/lasker-steinitz}
-\input{cards/chess/maneuvering/ding-aronian}
+\input{../cards/chess/maneuvering/chess-problem}
+\input{../cards/chess/maneuvering/conquest-nunn}
+\input{../cards/chess/maneuvering/fischer-keres}
+\input{../cards/chess/maneuvering/petrosian-bannik}
+\input{../cards/chess/maneuvering/bebchuk-bakulin}
+\input{../cards/chess/maneuvering/gelfand-anand}
+\input{../cards/chess/maneuvering/morovic-karpov}
+\input{../cards/chess/maneuvering/sanakoev-lungdal}
+\input{../cards/chess/maneuvering/zlotnik-lopes}
+\input{../cards/chess/maneuvering/carlsen-ding}
+\input{../cards/chess/maneuvering/lelchuk-voronova}
+\input{../cards/chess/maneuvering/lasker-steinitz}
+\input{../cards/chess/maneuvering/ding-aronian}
 
 \newpage
 \section{Excercises}
@@ -317,10 +317,10 @@ This chapter presents an array of positional chess problems designed to enhance 
 \end{multicols}
 
 \chapter{Process of Elimination} \index{Thinking!Process of Elimination}
-\input{cards/chess/process_of_elimination}
-\input{cards/chess/process_of_elimination/elimination_tool}
-\input{cards/chess/process_of_elimination/karjakin-carlsen-2013}
-\input{cards/chess/process_of_elimination/lelchuk-voronova}
+\input{../cards/chess/process_of_elimination}
+\input{../cards/chess/process_of_elimination/elimination_tool}
+\input{../cards/chess/process_of_elimination/karjakin-carlsen-2013}
+\input{../cards/chess/process_of_elimination/lelchuk-voronova}
 
 We will present some complex exercises to train your Process of Elimination skills. To solve these exercises, you may also use the thinking tools we have covered in the previous chapters: Prophylaxis, Schematic Thinking or Positional Thinking Template. You may need to calculate a little, but you don't need to calculate through the whole variation.
 
@@ -345,18 +345,18 @@ We will present some complex exercises to train your Process of Elimination skil
 \end{multicols}
 
 \chapter{Dynamic Play}
-\input{cards/chess/critical_position/dynamic-chess-problem}
+\input{../cards/chess/critical_position/dynamic-chess-problem}
 \section{Critical Position}
-\input{cards/chess/critical_position}
+\input{../cards/chess/critical_position}
 \section{How to play a Critical Position} \label{sec:critical-position}
-\input{cards/chess/chess_method}
+\input{../cards/chess/chess_method}
 
-\input{cards/chess/critical_position/short-sokolov}
-\input{cards/chess/critical_position/ding-gukesh-game12}
-\input{cards/chess/critical_position/nielsen-dreev}
-\input{cards/chess/critical_position/ding-nepomniachtchi_game4}
-\input{cards/chess/critical_position/arnason-miles}
-\input{cards/chess/critical_position/miles}
+\input{../cards/chess/critical_position/short-sokolov}
+\input{../cards/chess/critical_position/ding-gukesh-game12}
+\input{../cards/chess/critical_position/nielsen-dreev}
+\input{../cards/chess/critical_position/ding-nepomniachtchi_game4}
+\input{../cards/chess/critical_position/arnason-miles}
+\input{../cards/chess/critical_position/miles}
 
 
 \section{Excercises}
@@ -394,31 +394,31 @@ Ultimately, I aspire to discover effective strategies for playing good chess thr
 % show the text as: Keywords: London System, French Defence, Square Play, Diagonal Play
 \newcommand{\keywords}[1]{Keywords: \textit{#1}}
 
-\input{cards/chess/chess-tool}
+\input{../cards/chess/chess-tool}
 
-\input{cards/chess/annotations/kasparov_karpov_1984_game_3}
-%\input{cards/chess/annotations/kasparov_karpov_1984_game_6}
-\input{cards/chess/annotations/spassky_petrosian_1969_game_5}
-\input{cards/chess/annotations/ding_gukesh_game12}
-\input{cards/chess/annotations/carlsen_ding_2020}
-\input{cards/chess/annotations/ding_nepomniachtchi_2023_game_4}
-\input{cards/chess/annotations/ding_nepomniachtchi_2023_game_6}
-\input{cards/chess/annotations/karjakin_carlsen_2013}
-\input{cards/chess/annotations/lasker_steinitz_1894}
-\input{cards/chess/annotations/ding_aronian_2013}
+\input{../cards/chess/annotations/kasparov_karpov_1984_game_3}
+%\input{../cards/chess/annotations/kasparov_karpov_1984_game_6}
+\input{../cards/chess/annotations/spassky_petrosian_1969_game_5}
+\input{../cards/chess/annotations/ding_gukesh_game12}
+\input{../cards/chess/annotations/carlsen_ding_2020}
+\input{../cards/chess/annotations/ding_nepomniachtchi_2023_game_4}
+\input{../cards/chess/annotations/ding_nepomniachtchi_2023_game_6}
+\input{../cards/chess/annotations/karjakin_carlsen_2013}
+\input{../cards/chess/annotations/lasker_steinitz_1894}
+\input{../cards/chess/annotations/ding_aronian_2013}
 
 \chapter{Chess Ideas and Patterns}
-\input{cards/chess/ideas/ideas}
-\input{cards/chess/ideas/carlsen-vanVely}
+\input{../cards/chess/ideas/ideas}
+\input{../cards/chess/ideas/carlsen-vanVely}
 
 \chapter{My Games}
-\input{cards/chess/my_games/Ming-Marius-20250117}
+\input{../cards/chess/my_games/Ming-Marius-20250117}
 
 
 
 \chapter{Side Lines}
-\input{cards/chess/playouts/tactical/ding-gukesh-game12}
-\input{cards/chess/playouts/tactical/lelchuk-voronova}
+\input{../cards/chess/playouts/tactical/ding-gukesh-game12}
+\input{../cards/chess/playouts/tactical/lelchuk-voronova}
 
 %----------------------------------------------------------------------------------------
 
@@ -461,7 +461,7 @@ Ultimately, I aspire to discover effective strategies for playing good chess thr
 %	APPENDICES
 %----------------------------------------------------------------------------------------
 
-\chapterimage{orange2.jpg} % Chapter heading image
+\chapterimage{../Images/orange2.jpg} % Chapter heading image
 \chapterspaceabove{6.75cm} % Whitespace from the top of the page to the chapter title on chapter pages
 \chapterspacebelow{7.25cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
