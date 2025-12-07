@@ -1,41 +1,114 @@
-\documentclass[
-	11pt,
-	a4paper,
-	oneside,
-]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 3.1 (February 18, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{a4paper, margin=2.5cm}
+\documentclass[
+	11pt, % Default font size, select one of 10pt, 11pt or 12pt
+	fleqn, % Left align equations
+	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
+	oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
+]{../LegrandOrangeBook}
 
-% Book information for PDF metadata
+% Book information for PDF metadata, remove/comment this block if not required 
 \hypersetup{
-	pdftitle={My Chess Notebook}, 
-	pdfauthor={Ming Lu}, 
-	pdfsubject={Chess}, 
-	pdfkeywords={chess, ideas, games, annotations}, 
-	pdfcreator={LaTeX}, 
+	pdftitle={My Chess Notebook}, % Title field
+	pdfauthor={Ming Lu}, % Author field
+	pdfsubject={Chess}, % Subject field
+	pdfkeywords={chess, ideas, games, annotations}, % Keywords
+	pdfcreator={LaTeX}, % Content creator field
 }
 
-\definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting
+\addbibresource{../sample.bib} % Bibliography file
+
+\definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
+
+\chapterimage{../Images/zen-stone.jpg} % Chapter heading image
+\chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
 \usepackage{chessboard}
 \usepackage{xskak}
+\usepackage{sectsty}
+\usepackage{tocloft}
 \usepackage{epigraph}
 \usepackage{multicol}
-\usepackage{tikz}
-\usepackage{xcolor}
-\usepackage{etoolbox} % For \ifstrempty command used in chessgameinfo
 
-% Define section colors
-\usepackage{sectsty}
-\sectionfont{\color{ocre}\Large\bfseries}
-\subsectionfont{\color{ocre}\large\bfseries}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\titlepage % Output the title page
+	{\includegraphics[width=\paperwidth]{../Images/background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+	{ % Title(s) and author(s)
+		\centering\sffamily % Font styling
+		{\Huge\bfseries My Chess Notebook\par} % Book title
+		\vspace{16pt} % Vertical whitespace
+		\vspace{24pt} % Vertical whitespace
+		{\huge\bfseries Ming Lu\par} % Author name
+	}
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty} % Suppress headers and footers on this page
+
+~\vfill % Push the text down to the bottom of the page
+
+\noindent Copyright \copyright\ 2025 Ming Lu\\ % Copyright notice
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+\newcommand{\Color}[1]{\hypersetup{linkcolor=#1}\color{#1}}
+
+\titlespacing*{\part}{10em}{0em}{0em}
+% Optionally change font style
+\renewcommand{\cftpartfont}{\Large\bfseries\Color{ocre}} 
+\renewcommand{\cftchapfont}{\Large\bfseries\Color{ocre}} 
+\renewcommand{\cftsecfont}{\large}  % Bold section font
+\renewcommand{\cftsubsecfont}{\large\itshape} % Italic subsection font
+\renewcommand{\cftsecpagefont}{\large}   % Page numbers for sections
+\renewcommand{\cftsubsecpagefont}{\large} % Page numbers for subsections
+
+\begingroup % start a TeX group
+\color{ocre}% or whatever color you wish to use
+\tableofcontents % Output the table of contents
+\endgroup
+
+
+\pagestyle{fancy} % Enable default headers and footers again
+
+\cleardoublepage % Start the following content on a new page
+
+% Define section and subsection colors
+\partfont{\color{ocre}\Huge}
+\chapterfont{\color{ocre}}
+\sectionfont{\color{ocre}}
+\subsectionfont{\color{ocre}}
 
 % Define a macro for keywords, the keywords are displayed in italic
 \newcommand{\keywords}[1]{Keywords: \textit{#1}}
@@ -44,39 +117,19 @@
 \input{../cards/chess/chess-tool}
 
 %----------------------------------------------------------------------------------------
-%	DOCUMENT
+%	Main Content
 %----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\title{My Chess Notebook}
-\author{Ming Lu}
-\date{\today}
-\maketitle
-
-\tableofcontents
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	IDEAS
-%----------------------------------------------------------------------------------------
-
-\part{Ideas}
+\chapter{Introduction}
+\section{Visualization the Three Questions}
+\input{../cards/chess/visualization-board}
+\chapter{Chess Ideas and Patterns}
 \input{../cards/chess/ideas/ideas}
 \input{../cards/chess/ideas/carlsen-vanVely}
 
-%----------------------------------------------------------------------------------------
-%	MY GAMES
-%----------------------------------------------------------------------------------------
-
-\part{My Games}
+\chapter{My Games}
 \input{../cards/chess/my_games/Ming-Marius-20250117}
 
-%----------------------------------------------------------------------------------------
-%	ANNOTATIONS
-%----------------------------------------------------------------------------------------
-
-\part{Annotations}
+\chapter{Annotations}
 I annotate chess games as a means of self-improvement and personal learning. The market offers a wealth of excellent chess literature, much of which is dense with variations. Additionally, there are countless chess games available, and uncovering hidden insights within these games provides a valuable experience for me.
 
 My primary focus is on identifying critical moments and key moves using straightforward methods, rather than getting lost in complex variations. I prefer to analyze games with fewer moves, often avoiding endgames, as they tend to require extensive calculations and are not my main interest.
@@ -97,5 +150,39 @@ Ultimately, I aspire to discover effective strategies for playing good chess thr
 \input{../cards/chess/annotations/lasker_steinitz_1894}
 \input{../cards/chess/annotations/ding_aronian_2013}
 
-\end{document}
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
 
+\chapterimage{} % Chapter heading image
+\chapterspaceabove{2.5cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{2cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+\chapter*{Bibliography}
+\markboth{\sffamily\normalsize\bfseries Bibliography}{\sffamily\normalsize\bfseries Bibliography} % Set the page headers to display a Bibliography chapter name
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
+
+%\section*{Articles}
+%\addcontentsline{toc}{section}{Articles} % Add the Articles subheading to the table of contents
+
+\printbibliography[heading=bibempty, type=article] % Output article bibliography entries
+
+\section*{Books}
+\addcontentsline{toc}{section}{Books} % Add the Books subheading to the table of contents
+
+\printbibliography[heading=bibempty, type=book] % Output book bibliography entries
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+\phantomsection
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
