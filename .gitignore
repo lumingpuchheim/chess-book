@@ -16,3 +16,7 @@ main.fdb_latexmk
 main.fls
 texput.log
 example.log
+*.fdb_latexmk
+*.fls
+*.log
+*.toc
