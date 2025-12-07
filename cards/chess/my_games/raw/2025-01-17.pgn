@@ -1,0 +1,26 @@
+[Event "Play vs Bot"]
+[Site "Chess.com"]
+[Date "2025.01.17"]
+[Round "-"]
+[White "dancingbytes"]
+[Black "Hikaru-bot"]
+[Result "0-1"]
+[WhiteElo "870"]
+[BlackElo "2820"]
+[ECO "B06"]
+[Termination "Hikaru-bot won by resignation"]
+[TimeControl "-"]
+[EndTime "21:32:51"]
+[EndDate "2025.01.17"]
+[Link "https://www.chess.com/analysis/collection/tactical-misses-geXXCd8z/2tQPDqBwBC/analysis?move=39"]
+
+1. e4 g6 2. d4 Bg7 3. Nc3 d6 4. h4 Nf6 5. f3 O-O 6. Be3 Be6 7. Qd2 c6 8. Bh6
+Bxh6 9. Qxh6 b5 10. Nce2 Nbd7 11. Nf4 Bc4 12. h5 e5 13. Nfh3 Bxf1 14. Kxf1 Nxh5
+15. Ng5 Ng3+ 16. Ke1 Nf6 17. Rh3 Ngh5 18. g4 (18. Ne2) 18... Nf4 19. Rh2 exd4
+20. Nxh7 Ng2+ 21. Kf2 (21. Rxg2) 21... Nxg4+ 22. fxg4 Ne3 23. Ke2 (23. Nxf8)
+23... Re8 24. Qf4 (24. g5 Ng4 25. Nf6+) 24... Nd5 25. Qf3 Qe7 26. g5 (26. Kf2
+Qxe4 (26... Qe5 27. Rh4 Nf4 28. g5 Re6 29. Nf6+ Rxf6 30. gxf6 Nh5)) 26... Qxe4+
+27. Qxe4 Rxe4+ 28. Kd3 Re3+ 29. Kd2 c5 30. Re1 (30. Nf6+ Nxf6 31. gxf6 Rae8 32.
+Nf3 Rxf3 33. Rah1 Rf2+ 34. Rxf2 Re5 35. Rfh2 Rh5 36. Rxh5 gxh5 37. Rxh5 c4 38.
+b4 cxb3 39. cxb3 b4) 30... Rxe1 31. Kxe1 Re8+ 32. Kd2 Kg7 33. Nf6 Nxf6 34. gxf6+
+Kxf6 35. Re2 Rxe2+ 36. Nxe2 Ke5 37. Kd3 c4+ 38. Kd2 0-1
