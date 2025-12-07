@@ -14,25 +14,227 @@
 
     \mainline[level=1]{1. e4 e5 2. Bc4?!} 
     
-    I dislike this move when I am annotating now. During the game, I was 
-    thinking of a setup like London System:
+    I dislike this move now that I am annotating. During the game, I was 
+    thinking of a setup similar to the London System:
 
     \chessboard[setfen=8/8/8/8/2B1P3/2NPBP2/PPP1N1PP/R2KQ2R ]
 
-    Schematic thinking per se is never bad. However, such a setup that requires lots of tempi can be
-    disturbed easily. 
+    Schematic thinking in itself is not bad. However, such a setup that requires many tempi can be
+    easily disturbed. 
 
-    Observing the opening position: it is mandatory to move e- and f-pawns to develop the 
-    bishops. \variation[invar]{2. f4} with the spirit of queen's gambit is called. 
+    Observing the opening position: it is necessary to move the e- and f-pawns to develop the 
+    bishops. \variation[invar]{2. f4} in the spirit of the Queen's Gambit is called for. 
     The engine recommends \variation[invar]{2. f4 f6 3. Nc3 Nc6 4. Nd3 Nd6 5. O-O-O O-O-O 6. g3 h5 7. Kb1 Kb8 8. Bf2 }
 
-    \chessboard[setfen=2krqbbr/pppp2pp/2nn1p2/4p3/4PP2/2NN4/PPPP2PP/2KRQBBR w - - 6 6]
-
-    \mainline{2... Nd6! 3. Bb3 f6!}
+    \mainline[level=1]{2... Nd6! 3. Bb3 f6!}
     
-    Marius just played some natural moves to refute my idea. What now? I was
-    unwilling to exchange since I had used already some tempi for this unfortunate
-    bishop. 
+    \chessboard
 
-    \mainline{4. Nc3 Nc6 5. f3 Be6 6. N1e2 O-O-O 7. d3 Qg6 8. Qf2 Kb8 9. d4 exd4 10. Nxd4 Nxd4 11. Qxd4 b6 12. Qf2 Nc4 13. O-O-O Bc5 14. Qe2 Qg5+ 15. Kb1 Ne3 16. Qa6 c6 17. Bxe3 Bxe3 18. Rd3 Bxb3 19. axb3 d6 20. Rhd1 Bc5 21. Qa4 Kb7 22. b4 b5 23. Qa5 Bb6 24. Qa2 Rd7 25. Qe6 Rhd8 26. g3 Qe5 27. Qxe5 fxe5 28. Ne2 Kc7 29. f4 d5 30. exd5 Rxd5 31. Rxd5 Rxd5 32. Rxd5 cxd5 33. fxe5 a5 34. bxa5 Bxa5 35. Nd4 b4 36. Ne6+ Kd7 37. Nxg7 Bc7 38. e6+ Ke7 39. Nf5+ Kxe6 40. Nd4+ Kf6 41. Ka2 Bd6 42. Kb3 h5 43. Nc6 Kg5 44. Nxb4 Bxb4 45. Kxb4 Kg4 46. Kc5 Kh3 47. b4 }
+    Marius played natural moves that refuted my idea. My bishop will eventually 
+    be exchanged. During the game, I was not happy with this development. The game must go on, 
+    so we continued with development moves.
+
+    \mainline{4. Nc3 Nc6 5. f3 Be6 6. N1e2 }
+
+    \chessboard[
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove={d2-d4},
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={g2},
+        markstyle=border,
+        linewidth=0.05em,
+        markfields={f8},   
+    ]
+
+    \begin{itemize}
+		\item{Where are the weaknesses?}
+
+		g2 pawn.
+		\item{Which is the worst-placed piece?}
+
+		f8 bishop is inactive. 
+		\item{What is my opponent's idea?}
+
+		He wants to play d4.
+	\end{itemize}
+    \mainline[level=1]{6...O-O-O?!} 
+    
+    I was happy to see this move during the game because I saw that I might start 
+    an attack along the a7-g1 diagonal with a battery. At some point, my knight can move
+    to b5. 
+    \variation[invar]{6... Qg6} would have been more energetic.  
+    \mainline[level=1]{ 7. d3 }
+    
+    I cannot explain why I did not play d4 directly. The reason may be that I was so obsessed 
+    with the attack on the a7-g1 diagonal that I wanted to place my queen in front of my bishop.
+    
+    \mainline[level=1]{7... Qg6 8. Qf2 Kb8} 
+    
+    \chessboard
+
+    It is difficult to formulate a concrete plan for White. The problem is that the queen and 
+    bishop battery has no future for the attack. \variation[invar]{9.Nb5} is and will remain impossible 
+    as long as there is a Black knight on d6. The h1 rook cannot be activated because 
+    of the battery. 
+    
+    \mainline[level=1]{ 9. d4?!}
+    
+    This move is too committal. White is not ready for an attack because Black's defenders 
+    are well placed. A move like d4 will open the center and therefore change the game completely from 
+    slow maneuvering to rapid piece contact. White is not ready for this yet. 
+    
+    A waiting move like \variation[invar] {9. h4} would have been better.
+    
+    \mainline[invar]{9...exd4 10. Nxd4 Nxd4 11. Qxd4 b6 12. Qf2 Nc4 13. O-O-O}
+    
+    
+    \mainline[level=1]{13...Bc5 }
+    
+    Finally, I can forget about my battery and the attack. Ironically, this move forces 
+    me to make a good move. Then Black must decide what to do with his attacked knight 
+    on c4. In a few moves, we will see that Black makes a mistake.
+    
+    \mainline{14. Qe2 Qg5+ 15. Kb1}
+    
+    \chessboard
+
+    \mainline[level=1]{15...Ne3?}
+    
+    Marius overlooked the fact that the knight on e3 was in danger.
+    I also overlooked it during the game. \variation[invar]{15... Bxg1} would have been better.
+    
+    \chessboard[
+        setfen=1k1r3r/p1pp2pp/1p2bp2/2b3q1/4P3/1BN1nP2/PPP1Q1PP/1K1R2BR w - - 8 16
+    ]
+    
+    \mainline[level=1]{16. Qa6?!}
+    
+    During the game, I was happy to find this route/rout. Black cannot take the rook because of
+    \variation[invar]{17. Nb5}, leading to mate in several moves. 
+
+    The problem with this move was that it helped Black solve his e3 knight problem. 
+    
+    \variation[invar]{16. Re1} would have been better. Black cannot defend two weaknesses 
+    simultaneously: the knight on e3 and the weakness around his king. For example:
+
+    \variation[invar]{16. Re1 Bxb3 17. axb3 Nxg2 18. h4 Qg6 19. Qa6 }
+
+    \chessboard[
+        setfen=1k1r3r/p1pp2pp/Qp3pq1/2b5/4P2P/1PN2P2/1PP3n1/1K2R1BR b - - 2 19
+    ]
+
+    White threatens \variation[invar]{20. Nb5}. Therefore \variation[invar]{19... c6 20. Bxc5 bxc5 21. Reg1 Qg3 22. Qe2 Nf4 23. Qf1 }. 
+    
+    \chessboard[
+        setfen=1k1r3r/p2p2pp/2p2p2/2p5/4Pn1P/1PN2Pq1/1PP5/1K3QRR b - - 5 23
+    ]
+    
+    The Black queen is trapped.
+
+    We go back to the mainline.
+    \mainline[level=1]{16...c6 17. Bxe3 Bxe3 18. Rd3 Bxb3 19. axb3 }
+    
+    \chessboard
+
+    During the game, I was looking for something like \symknight d5 at some point. 
+    The idea was ambitious. However, I could play \symknight a4, threatening to sacrifice on b6.
+    Here we can also see that \variation[invar]{15... Ne3} helped White solve his h1 rook
+    problem. \symrook hd1 is now in play. 
+
+    \mainline[level=1]{19...d6}
+
+    Another possibility would be \variation[invar]{
+        19...Qxg2 20. Rhd1 Bf4 21. Na4 Qg5 22. Nxb6! axb6 23. Qxb6+ Kc8 24. Qa6+ Kc7 25. Rxd7+ Rxd7 26. Qa7+ Kc8 27. Rxd7 Qb5 28. Rxg7 c5 29. Qa8+ Qb8 
+    }
+
+    \chessboard[
+        setfen=2k4r/Q5Rp/5p2/1qp5/4Pb2/1P3P2/1PP4P/1K6 w - - 0 29
+    ]
+    White makes no sacrifices here because the material is equal. His pieces are more active 
+    and his king is safer. It is unclear whether White can convert this advantage.
+
+    \mainline[level=1]{20. Rhd1 Bc5}
+    
+    \chessboard[
+        setfen=1k1r3r/p5pp/Qppp1p2/2b3q1/4P3/1PNR1P2/1PP3PP/1K1R4 w - - 2 21
+    ]
+    
+    Here is a critical position. White has a significant advantage here. Black's bishop is stuck on c5 and must protect the d6 pawn.
+    White would love to play b4. \variation[invar]{21. Na2} is hard to see. White threatens 
+    to play b4. For example: \variation[invar]{21. Na2 Qxg2 22. b4 Bg1 23. Nc3 Rd7 24. b5 c5 25. R3d2 Qg6 26. Rxd6 Rxd6 27. Rxd6 Qe8 }
+
+    \chessboard[
+        setfen=1k2q2r/p5pp/Qp1R1p2/1Pp5/4P3/2N2P2/1PP4P/1K4b1 w - - 1 28
+    ]
+
+    Compared to the actual game, White has achieved more: his queen is active, and his rook and 
+    knight will be dominant. We return to the actual game.
+    \mainline[level=1]{21. Qa4 } The correct idea, though the execution could have been better.
+    
+    \mainline[level=1]{21...Kb7 22. b4 b5!}
+    
+    I overlooked this move and soon afterward made a mistake. 
+    \mainline[level=1]{23. Qa5?!} This wastes a tempo! \variation[invar]{23. Qb3} would have been better.
+    
+    \mainline[level=1]{23... Bb6 24. Qa2 Rd7}
+    
+    \chessboard[
+        7r/pk1r2pp/1bpp1p2/1p4q1/1P2P3/2NR1P2/QPP3PP/1K1R4 w - - 4 25
+    ]
+
+    \mainline[level=1]{25. Qe6?}
+
+    I missed an opportunity! Perhaps I was afraid of losing too many pawns on the kingside. \variation[invar]{25. Rxd6 Rxd6 26. Qf7+} would have been better. 
+
+    \mainline[level=1]{25... Rhd8 26. g3 Qe5!}
+    
+    \chessboard
+
+    That is it. Now the position is equal again.
+
+    \mainline[level=1]{27. Qxe5 fxe5 28. Ne2 Kc7}
+    
+    \chessboard
+
+    
+    \mainline[level=1]{29. f4?}
+    Feeling that I had some advantage earlier, I felt I must try for a win. A waiting move 
+    would have been better.
+    
+    \mainline[level=1]{29...d5! 30. exd5}
+    
+    \chessboard
+
+    \mainline[level=1]{30...Rxd5?}
+    
+    Black actually has some advantage here. \variation[invar]{30... e4} would 
+    have been better. His passed pawn would be too strong.
+
+    \chessboard
+
+    \mainline[level=1]{31. Rxd5?}
+    Another missed opportunity. \variation[invar]{31. fxe5} would have been better. In the endgame,
+    both of us made too many automatic bad moves.
+
+    \mainline[level=1]{31...Rxd5 32. Rxd5 cxd5 33. fxe5}
+    
+    \chessboard
+    
+    The position is still equal, although White has one more pawn. His e5 pawn is too weak.
+
+    \mainline{33...a5??}
+    It is understandable that Black wants to exchange some pawns to secure a draw, but this move is a blunder. 
+    
+    \mainline{34. bxa5 Bxa5 35. Nd4 b4 36. Ne6+ Kd7 37. Nxg7 Bc7 38. e6+ Ke7 39. Nf5+ Kxe6 40. Nd4+ Kf6 41. Ka2 Bd6 42. Kb3 h5 43. Nc6 Kg5 44. Nxb4 Bxb4 45. Kxb4 Kg4 46. Kc5 Kh3 47. b4 } Black resigned.
+
+    It was an exciting game with many mistakes from both sides. Both of us 
+    tried hard to play good chess. I had some good ideas, but I was too eager to play them without 
+    trying to find better moves.
+
+    I tried hard to create a non-existent attack in the opening. Marius parried 
+    it easily. Later in the middlegame, I had some attacking chances without trying hard, but I missed several opportunities.
+
+    The endgame was fortunate for me. 
 \end{multicols}
