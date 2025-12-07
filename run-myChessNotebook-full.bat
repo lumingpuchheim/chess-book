@@ -10,7 +10,24 @@ cd ..
 
 echo Building from scratch...
 cd myChessNotebook
-latexmk -pdf -interaction=nonstopmode myChessNotebook.tex
+
+echo Running pdflatex (first pass)...
+pdflatex -interaction=nonstopmode myChessNotebook.tex
+
+echo Running biber for bibliography...
+biber myChessNotebook
+
+echo Running makeindex for index...
+if exist myChessNotebook.idx (
+    makeindex -s ../indexstyle.ist myChessNotebook.idx
+)
+
+echo Running pdflatex (second pass)...
+pdflatex -interaction=nonstopmode myChessNotebook.tex
+
+echo Running pdflatex (third pass to resolve all references)...
+pdflatex -interaction=nonstopmode myChessNotebook.tex
+
 cd ..
 
 if errorlevel 1 (
