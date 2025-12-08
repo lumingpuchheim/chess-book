@@ -1,0 +1,18 @@
+[Event "Play vs Bot"]
+[Site "Chess.com"]
+[Date "2024.09.02"]
+[Round "?"]
+[White "dancingbytes"]
+[Black "Naroditsky-Bot"]
+[Result "1-0"]
+[TimeControl "-"]
+[WhiteElo "637"]
+[BlackElo "2650"]
+[Termination "dancingbytes won by resignation"]
+[ECO "E70"]
+[EndDate "2024.09.02"]
+[Link "https://www.chess.com/game/computer/153041127?move=7"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. h4 O-O 6. h5 Nxh5 7. Rxh5 gxh5 8. Qxh5
+c5 9. Nf3 Nc6 10. Ng5 h6 11. Nf3 Nb4 12. Bxh6 Nc2+ 13. Kd2 Nxd4 14. Bxg7 Nxf3+
+15. gxf3 Kxg7 16. Qg5+ Kh8 17. Bd3 Bh3 18. Qh6+ Kg8 19. Rg1+ Bg4 20. Rxg4# 1-0

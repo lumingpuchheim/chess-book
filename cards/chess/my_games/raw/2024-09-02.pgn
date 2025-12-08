@@ -1,0 +1,33 @@
+[Event "Play vs Bot"]
+[Site "Chess.com"]
+[Date "2024.09.02"]
+[Round "-"]
+[White "dancingbytes"]
+[Black "Francis-BOT"]
+[Result "1-0"]
+[CurrentPosition "r3rk2/1ppb1Q2/4p1B1/4P3/3P1P2/1pK3P1/P1N3P1/8 b - - 1 29"]
+[Timezone "UTC"]
+[ECO "A80"]
+[ECOUrl "https://www.chess.com/openings/Dutch-Defense-2.Bf4-e6"]
+[UTCDate "2024.09.02"]
+[UTCTime "18:32:12"]
+[WhiteElo "637"]
+[BlackElo "2300"]
+[TimeControl "-"]
+[Termination "dancingbytes won by checkmate"]
+[StartTime "18:32:12"]
+[EndDate "2024.09.02"]
+[EndTime "18:57:47"]
+[Link "https://www.chess.com/analysis/game/computer/153013401/review?move=44&move=44&tab=review&classification=brilliant&autorun=true"]
+[WhiteUrl "https://www.chess.com/bundles/web/images/noavatar_l.84a92436.gif"]
+[WhiteCountry "54"]
+[WhiteTitle ""]
+[BlackUrl "https://images.chesscomfiles.com/uploads/v1/user/66745948.80bb042b.50x50o.7f00bf6cc2e0.png"]
+[BlackCountry "111"]
+[BlackTitle ""]
+
+1. d4 f5 2. Bf4 e6 3. Nf3 Nf6 4. e3 Bd6 5. Bg3 O-O 6. Bc4 Nc6 7. c3 Bxg3 8. hxg3
+d5 9. Bd3 Qe7 10. Ne5 $2 (10. Nbd2) 10... Bd7 11. f4 Nxe5 12. dxe5 Ng4 13. Qe2 Qc5
+14. Kd2 Qb6 15. b3 $6 a5 16. Na3 Qc5 17. Nc2 h6 $2 18. Rh4 $1 Rfd8 $6 19. Rah1 Re8 $6
+20. Rxg4 $3 fxg4 21. Qxg4 Kf8 22. Qg6 $6 (22. Nd4) 22... a4 23. Rxh6 $3 gxh6 24.
+Qxh6+ Kf7 25. Qh7+ Kf8 26. Bg6 Qxc3+ 27. Kxc3 d4+ 28. exd4 axb3 29. Qf7# 1-0
