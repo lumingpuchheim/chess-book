@@ -1,0 +1,70 @@
+\newpage
+\subsection{Quiet King Moves Before Starting an Attack}
+
+Quiet king moves before launching an attack, such as Kb1 or Kb8, are essential preparations that ensure king safety and prevent tactical complications. When pieces are committed forward during an attack, the king can become vulnerable to counterattacks, back-rank mates, or discovered checks. By moving the king to a safer square beforehand, a player eliminates one of the opponent's primary tactical targets and reduces their counterplay options.
+
+These moves also improve piece coordination by freeing rooks and other pieces that might have been tied to defending the king. With the king secure, all available resources can be directed toward the attack. This is particularly important when preparing for piece sacrifices, as a safe king ensures that even if the attack doesn't immediately succeed, the position remains defensible.
+
+The timing is crucial: quiet king moves must be played when the position is still relatively calm, before the attack begins. Once the attack is launched, there may no longer be time for such prophylactic improvements, as every move must contribute directly to the attack or defense. This principle follows the fundamental chess maxim: secure your position before launching an attack. A safe king is a prerequisite for successful attacking play, allowing a player to commit pieces without fear of immediate tactical counterplay.
+
+
+
+\begin{multicols}{2}
+\chessgameinfo{World Championship}{Lasker}{Steinitz}{7}{1894.08.26}{1-0}
+\newchessgame[
+    setfen=4r2n/1p2qpkP/p1p3p1/3p4/8/3Br3/PPPQ4/2K2R1R w - - 1 29,
+    moveid=29w
+]
+\chessboard[
+    setfen=4r2n/1p2qpkP/p1p3p1/3p4/8/3Br3/PPPQ4/2K2R1R w - - 1 29
+]
+
+\emph{One of Lasker's characteristic ``changes of rhythm''. As long as his opponent
+has not yet created any direct threats, White has a little time to make the useful
+prophylaxy moves. In the ensuing complications, Black will no longer be able to exploit tactical resources involving
+the enemy king's vulnerability. Such play requires both a healthy evaluating 
+capacity andtremendous coolnesss.} \cite{Dvoretsky:2008}
+
+\mainline[level=1]{29. Kb1}
+This move has a good idea. However \variation[invar]{29. a3} first is more accurate.
+
+\chessboard[
+    markstyle=border,
+    linewidth=0.05em,
+    markfields={h8},
+]
+
+Black is playing practically one piece down, since his knight
+is at the corner. Activating the knight urgent now.
+
+\mainline[level=1]{29...Qe5} 
+\variation[invar]{29... f6! 30. Qf2 \xskakcomment{ (\symqueen h2 is now impossible, due to back rank
+weekness.)} Qe6 31. Ka2 Nf7} The knight is finally free again. We also see
+why White's last move is an inaccuracy. If \variation[invar]{29. a3} has been played first,
+White can play \variation[invar]{30. Qh2} after \variation[invar]{29... f6}.
+
+Calculating the optimal sequence through brute force is practically impossible here. 
+However, by comparing the consequences of each move, one can deduce that a3 must be played first, 
+because \symking b1 creates a potential back-rank weakness that restricts White's options.
+
+\mainline[level=1]{30. a3}
+Now the White king is in safty, Lasker started an attack and eventually won the game. 
+
+\chessgameinfo{World Championship}{Kasparov}{Karpov}{16}{1986.09.15}{1-0}
+
+\newchessgame[
+    setfen=1r3k2/3n1p2/b5p1/3P4/2p3N1/N2n1QRP/1q3PP1/1B4K1 w - - 0 31,
+    moveid=31w
+]
+
+\chessboard[
+    setfen=1r3k2/3n1p2/b5p1/3P4/2p3N1/N2n1QRP/1q3PP1/1B4K1 w - - 0 31,
+]
+
+\mainline[level=1]{31. Kh2!}
+
+Kasparov says: ``This is the last prophylaxis. It is necessary to move 
+the King out of the weak first rank. After that White is ready to start his attack.'' 
+
+He doesn't give any concrete variation where it is clear that 31.Kh2! was really necessary. But for any experienced chess player it is pretty obvious that an opportunity to concentrate on your attack without being distracted by your opponent's pesky checks along the first rank is the luxury that fully justifies spending a tempo to move the King.
+\end{multicols}
