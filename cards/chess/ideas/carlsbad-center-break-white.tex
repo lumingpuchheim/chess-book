@@ -1,0 +1,110 @@
+\newpage
+
+\section{Center Break with f3 and e4 for White in Closed Positions}
+
+\begin{multicols}{2}
+    The Carlsbad pawn structure typically arises from the Exchange Variation of the Queen's Gambit, but it can also be reached through openings like the Nimzo-Indian and Caro-Kann. The name comes from the 1923 Carlsbad tournament, where it was prominently featured. 
+
+    \chessboard[
+        setfen=r1bqk2r/pp1nbppp/2p2n2/3p2B1/3P4/2NBP3/PP3PPP/R2QK1NR w KQkq - 2 8
+    ]
+
+    In this section, we focus on the center-break plan for White.
+    Typically, White needs to complete these steps to break in the center:
+
+    \begin{itemize}
+        \item{f2-f3}
+        \item{e3-e4}
+        \item{e4-e5}
+        \item{An attack on the king side}
+    \end{itemize}
+
+    We will illustrate the idea by a famous game.
+
+    \chessgameinfo{USSR Championship}{M.Botvinnik}{P.Keres}{}{1952.12.09}{1-0}
+    \newchessgame
+    \mainline[level=1]{
+        1.d4 Nf6 2.c4 e6 3.Nc3 d5 4.cxd5 exd5 5.Bg5 Be7 6.e3 O-O 7.Bd3
+        Nbd7 8.Qc2 Re8 9.Nge2 Nf8 10.O-O c6 }
+    
+    \chessboard
+
+    We reach a typical Queen's Gambit Declined Exchange Variation position.
+    One typical idea for White is the minority attack.
+
+    \mainline[level=1]{11.Rab1}
+    
+    \chessboard
+
+    \mainline[level=1]{11...Bd6}
+
+    This move doesn't have a clear plan. The text move threats \symbishop xh2.
+    However the threat is easy to defend and we will see soon that the bishop 
+    will go back.  
+
+    \mainline[level=1]{12.Kh1 Ng6}
+
+    \chessboard
+
+    \mainline[level=1]{
+        13.f3}
+    
+    First mission accomplished. Now White aims for e4 and directs all pieces toward that square.
+        
+    \mainline{13...Be7 14.Rbe1 Nd7?}
+    
+    Black loses two tempi because the knight will return to f6. \variation[invar]{14... h6} is the best move.
+
+    \mainline[level=1]{15.Bxe7 Rxe7 16.Ng3 Nf6 17.Qf2}
+    
+    Note how White prepared for the e4 break. In the last move, he protected the d4 
+    pawn with his queen, since it will be loose after e4.
+    
+    \mainline[level=1]{17...Be6
+        18.Nf5 Bxf5 19.Bxf5 Qb6 }
+    
+    \chessboard
+
+    Now the second mission is achieved. It is instructive to notice the piece maneuvers:
+    \symknight g1 - e2 - g3, 
+    \symrook a1 - b1 - e1,
+    \symqueen d1 - f2 
+    
+    All the pieces are helping for the e4 break.
+    \mainline[level=1]{20.e4! dxe4 21.fxe4 Rd8}
+    
+    \chessboard
+
+    Now for the third mission: White launches a kingside attack and wins.
+    \mainline[level=1]{22.e5 Nd5 23.Ne4 Nf8 24.Nd6 Qc7 25.Be4 Ne6 26.Qh4 g6 27.Bxd5 cxd5 28.Rc1 Qd7 29.Rc3 Rf8 30.Nf5 Rfe8 31.Nh6+ Kf8 32.Qf6 Ng7 33.Rcf3 Rc8 34.Nxf7 Re6 35.Qg5 Nf5 36.Nh6 Qg7 37.g4} Black resigned.
+
+    Actually such a plan doesn't need to be restricted in Carlsbad structure, it 
+    can also be used in Nimzo-Indian defense. The next game is a classic.
+
+    \chessgameinfo{AVRO}{M.Botvinnik}{J.Capablanca}{11}{1938.11.22}{1-0}
+    \newchessgame
+
+    \mainline[level=1]{1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 d5 5.a3 Bxc3+ 6.bxc3 c5 7.cxd5
+    exd5 8.Bd3 O-O 9.Ne2 b6 10.O-O Ba6 11.Bxa6 Nxa6 12.Bb2 Qd7
+    13.a4 Rfe8 14.Qd3 c4}
+    
+    \chessboard
+
+    White is preparing for f3 and e4. Notice the piece maneuvers, we know them already. 
+    Certainly Botvinnik did remember his plan and just played them during the game.
+    
+    \mainline[level=1]{15.Qc2 Nb8 16.Rae1 Nc6 17.Ng3 Na5 18.f3 Nb3 19.e4 Qxa4}
+    
+    Mission accomplished: f3 and e4. The next is e5 winning a tempo.
+
+    \mainline[level=1]{20.e5 Nd7 21.Qf2 g6 22.f4 f5 23.exf6 Nxf6 24.f5
+    Rxe1 25.Rxe1 Re8 26.Re6 Rxe6 27.fxe6 Kg7 28.Qf4 Qe8 29.Qe5 Qe7}
+
+    \chessboard
+
+    This is the classic finish:
+    \mainline[level=1]{30.Ba3 Qxa3 31.Nh5+ gxh5 32.Qg5+ Kf8 33.Qxf6+ Kg8 34.e7 Qc1+
+    35.Kf2 Qc2+ 36.Kg3 Qd3+ 37.Kh4 Qe4+ 38.Kxh5 Qe2+ 39.Kh4 Qe4+
+    40.g4 Qe1+ 41.Kh5} Black resigned.
+
+\end{multicols}

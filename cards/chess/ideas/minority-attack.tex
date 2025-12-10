@@ -1,0 +1,63 @@
+\newpage
+\section{Minority Attack}
+
+In chess, a minority attack is the advancement of one's pawns on the side of the board where one has fewer pawns than their opponent, intending to use their minority to strategically provoke a weakness (i.e, an isolated or backward pawn) in the opponent's pawn structure. The minority attack is a common middlegame plan that can be played in many pawn structures. The name might be misleading, as the "attack" does not involve tactics planned to produce checkmate or significant material gain, but rather a strategical and structural advantage for the attacking player.
+
+The minority attack can be strengthened by the moving of one or both rooks to the files where the attacking player intends to advance their pawns, planning prophylactically for the opening of the files. Common openings that result in pawn structures where a minority attack is effective include the Queen's Gambit Declined and the Caro-Kann Defense. The minority attack occurs most commonly on the queenside, as players commonly castle kingside in openings where a minority attack is effective, and the advancement of the pawns on the side of the castled king is widely considered to severely weaken the king's safety.
+
+\begin{multicols}{2}
+\subsection*{Basic Form}
+White thrusts a- and b-pawns to create a weakness for black on c6.
+
+
+\newchessgame[
+id=main,
+moveid=23w,print,
+showmover,
+mover=b,% has no effect
+castling=Q,enpassant=a3,
+setwhite={pa2,pb2,pd4,pe3,pf2,pg2,ph2},
+addblack={pa7,pb7,pc6,pd5,pf7,pg7,ph7}]
+
+
+White has the following moves to start a minority attack:
+\begin{itemize}
+    \item{1. b4}
+    \item{1. a4}
+    \item{1. b5}
+\end{itemize}
+
+\chessgameinfo{}{Capablanca}{Golombek}{}{1939}{1-0}
+%\centering
+\newchessgame[
+id=main,
+moveid=23w,print,
+showmover,
+mover=b,% has no effect
+castling=Q,enpassant=a3,
+setwhite={pa2,pb4,pd4,pe3,pf2,pg2,ph3,qd3,kg1,rb1,rc1,na4},
+addblack={pa7,pb7,pc6,pd5,pf7,pg6,ph6,kg8,qd6,ra8,re8,ng7}]
+
+\mainline[level=1]{23.b5 cxb5}
+
+White continues the minority attack and favorably changes the pawn structure. If black allows white to capture on c6, then he will have a backward c6-pawn. If black captures on b5, white will recapture with the queen and can target the isolated d5 and b7 pawn.
+
+\mainline{24.Qxb5 Ne6}
+
+\chessboard
+
+\mainline{25. Nc3!}
+
+Much better than 
+\variation{25. Qxb7} which gives black chances after \variation{25... Reb8 26. Qc6 Qxc6 27. Rxb8+ Rxb8 28. Rxc6 Rb1+}.
+
+\mainline{25... Red8 26. Qxb7 Qa3 27.Nxd5 Qxa2}
+
+\chessboard
+
+\mainline{28.Nb4 Qa4 29. Nc6}
+1-0
+
+For white not only threatens the rook but also the queen with \variation{30. Ra1}.
+
+\end{multicols}
