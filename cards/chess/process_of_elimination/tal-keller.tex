@@ -1,0 +1,26 @@
+\ifdefined\talKellerPOE
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\talKellerPOE}[1]{
+        \poechessproblem{#1}{Tal - Keller}{r5r1/1k2Pp1p/p1n2p2/PNbbq3/Q1p3B1/2P3P1/5P1P/R3R1K1 b - - 6 23}
+    }
+\fi
+
+\ifdefined\talKellerAnswerPOE
+    % The command is already defined, do nothing.
+\else
+    \newcommand{\talKellerAnswerPOE}[1]{
+        \poechessanswer{#1}{Tal - Keller}{r5r1/1k2Pp1p/p1n2p2/PNbbq3/Q1p3B1/2P3P1/5P1P/R3R1K1 b - - 6 23}
+    
+        \begin{itemize}
+            \item{What are the candidate moves?}
+
+            \symbishop e4 and \symqueen g5.
+            \item{Which move can be eliminated?}
+            
+            \symbishop e4 can be eliminated because after \variation[invar]{24.Rab1 Rxg4 25.Rxe4 Qxe4 26.Nd6+ Kc7 27.Nxe4} Black loses a piece. 
+            \item{What is the move?}
+
+            Therefore Black must play \variation[invar]{23... Qg5}.
+        \end{itemize}}
+\fi
