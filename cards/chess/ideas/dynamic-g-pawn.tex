@@ -1,0 +1,65 @@
+\newpage
+\section{Dynamic G-Pawn Play}
+In some positions one side has static advantage and 
+the other side has dynamic advantage. The side with 
+dynamic advantage must seize the initiative without delay before the 
+other side can neutralize it. A dynamic g-pawn thrust 
+is often an excellent idea.
+
+\begin{multicols}{2}
+    \chessgameinfo{Candidate Quarter Final}{J.Timman}{A.Jusupov}{}{1986}{1/2-1/2}
+
+    \newchessgame[
+        setfen=4k2r/p2n1ppp/Npr1p3/3pP3/3p1P2/8/P2N2PP/R3K2R b KQk - 0 19,
+        moveid=19b
+    ]
+    \chessboard
+
+    The material is almost equal. If White can play \symknight f3 and O-O, he 
+    will have some advantage. Black must hurry.
+
+    \mainline[level=1]{19... g5!}
+
+    After \variation{20. g3 gxf4 21. gxf4 Rg8} both Black rooks are very active.
+
+    \mainline[level=1]{20. O-O gxf4 21. Rxf4 Nxe5}
+
+    White's center is destroyed. Timman decided to return the piece because 
+    in endgame the knight is inferior to the pawns. The game ended in a draw.
+
+    \mainline[level=1]{22. Rxd4 Rg8 23. Nb4 Rc3 24. Nxd5 exd5 25. Rxd5 Rc5 26. Rxc5 bxc5 27. Ne4 Ke7 28. Nxc5 Rc8 29. Nb3 Rc2 30. Nd4 Rc4 31. Re1 f6 32. Nf3 Ke6 33. Nxe5 fxe5 34. Re3 Ra4 35. Rh3 Rxa2 36. Rxh7 e4 37. h4 e3 38. Kf1 a5 39. h5 Rf2+ 40. Ke1 Rxg2 }
+
+
+    \chessgameinfo{Vinkovci}{M.Taimanov}{B.Larsen}{13}{1970}{0-1}
+
+    \newchessgame[
+        setfen=r1b2rk1/pp2bppp/2n5/q2p4/5B2/PQN1PN2/1P3PPP/2R1K2R b Kq - 0 14,
+        moveid=14b
+    ]
+
+    \chessboard
+
+    The last move \variation[invar]{14. Qb3} attacks the weak pawn. 
+
+    If White can play O-O, he will consilidate his position and Black will have 
+    difficulty to develop his c8 bishop. 
+
+    ``Indeed, the d5 pawn can be easily be defended by ...\symrook d8,
+    but can it be said that this would have ensured Black an easy life? After all, 
+    the queen move also nailed down the c8 bishop, as in the event of the invasion of 
+    the White queen at b7 the standard reply ...\symrook b8 is not possible.'' (T. Petrosian)
+    
+    Larsen decided to play dynamically:
+    \mainline[level=1]{
+        14...g5! 15.Bg3 g4 16.Nd4 Nxd4 17.exd4 Bg5!}
+
+    \chessboard
+
+    Black won the game after a tactical struggle.
+    \mainline[level=1]{
+        18.O-O Bxc1 19.Rxc1 Be6 20.h3 gxh3 21.Be5 f6 22.Ne4 fxe5
+        23.Qg3+ Bg4 24.Qxg4+ Kh8 25.Ng5 Qd2 26.Rc7 Qxf2+ 27.Kh2 Qxg2+
+        28.Qxg2 hxg2 29.dxe5 Rac8 30.Rxb7 Rc2 31.Nf7+ Kg7 32.e6 Kf6
+        33.e7 g1=Q+ 34.Kxg1 Rg8+
+    } 0-1
+\end{multicols}
