@@ -1,0 +1,67 @@
+\newpage
+\section{Doubling Rook on G-File from Hedgehog Position}
+The Hedgehog is a pawn formation usually adopted by Black that 
+can arise from several openings. Black trades the pawn on c5 for White's pawn on d4, then places pawns on a6, b6, d6, and e6. 
+These pawns form a row of ``spines'' behind which Black develops pieces. 
+Typically, the bishops sit on b7 and e7, knights on d7 and f6, the queen on c7, 
+and rooks on c8 and e8 (or c8 and d8).
+
+\chessboard[
+    setfen=r4rk1/1bqnbppp/pp1ppn2/8/8/8/8/8 w HAhq - 0 1
+]
+
+\begin{multicols}{2}
+\chessgameinfo{Exhibition Game}{B. Fischer}{U.Andersson}{}{1970}{1-0}
+
+\newchessgame[
+    setfen=r2qrbk1/1pp3pp/2n1bp2/p2np3/8/PP1PPN2/1BQNBPPP/R4RK1 w - - 2 13,
+    moveid=13w
+]
+
+\chessboard
+
+White reached a color-reversed Hedgehog.
+Here Fischer began his original idea: move the king to h1, push g-pawn to g4,
+and double rooks on the g-file.
+
+The Black pawn on f6 allows White to play g5 and open the g-file. 
+
+\mainline[level=1]{
+    13. Kh1! Qd7 14. Rg1! Rad8 15. Ne4 Qf7 16. g4 g6 17. Rg3! Bg7 18. Rag1!}
+    
+\chessboard
+
+White plans \symknight h4 and \symknight f5/g5. Black cannot stop the g5 thrust 
+with ...g4 because it would weaken the f5 square.
+
+White won the game in 25 moves.
+
+
+\chessgameinfo{Kislovodsk}{M.Taimanov}{A.Yusupov}{}{1982}{0-1}
+
+\newchessgame[
+    setfen=1qr1r1k1/1bbn1ppp/pp1ppn2/8/2P1P3/1NN1BP2/PP4PP/2RR1BQK b - - 0 18,
+    moveid=18b
+]
+
+\chessboard
+
+Again we have a Hedgehog (color-reversed from the last game), again with a pawn on f3.
+It was hard to find a fresh plan for Black. Yusupov knew Fischer's idea and played confidently.
+
+\mainline[level=1]{18... Kh8 19. Rc2 Rg8! 20. Rcd2 g5! 21. Bd4 Rg6! 22. Nc1 Rcg8! 23. Nd3 Qf8}
+
+\chessboard
+
+Black is clearly planning the g4 thrust. 
+\mainline[level=1]{24. Re1?}
+
+White has an important resource because
+the Black knight cannot jump to h4 as in the previous game due to the pin from the d4 bishop.
+
+\variation[invar]{24. g4} stops Black's pawn thrust. The position stays equal. 
+
+
+\mainline[level=1]{24...g4 25. fxg4 e5 26. Be3 Nxg4 27. Nd5 Bd8} Black won in the end.
+
+\end{multicols}
