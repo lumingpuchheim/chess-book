@@ -1,0 +1,74 @@
+\newpage
+\section{Attack Along Two Diagonals}
+
+When White castles kingside, he must be careful not 
+to face an attack with. 
+\begin{itemize}
+    \item{Black's knight on g4}
+    \item{Black's bishop on c5}
+    \item{Black's bishop on b7}
+    \item{Black's queen targeting h4}
+\end{itemize}
+There will be too many mate threats to handle.
+
+\begin{multicols}{2}
+\chessgameinfo{Tata Steel-A 75th}{L.Aronian}{V.Anand}{4}{2013.01.15}{0-1}
+
+\newchessgame
+    \mainline[level=1]{
+    1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6 5. e3 Nbd7 6. Bd3 dxc4 7. Bxc4 b5 8. Bd3 Bd6 9. O-O O-O 10. Qc2 Bb7 11. a3 Rc8 12. Ng5 c5 13. Nxh7}
+
+    \chessboard
+
+    White has no defender on the king side. Black starts a dangerous attack.
+    
+    \mainline{13...Ng4! 14. f4 cxd4 15. exd4 Bc5 }
+    
+    \chessboard
+
+    \mainline[level=1]{16. Be2?}
+    
+    Black has a dangerous bishop on c5. White should have eliminated it with
+    \variation[invar]{16. dxc5 Nxc5 17. h3 Nxd3 18. Nxf8 Qd4+ 19. Kh1 Ndf2+ 20. Rxf2 Nxf2+ 21. Kh2 Kxf8}
+
+    \chessboard[
+        setfen=2r2k2/pb3pp1/4p3/1p6/3q1P2/P1N4P/1PQ2nPK/R1B5 w - - 0 22
+    ]
+    White can defend. We go back to the mainline.
+    
+    \chessboard
+
+    \mainline[level=1]{16...Nde5!}
+    
+    Black threats with \variation[invar]{17... Qd4+ 18. Kh1 Nf2+ 19. Kg1 Nh3+ 20. Kh1 Qg1+! 21. Rxg1 Nf2#}
+    
+    \mainline[level=1]{17. Bxg4 Bxd4+ 18. Kh1 Nxg4}
+    
+    We arrive the position mentioned at the beginning of this section.
+    \mainline[level=1]{19. Nxf8}
+    
+    \chessboard
+
+    \variation[invar]{19... Qh4?? 20. Qh7+} Black loses all the attack. 
+    
+    Black cuts off White's queen with his next move.
+    
+    \mainline{19...f5! 20. Ng6 Qf6 21. h3 Qxg6 22. Qe2 Qh5 23. Qd3 Be3! 
+}  0-1
+
+\chessboard
+
+Let's remind ourselves of the finish to ``Rubinstein's Immortal''.
+
+\chessgameinfo{}{G.Rotlewi}{A.Rubinstein}{}{1907.12.26}{0-1}
+
+\newchessgame[
+    setfen=2rr2k1/1b2qppp/pb2pn2/1p2P3/1P3P2/P1NB4/1B2Q1PP/R4R1K b - - 2 20,
+    moveid=20b
+]
+
+\chessboard
+
+\mainline[level=1]{20...Ng4 21. Be4 Qh4 22. g3 Rxc3!! 23. gxh4 Rd2! 24. Qxd2 Bxe4+ 25. Qg2 Rh3 26. Bd4 Bxd4} 0-1
+
+\end{multicols}
