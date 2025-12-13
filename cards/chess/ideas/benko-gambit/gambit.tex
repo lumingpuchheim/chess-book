@@ -1,0 +1,132 @@
+\newpage
+\section{Benko Gambit}
+
+The Benko Gambit (or Volga Gambit) is a chess opening characterised by the move 3...b5 in the Benoni Defence arising after:
+
+\begin{multicols}{2}
+\newchessgame
+\mainline[level=1]{
+1. d4 Nf6
+2. c4 c5
+3. d5 b5}
+
+\chessboard
+Black sacrifices a pawn for enduring queenside pressure. White can accept or decline the gambit.
+
+When the sacrifice is accepted, White, who is already behind in development, must solve the problem of developing the f1-bishop.
+An early e4 will lead to an exchange on f1, losing the right to castle.
+
+Black also obtains fast development, good control of the a1–h8 diagonal, and can exert pressure down the half-open a- and b-files, where White's a- and b-pawns can become vulnerable. These benefits can last well into the endgame, and so, unusually for a gambit, Black does not generally mind if queens are exchanged.
+
+
+
+\chessgameinfo{9th Canadian Open}{Gerald Aspler}{Pal Benko}{6}{1971.08.29}{0-1}
+\newchessgame
+\mainline[level=1]{
+    1. d4 Nf6 2. c4 c5 3. d5 b5 4. cxb5 a6 5. bxa6 Bxa6}
+    
+\chessboard
+
+This is a typical position in the Benko Gambit Accepted. Black has a clear plan:
+attack along the a- and b-files. Note that the light-squared bishop on a6 prevents
+White's normal development e4 (after exchanging on f1, White loses the right to castle).
+
+\mainline[level=1]{6. Nc3 d6
+7. Nf3 g6 8. g3 Bg7 9. Bg2 O-O 10. O-O Nbd7 11. Re1 Qb6 12. e4
+Ng4 13. Qc2 Rfb8}
+
+\chessboard
+
+It is clear that Black is attacking along the a- and b-files. 
+Black has a pawn structure similar to the Benoni structure with pawns on c5 and d6.
+This means Black will also have a typical Benoni plan: 
+
+\begin{itemize}
+    \item{Advance the pawn to c4}
+    \item{Move the knight to d3}
+\end{itemize}
+
+Note that the knight on d3 will be well protected by the c4 pawn and the a6 bishop.
+
+\mainline[level=1]{14. h3 Nge5 15. Nxe5 Nxe5 16. b3 Nd3 17. Rd1}
+
+\chessboard
+
+\mainline[level=1]{17...c4! 18. Be3 Qb4 19. Bd2 Qc5 20. Rf1 cxb3 21. axb3 Nb4 22. Qb2
+Rc8 23. Qa3 Bxc3 24. Bxc3 Qxc3 25. Rfc1 Qd4 26. Bf1 Rc2
+} 0-1
+
+We will also see, the great Capablanca played the idea of Benko Gambit 
+with Ruy Lopez before Benko Gambitwas even invented.
+
+\chessgameinfo{St. Petersburg}{Aron Nimzowitsch}{Jose Raul Capablanca}{1}{1914.04.21}{0-1}
+\newchessgame
+
+\mainline[level=1]{
+    1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bb5 d6 5. d4 Bd7 6. Bxc6
+Bxc6 7. Qd3 exd4 8. Nxd4 g6}
+
+\chessboard
+
+The last move loses a pawn, yet the position is still playable. 
+I believe Capablanca didn't play the gambit intentionally. 
+
+\mainline[level=1]{9. Nxc6 bxc6 10. Qa6 Qd7 11. Qb7
+Rc8 12. Qxa7 Bg7 13. O-O O-O}
+
+\chessboard[
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={e4},
+]
+
+\mainline[level=1]{14. Qa6?!}
+
+This move simply loses one tempo. White's e4 pawn needs protection, 
+one obvious idea is playing \variation[invar]{14. f3}. After 
+the text move, Black can play some natural moves to develop while 
+White can only react passively.
+
+\mainline[level=1]{14...Rfe8 15. Qd3 Qe6 16. f3 Nd7 17. Bd2}
+
+\chessboard[
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={c3, b2},
+]
+
+Black's bishop targets all the White's weaknesses along the long diagonal.
+White's d2 pawn is an important defender. A logic decision is to trade it.
+Afterwards, Black can exert pressure on a- and b-file with the rooks.
+
+\mainline[level=1]{17...Ne5! 18. Qe2 Nc4! 19. Rab1 Ra8 20. a4 Nxd2! 21. Qxd2}
+
+\chessboard[
+    pgfstyle=straightmove,
+    linewidth=0.05em,
+    markmove={b2-b3},
+]
+
+White intends to play b3 and when move his knight away. 
+If he succeeds, he will rid of his weak a- and b-pawns and these pawns will
+even become strength as passed pawns. Black must stop it.
+
+\mainline[level=1]{21...Qc4! 22. Rfd1 Reb8}
+
+\chessboard
+
+Now Black has finally realized the Benko Gambit idea without playing 
+the opening. White's knight is tied down. Black will double his rooks on the b-file in 
+the next few moves.
+
+\mainline[level=1]{23. Qe3 Rb4}
+
+\chessboard
+
+\mainline[level=1]{24. Qg5? Bd4+ 25. Kh1 Rab8
+26. Rxd4 Qxd4 27. Rd1 Qc4 28. h4 Rxb2 29. Qd2 Qc5 30. Re1 Qh5
+31. Ra1 Qxh4+ 32. Kg1 Qh5 33. a5 Ra8 34. a6 Qc5+ 35. Kh1 Qc4
+36. a7 Qc5 37. e5 Qxe5 38. Ra4 Qh5+ 39. Kg1 Qc5+ 40. Kh2 d5
+41. Rh4 Rxa7 42. Nd1
+}
+\end{multicols}
