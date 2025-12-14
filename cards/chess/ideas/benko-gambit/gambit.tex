@@ -11,6 +11,7 @@ The Benko Gambit (or Volga Gambit) is a chess opening characterised by the move 
 3. d5 b5}
 
 \chessboard
+
 Black sacrifices a pawn for enduring queenside pressure. White can accept or decline the gambit.
 
 When the sacrifice is accepted, White, who is already behind in development, must solve the problem of developing the f1-bishop.
@@ -56,8 +57,8 @@ Note that the knight on d3 will be well protected by the c4 pawn and the a6 bish
 Rc8 23. Qa3 Bxc3 24. Bxc3 Qxc3 25. Rfc1 Qd4 26. Bf1 Rc2
 } 0-1
 
-We will also see, the great Capablanca played the idea of Benko Gambit 
-with Ruy Lopez before Benko Gambitwas even invented.
+We will also see that the great Capablanca played the idea of the Benko Gambit 
+in a Ruy Lopez before the Benko Gambit was even invented.
 
 \chessgameinfo{St. Petersburg}{Aron Nimzowitsch}{Jose Raul Capablanca}{1}{1914.04.21}{0-1}
 \newchessgame
@@ -95,9 +96,9 @@ White can only react passively.
     markfields={c3, b2},
 ]
 
-Black's bishop targets all the White's weaknesses along the long diagonal.
-White's d2 pawn is an important defender. A logic decision is to trade it.
-Afterwards, Black can exert pressure on a- and b-file with the rooks.
+Black's bishop targets all of White's weaknesses along the long diagonal.
+White's d2 pawn is an important defender. A logical decision is to trade it.
+Afterwards, Black can exert pressure on the a- and b-files with the rooks.
 
 \mainline[level=1]{17...Ne5! 18. Qe2 Nc4! 19. Rab1 Ra8 20. a4 Nxd2! 21. Qxd2}
 
@@ -107,15 +108,15 @@ Afterwards, Black can exert pressure on a- and b-file with the rooks.
     markmove={b2-b3},
 ]
 
-White intends to play b3 and when move his knight away. 
-If he succeeds, he will rid of his weak a- and b-pawns and these pawns will
-even become strength as passed pawns. Black must stop it.
+White intends to play b3 and then move his knight away. 
+If he succeeds, he will get rid of his weak a- and b-pawns, and these pawns will
+even become strengths as passed pawns. Black must stop it.
 
 \mainline[level=1]{21...Qc4! 22. Rfd1 Reb8}
 
 \chessboard
 
-Now Black has finally realized the Benko Gambit idea without playing 
+Now Black has finally achieved the Benko Gambit idea without playing 
 the opening. White's knight is tied down. Black will double his rooks on the b-file in 
 the next few moves.
 
@@ -129,4 +130,32 @@ the next few moves.
 36. a7 Qc5 37. e5 Qxe5 38. Ra4 Qh5+ 39. Kg1 Qc5+ 40. Kh2 d5
 41. Rh4 Rxa7 42. Nd1
 } 0-1
+
+
+\newchessgame
+\chessgameinfo{USSR Championship 1961a}{Tigran Vartanovich Petrosian}{Eduard Gufeld}{11}{1961.01.27}{1-0}
+\mainline[level=1]{
+    1. c4 g6 2. d4 Bg7 3. Nc3 Nf6 4. e4 O-O 5. Bg5 d6 6. Qd2 c5
+7. d5 Qa5 8. Bd3 a6 9. Nge2 e5?}
+
+\chessboard
+
+Black could have played \variation[invar]{9...b5 10. cxb5 Nbd7 11. bxa6 Ne5 12. O-O Nxd3 13. Qxd3 h6 14. Bd2 Bxa6},
+playing the idea of the Benko Gambit. He has enough compensation on the a- and b-files for the 
+pawn, as in the Benko Gambit.
+
+\chessboard[
+    setfen=r4rk1/4ppb1/b2p1npp/q1pP4/4P3/2NQ4/PP1BNPPP/R4RK1 w - - 0 15
+]
+
+In the game, Gufeld lost the thread and soon lost.
+
+\mainline[level=1]{10. O-O Nbd7 11. a3 Nh5 12. f3
+Bf6 13. Bh6 Ng7 14. g3 Rb8 15. Kh1 Qc7 16. b3 Be7 17. Rab1 Kh8
+18. Rb2 Nf6 19. b4 Ng8 20. Be3 f5 21. bxc5 dxc5 22. Rfb1 Nf6
+23. Rb6 Bd6 24. Bh6 Rf7 25. Ng1 f4 26. gxf4 Nd7 27. fxe5 Bxe5
+28. Re6 b5 29. cxb5 c4 30. Rc6 Qd8 31. Bxc4 Qh4 32. Rc1 Nh5
+33. Bg5 Ng3+ 34. Kg2 Nxe4 35. Nxe4 Qxh2+ 36. Kf1 Rxf3+
+37. Nxf3 Qh1+ 38. Kf2 } 1-0
+
 \end{multicols}
