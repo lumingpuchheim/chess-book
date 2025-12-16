@@ -1,0 +1,54 @@
+\newpage
+\section{Prophylactic King Move}
+
+Sometimes the opponnent needs a crucial check to achieve his 
+goal. It is helpful to move the king to a safe square to 
+eliminate the opponent's check.
+
+\nocite{Dvoretsky:1996}
+
+\begin{multicols}{2}
+\chessgameinfo{Linares}{J.Nunn}{A.Jusupov}{}{1988}{0-1}
+\newchessgame[
+    setfen=r4rk1/p3npp1/4p2p/n2pP3/R7/2qBR3/2PN1PPP/3Q2K1 b - - 0 18,
+    moveid=18b
+]
+\chessboard
+
+White threatens to play \symbishop h7+, winning the queen. 
+
+If Black moves his queen away, for example \variation[invar]{18... Qc7} White can play 19. \symqueen c5 
+and then \symrook g3, maintaining the attack.
+
+\mainline[level=1]{18... Kh8!}
+
+``Despite looking rather awkward on c3 the queen at least attacks the d2-knight and so
+limits the movement of the White queen.'' (Dvoretsky)
+
+\mainline[level=1]{19. g4 Nac6 20. Nf3 Rab8 21. Bc4 Qb2 22. Bb3 Ng6 23. Ra2 Rxb3 24. Rxb2 Rxb2 }
+
+\chessboard
+
+Black has compensation for his queen. He wins the game eventually.
+
+
+\chessgameinfo{Mar del Plata}{J.Timman}{B.Larsen}{}{1982}{0-1}
+\newchessgame[
+    setfen=1r2rbk1/2q3p1/p1p1bn1p/1pP1p3/8/1PN3P1/PBQ1PPB1/2RR2K1 b - - 0 23,
+    moveid=23b
+]
+
+\chessboard
+
+\mainline[level=1]{23... Kh8!}
+
+\variation[invar]{23... Bxc5 24. Ne4 Nxe4 25. Qxe4} White will also gain 
+the c6 pawn and have advantage.
+
+\mainline[level=1]{24. e3}
+
+Now \variation[24. Ne4 Bf5]. White cannot take the f6 knight since there is 
+no check and his queen is hanging.
+
+The game continues and Black wins eventually.
+\end{multicols}
