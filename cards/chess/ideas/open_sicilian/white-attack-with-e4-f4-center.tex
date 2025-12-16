@@ -1,0 +1,58 @@
+\newpage
+\section{Najdorf Sicilian: White Attack with e4 and f4 Center}
+
+Often in Najdorf Sicilian positions, White sets up a center with e4 and f4:
+
+\chessboard[
+    setfen=8/pp3ppp/3pp3/8/4PP2/8/PPP3PP/8 w HAha - 0 1,
+    pgfstyle=straightmove,
+    markmove={e4-e5, f4-f5},
+]
+
+White can either play e5 to open the f-file for the rook or sometimes f5
+to open the a2--g8 diagonal for the bishop.
+
+\begin{multicols}{2}
+    \chessgameinfo{USSR Chess Championship}{B.Spassky}{L.Polugaevsky}{}{1958}{}
+    \newchessgame
+    \mainline[level=1]{
+        1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 
+        7. Bc4 Qa5 8. Qd2 e6 9. O-O-O b5 10. Bb3 Bb7 11. Rhe1 Be7 12. f4 Nc5}.
+    
+    \chessboard
+
+    White sets up a center with e4 and f4 and then thrusts with e5 to open the f-file.
+ 
+\mainline[level=1]{13. e5}
+
+Good idea, but the move order is wrong. The correct sequence is 
+\variation[invar]{13. Bxf6 Bxf6 14. e5}.
+
+\mainline[level=1]{13... dxe5 14. Bxf6 Bxf6?}
+
+\variation[invar]{14... gxf6} is more accurate.
+
+\mainline[level=1]{15. fxe5 Bh4 16. g3 Be7}
+
+\chessboard
+
+\mainline[level=1]{17. Bxe6!}
+
+Here we see this thematic attack on e6 again. It is not a true sacrifice, 
+since Black cannot safely accept it.
+
+\chessboard
+
+Accepting the sacrifice is a mistake: \variation[invar]{17... fxe6 18. Nxe6 Rd8 19. Nxg7+ \xskakcomment{This is a typical idea after the sacrifice: the g7-pawn is unprotected and White captures it with check.} Kf7 20. Qh6 \xskakcomment{White has a crushing attack.} }
+
+\mainline[level=1]{17... O-O 18. Bb3 Rad8 19. Qf4 b4 20. Na4 h6 21. Nxc5 Qxc5 22. h4 }
+
+\chessboard
+
+White emerges a pawn up and with the initiative, and he eventually wins the game.
+
+\mainline[level=1]{22... Bd5 23. Nf5 Bxb3 24. axb3 Rxd1+ 25. Rxd1 Rc8 26. Qe4 Bf8 27. e6 fxe6 28. Qxe6+ Kh8 29. Qe4 Qc6 30. Qd3 Re8 31. h5 Be7 32. Nxe7 Rxe7 33. Qg6 Qe8 34. g4 Re1 35. Qxe8+ Rxe8 36. Rd4 a5 37. Kd2 Re5 38. c3 bxc3+ 39. bxc3 Rg5 40. c4 Kg8 41. Rf4 g6 1-0}
+
+
+
+\end{multicols}
