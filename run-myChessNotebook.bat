@@ -1,12 +1,24 @@
 @echo off
 REM Smart incremental build using latexmk
-REM This only rebuilds what has changed, not everything from scratch
-REM latexmk automatically handles biber and makeindex when needed
+REM Usage:
+REM   run-myChessNotebook.bat          -> build all content (default)
+REM   run-myChessNotebook.bat false    -> skip heavy chapters (ideas/games/annotations)
+
+setlocal
+set "buildAll=%~1"
+if "%buildAll%"=="" set "buildAll=true"
 
 cd /d "%~dp0"
 echo Building myChessNotebook with latexmk (incremental mode)...
 cd myChessNotebook
-latexmk -pdf -interaction=nonstopmode myChessNotebook.tex
+
+if /I "%buildAll%"=="false" (
+    echo   Skipping heavy chapters ^(ideas/games/annotations^)...
+    latexmk -pdf -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+) else (
+    latexmk -pdf -interaction=nonstopmode myChessNotebook.tex
+)
+
 cd ..
 
 if errorlevel 1 (
@@ -21,4 +33,3 @@ if errorlevel 1 (
     echo Build successful!
     pause
 )
-

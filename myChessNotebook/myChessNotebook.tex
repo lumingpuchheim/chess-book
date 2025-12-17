@@ -26,6 +26,18 @@
 	oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
 ]{../LegrandOrangeBook}
 
+%----------------------------------------------------------------------------------------
+%	BUILD FLAGS
+%----------------------------------------------------------------------------------------
+% Control whether to build all heavy chapters (ideas, games, annotations).
+% Default: build everything. A wrapper file can define \nobuildall before
+% loading this file to disable them.
+\newif\ifbuildall
+\buildalltrue
+\ifdefined\nobuildall
+  \buildallfalse
+\fi
+
 % Book information for PDF metadata, remove/comment this block if not required 
 \hypersetup{
 	pdftitle={My Chess Notebook}, % Title field
@@ -125,9 +137,11 @@
 \input{../cards/chess/visualization-board}
 \chapter{Chess Ideas and Patterns}
 
+\ifbuildall
 \input{../cards/chess/ideas/ideas}
 \input{../cards/chess/my_games/my-games}
 \input{../cards/chess/annotations/annotation}
+\fi
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY

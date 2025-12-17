@@ -1,6 +1,14 @@
 @echo off
 REM Full clean build - rebuilds everything from scratch
 REM Use this when you want to ensure everything is up to date
+REM
+REM Usage:
+REM   run-myChessNotebook-full.bat          -> build all content (default)
+REM   run-myChessNotebook-full.bat false    -> skip heavy chapters (ideas/games/annotations)
+
+setlocal
+set "buildAll=%~1"
+if "%buildAll%"=="" set "buildAll=true"
 
 cd /d "%~dp0"
 echo Cleaning previous build...
@@ -12,7 +20,12 @@ echo Building from scratch...
 cd myChessNotebook
 
 echo Running pdflatex (first pass)...
-pdflatex -interaction=nonstopmode myChessNotebook.tex
+if /I "%buildAll%"=="false" (
+    echo   Skipping heavy chapters ^(ideas/games/annotations^) in this full build...
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+) else (
+    pdflatex -interaction=nonstopmode myChessNotebook.tex
+)
 
 echo Running biber for bibliography...
 biber myChessNotebook
@@ -23,10 +36,18 @@ if exist myChessNotebook.idx (
 )
 
 echo Running pdflatex (second pass)...
-pdflatex -interaction=nonstopmode myChessNotebook.tex
+if /I "%buildAll%"=="false" (
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+) else (
+    pdflatex -interaction=nonstopmode myChessNotebook.tex
+)
 
 echo Running pdflatex (third pass to resolve all references)...
-pdflatex -interaction=nonstopmode myChessNotebook.tex
+if /I "%buildAll%"=="false" (
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+) else (
+    pdflatex -interaction=nonstopmode myChessNotebook.tex
+)
 
 cd ..
 
@@ -40,4 +61,5 @@ if errorlevel 1 (
     echo Full build successful!
     pause
 )
+
 
