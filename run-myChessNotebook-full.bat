@@ -22,29 +22,39 @@ cd myChessNotebook
 echo Running pdflatex (first pass)...
 if /I "%buildAll%"=="false" (
     echo   Skipping heavy chapters ^(ideas/games/annotations^) in this full build...
-    pdflatex -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook-lite myChessNotebook-lite.tex
 ) else (
     pdflatex -interaction=nonstopmode myChessNotebook.tex
 )
 
 echo Running biber for bibliography...
-biber myChessNotebook
+if /I "%buildAll%"=="false" (
+    biber myChessNotebook-lite
+) else (
+    biber myChessNotebook
+)
 
 echo Running makeindex for index...
-if exist myChessNotebook.idx (
-    makeindex -s ../indexstyle.ist myChessNotebook.idx
+if /I "%buildAll%"=="false" (
+    if exist myChessNotebook-lite.idx (
+        makeindex -s ../indexstyle.ist myChessNotebook-lite.idx
+    )
+) else (
+    if exist myChessNotebook.idx (
+        makeindex -s ../indexstyle.ist myChessNotebook.idx
+    )
 )
 
 echo Running pdflatex (second pass)...
 if /I "%buildAll%"=="false" (
-    pdflatex -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook-lite myChessNotebook-lite.tex
 ) else (
     pdflatex -interaction=nonstopmode myChessNotebook.tex
 )
 
 echo Running pdflatex (third pass to resolve all references)...
 if /I "%buildAll%"=="false" (
-    pdflatex -interaction=nonstopmode -jobname=myChessNotebook myChessNotebook-lite.tex
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook-lite myChessNotebook-lite.tex
 ) else (
     pdflatex -interaction=nonstopmode myChessNotebook.tex
 )
