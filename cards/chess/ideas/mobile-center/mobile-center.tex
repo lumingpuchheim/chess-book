@@ -1,0 +1,20 @@
+\newpage
+\section{Mobile Center}
+A mobile pawn center is a central pawn formation where one side has at least two connected central pawns (usually on d4 and e4) 
+that are free to advance, and the opponent has at most one pawn in the center. 
+This gives the side with the pawn chain potential to push those pawns forward 
+to gain space or create passed pawns, and often forces the opponent to defend 
+against advancing pawns rather than contesting the center directly.
+
+\chessboard[
+    setfen=8/pp3ppp/4p3/8/3PP3/8/P4PPP/8 w KQkq - 2 1,
+    pgfstyle=straightmove,
+    linewidth=0.05em,
+    markmove={d4-d5, e4-e5},
+]
+
+The typical strategic plan for the side with the mobile center is to advance pawns and try to create a passed pawn 
+or use pawn pressure to push pieces away. We will see both strategies in this section.
+
+\input{../cards/chess/ideas/mobile-center/white-create-passed-pawn}
+\input{../cards/chess/ideas/mobile-center/white-kingside-attack}
