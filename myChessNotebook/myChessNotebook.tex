@@ -133,21 +133,22 @@
 %----------------------------------------------------------------------------------------
 \chapter*{Preface}
 \input{../cards/chess/preface}
-\chapter{Introduction}
+\chapter*{Introduction}
 \input{../cards/chess/explanation-of-symbols}
-\section{Visualization the Three Questions}
+\section*{Visualization the Three Questions}
 \input{../cards/chess/visualization-board}
-\section{Process of Elimination}
+\section*{Process of Elimination}
 \input{../cards/chess/process_of_elimination}
 \chapter{Chess Ideas and Patterns}
 
 \ifbuildall
 	\input{../cards/chess/ideas/ideas}
+	\input{../cards/chess/maneuvering/maneuvering}
 	\input{../cards/chess/my_games/my-games}
 	\input{../cards/chess/annotations/annotation}
 \else
 	% Lite build: skip ideas, games and annotations to speed up compilation.
-	\input{../cards/chess/ideas/carlsbad/carlsbad}
+	\input{../cards/chess/ideas/pawn-sacrifice/pawn-sacrifice}
 \fi
 
 %----------------------------------------------------------------------------------------
