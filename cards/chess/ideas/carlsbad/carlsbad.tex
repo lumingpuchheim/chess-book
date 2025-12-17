@@ -1,0 +1,53 @@
+\newpage
+\section{Carlsbad Structure}
+\newchessgame
+
+
+The Carlsbad pawn structure can be reached via many openings but is best 
+known from the Queen's Gambit Declined Exchange Variation, which occurs after 
+
+\mainline[level=1]{1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 Be7 6.e3 c6}
+
+\chessboard[
+    setfen=r1bqk2r/pp1nbppp/2p2n2/3p2B1/3P4/2NBP3/PP3PPP/R2QK1NR w KQkq - 2 8
+]
+
+The Carlsbad pawn structure is important because it is full of rich possibilities 
+for both sides and because the structure that can be reached via many openings, 
+including the Nimzo-Indian, Caro-Kann, Scandinavian, and multiple other queen's 
+pawn openings.
+
+\begin{itemize}
+    \item{Minority Attack}
+
+    White advances his queenside pawns with the main purpose of creating weaknesses in black’s structure.
+
+    \chessboard[
+        setfen=8/pp3ppp/2p5/3p4/3P4/4P3/PP3PPP/8 w KQkq - 2 8,
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove={b2-b4, b4-b5, b5-c6, b7-c6},
+    ]
+    
+    \item{Playing for the e3-e4 push}
+
+    This can be done with or without the support of the f pawn (by pushing f3) then e4.
+
+    \chessboard[
+        setfen=8/pp3ppp/2p5/3p4/3P4/4P3/PP3PPP/8 w KQkq - 2 8,
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove={e3-e4},
+    ]   
+\end{itemize}
+
+Black must defend accordingly. His ideas are
+\begin{itemize}
+    \item{Moving the knight from g8 to e4}
+    \item{Moving the knight from b8 to c4 via d7 and b6.}
+    \item{Idea from Petrosian, moving the knight from b8 to d6 via d7, b6 and c4, in anticipation of
+    the standard minority attack b2-b4-b5. \footnote{See the game Bobotsov-Petrosian, Lugano Olympiad 1968 \cite{kasparov:2004}}}
+\end{itemize}
+
+\input{../cards/chess/ideas/carlsbad/carlsbad-center-break-white}
+\input{../cards/chess/ideas/carlsbad/minority-attack}
