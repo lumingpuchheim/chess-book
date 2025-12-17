@@ -137,6 +137,8 @@
 \input{../cards/chess/explanation-of-symbols}
 \section{Visualization the Three Questions}
 \input{../cards/chess/visualization-board}
+\section{Process of Elimination}
+\input{../cards/chess/process_of_elimination}
 \chapter{Chess Ideas and Patterns}
 
 \ifbuildall
@@ -175,6 +177,19 @@
 %----------------------------------------------------------------------------------------
 %	INDEX
 %----------------------------------------------------------------------------------------
+
+% Workaround: index entries are off by 2 pages in the .idx file.
+% Adjust the page number and link target used by \hyperpage (only used in the index).
+\makeatletter
+\renewcommand*{\hyperpage}[1]{%
+  \begingroup
+  \edef\Hy@page{\number\numexpr#1+2\relax}%
+  \hyper@linkstart{link}{page.\Hy@page}%
+  \Hy@page
+  \hyper@linkend
+  \endgroup
+}
+\makeatother
 
 \cleardoublepage % Make sure the index starts on an odd (right side) page
 \phantomsection
