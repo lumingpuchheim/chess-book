@@ -140,9 +140,11 @@
 \chapter{Chess Ideas and Patterns}
 
 \ifbuildall
-\input{../cards/chess/ideas/ideas}
-\input{../cards/chess/my_games/my-games}
-\input{../cards/chess/annotations/annotation}
+	\input{../cards/chess/ideas/ideas}
+	\input{../cards/chess/my_games/my-games}
+	\input{../cards/chess/annotations/annotation}
+\else
+% Lite build: skip ideas, games and annotations to speed up compilation.
 \fi
 
 %----------------------------------------------------------------------------------------
