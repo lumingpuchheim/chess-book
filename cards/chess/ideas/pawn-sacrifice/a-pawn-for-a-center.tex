@@ -1,0 +1,180 @@
+\newpage
+
+\section{Pawn Sacrifice: Center}
+
+In the opening or middlegame, a good center usually means 
+piece activity. It is therefore a good idea to sacrifice a pawn or two for a center.
+\index{Pawn Sacrifice!Center}
+
+\begin{multicols}{2}
+    \chessgameinfo{World Championship}{Ding, Liren}{Nepomniachtchi, Ian}{4}{2023.04.13}{1-0}
+    \newchessgame[      
+        id=main,
+        event={FIDE World Championship 2023},
+        white={Ding, Liren},
+        black={Nepomniachtchi, Ian},
+        round={4}]
+    \mainline[level=1]{
+        1. c4 Nf6 2. Nc3 e5 3. Nf3 Nc6 4. e3 Bb4 5. Qc2 Bxc3 6. bxc3 d6 7. e4 O-O 8. Be2 Nh5 9. d4}
+
+    \chessboard
+
+    There is a fierce fight in the center around d4. An alternative is \variation[invar]{9... Qf6 \xskakcomment{ a natural idea.}
+    10. d5 Na5 11. g3 Bg4 } 
+
+    \chessboard[
+        setfen=r4rk1/ppp2ppp/3p1q2/n2Pp2n/2P1P1b1/2P2NP1/P1Q1BP1P/R1B1K2R w KQ - 1 12
+    ]
+
+    Black has a solid but passive position. It is probably not to Nepo's taste. 
+
+    \mainline[level=1]{9...Nf4 10. Bxf4 exf4 11. O-O Qf6 12. Rfe1 Re8}
+    
+    \chessboard
+
+    In the middlegame, it is often more about choosing moves and positions according to the 
+    players' style than finding the objectively best move.
+
+    White has a solid center and Black has a compact position. Continuing in this manner 
+    would suit Ding better because Nepo, as a dynamic player, cannot sit and wait passively.
+
+    \variation[invar]{13. c5 dxc5 14. e5 Qh6 15. Rad1 Bg4 16. Qb3} would be a good idea but not a good practical decision:
+
+    \chessboard[
+        setfen=r3r1k1/ppp2ppp/2n4q/2p1P3/3P1pb1/1QP2N2/P3BPPP/3RR1K1 b - - 4 16
+    ]
+
+    The position is sharp. White may have some advantage. However, the position 
+    is open and Black has counterplay and open lines. What is the point of allowing
+    a dynamic player tactical opportunities?
+
+    Ding chooses a natural move, improving his position slowly and not allowing Nepo any counterplay.
+    
+    \mainline[level=1]{ 13. Bd3 Bg4 14. Nd2}
+    
+    \chessboard
+    
+    \mainline[level=1]{14...Na5?}
+    
+    A very strange move. The knight on a5 has no future. \variation[invar]{14...Rad8} would be a natural move.
+
+    \chessboard
+    
+    \mainline[level=1]{ 15. c5!} With his sacrifice White activates his pieces.
+    \mainline[level=1]{ 15... dxc5 16. e5 Qh6 17. d5 Rad8 18. c4}
+    
+    \chessboard
+
+    White has some advantage here. His center is strong and Black has 
+    a passive knight on a5. 
+
+    While the position may still be equal according to the computer, for human players White has a much easier position to play. He controls the center, while his opponent, as a dynamic player, can only sit and wait. At some point, his opponent would lose patience while defending and make mistakes, as happened in this game. 
+
+    \mainline[level=1]{18... b6 19. h3 Bh5}
+
+    \chessboard[
+        pgfstyle=straightmove,
+        linewidth=0.05em,
+        markmove=f4-f3,
+        markstyle=circle,
+        linewidth=0.05em,
+        markfields={e5},
+    ]
+
+    \begin{itemize}
+        \item Where are the weaknesses?
+    
+        The e5 pawn is the pivot of the position and must be protected.
+        \item Which is the worst-placed piece?
+       
+        The rooks must be activated.
+        \item What is my opponent's idea?
+    
+        He wants to play \symknight f3, creating some counterplay.
+    \end{itemize}
+    
+    By answering the questions above, White can find the next few moves:
+    \begin{itemize}
+        \item Move his bishop to e4 then f3 (if Black exchanges the bishop, White has a knight on f3, which further strengthens the e5 pawn).
+        \item Move his queen to c3 to protect the e5 pawn.
+        \item Double his rooks on the e-file to protect the e5 pawn.
+    \end{itemize}
+
+    Black, however, must play move by move.
+
+    \mainline[level=1]{20. Be4 Re7 21. Qc3 Rde8 22. Bf3 Nb7 23. Re2} 
+    
+    As mentioned above, White has a clear plan and needs only to execute it, without thinking too much. 
+
+    \chessboard
+
+    Black makes a difficult decision here, allowing White to create a passed pawn but gaining 
+    a good square on d6 for his knight.
+    
+    \mainline[level=1]{23... f6 24. e6 Nd6 25. Rae1} 
+    
+    \chessboard[
+        setfen=4r1k1/p1p1r1pp/1p1nPp1q/2pP3b/2P2p2/2Q2B1P/P2NRPP1/4R1K1 b - - 2 25
+    ]
+
+    White has executed his plan and Black has defended well. How should Black defend next?
+
+    I believe the question can be answered logically without calculating a lot.
+    The main asset of White is the passed pawns, which have been blocked by the Black rooks.
+
+    The rooks on the e-file are not doing much because there is no open file. The knights are 
+    important pieces. The Black knight keeps an eye on e4 so that the rooks cannot attack the 
+    f4 pawn. 
+    
+    At some point, White may play \symrook e4 to attack the f4 pawn and exchange the Black knight.
+
+    Alternatively, White may play \symknight e4 to exchange the Black knight. In either case, e4 is 
+    an important square and must be protected in advance. \variation[invar]{25... Bg6} is a good move.
+
+    It is unclear how White can make progress here. In the actual game, Black chooses to defend
+    actively and soon makes a severe mistake.
+    
+    \mainline[level=1]{25... Nf5?!} 
+    
+    \chessboard
+
+    White's bishop cannot improve White's position, while Black's bishop can defend the important e4
+    square. It is therefore logical to exchange the bishops and then occupy the e4 square with the rook.
+    
+    \mainline[level=1]{ 26. Bxh5 Qxh5 27. Re4 Qh6 }
+    
+    \chessboard
+    
+    \mainline{28. Qf3}
+
+    Again, a very logical move, attacking the weak f4 pawn. Ding's moves 
+    are natural, although not the perfect computer moves. By playing these moves,
+    he sets problems for Nepo that cannot be solved using dynamic play---a 
+    very practical choice!
+    
+    \chessboard
+
+    After \variation[invar]{28... g5 29. g4 Nd6}, the position is still defensible for Black. 
+
+    \mainline[level=1]{28...Nd4?? } 
+    
+    \chessboard
+
+    I am not sure whether Nepo sees a trap that backfires because Ding has set a deeper one. After \variation[invar]{29. Qxf4 Qxf4 30. Rxf4 c6 31. Nf3 Nxf3 32. Rxf3 cxd5 33. cxd5 Rd8 34. Rd3 Rd6} 
+    
+    \chessboard[setfen=6k1/p3r1pp/1p1rPp2/2pP4/8/3R3P/P4PP1/4R1K1 w - - 3 35]
+
+    White has no advantage.
+
+    More plausibly, Nepo loses his patience in defense and wants to force a draw. 
+    
+    \chessboard
+
+    \mainline[level=1]{29. Rxd4! } 
+    
+    Of course, the knight is much more valuable than the rook.
+
+    \mainline[level=1]{29...cxd4 30. Nb3 g5 31. Nxd4 Qg6 32. g4 fxg3 33. fxg3 h5 34. Nf5 Rh7 35. Qe4 Kh8 36. e7 Qf7 37. d6 cxd6 38. Nxd6 Qg8 39. Nxe8 Qxe8 40. Qe6 Kg7 41. Rf1 Rh6 42. Rd1 f5 43. Qe5+ Kf7 44. Qxf5+ Rf6 45. Qh7+ Ke6 46. Qg7 Rg6 47. Qf8}
+
+    \chessboard
+\end{multicols}
