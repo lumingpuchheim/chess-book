@@ -1,0 +1,103 @@
+\section{Catalan Opening: Endgame}
+
+White can steer the game toward a favorable endgame, as Ulf Andersson demonstrated in this instructive example.
+
+\begin{multicols}{2}
+\chessgameinfo{Swedish Team Championship}{Ulf Andersson}{Sergey Vladimirovich Ivanov}{}{2000}{1-0}
+\newchessgame
+\mainline[level=1]{1. Nf3 d5 2. d4 Nf6 3. c4 e6 4. g3 dxc4 5. Qa4+ Nbd7 6. Bg2 a6
+7. Nc3 Rb8 8. Qxc4 b5 9. Qd3 Bb7 10. O-O c5 11. dxc5 Bxc5
+12. Bf4 Rc8 13. Rad1 O-O 14. Ne5}
+
+\chessboard
+
+Many pieces will be exchanged, and Andersson deliberately heads for an endgame
+where he can press with a persistent but risk-free advantage.
+
+\mainline[level=1]{14... Bxg2 15. Kxg2 Nxe5 16. Bxe5
+Qxd3 17. Rxd3 Rfd8 18. Rxd8+ Rxd8 19. Bxf6 gxf6}
+
+\chessboard
+
+This is the position Andersson had in mind when he played his 14th move.
+How should we evaluate this endgame? A good starting point is to examine
+the pawn structure.
+
+\chessboard[
+    setfen=8/5p1p/p3pp2/1p6/8/P5P1/1P2PP1P/8 w HAha - 0 1,
+    showmover=false,
+    markstyle=circle,
+    linewidth=0.05em,
+    markfields={a6, h7},
+]
+
+White has no real weaknesses in his camp. He will place his pawns on light
+squares so that Black's dark-squared bishop cannot attack them.
+
+On the other hand, Black has two clear weaknesses: the pawns on a6 and h7.
+As the game continues, White will use his king to attack these pawns directly.
+Also notice Black's doubled pawns on the f-file; they give White enough time
+to bring his king into Black's position.
+
+After the rooks are exchanged, White's pieces are actually too slow to attack
+both weaknesses simultaneously, so Black has decent practical chances to hold.
+However, White can simply improve his position and wait for a mistake, so his
+winning chances remain very good.
+
+\mainline[level=1]{20. Rc1 Be7}
+
+\chessboard
+
+One of the most neglected principles in chess is \emph{don't rush}. 
+Before pushing forward, White must first prevent Black's rook from invading
+on d2. His next move is highly instructive.
+
+\mainline[level=1]{
+21. Nb1! f5 22. e3 Bf6 23. b3 Kf8 24. Kf3 Ke7 25. h3 Rd5
+26. Ke2 Kd7 27. Nd2 Be7 28. Nf3 Bf6 29. Ne1 Rd6 30. g4 fxg4
+31. hxg4 Rc6 32. Rxc6 Kxc6 33. Nd3!}
+
+\chessboard
+
+White must now stop Black's king from invading. The d5 square is also
+temporarily defended because after \variation[invar]{33...Kd5? 34. Nb4+}
+Black would simply lose a pawn.
+
+\mainline[level=1]{33...a5 34. e4!}
+
+\chessboard 
+
+Now d5 is also defended permanently. White is ready to march his king toward
+Black's kingside while Black is reduced to waiting.
+\mainline[level=1]{34...a4 35. Ke3 axb3
+36. axb3 Kd6 37. Kf4 Bd8 }
+
+\chessboard
+
+\mainline[level=1]{38. g5!}
+
+White now sacrifices a pawn temporarily to open lines for a decisive king invasion.
+
+\mainline[level=1]{38...Ke7 39. Kg4 Kf8 40. f3 f6
+41. Kh5 fxg5 42. Kh6 Kg8 43. Nc5 Kf7 44. Kxh7}
+
+\chessboard
+
+The first mission is accomplished: White's king has infiltrated Black's camp.
+Next he will march toward the queenside to attack the remaining weakness.
+
+\mainline[level=1]{44...Bb6 45. Nd3 Kf6
+46. Kg8 Bg1 47. Kf8 e5 48. Ke8 Ke6 49. Kd8 Kd6 50. Kc8 Be3
+51. Kb7}
+
+\chessboard
+
+\mainline[level=1]{51...Bd4?}
+
+Until this point Black has defended well. After the move in the game, however,
+White places him in zugzwang, wins a pawn, and with it the game. Black should
+have played \variation[invar]{51... Bg1}
+\mainline[level=1]{52. b4 Kd7 53. Nc5+ Kd6 54. Kb6 Bc3 55. Kxb5 Bd2
+56. Nb7+ Kc7 57. Na5 Be3 58. Ka6} 1-0
+
+\end{multicols}

@@ -230,6 +230,8 @@
 
 % Define a macro for keywords, the keywords are displayed in italic
 \newcommand{\keywords}[1]{Keywords: \textit{#1}}
+% Glossary helper for the term "hanging pawns"
+\newcommand{\glsHangingPawns}{\hyperref[gls:hanging-pawns]{hanging pawns}}
 
 % Include chess tools
 \input{../cards/chess/chess-tool}
@@ -254,8 +256,23 @@
 	\input{../cards/chess/annotations/annotation}
 \else
 	% Lite build: skip ideas, games and annotations to speed up compilation.
-	\input{../cards/chess/ideas/attack/middle-game-attack}
+	\input{../cards/chess/ideas/catalan/catalan}
 \fi
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Glossary}
+\markboth{\sffamily\normalsize\bfseries Glossary}{\sffamily\normalsize\bfseries Glossary}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
+
+\section*{Hanging pawns}\label{gls:hanging-pawns}
+In classical terminology, \emph{hanging pawns} are two side‑by‑side pawns
+on adjacent files (usually c- and d-pawns or d- and e-pawns) with no pawns
+of the same color on neighboring files behind them to support them.
+They often give their owner space and dynamic piece activity but can become
+long‑term weaknesses if they are blockaded or forced to advance.
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
