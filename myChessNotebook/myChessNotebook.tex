@@ -144,8 +144,8 @@
 	\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}%
 	\begin{tikzpicture}[remember picture,overlay]%
 		\node[anchor=center,inner sep=0] at (current page.center) {#1};%
-		\node[anchor=center,align=center] at ([yshift=3cm]current page.center) {\sffamily\Huge\bfseries #2};%
-		\node[anchor=center,align=center] at ([yshift=-2cm]current page.center) {\sffamily\huge\bfseries #3};%
+		\node[anchor=center,align=center] at ([yshift=3cm]current page.center) {\rmfamily\fontsize{50}{60}\selectfont\bfseries #2};%
+		\node[anchor=center,align=center] at ([yshift=-2cm]current page.center) {\rmfamily\fontsize{36}{44}\selectfont\bfseries #3};%
 	\end{tikzpicture}%
 	\restoregeometry%
 	\clearpage%
