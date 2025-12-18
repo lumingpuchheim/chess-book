@@ -1,0 +1,33 @@
+\newpage
+\section{Attack: Double Sacrifice}
+
+In the double sacrifice attack, the attacker sacrifices two pieces (typically two bishops) on h7 and g7 (or h2 and g2 for Black) to break down the opponent's king's pawn shield, ultimately delivering checkmate with the queen and rook. \index{Attack!Double Sacrifice}
+
+\begin{multicols}{2}
+
+\chessgameinfo{St. Petersburg}{Aron Nimzowitsch}{Siegbert Tarrasch}{}{1914.04.28}{0-1}
+\newchessgame[
+    setfen= 3r1rk1/p3qp1p/2bb2p1/2p5/3P4/1P6/PBQN1PPP/2R2RK1 b - - 0 19,
+    moveid=19b
+]
+
+\chessboard
+
+Black begins by destroying White's defensive pawns on h2 and g2. The move order is crucial: first, a check on h2 forces the king to capture, then the queen delivers a check on h4, and only after the king retreats does the second bishop sacrifice occur on g2.
+
+\mainline[level=1]{19... Bxh2+ 20. Kxh2 Qh4+ 21. Kg1 Bxg2 }
+
+\chessboard
+
+If White accepts the second sacrifice by capturing the bishop, the position remains lost. \variation[invar]{
+22. Kxg2 Qg4+ 23. Kh2 Rd5 \xskakcomment{ Black threatens mate. White must give up material.} 24. Qxc5 Rh5+ 25. Qxh5 Qxh5+ 26. Kg2 Qg5+ 27. Kh2 Qxd2 28. Bc3 Qxa2 
+}
+
+In the actual game, Black maintains a crushing attack even after White declines the second sacrifice, and the game concludes decisively.
+\mainline[level=1]{22. f3 Rfe8 23. Ne4 Qh1+ 24. Kf2 Bxf1 25. d5 f5 26. Qc3 Qg2+ 27. Ke3 Rxe4+ 28. fxe4 f4+ 29. Kxf4 Rf8+ 30. Ke5 Qh2+ 31. Ke6 Re8+ 32. Kd7 Bb5# 0-1
+}
+
+
+
+
+\end{multicols}
