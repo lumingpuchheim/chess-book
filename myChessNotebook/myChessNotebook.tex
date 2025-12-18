@@ -23,8 +23,68 @@
 	11pt, % Default font size, select one of 10pt, 11pt or 12pt
 	fleqn, % Left align equations
 	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
-	oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
-]{../LegrandOrangeBook}
+	oneside, % Oneside mode, more suitable if the book is to be read on a screen or print-on-demand
+]{memoir}
+
+%----------------------------------------------------------------------------------------
+%	CORE PACKAGES (replacing what the old class loaded)
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage[usenames, svgnames, table]{xcolor}
+
+\usepackage{lmodern} % Latin Modern = scalable Computer Modern
+\usepackage{microtype}
+
+\usepackage{geometry}
+\geometry{
+	top=3cm,
+	bottom=2.5cm,
+	inner=1.5cm,
+	outer=1.5cm,
+	headsep=10pt,
+	headheight=14pt,
+	footskip=1.4cm,
+	columnsep=1cm
+}
+
+\usepackage{hyperref}
+
+% Header/footer styling similar to the old Legrand template
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancypagestyle{plain}{%
+  \fancyhead{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% Section and TOC formatting (you were already using these)
+\usepackage[explicit]{titlesec}
+\usepackage{tocloft}
+
+% Bibliography and index setup (mirroring the old class)
+\usepackage[
+	backend=biber,
+	bibstyle=numeric,
+	citestyle=numeric,
+	sorting=nyt,
+	sortcites=true,
+	abbreviate=false,
+	backref=true
+]{biblatex}
+\defbibheading{bibempty}{}
+
+\usepackage{makeidx}
+\makeindex
+\usepackage{etoolbox}
 
 %----------------------------------------------------------------------------------------
 %	BUILD FLAGS
@@ -51,9 +111,16 @@
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
 
-\chapterimage{../Images/zen-stone.jpg} % Chapter heading image
-\chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
-\chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
+% These commands came from the old Legrand class; provide no-op versions so
+% existing content still compiles under memoir. You can later redefine them
+% if you want fancy chapter images again.
+\newcommand{\chapterimage}[1]{} % Chapter heading image (ignored for now)
+\newcommand{\chapterspaceabove}[1]{} % Whitespace above chapter title box
+\newcommand{\chapterspacebelow}[1]{} % Whitespace below chapter title box
+
+\chapterimage{../Images/zen-stone.jpg}
+\chapterspaceabove{6.5cm}
+\chapterspacebelow{6.75cm}
 
 \usepackage{chessboard}
 \usepackage{xskak}
@@ -67,18 +134,12 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	TITLE PAGE
+%	TITLE PAGE (memoir style)
 %----------------------------------------------------------------------------------------
 
-\titlepage % Output the title page
-	{\includegraphics[width=\paperwidth]{../Images/background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
-	{ % Title(s) and author(s)
-		\centering\sffamily % Font styling
-		{\Huge\bfseries My Chess Notebook\par} % Book title
-		\vspace{16pt} % Vertical whitespace
-		\vspace{24pt} % Vertical whitespace
-		{\huge\bfseries Ming Lu\par} % Author name
-	}
+\title{My Chess Notebook}
+\author{Ming Lu}
+\maketitle
 
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE
