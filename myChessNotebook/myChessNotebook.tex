@@ -98,13 +98,18 @@
   \buildallfalse
 \fi
 
-% Book information for PDF metadata, remove/comment this block if not required 
+% PDF metadata and link appearance
 \hypersetup{
 	pdftitle={My Chess Notebook}, % Title field
 	pdfauthor={Ming Lu}, % Author field
 	pdfsubject={Chess}, % Subject field
 	pdfkeywords={chess, ideas, games, annotations}, % Keywords
 	pdfcreator={LaTeX}, % Content creator field
+	% Make links colored instead of framed rectangles
+	colorlinks=true,
+	linkcolor=ocre,
+	citecolor=ocre,
+	urlcolor=ocre
 }
 
 \addbibresource{../sample.bib} % Bibliography file
