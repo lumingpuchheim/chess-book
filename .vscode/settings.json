@@ -1,0 +1,61 @@
+{
+  // Exclude LaTeX build artifacts and temporary files
+  // This makes the explorer show primarily git-tracked source files
+  "files.exclude": {
+    // LaTeX build artifacts
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.bcf": true,
+    "**/*.blg": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.glg": true,
+    "**/*.glo": true,
+    "**/*.gls": true,
+    "**/*.glsdefs": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+    "**/*.ist": true,
+    "**/*.lof": true,
+    "**/*.log": true,
+    "**/*.lot": true,
+    "**/*.out": true,
+    "**/*.pdf": true,
+    "**/*.ptc": true,
+    "**/*.run.xml": true,
+    "**/*.toc": true,
+    "**/*.xml": true,
+    "**/*-SAVE-ERROR": true,
+    "**/texput.log": true,
+    "**/example.log": true,
+    "**/cards-keres.aux": true
+  },
+  // Also exclude from search
+  "search.exclude": {
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.bcf": true,
+    "**/*.blg": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.glg": true,
+    "**/*.glo": true,
+    "**/*.gls": true,
+    "**/*.glsdefs": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+    "**/*.ist": true,
+    "**/*.lof": true,
+    "**/*.log": true,
+    "**/*.lot": true,
+    "**/*.out": true,
+    "**/*.pdf": true,
+    "**/*.ptc": true,
+    "**/*.run.xml": true,
+    "**/*.toc": true,
+    "**/*.xml": true
+  }
+}
+
