@@ -135,6 +135,21 @@
 \usepackage{tocloft}
 \usepackage{epigraph}
 \usepackage{multicol}
+\usepackage{tikz}
+
+% Define \titlepage command to match Legrand template style
+% Usage: \titlepage{background image code}{title text}{author text}
+\newcommand{\titlepage}[3]{%
+	\thispagestyle{empty}%
+	\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}%
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node[anchor=center,inner sep=0] at (current page.center) {#1};%
+		\node[anchor=center,align=center] at ([yshift=3cm]current page.center) {\sffamily\Huge\bfseries #2};%
+		\node[anchor=center,align=center] at ([yshift=-2cm]current page.center) {\sffamily\huge\bfseries #3};%
+	\end{tikzpicture}%
+	\restoregeometry%
+	\clearpage%
+}
 
 %----------------------------------------------------------------------------------------
 
@@ -144,9 +159,10 @@
 %	TITLE PAGE (memoir style)
 %----------------------------------------------------------------------------------------
 
-\title{My Chess Notebook}
-\author{Ming Lu}
-\maketitle
+\titlepage % Output the title page
+	{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{../Images/Delicate chessboard with a soft accent.png}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+	{My Chess Notebook} % Book title
+	{Ming Lu} % Author name
 
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE
@@ -269,7 +285,7 @@
 	\input{../cards/chess/annotations/annotation}
 \else
 	% Lite build: skip ideas, games and annotations to speed up compilation.
-	\input{../cards/chess/ideas/catalan/catalan}
+	%\input{../cards/chess/ideas/catalan/catalan}
 \fi
 
 %----------------------------------------------------------------------------------------
