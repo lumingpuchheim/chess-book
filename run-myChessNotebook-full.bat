@@ -45,6 +45,17 @@ if /I "%buildAll%"=="false" (
     )
 )
 
+echo Running makeglossaries for glossary...
+if /I "%buildAll%"=="false" (
+    if exist myChessNotebook-lite.glo (
+        makeglossaries myChessNotebook-lite
+    )
+) else (
+    if exist myChessNotebook.glo (
+        makeglossaries myChessNotebook
+    )
+)
+
 echo Running pdflatex (second pass)...
 if /I "%buildAll%"=="false" (
     pdflatex -interaction=nonstopmode -jobname=myChessNotebook-lite myChessNotebook-lite.tex
