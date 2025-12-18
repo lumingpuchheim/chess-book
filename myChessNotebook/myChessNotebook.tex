@@ -276,6 +276,15 @@
 \input{../cards/chess/visualization-board}
 \section*{Process of Elimination}
 \input{../cards/chess/process_of_elimination}
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
+\printglossary[title={Glossary}]
+
 \chapter{Chess Ideas and Patterns}
 
 \ifbuildall
@@ -285,16 +294,8 @@
 	\input{../cards/chess/annotations/annotation}
 \else
 	% Lite build: skip ideas, games and annotations to speed up compilation.
-	%\input{../cards/chess/ideas/catalan/catalan}
+	\input{../cards/chess/ideas/catalan/setup-center}
 \fi
-
-%----------------------------------------------------------------------------------------
-%	GLOSSARY
-%----------------------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
-\printglossary[title={Glossary}]
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
