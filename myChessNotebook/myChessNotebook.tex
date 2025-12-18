@@ -159,7 +159,7 @@
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
-
+\newpage
 \pagestyle{empty} % Disable headers and footers for the following pages
 \newcommand{\Color}[1]{\hypersetup{linkcolor=#1}\color{#1}}
 
@@ -174,7 +174,7 @@
 
 \begingroup % start a TeX group
 \color{ocre}% or whatever color you wish to use
-\tableofcontents % Output the table of contents
+\tableofcontents* % Output the table of contents (no self-entry)
 \endgroup
 
 
@@ -182,11 +182,51 @@
 
 \cleardoublepage % Start the following content on a new page
 
-% Define section and subsection colors
-\partfont{\color{ocre}\Huge}
-\chapterfont{\color{ocre}}
-\sectionfont{\color{ocre}}
-\subsectionfont{\color{ocre}}
+%----------------------------------------------------------------------------------------
+%	HEADING COLORS (chapters/sections/subsections in text)
+%----------------------------------------------------------------------------------------
+
+% Chapter heading: ocre, same font size as default
+\titleformat{\chapter}
+  {\normalfont\huge\bfseries\color{ocre}} % format
+  {\thechapter}                            % label
+  {1em}                                    % sep
+  {#1}                                     % before-code (title text)
+
+% Unnumbered chapters (\chapter*)
+\titleformat{name=\chapter,numberless}
+  {\normalfont\huge\bfseries\color{ocre}}
+  {}
+  {0pt}
+  {#1}
+
+% Section heading
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{ocre}}
+  {\thesection}
+  {1em}
+  {#1}
+
+% Unnumbered sections (\section*)
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries\color{ocre}}
+  {}
+  {0pt}
+  {#1}
+
+% Subsection heading
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{ocre}}
+  {\thesubsection}
+  {1em}
+  {#1}
+
+% Unnumbered subsections (\subsection*)
+\titleformat{name=\subsection,numberless}
+  {\normalfont\large\bfseries\color{ocre}}
+  {}
+  {0pt}
+  {#1}
 
 % Define a macro for keywords, the keywords are displayed in italic
 \newcommand{\keywords}[1]{Keywords: \textit{#1}}
@@ -250,7 +290,7 @@
 \makeatletter
 \renewcommand*{\hyperpage}[1]{%
   \begingroup
-  \edef\Hy@page{\number\numexpr#1+2\relax}%
+  \edef\Hy@page{\number\numexpr#1+1\relax}%
   \hyper@linkstart{link}{page.\Hy@page}%
   \Hy@page
   \hyper@linkend
@@ -260,7 +300,6 @@
 
 \cleardoublepage % Make sure the index starts on an odd (right side) page
 \phantomsection
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
 \printindex % Output the index
 
 %----------------------------------------------------------------------------------------
