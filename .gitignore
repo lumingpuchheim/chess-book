@@ -28,3 +28,9 @@ example.log
 *.ptc
 *.blg
 myChessNotebook/myChessNotebook.bbl-SAVE-ERROR
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.out
