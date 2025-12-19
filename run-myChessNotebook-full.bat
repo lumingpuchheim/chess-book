@@ -29,9 +29,13 @@ if /I "%buildAll%"=="false" (
 
 echo Running biber for bibliography...
 if /I "%buildAll%"=="false" (
-    biber myChessNotebook-lite
+    if exist myChessNotebook-lite.bcf (
+        biber myChessNotebook-lite
+    )
 ) else (
-    biber myChessNotebook
+    if exist myChessNotebook.bcf (
+        biber myChessNotebook
+    )
 )
 
 echo Running makeindex for index...
@@ -49,10 +53,14 @@ echo Running makeglossaries for glossary...
 if /I "%buildAll%"=="false" (
     if exist myChessNotebook-lite.glo (
         makeglossaries myChessNotebook-lite
+    ) else (
+        echo   No glossary file found, skipping makeglossaries...
     )
 ) else (
     if exist myChessNotebook.glo (
         makeglossaries myChessNotebook
+    ) else (
+        echo   No glossary file found, skipping makeglossaries...
     )
 )
 
@@ -64,6 +72,13 @@ if /I "%buildAll%"=="false" (
 )
 
 echo Running pdflatex (third pass to resolve all references)...
+if /I "%buildAll%"=="false" (
+    pdflatex -interaction=nonstopmode -jobname=myChessNotebook-lite myChessNotebook-lite.tex
+) else (
+    pdflatex -interaction=nonstopmode myChessNotebook.tex
+)
+
+echo Running pdflatex (fourth pass to ensure glossary is fully resolved)...
 if /I "%buildAll%"=="false" (
     pdflatex -interaction=nonstopmode -jobname=myChessNotebook-lite myChessNotebook-lite.tex
 ) else (

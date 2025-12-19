@@ -295,7 +295,7 @@
 %----------------------------------------------------------------------------------------
 %	GLOSSARY
 %----------------------------------------------------------------------------------------
-\cleardoublepage
+\newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
 \printglossary[title={Glossary}]
@@ -309,7 +309,9 @@
 	\input{../cards/chess/annotations/annotation}
 \else
 	% Lite build: skip ideas, games and annotations to speed up compilation.
-	\input{../cards/chess/ideas/pawn-sacrifice/carlsen-vanVely}
+	% \input{../cards/chess/ideas/pawn-sacrifice/carlsen-vanVely}
+  \input{../cards/chess/ideas/carlsbad/minority-attack}
+  \input{../cards/chess/prophylaxis}
 \fi
 
 %----------------------------------------------------------------------------------------
