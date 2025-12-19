@@ -267,10 +267,10 @@
 % Vocabulary/glossary helper:
 %   #1 = key (no spaces, e.g. hanging-pawns)
 %   #2 = word as printed in the text (e.g. hanging pawns)
-%   #3 = meaning (definition)
+%   #3 = meaning (definition) - if empty, no glossary entry is created
 \newcommand{\vocab}[3]{%
-  \ifglsentryexists{#1}{%
-    \gls{#1}% use existing entry
+  \ifstrempty{#3}{%
+    \gls{#1}% just print the text without creating glossary entry
   }{%
     \newglossaryentry{#1}{name={#2},description={#3}}%
     \gls{#1}% first use also prints as a glossary link
