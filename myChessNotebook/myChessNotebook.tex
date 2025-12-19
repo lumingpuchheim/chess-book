@@ -59,13 +59,31 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.5pt}
+% Clear all headers and footers first, then set up the fancy style
 \fancyhf{}
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\rightmark}
-\fancyhead[RE]{\leftmark}
+% Set up fancy pagestyle: chapter name in header, page numbers in footers
+% Note: Since document is oneside, we show only chapter name to avoid overlap
+% If section name exists, show "Chapter: Section", otherwise just "Chapter"
+\fancyhead[L]{\leftmark}      % Left: chapter name (primary)
+\fancyhead[R]{}                % Right: empty (to prevent overlap)
+\fancyfoot[C]{\thepage}       % Center: page numbers in footer (consistent with plain style)
+
+% Redefine plain pagestyle for chapter opening pages
+% Chapter opening pages traditionally have clean headers (no chapter/section names)
+% but should still show page numbers in the footer
+% Note: In memoir, \chapter* uses the plain pagestyle, so we must ensure it has page numbers
 \fancypagestyle{plain}{%
-  \fancyhead{}%
+  % Clear all headers and footers first
+  \fancyhf{}%
+  % Set headers to empty (clean look for chapter opening pages)
+  \fancyhead[L]{}\fancyhead[R]{}\fancyhead[C]{}%
+  \fancyhead[LE]{}\fancyhead[RO]{}\fancyhead[LO]{}\fancyhead[RE]{}%
+  % Clear left and right footers, set center footer with page number
+  \fancyfoot[L]{}\fancyfoot[R]{}%
+  \fancyfoot[C]{\thepage}%        % Page number in center footer (standard for chapter pages)
+  % Remove rule lines for clean appearance
   \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
 }
 
 % Section and TOC formatting (you were already using these)
@@ -284,6 +302,7 @@
 %	Main Content
 %----------------------------------------------------------------------------------------
 \chapter*{Preface}
+\thispagestyle{plain} % Ensure plain pagestyle is applied (with page numbers in footer)
 \addcontentsline{toc}{chapter}{Preface}
 \input{preface}
 
