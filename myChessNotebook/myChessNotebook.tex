@@ -188,25 +188,6 @@
 
 ~\vfill % Push the text to the center
 
-%----------------------------------------------------------------------------------------
-%	EPIGRAPH PAGE
-%----------------------------------------------------------------------------------------
-
-\newpage
-\thispagestyle{empty} % Suppress headers and footers on this page
-
-~\vfill % Push the text down to the center of the page
-
-\begin{center}
-\fontsize{24}{30}\selectfont
-``Knowledge is power.''
-\vspace{1em}
-
-\fontsize{14}{18}\selectfont
---- Petyr Baelish, \emph{Game of Thrones}
-\end{center}
-
-~\vfill % Push the text to the center
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
@@ -305,13 +286,11 @@
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
 \input{preface}
-\chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
-\input{../cards/chess/explanation-of-symbols}
-\section*{Visualization the Three Questions}
-\input{../cards/chess/visualization-board}
-\section*{Process of Elimination}
-\input{../cards/chess/process_of_elimination}
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\input{introduction}
 
 %----------------------------------------------------------------------------------------
 %	GLOSSARY
@@ -330,7 +309,7 @@
 	\input{../cards/chess/annotations/annotation}
 \else
 	% Lite build: skip ideas, games and annotations to speed up compilation.
-	\input{../cards/chess/ideas/catalan/setup-center}
+	\input{../cards/chess/ideas/pawn-sacrifice/carlsen-vanVely}
 \fi
 
 %----------------------------------------------------------------------------------------
