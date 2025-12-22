@@ -1,0 +1,44 @@
+\newpage
+\section{f- and h-Pawn Against h-Pawn}
+
+\begin{multicols}{2}
+
+    \newchessgame[
+        setfen=8/7p/8/8/8/5p1k/7P/6K1 w - - 0 1
+    ]
+
+    \textbf{N. Grigoriev, 1920}
+
+    \chessboard
+
+    \variation[invar]{1. Kh1? Kg4!} Black has an elementary 
+    plan: his king goes to e3 and then he advances f2, 
+    forcing the advance of White's h-pawn. Black then chooses 
+    whether to move his h-pawn one or two squares to place his 
+    opponent in zugzwang.
+
+    \mainline[level=1]{1. Kf2 Kg4 2. Ke3!}
+
+    Thanks to zugzwang, the pawn must leave the h7-square. White 
+    must only make sure he chooses the right back rank square for his 
+    king.
+
+    \mainline[level=1]{2... h6 3. Kf2 Kf4} 
+
+    \chessboard
+
+    Here White must be careful not to play \variation[invar]{4. Kf1? Ke3 5. Ke1 h5!}.
+    White is losing: moving the h-pawn leas either to Fahrni-Alapin Position or lose
+    the h-pawn. Move the king will make Black's f-pawn promote. 
+
+    The h pawns need odd number of tempi to block each other so that White can play stalemate defense.
+    Therefore White must search for anti-opposition.     \index{Pawn Endgame!Fahrni-Alapin Position}
+
+    \mainline[level=1]{4. Ke1 Ke3 5. Kf1 h5 6. Ke1 f2+ }
+    
+    \variation[invar]{6... h4 7. Kf1 f2 8. h3} \equal
+    But not \variation[invar]{7. h3?} Black wins as Fahrni-Alapin Position. 
+
+    \mainline[level=1]{7. Kf1 Kf3 8. h3 Kg3 9. h4} \textbf{\equal}
+
+\end{multicols}

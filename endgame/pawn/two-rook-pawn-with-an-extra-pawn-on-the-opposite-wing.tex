@@ -1,0 +1,70 @@
+\newpage
+\section{Two Rook-Pawn with an Extra Pawn on the Opposite Wing}
+
+\begin{multicols}{2}
+
+Positions in which two rook's pawn are facing each other,
+with one side having a distant passed pawn, are fairly common in 
+practice. So it is useful to have a quick and accurate way of 
+evaluating them. The plan to play for a win is obvious:
+the king will go after the rook's pawn. His opponent musteliminate the pawn on the other wing 
+and then rush the king over to the corner where it 
+can stop the rook's pawn. Under what circumstances 
+can he succeed?
+
+\newchessgame[
+    setfen=8/5k2/p7/5PK1/P7/8/8/8 w - - 0 1
+]
+
+\chessboard
+
+White to move wins:
+
+\mainline[level=1]{1. a5! Kg7 2. Kf4 Kf6 3. Ke4 Kf7 4. Kd5 Kf6 5. Kc6 Kxf5
+6. Kb6 Ke6 7. Kxa6 Kd7 8. Kb7}
+
+In practice, such situation often occur at the end of 
+long calculations, and extending such calculations a few moves further 
+could be most difficult. It would be good to have 
+a definite evaluation of this position immediately as soon as 
+we lay eye on it. \index{Pawn Endgame!Dvoretsky's Rule}
+
+
+\subsection{Dvoretsky's Rule}
+\begin{enumerate}
+    \item{If the rook's pawn of the stronger side has crossed 
+    the middle of the board, it's always a win.}
+    \item{We define a ``normal'' position, which is drawn:}
+    \begin{enumerate}
+        \item{the rook's pawns, which block one another, are separated by 
+        the middle of the board on a-file.}
+        \item{
+            Black's (the defender) king aiming for the c8 square, can reach 
+            it without loss of time. This is because the passed pawn 
+            has either traversed the key h3-c8 diagonal or stands on it.
+        }
+    \end{enumerate}
+    \item{For the kingside passed pawn, every square behind the h3-c8 square is 
+    a reserve tempo for White. 
+    For example, the pawn at f4 means one reserve tempo for White.
+    If the king is not beside the passed pawn, but in front of it, that's another reserve tempo
+    for White.}
+    \item{Every square the queenside pawns are behind the ``normal'' position is 
+    a reserve tempo for Black. With pawn at a3/a4, Black has one reserve tempo in his favor.}
+    \item{White wins only if the relative number of tempi calculated shown above is in his favor.}
+\end{enumerate}
+
+\newchessgame[
+    setfen=8/8/5k2/8/5K2/p4P2/P7/8 w - - 0 1
+]
+\chessboard
+
+White wins because the count is 3:2. His f-pawn is two squares 
+behind the h3-c8 diagonal and the king is in front of the passed pawn.
+Black has two tempi because the queenside pawns are two squares 
+behind the ``normal'' position.
+
+\mainline[level]{
+    1. Ke4! Ke6 2. Kd4
+} \textbf{ $+-$}
+\end{multicols}

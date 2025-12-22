@@ -31,12 +31,15 @@
 %	INDEX
 %----------------------------------------------------------------------------------------
 
-% Workaround: index entries are off by 2 pages in the .idx file.
+% Workaround: index entries are off by N pages in the .idx file.
 % Adjust the page number and link target used by \hyperpage (only used in the index).
+% The offset N is controlled by \IndexPageOffset, which defaults to 1 but
+% can be overridden (e.g. from the build script via \def\IndexPageOffset{2}).
+\providecommand{\IndexPageOffset}{1}
 \makeatletter
 \renewcommand*{\hyperpage}[1]{%
   \begingroup
-  \edef\Hy@page{\number\numexpr#1+1\relax}%
+  \edef\Hy@page{\number\numexpr#1+\IndexPageOffset\relax}%
   \hyper@linkstart{link}{page.\Hy@page}%
   \Hy@page
   \hyper@linkend

@@ -5,6 +5,10 @@
 \def\BookTitle{Endgame Notes}
 \def\BookAuthor{Ming Lu} % or another author if you like
 
+% Index page offset: controls how much we shift page numbers in \hyperpage.
+% This is used in postprocess.tex; adjust here per-book as needed.
+\def\IndexPageOffset{0}
+
 \input{../preprocess}
 
 %----------------------------------------------------------------------------------------
@@ -28,8 +32,13 @@
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
 \printglossary[title={Glossary}]
 
+\nocite{Dvoretsky:2008}
 \chapter{Pawn Endgame}
 
-
+\input{pawn/reti-idea}
+\input{pawn/king-activity}
+\input{pawn/two-rook-pawn-with-an-extra-pawn-on-the-opposite-wing}
+\input{pawn/triangulation}
+\input{pawn/f-and-h-pawn-against-h-pawn}
 
 \input{../postprocess}

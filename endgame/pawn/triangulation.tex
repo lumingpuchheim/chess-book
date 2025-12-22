@@ -1,0 +1,40 @@
+\newpage
+\section{Triangulation}
+
+\begin{multicols}{2}
+    Triangulation refers to a king maneuver which aims to 
+    lose a tempo, and leave the opponent with the move.
+
+    The following position is very important, both for itself
+    and as an illustration of the characteristic logic 
+    of analyzing corresponding squares.
+    \newchessgame[
+        setfen=2k5/8/p1P5/P2K4/8/8/8/8 w - - 0 1
+    ]
+
+    \textbf{Fahrni-Alapin, 1912}
+
+    \chessboard
+
+    Two pairs of squares of reciprocal zugzwang are 
+    obvious: d6-d8 and c5-c7. The squares d6 and c5 border on d5.
+
+    For Black, the squares d8 and c7 border on c8. Thus a standard
+    means of identifying a new correspondece: that of the d5 and 
+    c8-square.
+
+    Along with d5 and c5, White has two equally important squares
+    c4 and d4; while Black has b8 and d8 adjoining the squares c7 and 
+    c8.
+
+    With Black's king on d8, White makes a waiting move with his king,
+    from c4 to d4, Black's king will be forced to c7 or c8, 
+    when White occupies the corresponding square and wins. 
+    \index{Pawn Endgame!Triangulation}
+    \index{Pawn Endgame!Corresponding Squares}
+    \index{Pawn Endgame!Fahrni-Alapin Position}
+
+    \mainline[level=1]{
+        1. Kc4 Kd8 2. Kd4 Kc8 3. Kd5 Kd8 4. Kd6 Kc8 5. c7
+    } \textbf{1-0}
+\end{multicols}
