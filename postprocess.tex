@@ -35,14 +35,21 @@
 % Adjust the page number and link target used by \hyperpage (only used in the index).
 % The offset N is controlled by \IndexPageOffset, which defaults to 1 but
 % can be overridden (e.g. from the build script via \def\IndexPageOffset{2}).
+% This version handles both single page numbers and comma-separated lists
+% (when makeindex combines multiple entries for the same term).
 \providecommand{\IndexPageOffset}{1}
 \makeatletter
 \renewcommand*{\hyperpage}[1]{%
   \begingroup
-  \edef\Hy@page{\number\numexpr#1+\IndexPageOffset\relax}%
-  \hyper@linkstart{link}{page.\Hy@page}%
-  \Hy@page
-  \hyper@linkend
+  \@tempswafalse
+  \@for\@tempa:=#1\do{%
+    \if@tempswa,\fi
+    \@tempswatrue
+    \edef\Hy@page{\number\numexpr\@tempa+\IndexPageOffset\relax}%
+    \hyper@linkstart{link}{page.\Hy@page}%
+    \Hy@page
+    \hyper@linkend
+  }%
   \endgroup
 }
 \makeatother
