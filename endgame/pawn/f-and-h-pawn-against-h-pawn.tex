@@ -40,5 +40,55 @@
     But not \variation[invar]{7. h3?} Black wins as Fahrni-Alapin Position. 
 
     \mainline[level=1]{7. Kf1 Kf3 8. h3 Kg3 9. h4} \textbf{\equal}
+\end{multicols}
 
+\newpage
+\section{Maizelis' Position} \label{sec:maizelis-position}
+\begin{multicols}{2}
+    The stronger side has an easy win if the rook's pawn is on the starting 
+    square. If it is not the case, Maizelis' position serves as a most 
+    important guidepost. The outcome of the battle depends on whether the 
+    stronger side cn reach Maizelis' position and whose move it is. \index{Pawn Endgame!Maizelis' Position}
+
+    \newchessgame[
+        setfen=8/8/8/5p1p/5k2/8/5K1P/8 w - - 0 1
+    ]
+
+    \textbf{Maizelis, 1955}
+
+    \chessboard
+
+    With White to move, there is no win:
+    \mainline[level=1]{
+        1. Ke2 Ke4 2. Kf2 h4 3. Ke2 h3 4. Kf2 Kd3 5. Kf3 Kd2 Kf2,
+    } \textbf{\equal}
+
+    Black to move wins:
+
+    \newchessgame[
+        setfen=8/8/8/5p1p/5k2/8/5K1P/8 b - - 0 1,
+        moveid=1b
+    ]
+
+    \chessboard
+
+    \mainline[level=1]{
+        1... Ke4 2. Ke2 h4
+    } 
+
+    White is in zugzwang: h3 leads to Fahrni-Alapin Position. \index{Pawn Endgame!Fahrni-Alapin Position}
+    As we will see, moving the king allows Black's king to invade.
+
+    \mainline[level=1]{
+        3. Kf2 Kd3! 4. Kf3 h3 5. Kf2 Kd2 6. Kf3 }
+        
+    (\variation[invar]{6. Kf1 Ke3 7. Ke1 Kf3 8. Kf1 f4 9. Kg1 Ke2} $-+$)
+    \mainline[level=1]{6... Ke1 7. Ke3 Kf1 8. Kf3 Kg1 
+        9. Kg3 f4+ 10. Kf3 Kxf2 11. Kf2 f3
+    } \textbf{$-+$}
+
+    The central problem here is one reciprocal zugzwang. If Black's
+    king moves to the 4th rank, with the pawn at h4 or h6, both
+    must respond by taking the opposition.
+    If the pawn is at h5, both must take the anti-opposition.
 \end{multicols}
