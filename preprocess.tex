@@ -96,8 +96,14 @@
 \usepackage{etoolbox}
 
 %----------------------------------------------------------------------------------------
-%	BUILD FLAGS
+%	BOOK METADATA & BUILD FLAGS
 %----------------------------------------------------------------------------------------
+
+% Allow each book to override title/author by defining these commands
+% *before* loading this file. If not provided, fall back to defaults.
+\providecommand{\BookTitle}{My Chess Notebook}
+\providecommand{\BookAuthor}{Ming Lu}
+
 % Control whether to build all heavy chapters (ideas, games, annotations).
 % Default: build everything. A wrapper file can define \nobuildall before
 % loading this file to disable them.
@@ -109,8 +115,8 @@
 
 % PDF metadata and link appearance
 \hypersetup{
-	pdftitle={My Chess Notebook}, % Title field
-	pdfauthor={Ming Lu}, % Author field
+	pdftitle={\BookTitle}, % Title field
+	pdfauthor={\BookAuthor}, % Author field
 	pdfsubject={Chess}, % Subject field
 	pdfkeywords={chess, ideas, games, annotations}, % Keywords
 	pdfcreator={LaTeX}, % Content creator field
@@ -166,8 +172,8 @@
 
 \titlepage % Output the title page
 	{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{../Images/Delicate chessboard with a soft accent.png}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
-	{My Chess Notebook} % Book title
-	{Ming Lu} % Author name
+	{\BookTitle} % Book title
+	{\BookAuthor} % Author name
 
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE

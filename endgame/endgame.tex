@@ -1,0 +1,35 @@
+% This file now focuses on the book-specific content and uses shared
+% preprocess/postprocess files from the project root.
+
+% Book-specific metadata (overrides defaults in preprocess.tex)
+\def\BookTitle{Endgame Notes}
+\def\BookAuthor{Ming Lu} % or another author if you like
+
+\input{../preprocess}
+
+%----------------------------------------------------------------------------------------
+%	Main Content
+%----------------------------------------------------------------------------------------
+\chapter*{Preface}
+\thispagestyle{plain} % Ensure plain pagestyle is applied (with page numbers in footer)
+\addcontentsline{toc}{chapter}{Preface}
+\input{preface}
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+\input{introduction}
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
+\printglossary[title={Glossary}]
+
+\chapter{Pawn Endgame}
+
+
+
+\input{../postprocess}
