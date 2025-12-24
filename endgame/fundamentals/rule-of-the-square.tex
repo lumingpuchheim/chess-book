@@ -1,0 +1,24 @@
+\section{Rule of the Square}
+
+\vocab{rule-of-the-square}{Rule of the Square}{
+    Imagine a square having for one of its sides the path 
+    from the pawn to its queening square. If the king 
+    stands within the square of the passed pawn, or can reach
+    it onits move, the pawn can be stopped; otherwise, it will queen.}
+    Imagine a square having for one of its sides the path 
+    from the pawn to its queening square. If the king 
+    stands within the square of the passed pawn, or can reach
+    it onits move, the pawn can be stopped; otherwise, it will queen.
+    \index{Rule of the Square}
+
+\begin{multicols}{2}
+    \chessboard[
+        setfen=8/8/8/8/8/1P5k/8/7K w - - 0 1,
+        showmover=false,
+        pgfstyle=lefttoprightborder,
+        linewidth=0.1em,
+        markregion={b3-g8},
+        pgfstyle=bottomborder,
+        markregion={b8-g3}
+    ]
+\end{multicols}
