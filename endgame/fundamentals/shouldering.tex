@@ -1,0 +1,51 @@
+\newpage
+\section{Shouldering}
+Quite often, one must choose a route for the king that gives
+a ``shouldering'' to the enemy king to prevent the enemy 
+from arriving in time at an important part of the board.
+
+\begin{multicols}{2}
+\textbf{Schlage-Ahues, Berlin 1921}
+
+\newchessgame[
+    setfen=8/p4K2/P7/8/8/8/1k6/8/8 w - - 0 1
+]
+\chessboard
+
+White will win the pawn at a7. Black can save himself only if 
+he can succeed in locking the White king into the corner with ...\symking c7.
+
+The game was drawn after \variation[invar]{
+    1. Ke6 Kc3 2. Kd6? Kd4 3. Kc6 Ke5 4. Kb7 Kd6 5. Kxa7 Kc7
+}
+
+The right play would be:
+
+\mainline[level=1]{
+1. Ke6 Kc3 2. Kd5!
+}
+
+White's king approaches the a7-pawn while simultaneously ``shouldering''
+the enemy king, keeping it from approahching the c7-square. \index{Shouldering}
+
+\textbf{J. Moravec, 1940}
+
+\newchessgame[
+    setfen=8/1p6/8/8/8/8/1P6/K6k w - - 0 1
+]
+
+\chessboard
+
+White only gets a draw out of \variation[invar]{
+    1. Ka2? Kg2 2. Kb3 Kf3 3. Kc4 Ke4 4. b4 Ke5 5. Kc5 Ke6
+    6. Kb6 Kd5 7. Kxb7 Kc4
+} \textbf{$=$}.
+
+It is important to keep Black's king farther away from the pawns:
+
+\mainline[level=1]{
+    1. Kb1! Kg2 2. Kc2 Kf3 3. Kd3! Kf4 4. Kd4 Kf5 5. Kd5 Kf6
+    6. Kd6 Kf7 7. b4 Ke8 8. Kc7 b5 Kc6 } White wins.
+
+
+\end{multicols}

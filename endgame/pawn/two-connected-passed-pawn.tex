@@ -1,0 +1,75 @@
+\newpage
+\section{Two Connected Passed Pawn}
+\begin{multicols}{2}
+In practice we have often a typical situation with
+two connected passed pawns against one protected 
+passed pawn. Draw is often the result since the stronger 
+side's king is tied to the square of the protected passed pawn.
+
+Sometimes, the stronger side's king can leave the square to help his 
+pawns to queen or checkmate his opponent.
+
+The stronger side's plan usually consists of the following
+\begin{enumerate}
+    \item The furthest possible advance of the pawns
+    \item The optimum placement of the pawns - ready to roll
+    \item Choose the best time for the king's decisive advance
+\end{enumerate}
+
+\newchessgame[
+    setfen=8/8/8/1p6/1Pp5/2K3Pk/7P/8 w - - 0 1
+]
+
+\textbf{B. Horwitz, J. Kling, 1851}
+
+\chessboard
+
+Let's watch this plan in action. 
+
+\mainline[level=1]{1. Kd4 Kg4 2. h4 Kh5 3. Ke3 Kg4 4. Ke4 Kh5 5. Kf4 Kh6
+6. g4 Kg6 7. h5+ Kh6}
+
+\chessboard
+
+Stage 1 done. White's king has never left the square. In order to 
+advance his pawns further, he uses a typical technique: \vocab{triangulation}{triangulation}! \index{Triangulation}
+
+\mainline[level=1]{
+    8. Kf3 Kg5 9. Ke4 Kh6 10. Kf4
+}
+
+\chessboard
+
+Now Black's king must concede ground. As a result White's pawns can advance further.
+
+\mainline[level=1]{
+    10... Kh7 11. g5 Kg7 12. g6! Kf6
+}
+
+\chessboard
+
+Ready to roll! \variation[invar]{12. h6?} is a mistake because the pawns 
+cannot advance further.
+
+White executes another triangulation for the decisive king advance.
+
+\mainline[level=1]{
+13. Ke4 Kg7 14. Kf3 Kf6 15. Kf4 
+}
+
+\chessboard
+
+After another triangulation, Black must concede ground again.
+
+\mainline[level=1]{
+15... Kg7}
+
+\chessboard
+
+Stage 2 done. Now White has strengthened his position to its utmost, 
+it is time for the decisive king advance. The die will be cast. White's king will leave 
+the square. It is important to calculate the consequence of this move.
+
+\mainline{16. Kg5! c3 17. h6+ Kg8 18. Kf6 c2 19. h7+ Kh8 20. g7+ Kxh7 21. Kf7 c1=Q 22. g8=Q+ Kh6 23. Qg6#
+}
+\end{multicols}
