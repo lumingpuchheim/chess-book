@@ -35,4 +35,28 @@ on the mined square, or move forward, accurately avoiding it.
     to go to the mined square first.
 
     \mainline[level=1]{1. Kf6 Kb5 2. Ke7 Kc5 3. Ke6} \textbf{$+-$}
+
+    \chessboard[
+        setfen=8/8/8/8/5k2/2pP4/2P5/4K3 b - - 0 1,
+        pgfstyle=circle,
+        markfields={a2, b4},
+    ]
+
+    a2 and b4 squares are mined. 
+
+    Black must defend the key square e2 and f2. So the candidate moves are 
+    ...\symking e3 or ...\symking f3. Let's analyze first.
+
+    The following position is a mutual zugzwang. If it is 
+    Black's turn, he must move his king and then his c3 pawn is lost.
+    If it is White's turn, he has nothing better but moving his king back.
+
+    \chessboard[
+        setfen=8/8/8/8/1k6/2pP4/K1P5/8 b - - 0 1,   
+    ]
+
+    With White's king at a2, Black's king must be at b4 (a4 is too far from the kingside.)
+
+    We will have the whole packet of corresponding squares by moving the squares 
+    to the kingside: a2-b4, b1-c5, c1-d4, d1-e3 and e1-f3. Therefore Black's correct move is ...\symking f3. \index{Mined Squares} \index{Corresponding Squares}
 \end{multicols}
