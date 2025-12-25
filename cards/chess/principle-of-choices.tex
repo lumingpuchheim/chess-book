@@ -1,0 +1,81 @@
+\section{Principle of Choices}
+
+If you believe you are in a winning position, you must avoid 
+making moves that give your opponent choices, as different 
+outcomes may arise depending on an important tempo. The same 
+principle applies when you are defending and your position is drawn.
+
+On the other hand, if you are playing when the outcome is unclear, it is practical 
+to give your opponent a choice, as they may make a mistake. \index{Principle of Choices}
+
+Combining Principle of Choices and Process of Elimination makes it easier to find the correct 
+move.
+
+\begin{multicols}{2}
+\newchessgame[
+    setfen=6k1/8/5PP1/3p4/3Kp3/8/8/8  w - - 0 1
+]
+
+\chessboard
+
+White believes he is winning (it is a chess problem, draw can be easily achieved. Obviously
+White must find the winning move.)
+
+The candidate moves are
+\begin{itemize}
+    \item{f7}
+    \item{g7}
+    \item{\symking e3}
+    \item{Other king moves}
+\end{itemize}
+
+Other king moves are bad because Black can play ...e3 and then ...d4. He improves 
+his position.
+
+g7 is bad because White cannot make any further progress. He must move 
+his king to e6 which can be easily parried by ...\symking f7. Not to mention when 
+Black queens at e1, he gives a check.
+
+To eliminate f7 we can use the Principle of Choices. After f7, Black 
+can either play ...\symking f8 or ...\symking g7 and they lead to different result.
+This means f7 leads to a draw when Black responds correctly.
+Note we have eliminated the f7 without any calculation. Such a strategy saves 
+energy and time in real games since we are only interested in finding the good move.
+
+This leaves \symking e3. The game continues with 
+\mainline[level=1]{1. Ke3 Kf8}
+
+\chessboard
+
+Here again we can use Process of Elimination.
+Candidate moves are f7, g7, \symking d4 and other king moves.
+
+Other king moves are bad because of the same reason as before.
+
+\symking d4 is bad because Black can repeat the position. 
+
+g7 is bad because after ...\symking Kf7, White has no further threats.
+
+Therefore f7 is the move.
+
+\mainline[level=1]{2. f7 Ke7}
+
+\chessboard 
+
+Of course \symking d4 is the only move.
+
+\mainline[level=1]{3. Kd4 Kf8}
+
+\chessboard
+
+Even now we can use Process of Elimination! \symking e3 only repeats the position.
+Certainly White doesnt want to sacrifice with g7 yet. Which leaves only \symking xd5.
+
+\mainline[level=1]{4. Kxd5! e3}
+
+\chessboard
+
+The game finishes with a mate.
+
+\mainline[level=1]{5. Ke6! e2 6. Kf6 e1=Q 7. g7#} 
+\end{multicols}
