@@ -1,0 +1,44 @@
+\newpage
+\section{Drawn Positions: Bishop and Pawn}
+
+\begin{multicols}{2}
+    If the bishop does not control the rook pawn's 
+    queening square, then the weaker side has 
+    only to get his king in to corner (``safe corner''). 
+
+    \begin{chessdiagram}[Safe Corner]
+        \chessboard[
+            setfen=6k1/8/6BP/8/8/8/2K5/8 b - - 0 1,
+            showmover=false,
+        ]
+        \label{chess:bishop-endgame-1}
+    \end{chessdiagram}
+
+    The draw is obvious since White cannot drive the Black king 
+    away from the corner.
+    
+    \begin{chessdiagram}[Pawns at h6 and h7]
+        \chessboard[
+            setfen=6k1/7p/4K2P/4B3/8/8/8/8 b - - 0 1,
+            showmover=false,
+        ]
+        \label{chess:bishop-endgame-2}
+    \end{chessdiagram}
+
+    The position is a draw because Black's king only needs to move 
+    between f8 and g8 and White cannot attack the h7 pawn. The evaluation 
+    would not change if you added pawn pairs at g5/g6 and f4/f5.
+
+    \begin{chessdiagram}[Pawns at h7 and Pawn at g6 (Ponziani)]
+        \chessboard[
+            setfen=8/6kB/6P1/5K2/8/8/8/8 b - - 0 1,
+            showmover=false,
+        ]
+        \label{chess:bishop-endgame-3}
+    \end{chessdiagram}
+    
+    This drawing position has been known since the 18th century. The 
+    bishop cannot escape from its corner and giving it up leads to a 
+    drawn pawn ending.
+\end{multicols}
+
