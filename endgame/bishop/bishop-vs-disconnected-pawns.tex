@@ -1,0 +1,45 @@
+\section{Bishop vs Disconnected Pawns}
+
+\vocab{pants}{Pants}{
+    The bishop stops pawns on two different diagonals.
+    Advancing one of the pawns means the bishop must give up its guard over the other.
+} refers to a situation where the bishop stops pawns on two different diagonals.
+Advancing one of the pawns forces the bishop to give up its guard over the other.
+
+Note that there are other ways to exploit 
+a torn bishop. Sometimes, it may be driven away from the intersection 
+of two diagonals by the king, or forced to move away by means of zugzwang.
+
+\vocab{one-diagonal-principle}{One Diagonal Principle}{
+    The bishop fulfills its functions from a single diagonal. 
+} states that a bishop can defend from a single diagonal.
+
+\begin{multicols}{2}
+    \begin{chessdiagram}[Dvoretsky, 2000]
+        \newchessgame[
+            setfen=3Bk3/2K2p2/8/5pP1/2p5/8/8/8 w - - 0 1,
+        ]
+        \chessboard
+    \end{chessdiagram}
+
+    \mainline[level=1]{1. g6! }
+
+    The bishop now fulfills both functions from the single diagonal c1-h6.
+
+    \mainline[level=1]{
+        1... f6
+    }
+
+    \variation[invar]{1... fxg6 2. Bg5} the draw is easily achieved.
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    Here is another example of \vocab{PoE}{Process of Elimination}{}. 
+    \variation[invar]{2. Bxf6 f4} fails.
+
+    \variation[invar]{2. g7} gives up the pawn for nothing, which is bad. 
+
+    This leaves only \mainline[level=1]{2. Kd6 Kf8 3. Kd5} with a draw.
+\end{multicols}
