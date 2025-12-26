@@ -168,8 +168,10 @@
 \renewcommand{\thechessboard}{\arabic{chessboard}}
 
 % Create a chessboard environment with automatic numbering
+\makeatletter
 \newenvironment{chessdiagram}[1][]{%
     \refstepcounter{chessboard}%
+    \vspace{2em}%
     \begin{minipage}{\linewidth}%
         \centering%
         \noindent\textbf{Diagram~\thechessboard\ifx\relax#1\relax\else\ (#1)\fi}%
@@ -177,6 +179,7 @@
 }{%
     \end{minipage}%
 }
+\makeatother
 
 \begin{document}
 
