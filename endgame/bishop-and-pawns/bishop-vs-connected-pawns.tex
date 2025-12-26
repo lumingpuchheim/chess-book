@@ -1,0 +1,77 @@
+\newpage
+\section{Bishop vs Connected Pawns}
+
+\begin{multicols}{2}
+    The following ending demonstrates the most important 
+    ideas for positions involving connected pawns.
+
+    \newchessgame[
+        setfen=8/8/8/6kb/PK6/8/1P6/8 w - - 0 1,
+    ]
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    We examine first \mainline[level=1]{
+        1. Kc5 Kf6 2. Kd6 Bd1!
+    }
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    \vocab{pawns-in-the-crosshairs}{Pawns in the Crosshairs}{
+        attacking the enemy pawns with the bishop either to force the 
+        pawns to advance, which aids in the task of their subsequent blockade, 
+        or else to tie the king to their defense.
+    } refers to attacking the enemy pawns with the bishop either to force the 
+    pawns to advance, which aids in the task of their subsequent blockade, 
+    or else to tie the king to their defense.
+
+    \mainline[level=1]{
+        3. a5 Be2 4. b4 Bf1 5. Kc6 Ke7 6. b5 Bxb5
+    } \textbf{$=$}.
+
+    White can also play \vocab{auto-pilot}{Auto Pilot}{
+        moving the king ahead of the connected passed pawns 
+        to secure their passage to the queening square.
+    }, moving the king ahead of the connected passed pawns to 
+    secure their passage to the queening square.
+
+    \newchessgame[
+        setfen=8/8/8/6kb/PK6/8/1P6/8 w - - 0 1,
+    ]
+
+    \mainline[level=1]{
+        1. Ka5 Kf6 2. b4
+    }
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    Black is saved by another important technique 
+    \vocab{tail-hook}{Tail Hook}{
+        Tying the king to the rearmost pawn from behind.
+    }, tying the king to the rearmost pawn from behind.
+
+    \mainline[level=1]{
+        2... Ke5 3. b5 Kd4 4. Kb6 Bf3 5. a5 Kc4
+    }
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    Black ties the king to the rearmost pawn. 
+
+    \mainline[level=1]{
+        6.a6 Kb4
+    }
+
+    Black ties the king to the rearmost pawn again
+
+    \mainline[level=1]{
+        7. a7 Ba8! 8. Ka6 Kc5 9. b6 Kc6
+    } \textbf{$=$}
+\end{multicols}
