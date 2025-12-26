@@ -1,0 +1,82 @@
+\newpage
+\section{Passed Pawn (Breakthrough)}
+
+A breakthrough occurs when one or more pawns are sacrificed
+in order to create a passed pawn and promote it.
+
+We will examine a few of the standard structures how 
+to achieve a breakthrough and how to prevent a breakthrough. \index{Passed Pawn} \index{Pawn Breakthrough}
+
+\begin{multicols}{2}
+
+\newchessgame[
+    setfen=8/ppp5/8/PPP5/8/7k/8/7K w - - 0 1,
+]
+
+\chessboard
+
+Whte wins by \mainline[level=1]{1. b6 cxb6 2. a6 bxa6 3. c6}.
+
+Black to move has only one way to avoid the threatened breakthrough
+\variation{1... b6}. Both \variation[invar]{1... a6 2. c6} and
+\variation[invar]{1...c6 2. a6} are bad.
+
+\chessboard[
+    setfen=8/8/2p3k1/ppp5/6PK/2P4P/P1P5/8 w - - 0 1,
+    showmover=false,
+]
+
+This is the structure we find the in Ruy Lopez Exchange Variation.
+Black to move can create a passed pawn by 1...c4, followed by 
+...c5, ...b4 ...a4 and ...b3.
+
+White to move can play \vocab{prophylaxis}{prophylaxis}{} by 
+1. c4, which guarantees him a decisive advantage.
+
+When the opponent has a pawn majority with a doubled pawn, 
+it is often a good move to play a pawn move on the file of 
+the enemy's doubled pawn to prevent the opponent to create a passed pawn.
+
+\textbf{Maslov - Glebov, USSR 1936}
+
+\newchessgame[
+    setfen=6k1/6pp/5p2/4p3/p1p1P2P/2P2PP1/1K6/8 b - - 0 1,
+    moveid=1b
+]
+
+\chessboard 
+
+The possibility of a pawn breakthrough changes the evaluation of the position completely.
+
+\mainline[level=1]{
+    1... h5 2. Ka3
+}
+
+\variation[invar]{
+    2. g4 g5
+}
+
+\chessboard[
+    setfen=6k1/8/5k2/4p1pp/p1p1P1PP/2P2P2/1K6/8 b - - 0 1,
+    showmover=false,
+]
+
+I call this a ``tetris'', four pawns meet in a tetris. Black 
+will create a passed pawn on h4. \index{Pawn Breakthrough!Tetris}
+
+We go back to the mainline. 
+
+\mainline[level=1]{
+    2...g5 3. Kxa4 f5! 
+}
+
+\chessboard 
+
+There is no defence: \variation[invar]{
+    4. hxg5 f4
+} or \variation[invar]{
+    4. exf5 g4 5. fxg4 e4
+}
+
+\mainline[level=1]{4. Kb5 f4 5. gxf5 gxh4} the h-pawn queens.
+\end{multicols}
