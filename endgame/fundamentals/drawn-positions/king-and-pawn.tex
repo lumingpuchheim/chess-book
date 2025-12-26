@@ -41,4 +41,24 @@
     ]
 
     When Black's king is at f7, it is obviously also a stalemate.
+
+    Against an h-pawn, the defender can combine defence, either lock the enemy's 
+    king in the corner, or the king goes to corner himself.
+
+    \chessboard[
+        setfen=K7/2k5/P7/8/8/8/8/8 w - - 0 1,
+        showmover=false,
+    ]
+
+    If it is White to play, it is a draw. 
+
+    \variation{
+        1. Ka7 Kc7 2. Ka8 Kc8
+    } etc.
+
+    If it is Black to play, is is also a draw.
+
+    \variation{
+        1... Kc7 2. Ka7 Kc8 3. Kb6 Kb8
+    } We have seen this position already and it is a draw.
 \end{multicols}
