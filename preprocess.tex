@@ -163,6 +163,22 @@
 	\clearpage%
 }
 
+% Create a counter for chessboard diagrams
+\newcounter{chessboard}
+\renewcommand{\thechessboard}{\arabic{chessboard}}
+
+% Create a chessboard environment with automatic numbering
+\newenvironment{chessdiagram}[1][]{%
+    \refstepcounter{chessboard}%
+    \begin{minipage}{\linewidth}%
+        \centering%
+        \noindent\textbf{Diagram~\thechessboard}%
+        \ifx\relax#1\relax\else\ (#1)\fi%
+
+}{%
+    \end{minipage}%
+}
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
