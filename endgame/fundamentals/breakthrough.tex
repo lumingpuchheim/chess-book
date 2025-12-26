@@ -13,7 +13,11 @@ to achieve a breakthrough and how to prevent a breakthrough. \index{Passed Pawn}
     setfen=8/ppp5/8/PPP5/8/7k/8/7K w - - 0 1,
 ]
 
-\chessboard
+\begin{chessdiagram}
+    \begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+\end{chessdiagram}
 
 White wins by \mainline[level=1]{1. b6 cxb6 2. a6 bxa6 3. c6}.
 
@@ -21,10 +25,14 @@ Black to move has only one way to avoid the threatened breakthrough
 \variation{1... b6}. Both \variation[invar]{1... a6 2. c6} and
 \variation[invar]{1...c6 2. a6} are bad.
 
-\chessboard[
-    setfen=8/8/2p3k1/ppp5/6PK/2P4P/P1P5/8 w - - 0 1,
-    showmover=false,
-]
+\begin{chessdiagram}
+    \begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}[
+        setfen=8/8/2p3k1/ppp5/6PK/2P4P/P1P5/8 w - - 0 1,
+        showmover=false,
+    ]
+\end{chessdiagram}
 
 This is the structure we find in the Ruy Lopez Exchange Variation.
 Black to move can create a passed pawn by 1...c4, followed by 
@@ -44,7 +52,11 @@ the enemy's doubled pawn to prevent the opponent from creating a passed pawn.
     moveid=1b
 ]
 
-\chessboard 
+\begin{chessdiagram}
+    \begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+\end{chessdiagram} 
 
 The possibility of a pawn breakthrough changes the evaluation of the position completely.
 
@@ -56,10 +68,14 @@ The possibility of a pawn breakthrough changes the evaluation of the position co
     2. g4 g5
 }
 
-\chessboard[
-    setfen=6k1/8/5k2/4p1pp/p1p1P1PP/2P2P2/1K6/8 b - - 0 1,
-    showmover=false,
-]
+\begin{chessdiagram}
+    \begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}[
+        setfen=6k1/8/5k2/4p1pp/p1p1P1PP/2P2P2/1K6/8 b - - 0 1,
+        showmover=false,
+    ]
+\end{chessdiagram}
 
 This structure is called a ``tetris'': four pawns meet in a tetris. Black 
 will create a passed pawn on h4. \index{Pawn Breakthrough!Tetris}
@@ -70,7 +86,9 @@ Returning to the mainline.
     2...g5 3. Kxa4 f5! 
 }
 
-\chessboard 
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram} 
 
 There is no defence: \variation[invar]{
     4. hxg5 f4

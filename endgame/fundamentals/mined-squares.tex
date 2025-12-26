@@ -8,12 +8,14 @@ on the mined square, or move forward, accurately avoiding it.
 \index{Mined Squares}
 \begin{multicols}{2}
 
-    \chessboard[
-        setfen=8/2k5/8/1Pp3p1/6P1/1K6/8/8/8 w - - 0 1,
-        pgfstyle=circle,
-        markfields={b6, c4},
-        showmover=false,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/2k5/8/1Pp3p1/6P1/1K6/8/8/8 w - - 0 1,
+            pgfstyle=circle,
+            markfields={b6, c4},
+            showmover=false,
+        ]
+    \end{chessdiagram}
     White's king shuttles between b3, c3 and d3 while the Black king
     goes from c7 to b7 to a7. Neither of them is able to attack 
     the pawn, because c4 and b6 are mined. 
@@ -26,21 +28,25 @@ on the mined square, or move forward, accurately avoiding it.
         setfen=8/8/1k1p4/3P1K2/8/8/8/8 w - - 0 1,      
     ]
 
-    \chessboard[
-        pgfstyle=circle,
-        markfields={c5, e6},
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            pgfstyle=circle,
+            markfields={c5, e6},
+        ]
+    \end{chessdiagram}
 
     Here e6 and c5 squares are mined. White wins by forcing his opponent
     to go to the mined square first.
 
     \mainline[level=1]{1. Kf6 Kb5 2. Ke7 Kc5 3. Ke6} \textbf{$+-$}
 
-    \chessboard[
-        setfen=8/8/8/8/5k2/2pP4/2P5/4K3 b - - 0 1,
-        pgfstyle=circle,
-        markfields={a2, b4},
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/8/8/8/5k2/2pP4/2P5/4K3 b - - 0 1,
+            pgfstyle=circle,
+            markfields={a2, b4},
+        ]
+    \end{chessdiagram}
 
     a2 and b4 squares are mined. 
 
@@ -51,9 +57,11 @@ on the mined square, or move forward, accurately avoiding it.
     Black's turn, he must move his king and then his c3 pawn is lost.
     If it is White's turn, he has nothing better but moving his king back.
 
-    \chessboard[
-        setfen=8/8/8/8/1k6/2pP4/K1P5/8 b - - 0 1,   
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/8/8/8/1k6/2pP4/K1P5/8 b - - 0 1,   
+        ]
+    \end{chessdiagram}
 
     With White's king at a2, Black's king must be at b4 (a4 is too far from the kingside.)
 

@@ -12,15 +12,19 @@
     \newchessgame[
         setfen=4k3/8/4KP/8/8/8/8/8/8 w - - 0 1,
     ]
-    \chessboard
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
 
     White to move draw. \mainline[level=1]{1. f7 Kf8 2. Kf6 } stalemate.
 
     If the attacker controls the opposition, he can use zugzwang to win the game. \index{Zugzwang}
     
-    \chessboard[
-        setfen=4k3/8/4KP/8/8/8/8/8/8 w - - 0 1,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=4k3/8/4KP/8/8/8/8/8/8 w - - 0 1,
+        ]
+    \end{chessdiagram}
     
     Black to move loses \variation{1... Kf7 2. f7} Black is in zugzwang and he 
     must move his king away.
@@ -28,27 +32,33 @@
     Rook-pawn is the exception. In the following position, no matter who has the move, 
     the position is drawn. 
 
-    \chessboard[
-        setfen=k7/8/PK6/8/8/8/8/8/8 b - - 0 1,
-        showmover=false,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=k7/8/PK6/8/8/8/8/8/8 b - - 0 1,
+            showmover=false,
+        ]
+    \end{chessdiagram}
 
     The defender may also stalemate the attacker's king in the corner.
 
-    \chessboard[
-        setfen=5k1K/7P/8/8/8/8/8/8 b - - 0 1,
-        showmover=false,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=5k1K/7P/8/8/8/8/8/8 b - - 0 1,
+            showmover=false,
+        ]
+    \end{chessdiagram}
 
     When Black's king is at f7, it is obviously also a stalemate.
 
     Against an h-pawn, the defender can combine defence, either lock the enemy's 
     king in the corner, or the king goes to corner himself.
 
-    \chessboard[
-        setfen=K7/2k5/P7/8/8/8/8/8 w - - 0 1,
-        showmover=false,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=K7/2k5/P7/8/8/8/8/8 w - - 0 1,
+            showmover=false,
+        ]
+    \end{chessdiagram}
 
     If it is White to play, it is a draw. 
 

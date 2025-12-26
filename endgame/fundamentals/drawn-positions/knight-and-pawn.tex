@@ -4,9 +4,11 @@ Knight and pawn win easily against a lone king.
 When the pawn is an h-pawn, there are often exceptions. \index{Drawn Positions!Knight and Pawn}
 
 \begin{multicols}{2}
-    \chessboard[
-        setfen=N6K/4k2P/8/8/8/8/8/8 b - - 0 1,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=N6K/4k2P/8/8/8/8/8/8 b - - 0 1,
+        ]
+    \end{chessdiagram}
 
     We know from the pawn endgame the defender can use stalemate to draw the game.
     Here Black must choose to move his king to f7 or f8.
@@ -28,20 +30,24 @@ When the pawn is an h-pawn, there are often exceptions. \index{Drawn Positions!K
 
     As a rule, \textbf{the king should move to the same color square as the knight.}
 
-    \chessboard[
-        setfen=8/6k1/8/8/6n1/8/6Kp/8 w - - 0 1,
-        showmover=false,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/6k1/8/8/6n1/8/6Kp/8 w - - 0 1,
+            showmover=false,
+        ]
+    \end{chessdiagram}
 
     This position is also drawn, no matter who has the move. The White king 
     just moves between g2 and h1. Black cannot move his knight, otherwise his pawn is lost.
     To prevent White from playing \symking g2, Black must move his king to h3, but this 
     leads to stalemate.
 
-    \chessboard[
-        setfen=8/8/8/8/5k2/2n4p/7P/6K1 b - - 0 1,
-        showmover=false,
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/8/8/8/5k2/2n4p/7P/6K1 b - - 0 1,
+            showmover=false,
+        ]
+    \end{chessdiagram}
 
     This position is drawn because it is again impossible for Black to 
     drive the king from the corner or to mate him. The best Black can achieve is stalemate.

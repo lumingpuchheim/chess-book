@@ -12,13 +12,15 @@
     \index{Rule of the Square}
 
 \begin{multicols}{2}
-    \chessboard[
-        setfen=8/8/8/8/8/1P5k/8/7K w - - 0 1,
-        showmover=false,
-        pgfstyle=lefttoprightborder,
-        linewidth=0.1em,
-        markregion={b3-g8},
-        pgfstyle=bottomborder,
-        markregion={b8-g3}
-    ]
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/8/8/8/8/1P5k/8/7K w - - 0 1,
+            showmover=false,
+            pgfstyle=lefttoprightborder,
+            linewidth=0.1em,
+            markregion={b3-g8},
+            pgfstyle=bottomborder,
+            markregion={b8-g3}
+        ]
+    \end{chessdiagram}
 \end{multicols}

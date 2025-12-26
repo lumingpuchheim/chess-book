@@ -17,13 +17,15 @@ the king can capture both; if the distance is any greater, he can only prevent t
     moveid=1b
 ]
 
-\chessboard[
-    pgfstyle=lefttoprightborder,
-    linewidth=0.1em,
-    markregion={a1-e5},
-    pgfstyle=bottomborder,
-    markregion={a1-e5}
-]
+\begin{chessdiagram}
+    \chessboard[
+        pgfstyle=lefttoprightborder,
+        linewidth=0.1em,
+        markregion={a1-e5},
+        pgfstyle=bottomborder,
+        markregion={a1-e5}
+    ]
+\end{chessdiagram}
 
 The square have reached the edge of the board, the pawns will queen, regardless 
 of whose move it is.
@@ -37,13 +39,15 @@ of whose move it is.
     moveid=1b
 ]
 
-\chessboard[
-    pgfstyle=lefttoprightborder,
-    linewidth=0.1em,
-    markregion={a2-e6},
-    pgfstyle=bottomborder,
-    markregion={a2-e6}
-]
+\begin{chessdiagram}
+    \chessboard[
+        pgfstyle=lefttoprightborder,
+        linewidth=0.1em,
+        markregion={a2-e6},
+        pgfstyle=bottomborder,
+        markregion={a2-e6}
+    ]
+\end{chessdiagram}
 
 The square now reaches only to the 2nd rank and the position becomes a draw.
 
