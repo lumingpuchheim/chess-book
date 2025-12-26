@@ -172,8 +172,7 @@
     \refstepcounter{chessboard}%
     \begin{minipage}{\linewidth}%
         \centering%
-        \noindent\textbf{Diagram~\thechessboard}%
-        \ifx\relax#1\relax\else\ (#1)\fi%
+        \noindent\textbf{Diagram~\thechessboard\ifx\relax#1\relax\else\ (#1)\fi}%
 
 }{%
     \end{minipage}%
