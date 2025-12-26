@@ -1,0 +1,44 @@
+\newpage
+\section{Drawn Positions: King Endgame}
+
+\begin{multicols}{2}
+    We know the idea of key square in the king endgame. \index{Drawn Positions!King Endgame}
+
+    When the attacker's pawn arrives the 6th rank with his king, it depends 
+    who controls the opposition. 
+    
+    If the defender controls the opposition, he can use stalemate as an important resource for the defender. \index{Stalemate}
+
+    \newchessgame[
+        setfen=4k3/8/4KP/8/8/8/8/8/8 w - - 0 1,
+    ]
+    \chessboard
+
+    White to move draw. \mainline[level=1]{1. f7 Kf8 2. Kf6 } stalemate.
+
+    If the attacker controls the opposition, he can use zugzwang to win the game. \index{Zugzwang}
+    
+    \chessboard[
+        setfen=4k3/8/4KP/8/8/8/8/8/8 w - - 0 1,
+    ]
+    
+    Black to move loses \variation{1... Kf7 2. f7} Black is in zugzwang and he 
+    must move his king away.
+
+    Rook-pawn is the exception. In the following position, no matter who has the move, 
+    the position is drawn. 
+
+    \chessboard[
+        setfen=k7/8/PK6/8/8/8/8/8/8 b - - 0 1,
+        showmover=false,
+    ]
+
+    The defender may also stalemate the attacker's king in the corner.
+
+    \chessboard[
+        setfen=5k1K/7P/8/8/8/8/8/8 b - - 0 1,
+        showmover=false,
+    ]
+
+    When Black's king is at f7, it is obviously also a stalemate.
+\end{multicols}

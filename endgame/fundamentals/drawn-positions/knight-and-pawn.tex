@@ -1,0 +1,49 @@
+\newpage
+\section{Drawn Positions: Knight and Pawn}
+Knight and pawn win easily against a lone king. 
+When the pawn is an h-pawn, there are often exceptions. \index{Drawn Positions!Knight and Pawn}
+
+\begin{multicols}{2}
+    \chessboard[
+        setfen=N6K/4k2P/8/8/8/8/8/8 b - - 0 1,
+    ]
+
+    We know from the pawn endgame the defender can use stalemate to draw the game.
+    Here Black must choose to move his king to f7 or f8.
+
+    A knight can only move from a dark square to a light square and vice versa.
+    Currently White's knight is on a light square. Obviously White can only move 
+    his knight. Black's king moves between f7 and f8. 
+
+    In this position, Black must place his king on the light square f7. 
+    When the knight is on a light square, it is still White to move.
+    When the knight is on a dark square, it is Black to move.
+    The knight can move to a dark square to check, and then Black simply plays \symking f8. 
+    White cannot force Black's king to leave the f7 or f8 square to free White's king, so the 
+    position is drawn.
+
+    If Black plays ...\symking f8 from the original position, when White moves his 
+    knight to a dark square, it is Black to move. For example, if White's knight arrives on d8, 
+    then Black cannot play \symking f7 anymore. He must free White's king and loses the game.
+
+    As a rule, \textbf{the king should move to the same color square as the knight.}
+
+    \chessboard[
+        setfen=8/6k1/8/8/6n1/8/6Kp/8 w - - 0 1,
+        showmover=false,
+    ]
+
+    This position is also drawn, no matter who has the move. The White king 
+    just moves between g2 and h1. Black cannot move his knight, otherwise his pawn is lost.
+    To prevent White from playing \symking g2, Black must move his king to h3, but this 
+    leads to stalemate.
+
+    \chessboard[
+        setfen=8/8/8/8/5k2/2n4p/7P/6K1 b - - 0 1,
+        showmover=false,
+    ]
+
+    This position is drawn because it is again impossible for Black to 
+    drive the king from the corner or to mate him. The best Black can achieve is stalemate.
+
+\end{multicols}
