@@ -1,0 +1,82 @@
+\newpage
+\section{Bishop and Two Connected Pawns vs. Bishop}
+\begin{multicols}{2}
+    \newchessgame[
+        setfen=8/4k3/8/4PP2/b3K3/8/3B4/8 b - - 0 1,
+        moveid=1b
+    ]
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    White threatens e6, \symking e5, and f6. Black must defend the 
+    e6 square. The candidate moves are ...\symbishop b3 or ...\symbishop d7.
+
+
+    We check first \variation[invar]{
+        1... Bb3
+    }
+
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/4k3/8/4PP2/4K3/1b6/3B4/8 w - - 1 2
+        ]
+    \end{chessdiagram}
+
+    To win the game, White must infiltrate his king to support the e6 advance.
+    He has two routes: either from the queenside or from the kingside.
+
+    White can give a probe check with \symbishop g5. Depending on where the Black king 
+    moves, White infiltrates from the opposite side.
+
+    For example 
+    \variation[invar]{
+        2. Bg5+ Kf7 3. Kd4 Ka2 4. Kc5 Bb3 5. Kd6
+    } or \variation{
+        2. Bg5+ Kd7 3. Kf4 Ba2 4. Bh4 Bf7 5. Kg5 Ke7 6. Kh6+ Kd7 7. Kg7 Bc4 
+        8. Kf6
+    } Black cannot stop e6.
+
+    However, Black can defend after \variation[invar]{
+        2. Bb4 Kf7 3. Kd4 
+    } 
+
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/5k2/8/4PP2/1B1K4/1b6/8/8 b - - 4 3
+        ]
+    \end{chessdiagram}
+
+    \variation{
+        3... Bc2
+    }
+
+    ``Pawns in the crosshairs!''
+
+    \variation{
+        4. e6+ Kf6 5. e7 Ba4
+    } draws. 
+    
+    We know the stronger side must place his pawns on squares of the opposite color to his own bishop, and 
+    \textbf{
+        When the weaker side manages to force the stronger 
+        side to place his pawns on the same color as his own bishop and 
+        block them, he can defend.
+    }
+
+    Returning to the mainline. Black must move his bishop to d7.
+    \mainline[level=1]{
+        1...Bd7 2. Bg5+ Kf7
+    }
+
+    Black moves his bishop between d7 and c8, preventing 
+    the e6 advance. White cannot make any progress. He cannot move his king to d5 to 
+    infiltrate because he is tied to defending his f5 pawn. 
+
+    \textbf{
+        The defender must place his bishop where it prevents the advance 
+        of one pawn and attacking the other.
+    }
+
+\end{multicols}
