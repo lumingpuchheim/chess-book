@@ -1,0 +1,69 @@
+\newpage
+\section{The King Blockades the Passed Pawn}
+The stronger side often has a passed pawn, which 
+must be blockaded either by the king or by the bishop.
+
+\vocab{first-defensive-system}{
+    The first Defensive System
+} {
+    The king blockades the enemy passed pawn while 
+    the bishop defends its own pawns. 
+} blockades the enemy passed pawn with the king while the bishop 
+defends its own pawns. This is the basic 
+and usually the most secure defensive arrangement.
+
+\begin{multicols}{2}
+    \newchessgame[
+        setfen=8/1k3p2/1P3Kp1/7p/2b2P2/4B1P1/7P/8 w - - 0 1,
+    ]
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    Black's bishop defends the pawns and the king holds the 
+    passed pawn. White cannot make any progress
+
+    \mainline[level=1]{
+        1. f5 Bd3
+    } \textbf{$=$}.
+
+    Breaking down the first defensive system always involve the creation of a second passed pawn, 
+    frequently by a pawn breakthrough. \index{Pawn Breakthrough}
+
+    \newchessgame[
+        setfen=8/8/4b1p1/2B13p/5P1P/1pK1Pk2/8/8 b - - 0 1,
+        moveid=1b
+    ]
+    \begin{chessdiagram}[Kotov-Botvinnik 1955]
+        \chessboard
+    \end{chessdiagram}
+
+    A classic example of using pawn breakthrough to break down the first defensive system.
+
+    \mainline[level=1]{
+        1...g5! 2. fxg5 d4! 3. exd4 Kg3 4. Ba3}
+    
+    \variation[invar]{
+        4. Be7 Kxh4 5. g6+ Kg4
+    }
+
+    Black's bishop has an excellent position. It protects the b3-pawn 
+    and restrains both enemy pawns along the \textbf{one diagonal} a2-g8 (\vocab{one-diagonal-principle}{One Diagonal Principle}{}) \index{Bishop Endgame|One Diagonal Principle}
+
+    White has no counterplay. Black just advances his h-pawn and wins the bishop for it.
+
+    \mainline[level=1]{4... Kxh4 5. Kd3 Kxg5}
+    
+
+    \chessboard
+
+    Now Black has a second passed pawn and can win the game.
+
+    \mainline[level=1]{
+        6. Ke4 h4 7. Kf3 Bd5+
+    }
+
+    White resigned because after \symking f2, Black's king goes after the 
+    b3-pawn. The bishop defends the h-pawn while restraining the d-pawn 
+    along the c8-h3 diagonal.
+\end{multicols}

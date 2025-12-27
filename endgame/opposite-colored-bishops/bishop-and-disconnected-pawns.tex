@@ -1,0 +1,68 @@
+\newpage
+\section{Bishop and Two Disconnected Pawns vs. Bishop}
+\begin{multicols}{2}
+    With disconnected passed pawns, the stronger side's 
+    strategy is always: the king goes toward the pawn that the bishop is holding back.
+
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/2k1b3/2P5/3K1P1B/8/8/8/8/8 w - - 0 1,
+        ]
+    \end{chessdiagram}
+
+    \variation{1. Bf3 Kd8 2. Ke6 Bb4 3. f6 Ba5 4. f7 Bb4 5. Kf6 Bc3+ 6. Kg6 Bb4 7. Kg7} \textbf{$+-$}.
+
+    Sometimes the weaker side's king can help the bishop defend against both pawns 
+    at once by shuttling to whichever fland it's needed to prevent the enemy king from 
+    invading his territory.
+
+    \begin{chessdiagram}
+        \chessboard[
+            setfen=8/2bB4/2P5/6k1/4K3/5P2/8/8 w - - 0 1,
+        ]
+    \end{chessdiagram}
+    \variation{
+        1. Kd5 Kf6
+    } If the White king goes to b7, Black's goes to d8.
+    Note Black's bishop defends with \vocab{one-diagonal-principle}{One Diagonal Principle}{} \index{Bishop Endgame|One Diagonal Principle}.
+
+    The next position has great practical significance.
+
+    The stronger side has a knight pawn and a center pawn separated by 
+    two files. The weaker side has a bishop that controls the queening 
+    square of the stronger side's knight pawn. \index{Opposite Colored Bishops!Berger-Kotlerman Position}
+
+    \newchessgame[
+        setfen=8/8/8/5B2/1p3b2/2k1p3/8/5K2 w - - 0 1,
+    ]
+    \begin{chessdiagram}[Berger-Kotlerman]
+        \chessboard[
+            
+        ]
+    \end{chessdiagram}
+    \label{fig:berger-kotlerman}
+
+    \mainline[level=1]{
+        1. Ke2 b3 2. Kd1 Kb4 3. Bh7 Ka3 4. Bg6 Kb2
+    }
+    
+    \variation[invar]{
+        4...b2 \xskakcomment{ threatening 5... \symking a2} 5. Bb1 Kb3 6. Ke2 
+    }
+
+    \mainline[level=1]{
+        5. Bf7
+    }
+
+    White's defence plan:
+    
+    If Black's king goes to a3, White places his bishop on b1-h7 diagonal. 
+    In case Black plays ...b2, White can defend with ...\symbishop b1. Black can not 
+    drive the bishop away because of the edge of the board.
+
+    If Black's king goes to a2, White places his bishop on a2-g8 diagonal. Black 
+    cannot advance his pawn because of the pin.
+
+    Otherwise White moves his Bishop along b1-h7 or a2-g8 diagonal.
+
+\end{multicols}
