@@ -1,5 +1,5 @@
 \newpage
-\section{Drawn Positions: Bishop and Pawn}
+\section{Drawn Positions: Bishop and Pawn} \label{section:bishop-and-pawn-drawn-positions}
 
 \begin{multicols}{2}
     If the bishop does not control the rook pawn's 
@@ -29,6 +29,10 @@
     between f8 and g8 and White cannot attack the h7 pawn. The evaluation 
     would not change if you added pawn pairs at g5/g6 and f4/f5.
 
+    The position is also a draw when White has a light-squared bishop. 
+    In this case, Black only needs to move his king between g8 and h8. 
+    White can only stalemate the Black king when his bishop controls the g8 square.
+
     \begin{chessdiagram}[Pawns at h7 and Pawn at g6 (Ponziani)]
         \chessboard[
             setfen=8/6kB/6P1/5K2/8/8/8/8 b - - 0 1,
@@ -40,5 +44,21 @@
     This drawing position has been known since the 18th century. The 
     bishop cannot escape from its corner and giving it up leads to a 
     drawn pawn ending.
+
+    \begin{chessdiagram}[Pawns at g6 and g7]
+        \chessboard[
+            setfen=5k2/6p1/3K2P1/3B4/8/8/8/8 b - - 0 1,
+            showmover=false,
+        ]
+        \label{chess:bishop-endgame-4}
+    \end{chessdiagram}
+
+    The draw is obvious here and it would still be so if we added more 
+    pawn pairs at h5/h6, f5/f6 and e4/e5.
+
+    The position is also a draw if White had a dark-squared bishop. In this 
+    case, Black only needs to move his king between g8 and h8. If White exchanges 
+    his bishop for the g7 pawn, the resulting position is draw because 
+    Black's king controls the key-square g7. \index{Key Square}
 \end{multicols}
 
