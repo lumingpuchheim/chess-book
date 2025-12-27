@@ -1,0 +1,62 @@
+\chapter{Opposite Colored Bishops} \label{chapter:opposite-colored-bishops}
+
+From chapter \ref{chapter:bishop-and-pawns-endgame} and section \ref{section:bishop-and-pawn-drawn-positions} we already learned some basic ideas:
+\begin{itemize}
+    \item{
+        \vocab{one-diagonal-principle}{One Diagonal Principle}{}
+    }
+
+    The bishop fulfills its functions from a single diagonal
+    \item{
+        \vocab{pawns-in-the-crosshairs}{Pawns in the Crosshairs}{}
+    }
+
+    attacking the enemy pawns with the bishop either to force the pawns to advance,
+    which aids in the task of their subsequent blockade, or else to tie the king to their defense
+    \item{
+        \vocab{tail-hook}{Tail Hook}{}
+    }
+
+    Tying the king to the rearmost pawn from behind
+\end{itemize}
+
+\paragraph{Fortress}
+Here it is frequently possible to save oneself even two or three pawns down.
+
+Often in opposite-colored bishop endgames, it is rather constructed than played.
+First it is necessary to determine the configuraiton of pawns and pieces which 
+will render the position impenetrable; only then can we proceed with the calculation of variations which will 
+prove whether or not we can attain the desired configuration and whether 
+it is impenetrable in fact. 
+
+\paragraph{Pawn Placement}
+In opposite-colored bishop endings, the stronger side 
+should place his pawns on the opposite color squares of the bishop while
+weaker side must contrary to the general rule, keep his pawns on the same color squares 
+as his own bishop. ``A bad bishop protects the good pawns.''
+
+\paragraph{Positional Nuance}
+When we are playing an opposite-colored bishop ending, the 
+number of pawns are frequently less important than a small alteration 
+in the placement of pieces or pawns. Therefore we often encounter 
+pawn sacrifices.
+
+\begin{multicols}{2}
+    \newchessgame[
+        setfen=1k6/8/1b2pp2/6p1/2P4p/5K1P/2B5/8 w - - 0 1,
+    ]
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    \mainline[level=1]{
+        1. c5 Bxc5 2. Bb3 e5 3. Be6 Kc7 4. Ke4
+    }
+
+    White achieves a draw by moving his bishop along h3-c8 diagonal when 
+    he is three pawns down. The final position is a \textbf{fortress}.
+    White places his pawn on the same color as his own bishop.
+
+    The bishop defends its pawn at h3 and holds the enemy pawns 
+    \textbf{on one diagonal}.
+\end{multicols}
