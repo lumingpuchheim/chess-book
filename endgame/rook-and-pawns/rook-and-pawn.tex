@@ -48,6 +48,22 @@
 
 
     \newchessgame[
+        setfen=R7/8/8/8/2K3p1/8/5k2/8 w - - 1 1
+    ]
+
+    \begin{chessdiagram}[An Intermediate Check]
+        \chessboard
+    \end{chessdiagram}
+
+    \mainline[level=1]{
+        1. Rf8+! Ke2 2. Rg8 Kf3}
+        
+    Because of the check, White succeeded in driving Black's 
+    king back one square from f2 to f3.
+
+    \mainline[level=1]{3. Kd3 g3 4. Kf8+ Kg2 5. Ke2} \textbf{$+-$}.
+
+    \newchessgame[
         setfen=8/8/8/8/1K6/7R/1pk5/8 w - - 0 1,
     ]
     \begin{chessdiagram}[Pawn Promotion to a Knight]
@@ -115,7 +131,7 @@
 
     In pawn endgames, we know the idea of \vocab{opposition}{Opposition}{}
     and outflanking. Here we have the same principle: White gains opposition 
-    in order to outflank.
+    in order to outflank. \index{Opposition}
 
     Black is in zugzwang. \variation[invar]{3... Kc4 4. Ke6}
     or \variation[invar]{3... Ke4 4. Kc6}
