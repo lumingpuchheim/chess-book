@@ -1,0 +1,38 @@
+\newpage
+\section{Barrier}
+
+\begin{multicols}{2}
+We remember \vocab{the-first-defensive-system}{First Defensive System}{
+} in opposite colored bishop endgame, using the king to block the enemy passed pawn.
+
+Such a system can also be used in bishops of the same color endgame.
+The king blockades the passed pawn while the bishop keeps the 
+attacker's king from invading.
+
+
+\newchessgame[
+    setfen=8/6p1/8/p2kbp1p/Pp6/1P2P2P/4K1P1/2B5 w - - 0 1
+]
+
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+
+White can sacrifice his bishop to setup an impassable barrier before 
+Black's king. 
+
+\mainline[level=1]{
+    1. Kd3 Bc3 2. e4+ fxe4 3. Ke2
+} \textbf{$=$}.
+
+\chessboard
+
+Black's king cannot invade because all the squares on the 
+fourth rank are covered. \index{Barrier}
+White only needs to move his bishop between e3 and f4. 
+With \vocab{one-diagonal-principle}{One Diagonal Principle}{
+
+} White's bishop also prevents Black from creating a passed pawn on the king side.
+
+
+\end{multicols}

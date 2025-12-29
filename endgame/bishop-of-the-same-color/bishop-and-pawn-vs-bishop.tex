@@ -1,0 +1,53 @@
+\section{Bishop and Pawn vs. Bishop}
+
+\begin{multicols}{2}
+    \newchessgame[
+        setfen=8/2K5/3P4/1B2k3/6b1/8/8/8 w - - 0 1,
+    ]
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    White to move wins by driving off the enemy bishop from one diagonal
+    and then interfering along the other.
+
+    \mainline[level=1]{
+        1. Bd7 Bd1 2. Bh3 Ba4 3. Bg2
+    } White wins after 4. \symbishop c6.
+
+    Black to move draws
+
+    \variation{
+        1... Kd4 2. Bd7 Bd1 3. Bh3 Ba4 4. Bg2 Kc5
+    } \textbf{$=$}. 
+    Thus, if the weaker side's king cannot get in front of the pawn, then the 
+    basic defensive principle becomes:
+    \vocab{king-behind-the-king}{King Behind the King}{
+        In bishops of the same color endgame a 
+        defendence resource if the weaker side's 
+        king cannot get in front of the pawn
+    }
+
+    \vocab{the-short-diagonal}{The Short Diagonal}{
+        In bishops of the same color endgame, 
+        even with the ``right'' king position, the draw 
+        is impossible if one of the diagonals along 
+        which the beshop will restrain the pawn proves too short
+    } In bishops of the same color endgame, 
+    even with the ``right'' king position, the draw 
+    is impossible if one of the diagonals along 
+    which the beshop will restrain the pawn proves too short.
+
+    \newchessgame[
+        setfen=2B5/K7/1P6/k7/4B3/8/8/8 w - - 0 1
+    ]
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    \mainline[level=1]{
+        1.Bb7 Bf5 2. Bf3 Bc8 3. Be2
+    } Black is in zugzwang therefore he cannot prevent White from playing
+    \symbishop a6 and wins the game.
+\end{multicols}
