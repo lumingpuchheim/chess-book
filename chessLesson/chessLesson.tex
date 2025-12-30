@@ -1,0 +1,39 @@
+% This file now focuses on the book-specific content and uses shared
+% preprocess/postprocess files from the project root.
+
+% Book-specific metadata (overrides defaults in preprocess.tex)
+\def\BookTitle{The Art of Not Losing}
+\def\BookAuthor{Ming Lu} % or another author if you like
+
+% Index page offset: controls how much we shift page numbers in \hyperpage.
+% This is used in postprocess.tex; adjust here per-book as needed.
+\def\IndexPageOffset{0}
+
+\input{../preprocess}
+
+%----------------------------------------------------------------------------------------
+%	Main Content
+%----------------------------------------------------------------------------------------
+\chapter*{Preface}
+\thispagestyle{plain} % Ensure plain pagestyle is applied (with page numbers in footer)
+\addcontentsline{toc}{chapter}{Preface}
+\input{preface}
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
+\printglossary[title={Glossary}]
+
+
+\input{../cards/chess/chess-mindset}
+
+\input{pattern-recognition/main}
+
+
+
+\def\IndexPageOffset{2}
+
+\input{../postprocess}
