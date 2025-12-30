@@ -1,0 +1,32 @@
+\section{Example}
+\index{Process of Elimination}
+We will use \vocab{PoE}{Process of Elimination}{} to analyze the games
+in this book. In this section, we just give a very simple example.
+
+\begin{multicols}{2}
+    \newchessgame[
+        setfen=8/8/4K3/8/8/5p1k/5P1P/8 w - - 0 1
+    ]
+
+    \begin{chessdiagram}
+        \chessboard
+    \end{chessdiagram}
+
+    White must approach to the f3 pawn, otherwise Black simply takes 
+    h2 pawn and then f2 pawn. The candidate moves are: \symking d5, \symking e5, \symking f5.
+
+    Note no matter which candidate move White plays, Black cannot 
+    play \variation[invar]{1... Kxh2? 2. Ke4 Kg2 3. Ke3} Black must give up his 
+    pawn because he is in zugzwang. Black's only move is ...\symking g2.
+
+    After \variation[invar]{1... Kg2 2. h4 Kxf2 3. h5 Kg2 4. h6 f2 5. h7 f1=Q}
+
+    If White's king is on f5, he will be checked and pawn will be lost since his king 
+    is too far away.
+
+    If White's king is on e5, his pawn will lost after \variation{6. h8=Q Qa1+}
+
+    The only move left is \symking d5. 
+
+    That's it. A very simple process.
+\end{multicols}
