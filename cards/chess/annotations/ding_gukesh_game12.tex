@@ -18,11 +18,13 @@ It was the 12th game of a 14-game match, and Ding found himself trailing by one 
  round={12}]
  \mainline[level=1]{1. c4 e6 2. g3 d5 3. Bg2 Nf6 4. Nf3 d4 5. O-O Nc6 6. e3 Be7 7. d3 dxe3 8. Bxe3 e5 9. Nc3 O-O 10. Re1 h6}
 
+ \begin{chessdiagram}
  \chessboard[
    	pgfstyle=straightmove,
 	linewidth=0.05em,
  	markmove=d3-d4
  ]
+ \end{chessdiagram}
 
  Ding Liren is known for his solid, strategic approach to chess. He excels in positional play and endgames, often outmaneuvering opponents with his patience and precision. Here the position is calm and it's all about piece maneuvering. 
 
@@ -35,6 +37,7 @@ In this position, White wants to push d3-d4. His knight on f3 is critical for th
 
 \mainline[level=1]{11...a5}
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
@@ -43,6 +46,7 @@ In this position, White wants to push d3-d4. His knight on f3 is critical for th
  	linewidth=0.05em,
  	markfields={b5},
  ]
+\end{chessdiagram}
 
 It was understandable that Gukesh wanted to prevent b4 with this move. However, compared to the previous position,
 he now has one serious weakness on b5 which White can easily exploit with his knight.
@@ -57,13 +61,16 @@ on his e5 pawn.
 \resumechessgame
 A direct \variation[invar]{12.d4 exd4 13. Nxd4 Nxd4 14. Bxd4 c6 15. c5} according to the engine. The position opens up and White has some advantage.
 
+\begin{chessdiagram}
  \chessboard[
         setfen=r1bq1rk1/1p2bpp1/2p2n1p/p1P5/3B4/P1N3P1/1P3PBP/R2QR1K1 b - - 0 15
         ]
+\end{chessdiagram}
 
 I don't know if the position favors White. After exchanging some pieces, Black should have more room to maneuver than 
 several moves ago, where he had a cramped position. Chess law states it is better to avoid exchanging when one has a space advantage. This is exactly the case for White.
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
@@ -72,6 +79,7 @@ several moves ago, where he had a cramped position. Chess law states it is bette
  	linewidth=0.05em,
  	markfields={b5},
  ]
+ \end{chessdiagram}
 
 It is instructive to observe the position here. White still has his trumps: d3-d4 and an outpost on b5, and Black can do nothing to parry. So there is no need for White to rush. With h3, White deprives Black of placing a bishop or knight on
 g4. White slowly improves his position and Black has no counterattack. 
@@ -83,6 +91,7 @@ No need to rush! \vocab{prophylaxis}{Prophylaxis} against \symqueen d7 \index{Pr
 
 \mainline{13...Rb8}
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
@@ -91,21 +100,26 @@ No need to rush! \vocab{prophylaxis}{Prophylaxis} against \symqueen d7 \index{Pr
  	linewidth=0.05em,
  	markfields={b5},
  ]
+ \end{chessdiagram}
 
 Here White has more options. Again, \variation{14. d4 exd4 15. Nxd4 Nxd4 16. Bxd4 c6 17. c5} loses his advantage. White loses his trump b5 now because the c6 pawn guards it. 
 \variation{14. Nb5 Nh7 15. Qd2 Ng5 16. Nxg5 hxg5 17. Rad1} 
 
+\begin{chessdiagram}
 \chessboard[
         setfen=1r1q1rk1/1pp1bpp1/2n1b3/pN2p1p1/2P5/P2PB1PP/1P1Q1PBK/3RR3 b - - 1 17,
 	markstyle=circle,
  	linewidth=0.05em,
  	markfields={e4},
         ]
+\end{chessdiagram}
+
 White keeps the advantage because Black now has a new weakness on e4.
 
 Ding's next move is prophylaxis against any Black potential e4 thrust.
 \mainline[level=1]{14. Qc2 Re8} 
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
@@ -114,19 +128,23 @@ Ding's next move is prophylaxis against any Black potential e4 thrust.
  	linewidth=0.05em,
  	markfields={b5},
  ]
+ \end{chessdiagram}
 
 \mainline{ 15. Nb5}
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={d3-d4,e5-e4},
  ]
+ \end{chessdiagram}
 
 Finally the move! White achieves his goal on b5. Now White is preparing d4. 
 
 \mainline{15... Bf5}
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
@@ -135,27 +153,32 @@ Finally the move! White achieves his goal on b5. Now White is preparing d4.
  	linewidth=0.05em,
  	markfields={a1},
  ]
+ \end{chessdiagram}
 
 The rook on a1 is not so active. It can move to d1 to support the d3-d4 thrust. The next
 move is logical. Even a World Chess Champion game can be so simple!
 
 \mainline{16. Rad1 Nd7}
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={d3-d4,e7-g5},
  ]
+ \end{chessdiagram}
 
 White wants to play d4 and prevent Black from playing \variation[invar]{16...Bg5}. His next move is logical.
 
 \mainline[level=1]{ 17. Qd2} 
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={d3-d4},
  ]
+ \end{chessdiagram}
 
  Grandmaster Dorfman writes: ``If for one of the players the static balance is negative, he must without hesitation 
  employ dynamic means, and be ready to go in for extreme measures.''  \cite{Dorfman:2001}
@@ -166,9 +189,11 @@ White wants to play d4 and prevent Black from playing \variation[invar]{16...Bg5
 
 \variation[invar]{17... Nc5 18. d5 Nd3 19. d5 Nxe1 20. Qxe1 Nd4 21. Nfxd4 exd4 22. Nxd4 Bh7 23. Qxa5}
 
+\begin{chessdiagram}
 \chessboard[
    	setfen=1r1qr1k1/1pp2pp1/6bp/Q2P2b1/2PN4/P3B1PP/1P3PBK/3R4 w - - 1 24
  ]
+ \end{chessdiagram}
 
 White still has a static advantage, with the price of one exchange. Black has more
 space to maneuver after exchanging some pieces. The position is much more playable
@@ -176,16 +201,19 @@ than in the actual game.
 
 Go back to the actual game. White has prepared everything. It is now the time!
 
+\begin{chessdiagram}
 \chessboard[
    	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={d3-d4},
  ]
+ \end{chessdiagram}
 
 \mainline[level=1]{18. d4 e4}
 
 The only move. \variation[invar]{18...exd4 19. Bf4! Rc8 20. Nfxd4 Nxd4 21. Qxd4 Nc5 22. Nxc7!} White wins easily.
 
+\begin{chessdiagram}
 \chessboard[
  	markstyle=border,
  	linewidth=0.05em,
@@ -194,33 +222,40 @@ The only move. \variation[invar]{18...exd4 19. Bf4! Rc8 20. Nfxd4 Nxd4 21. Qxd4 
         linewidth=0.05em,
  	markmove={f3-g1, g1-e2, e2-f4},
  ]
+ \end{chessdiagram}
 
 \mainline[level=1]{ 19. Ng1 Nb6 20. Qc3! }
 
+\begin{chessdiagram}
 \chessboard[
 	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={d4-d5},
  ]
+ \end{chessdiagram}
 
 It is quite an instructive move. The queen deprives the knight on c6 of the a5 and e5 squares.
 Meanwhile, d5 is coming.
 
 \mainline{20...Bf6 21. Qc2 a4 22. Ne2 Bg5} 
 
+\begin{chessdiagram}
 \chessboard[
 	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={e2-f4},
  ]
+ \end{chessdiagram}
 
 \mainline{ 23. Nf4 Bxf4 24. Bxf4 Rc8 25. Qc3 Nb8}
 
+\begin{chessdiagram}
 \chessboard[
 	pgfstyle=straightmove,
         linewidth=0.05em,
  	markmove={d4-d5},
  ]
+ \end{chessdiagram}
 
 \mainline{26. d5 Qd7 27. d6 c5 28. Nc7 Rf8 29. Bxe4 Nc6} 
 (\variation[invar]{29...Bxe4 30. Rxe4 Nc6 31. Bxh6 gxh6 32. Rg4+ Kh7 33. Qg7#})
@@ -228,20 +263,26 @@ Meanwhile, d5 is coming.
 \mainline[level=1]{ 30. Bg2 Rcd8
 31. Nd5 Nxd5 32. cxd5 Nb8 } 
 
-\chessboard
+\begin{chessdiagram}
+	\chessboard
+\end{chessdiagram}
 
 Gukesh could have resigned here.
 
 \mainline{33. Qxc5 Rc8 34. Qd4 Na6 35. Re7 Qb5
 36. d7 Rc4 37. Qe3 Rc2 38. Bd6 f6} 
 
-\chessboard
+\begin{chessdiagram}
+	\chessboard
+\end{chessdiagram}
 
 The live commentator said:``This is the only time Ding has calculated during the game!''
 
 \mainline{39. Rxg7+} Black resigned.
 
- \chessboard
+\begin{chessdiagram}
+	\chessboard
+\end{chessdiagram}
 
  Certainly this was not Gukesh's best game. Besides the game,
  it was more instructive to hear how Ding prepared for the game after the defeat the previous day:

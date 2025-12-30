@@ -16,7 +16,9 @@
 
 \mainline[level=1]{1. e4 e5 2. Nf3 Nc6 3. Bb5 d6 4. d4 Bd7 5. Nc3 Nge7 6. Be3 Ng6}
 
-\chessboard
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
 
 I usually don't comment on openings, especially from the old masters. 
 Just observing the position we can conclude White is much better. Assuming White castles
@@ -30,20 +32,26 @@ I can hardly see any counter play. Lasker has however a different plan.
 
 \mainline[level=1]{7. Qd2 Be7 8. O-O-O a6 9. Be2 exd4 10. Nxd4 Nxd4 11. Qxd4 Bf6 12. Qd2 Bc6 13. Nd5 O-O }
 
+\begin{chessdiagram}
 \chessboard
+\end{chessdiagram}
 
 Optically, White has more more active pieces. \variation[invar]{14. h4} would be natural.
 For example \variation[invar]{14. h4 Bxh4 15. g3 Bf6 16. f4 Re8 17. Bf3 Nf8 18. Qh2}
 
+\begin{chessdiagram}
 \chessboard[
     setfen=r2qrnk1/1pp2ppp/p1bp1b2/3N4/4PP2/4BBP1/PPP4Q/2KR3R b - - 4 18
 ]
+\end{chessdiagram}
 
 White has already doubled the heavy pieces on the h-file whilte Black has not launched the pawn!
 
 We go back to the game.
 
-\chessboard
+\begin{chessdiagram}
+    \chessboard
+    \end{chessdiagram}
 
 \mainline[level=1]{14. g4?}
 
@@ -52,7 +60,9 @@ The move loses a pawn without compensation.
 
 \mainline{14... Re8 15. g5 Bxd5} 
 
+\begin{chessdiagram}
 \chessboard
+\end{chessdiagram}
 
 The candidate moves are exd5, gxf6, or \symqueen xd5.
 
@@ -68,7 +78,9 @@ Lasker chooses the third move.
 
 \mainline[level=1]{ 16. Qxd5 Re5} 
 
+\begin{chessdiagram}
 \chessboard
+\end{chessdiagram}
 
 After \variation[invar]{17. Qxb7 Bxg5 18. Bxg5 Rxg5 19. Bc4 Rc5 20. Bd5 Rb8 21. Qxa6 Qf6},
 Black has active pieces while White has one more pawn.
@@ -76,9 +88,11 @@ Black has active pieces while White has one more pawn.
 Most likely, Lasker is continuing the moves he has planned on his 14th move and
 misses Steinitz' refutation.
 
+\begin{chessdiagram}
 \chessboard[
     setfen=1r4k1/2p2ppp/Q2p1qn1/2rB4/4P3/8/PPP2P1P/2KR3R w - - 1 22
 ]
+\end{chessdiagram}
 
 We go back to the current game. \mainline[level=1]{ 17. Qd2 Bxg5! 18. f4 Rxe4!}
 
@@ -90,9 +104,11 @@ We go back to the current game. \mainline[level=1]{ 17. Qd2 Bxg5! 18. f4 Rxe4!}
 \mainline[level=1]{19. fxg5 Qe7}
 
 % Dynamic play problem
+\begin{chessdiagram}
 \chessboard[
     setfen=r5k1/1pp1qppp/p2p2n1/6P1/4r3/4B3/PPPQB2P/2KR3R w - - 1 20
 ]
+\end{chessdiagram}
 
 Clearly Black has the static advantage: White is two pawns down and Black has more active heavy pieces on e-file.
 Playing such a position needs nerve.
@@ -106,7 +122,9 @@ One possibility as recommended by Kasparov is take one pawn and then defend an i
 Lasker chooses to continue the struggle:
 \mainline[level=1]{20. Rdf1?! Rxe3 21. Bc4}
 
-\chessboard
+\begin{chessdiagram}
+    \chessboard
+    \end{chessdiagram}
 
 The f7 pawn is under attack. \variation[invar]{21... Rf8} is an obvious
 alternative. The knight can be activated by moving to e5 at some point.
@@ -121,7 +139,9 @@ I believe Lasker expects this move since it is typical Steinitz.
 
 \mainline[level=1]{ 22. h4 c6 23. g6}
 
+\begin{chessdiagram}
 \chessboard
+\end{chessdiagram}
 
 \mainline[level=1]{ 23... d5?} This move throws away all the advantage.
 
@@ -135,13 +155,17 @@ it fails to see an intermediate move.
 After \variation[invar]{23...hxg6 24. h5 gxh5 25. Rxh5 Re8 26. Rhh1} Black has a clear advantage because
 he is up three pawns and White fails to start an attack on h-file. 
 
+\begin{chessdiagram}
 \chessboard
+\end{chessdiagram}
 
 \mainline[level=1]{24. gxh7+! Kxh7 25. Bd3+ Kg8 26. h5 Re8 27. h6 g6 28. h7+ Kg7}
 
+\begin{chessdiagram}
 \chessboard[
     setfen=4r2n/1p2qpkP/p1p3p1/3p4/8/3Br3/PPPQ4/2K2R1R w - - 1 29
 ]
+\end{chessdiagram}
 
 % TODO: add a prophylaxis problem
 \mainline[level=1]{29. Kb1?! } \index{Prophylaxis!King Move} 
@@ -153,11 +177,13 @@ the enemy king's vulnerability. Such play requires both a healthy evaluating cap
 
 This move has a good \vocab{prophylaxis}{prophylaxis}{} idea. However \variation[invar]{29. a3} first is more accurate \index{Prophylaxis}.
 
+\begin{chessdiagram}
 \chessboard[
     markstyle=border,
     linewidth=0.05em,
     markfields={h8},
 ]
+\end{chessdiagram}
 
 Black is playing practically one piece down, since his knight
 is at the corner. Activating the knight urgent now.
@@ -186,7 +212,8 @@ how can you play this way when two pawns are down?} (Kasparov)
 
 \mainline{30...c5 31. Qf2 c4 32. Qh4 f6 33. Bf5}
 
-\chessboard[
+\begin{chessdiagram}
+    \chessboard[
     setfen=4r2n/1p4kP/p4pp1/3pqB2/2p4Q/P3r3/1PP5/1K3R1R b - - 1 33,
     markstyle=circle,
     linewidth=0.05em,
@@ -198,6 +225,8 @@ how can you play this way when two pawns are down?} (Kasparov)
     linewidth=0.05em,
     markmove={h1-g1},
 ]
+\end{chessdiagram}
+
 
  The position is deeply complex and demands careful calculation.
 
@@ -261,8 +290,9 @@ how can you play this way when two pawns are down?} (Kasparov)
 
 \mainline[level=1]{36...Kd6}
 
+\begin{chessdiagram}
 \chessboard
-
+\end{chessdiagram}
 \emph{I believe it was exactly here that Steinitz made the decisive error:
 unlike the other commentators, I fail to see where Black could havesaved himself after this.} (Dvoretsky)
 
@@ -271,9 +301,12 @@ This assessment is exaggerated; only after Black's next move does White obtain a
 \mainline{37. Rxf5}
 
 % TODO: add an intermediate move problem
-\chessboard[
+\begin{chessdiagram}
+    \chessboard[
     setfen=4r1Rn/1p5P/p2k1p2/3pqR1Q/2p5/P3r3/1PP5/1K6 b - - 0 37
 ]
+\end{chessdiagram}
+
 
 \mainline[level=1]{37... Qe6?} 
 
