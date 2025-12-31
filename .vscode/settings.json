@@ -39,5 +39,42 @@
   "editor.suggest.showIssues": false,
   "editor.suggest.showUsers": false,
   "editor.suggest.showDeprecated": false,
-  "editor.inlineSuggest.enabled": false
+  "editor.inlineSuggest.enabled": false,
+  
+  // Show only .tex and .bib files in explorer
+  "files.exclude": {
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.pdf": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.bbl": true,
+    "**/*.blg": true,
+    "**/*.bcf": true,
+    "**/*.run.xml": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.synctex.gz": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+    "**/*.glo": true,
+    "**/*.gls": true,
+    "**/*.glg": true,
+    "**/*.glsdefs": true,
+    "**/*.ist": true,
+    "**/*.lof": true,
+    "**/*.lot": true,
+    "**/*.ptc": true,
+    "**/*.png": true,
+    "**/*.jpg": true,
+    "**/*.jpeg": true,
+    "**/*.webp": true,
+    "**/*.md": true,
+    "**/*.bat": true,
+    "**/*.txt": true,
+    "**/*.pgn": true,
+    "**/*.aux-SAVE-ERROR": true,
+    "**/*.bbl-SAVE-ERROR": true
+  }
 }

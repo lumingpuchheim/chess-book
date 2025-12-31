@@ -1,0 +1,100 @@
+\section{Resourcefulness in Chess}
+
+Shackleton's story is not about victory. It is about what happens when everything goes wrong: the ship sinks, the plan fails, the future disappears. In those moments, resourcefulness becomes the difference between survival and surrender.
+
+Chess offers the same test. Every player faces losing positions—material down, king exposed, pieces trapped, time running out. The natural response is resignation: accept defeat, stop fighting, give up. But resourcefulness means finding another way.
+
+When material is lost, resourcefulness looks for activity. When the king is exposed, it finds counterplay. When pieces are trapped, it creates complications. When time is short, it simplifies to what matters most. The goal shifts from winning to surviving, from brilliance to persistence.
+
+Shackleton did not cross Antarctica. He did not achieve his original dream. But he brought every man home. In chess, resourcefulness means the same: you may not win the game, but you can make your opponent work for it. You can create problems, find counterchances, turn a lost position into a difficult one, a difficult one into a draw, a draw into a win.
+
+In section \ref{sec:lasker-steinitz-1894} we saw how Lasker prevented an immediate loss after he was down in material. Then he resourcefully created problems for Steinitz. The position was unclear and finally Steinitz lost a so-called ``winning game''.
+
+We will present some more examples.
+
+\begin{multicols}{2}
+\chessgameinfo{USSR Championship}{B.Spassky}{L.Polugaevsky}{10}{1961.01.26}{0-1}
+
+We have seen this game already from the perspective of Spassky. Now we will see it 
+from the perspective of Polugaevsky, showing how to play to loss position.
+
+\newchessgame[
+    setfen=r3n1k1/p1pqb1pp/4p2P/1pp1Br2/3P4/3QPN2/PP2KPR1/7R b - - 2 22,
+    moveid=22b
+]
+
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+
+
+White has a deadly attack and more time on the clock. Resigning is out of the question.
+If White plays the attack correctly, there is nothing to be done. 
+
+Polugaevsky was in time scramble now and Spassky started to play quickly.
+He could only hope Spassky made some mistake. But at least he must have some 
+position to play with. What about create a passed pawn. If he survived the attack,
+he would have advantage in the endgame. Of course it is a big "if", but 
+at least there is something to hope for.
+
+\mainline[level=1]{22...c4 23. Qe4}
+
+\variation[invar]{23. Qxd5 exd5 24. hxg7} is more prosaic:
+Exchanging pieces in a winning position. Admittedly, Black was also lucky because White was playing for mate.
+If he chose to play prosaically, Black would have nothing to hope for.
+
+\mainline[level=1]{23...Qd5 24. Qg4 c3 25. b3 b4}
+
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+
+Now Black has a protected passed pawn. White must prove that he 
+can mate. 
+
+\mainline[level=1]{26. e4 Qb5+ 27. Ke3 Rf7 28. hxg7 Nf6}
+
+Black played the forced moves to avoid material loss.
+
+\mainline[level=1]{29. Bxf6 Rxf6 30. Rxh7}
+
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+
+Black must reckon White intends to play 
+\variation[invar]{
+    31. Rh2 Kg8 32. Rh8+ Kf7 33. g8+
+}.
+
+Black can only give some checks now.
+
+\mainline[level=1]{
+    30... Rxf3+  31. Kxf3 Qd3+ 32. Kf4
+}
+
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+
+\variation[invar]{
+    32... Qd2+ 33. Ke5 Bd6+ 34. Kxe6 Re8+ 35. Kd7! Re7+ 36. Kd8!
+} Black has no more checks. 
+
+From the above variation, White has no chance to make a mistake.
+
+In time scramble Polugaevsky again found the only move with 
+some practical chance.
+
+\mainline[level=1]{
+    32... Bd6+ 33. Kg5 Kxh7
+}
+
+\begin{chessdiagram}
+    \chessboard
+\end{chessdiagram}
+
+Now the decisive moment has arrived and Spassky made a mistake with \symking h5. 
+He lost the endgame afterwards.
+
+\end{multicols}

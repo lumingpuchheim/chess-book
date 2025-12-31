@@ -1,0 +1,31 @@
+% Minimal standalone test file for TeXmate
+% Compile this with: pdflatex texmate-test.tex
+%
+% Requirements:
+%   - MiKTeX/Tex Live with packages: texmate, skak (fonts for chess)
+
+\documentclass[11pt]{article}
+
+% TeXmate for chess annotation (uses skak fonts internally)
+\usepackage{texmate}
+
+\begin{document}
+
+This is a minimal TeXmate test. If this compiles and shows a short
+annotated game line below, then TeXmate is correctly installed.
+
+\bigskip
+
+% Turn | into TeXmate "chess mode"
+\makebarchess
+
+% Simple main line with a couple of comments and Informator-style symbols
+
+|1 e4 e5 2 Nf3 Nc6 3 Bb5 a6 4 Ba4 Nf6 5 O-O Be7|
+
+\medskip
+
+
+\end{document}
+
+

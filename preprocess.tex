@@ -99,9 +99,10 @@
 %	BOOK METADATA & BUILD FLAGS
 %----------------------------------------------------------------------------------------
 
-% Allow each book to override title/author by defining these commands
+% Allow each book to override title/author/subtitle by defining these commands
 % *before* loading this file. If not provided, fall back to defaults.
 \providecommand{\BookTitle}{My Chess Notebook}
+\providecommand{\BookSubtitle}{}
 \providecommand{\BookAuthor}{Ming Lu}
 
 % Control whether to build all heavy chapters (ideas, games, annotations).
@@ -156,7 +157,14 @@
 	\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}%
 	\begin{tikzpicture}[remember picture,overlay]%
 		\node[anchor=center,inner sep=0] at (current page.center) {#1};%
-		\node[anchor=center,align=center] at ([yshift=3cm]current page.center) {\rmfamily\fontsize{50}{60}\selectfont\bfseries #2};%
+		\ifx\BookSubtitle\empty
+			% No subtitle: display title only
+			\node[anchor=center,align=center] at ([yshift=3cm]current page.center) {\rmfamily\fontsize{50}{60}\selectfont\bfseries #2};%
+		\else
+			% Has subtitle: display title and subtitle
+			\node[anchor=center,align=center] at ([yshift=5cm]current page.center) {\rmfamily\fontsize{50}{60}\selectfont\bfseries #2};%
+			\node[anchor=center,align=center] at ([yshift=2.6cm]current page.center) {\rmfamily\fontsize{50}{60}\selectfont\bfseries \BookSubtitle};%
+		\fi
 		\node[anchor=center,align=center] at ([yshift=-2cm]current page.center) {\rmfamily\fontsize{36}{44}\selectfont\bfseries #3};%
 	\end{tikzpicture}%
 	\restoregeometry%
