@@ -22,10 +22,20 @@
 
 \printbibliography[heading=bibempty, type=book] % Output book bibliography entries
 
-% Online resources
-\section*{Online Resources}
-\addcontentsline{toc}{section}{Online Resources} % Add the Online Resources subheading to the table of contents
-\printbibliography[heading=bibempty, type=misc] % Output miscellaneous bibliography entries
+% Online resources - only show if there are any misc entries
+% Define a filter for misc entries and check if any exist
+\defbibfilter{miscfilter}{type=misc}
+% Use a box to capture the bibliography output
+\newsavebox{\miscbibbox}
+\sbox{\miscbibbox}{%
+    \printbibliography[heading=bibempty, filter=miscfilter]%
+}%
+% Only show section if the box has content (non-zero width)
+\ifdim\wd\miscbibbox>\z@
+    \section*{Online Resources}%
+    \addcontentsline{toc}{section}{Online Resources} % Add the Online Resources subheading to the table of contents
+    \printbibliography[heading=bibempty, type=misc] % Output miscellaneous bibliography entries
+\fi
 
 %----------------------------------------------------------------------------------------
 %	INDEX
