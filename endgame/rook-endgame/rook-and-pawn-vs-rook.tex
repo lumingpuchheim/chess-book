@@ -1,0 +1,85 @@
+\section{Rook and Pawn vs. Rook}
+
+\subsection*{Common Attack and Defense}
+
+\begin{multicols}{2}
+Most commonly, the attacker tries to promote his pawn while the 
+defender tries to stop it.
+
+We start from pawn on the 7th rank.
+
+\newchessgame[
+    setfen=4K3/4P1k1/8/8/8/8/r7/5R2 w - - 0 1,
+]
+
+\begin{chessdiagram}[Pawn on the 7th Rank]
+    \chessboard[
+        showmove=false
+    ]
+    \label{diagram:Lucena}
+\end{chessdiagram}
+
+\paragraph{Side Checks}
+If it is Black's turn to move, he gets a draw with
+\vocab{side-check}{Side Checks}{The weaker side gives checks using the rook from 
+the side. The defense is successful when the stronger side cannot avoid 
+the check because otherwise it loses the pawn}: \variation{1... Ra8+ 2. Rd7 Ra7+ 3. Kd6 Ra6+ 4. Kc7 Ra7+} etc.
+\index{Rook Endgame!Side Checks}
+
+Side checks are successful only when the rook and the pawn are separated 
+by at least 3 files. That's why the weaker side should place their 
+rook on the \vocab{long-side}{Long Side}{A central pawn or a bishop pawn divides
+the chessboard into two unequal parts, one is long and the other is short}.
+
+The king and the rook must defend together. Since the rook should be on the long side,
+the king should be on the short side, in order not to interfere with the side checks.
+
+\paragraph{Cutting Off}
+In diagram \ref{digram: rook cut off} we have already seen a rook 
+cutting off a king to stop it from joining the battle. 
+In diagram \ref{diagram:Lucena}, if it is White to move, he can play
+
+\mainline[level=1]{1. Rg1+ Kh7} 
+ \variation{1... Kf6}{2. Kf8} Black cannot stop White from promoting.
+
+The Black king is cut off and cannot stop the passed pawn anymore. 
+Black's rook is on its own. \index{Rook Endgame!Cut off}
+
+\paragraph{Bridging}
+\mainline[level=1]{2. Rg4} Black cannot use side checks anymore because 
+White's king can hide at f7. Black tries \vocab{rear-checks}{Rear Checks}{
+    The weaker side tries to defend by giving checks from the rear
+}. \index{Rook Endgame!Rear Checks}
+
+\mainline[level=1]{2... Rd2 3. Kf7 Rf2+ 4. Ke6 Re2+ 5. Kf6 Rf2+ 6. Ke5 Re2+ 7. Re4} 
+
+\begin{chessdiagram}[Vertical Bridge]
+    \chessboard[
+        showmove=false
+    ]
+    \label{diagram:bridge one}
+\end{chessdiagram}
+
+White's rook builds a \vocab{bridging}{Bridging}{The stronger side 
+uses his rook to interfere with a side check or a rear check in rook endgame} \index{Rook Endgame!Bridging}.
+
+\newchessgame[
+    setfen=4K3/4P1k1/8/8/8/8/r7/5R2 w - - 0 1,
+]
+
+White can also win the game by a horizontal bridging:
+
+\mainline[level=1]{
+    1. Rg1 Kh7 2. Rd1 Ra8+ 3. Rd8 Kg7 4. Kd7 Ra7+ 5. Ke6 Ra6+ 6. Rd6
+}
+
+\begin{chessdiagram}[Horizontal Bridge]
+    \chessboard[
+        showmove=false
+    ]
+    \label{diagram:bridge two}
+\end{chessdiagram}
+
+Black loses because he cannot stop White from promoting his pawn.
+
+\end{multicols}
