@@ -1,0 +1,217 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{news_bi_pricewar}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=28e8dd7bf33e0f25a5a8fc937e6d9df4}{%
+           family={Insider},
+           familyi={I\bibinitperiod},
+           given={Business},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{28e8dd7bf33e0f25a5a8fc937e6d9df4}
+      \strng{fullhash}{28e8dd7bf33e0f25a5a8fc937e6d9df4}
+      \strng{bibnamehash}{28e8dd7bf33e0f25a5a8fc937e6d9df4}
+      \strng{authorbibnamehash}{28e8dd7bf33e0f25a5a8fc937e6d9df4}
+      \strng{authornamehash}{28e8dd7bf33e0f25a5a8fc937e6d9df4}
+      \strng{authorfullhash}{28e8dd7bf33e0f25a5a8fc937e6d9df4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Overview of 2025 delivery price war and investor impact}
+      \field{title}{China’s era of one-yuan lattes and cheaply delivered meals is cratering}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.businessinsider.com/china-food-delivery-price-war-involution-competition-alibaba-jd-meituan-2025-8
+      \endverb
+      \verb{url}
+      \verb https://www.businessinsider.com/china-food-delivery-price-war-involution-competition-alibaba-jd-meituan-2025-8
+      \endverb
+    \endentry
+    \entry{scmp2025_alibaba_subsidy}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ff175c0bdc007d73a9b296ab6da44367}{%
+           family={Post},
+           familyi={P\bibinitperiod},
+           given={South\bibnamedelimb China\bibnamedelima Morning},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{fullhash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{bibnamehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{authorbibnamehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{authornamehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{authorfullhash}{ff175c0bdc007d73a9b296ab6da44367}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Details on Alibaba’s subsidy strategy in the delivery war}
+      \field{title}{Alibaba’s US$7 billion subsidy deepens China’s instant e-commerce war with JD.com, Meituan}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.scmp.com/tech/big-tech/article/3316646/alibabas-us7-billion-subsidy-deepens-chinas-instant-e-commerce-war-jdcom-meituan
+      \endverb
+      \verb{url}
+      \verb https://www.scmp.com/tech/big-tech/article/3316646/alibabas-us7-billion-subsidy-deepens-chinas-instant-e-commerce-war-jdcom-meituan
+      \endverb
+    \endentry
+    \entry{scmp2025_meituan_record}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ff175c0bdc007d73a9b296ab6da44367}{%
+           family={Post},
+           familyi={P\bibinitperiod},
+           given={South\bibnamedelimb China\bibnamedelima Morning},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{fullhash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{bibnamehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{authorbibnamehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{authornamehash}{ff175c0bdc007d73a9b296ab6da44367}
+      \strng{authorfullhash}{ff175c0bdc007d73a9b296ab6da44367}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{SCMP report on 2025 instant delivery war and record order volumes}
+      \field{title}{Meituan gets record orders as China’s e-commerce war fuels demand for delivery service}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.scmp.com/tech/big-tech/article/3317140/meituan-gets-record-orders-chinas-e-commerce-war-fuels-demand-for-delivery-service
+      \endverb
+      \verb{url}
+      \verb https://www.scmp.com/tech/big-tech/article/3317140/meituan-gets-record-orders-chinas-e-commerce-war-fuels-demand-for-delivery-service
+      \endverb
+    \endentry
+    \entry{news_reuters_meituan_loss}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7513717dba8b208fe06799dcc54e59e2}{%
+           family={Reuters},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7513717dba8b208fe06799dcc54e59e2}
+      \strng{fullhash}{7513717dba8b208fe06799dcc54e59e2}
+      \strng{bibnamehash}{7513717dba8b208fe06799dcc54e59e2}
+      \strng{authorbibnamehash}{7513717dba8b208fe06799dcc54e59e2}
+      \strng{authornamehash}{7513717dba8b208fe06799dcc54e59e2}
+      \strng{authorfullhash}{7513717dba8b208fe06799dcc54e59e2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Reuters on Meituan losses attributed to competitive delivery pressures}
+      \field{title}{Meituan posts first quarterly loss since 2022 as delivery battle takes toll}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.reuters.com/world/asia-pacific/meituan-books-2-rise-third-quarter-revenue-net-income-slumps-2025-11-28/
+      \endverb
+      \verb{url}
+      \verb https://www.reuters.com/world/asia-pacific/meituan-books-2-rise-third-quarter-revenue-net-income-slumps-2025-11-28/
+      \endverb
+    \endentry
+    \entry{turn0search23}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=840618375908c57557b9c5c6cdfe8590}{%
+           family={娱乐独角兽},
+           familyi={娱\bibinitperiod}}}%
+      }
+      \strng{namehash}{840618375908c57557b9c5c6cdfe8590}
+      \strng{fullhash}{840618375908c57557b9c5c6cdfe8590}
+      \strng{bibnamehash}{840618375908c57557b9c5c6cdfe8590}
+      \strng{authorbibnamehash}{840618375908c57557b9c5c6cdfe8590}
+      \strng{authornamehash}{840618375908c57557b9c5c6cdfe8590}
+      \strng{authorfullhash}{840618375908c57557b9c5c6cdfe8590}
+      \field{sortinit}{娱}
+      \field{sortinithash}{80b64355ebb08cadff70fe8f13ac4882}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Describes the heavy subsidy competition and financial results across Meituan, Alibaba and JD.com in 2025}
+      \field{title}{半年烧掉1000亿，美团京东阿里三季度战事谁先“守不住”？_亏损_补贴_业务}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.sohu.com/a/960461332_549401
+      \endverb
+      \verb{url}
+      \verb https://www.sohu.com/a/960461332_549401
+      \endverb
+    \endentry
+    \entry{turn0search24}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6fc60ea25795de26da486e07531feba6}{%
+           family={新浪财经},
+           familyi={新\bibinitperiod},
+           given={网易科技\bibnamedelima /},
+           giveni={网\bibinitperiod\bibinitdelim /\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fc60ea25795de26da486e07531feba6}
+      \strng{fullhash}{6fc60ea25795de26da486e07531feba6}
+      \strng{bibnamehash}{6fc60ea25795de26da486e07531feba6}
+      \strng{authorbibnamehash}{6fc60ea25795de26da486e07531feba6}
+      \strng{authornamehash}{6fc60ea25795de26da486e07531feba6}
+      \strng{authorfullhash}{6fc60ea25795de26da486e07531feba6}
+      \field{sortinit}{新}
+      \field{sortinithash}{a94919d18c32141dcf97308aac231e4c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Breakdown of subsidy costs and third-quarter financial outcomes for Meituan, Alibaba and JD.com}
+      \field{title}{外卖大战烧掉2200亿，三家巨头终于打不动了}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://finance.sina.com.cn/stock/t/2025-12-04/doc-infzqyfi0944089.shtml
+      \endverb
+      \verb{url}
+      \verb https://finance.sina.com.cn/stock/t/2025-12-04/doc-infzqyfi0944089.shtml
+      \endverb
+    \endentry
+    \entry{turn0search19}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=841701cee21621febeac1b902641279a}{%
+           family={智通财经},
+           familyi={智\bibinitperiod}}}%
+      }
+      \strng{namehash}{841701cee21621febeac1b902641279a}
+      \strng{fullhash}{841701cee21621febeac1b902641279a}
+      \strng{bibnamehash}{841701cee21621febeac1b902641279a}
+      \strng{authorbibnamehash}{841701cee21621febeac1b902641279a}
+      \strng{authornamehash}{841701cee21621febeac1b902641279a}
+      \strng{authorfullhash}{841701cee21621febeac1b902641279a}
+      \field{sortinit}{智}
+      \field{sortinithash}{1eadd09561ef80a8fe80cb37d9fbfb61}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Details third quarter losses and market conditions for Meituan amid the delivery wars}
+      \field{title}{外卖大战成底色试金石，美团-W以低战损交出韧性答卷}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://cn.investing.com/news/stock-market-news/article-3110001
+      \endverb
+      \verb{url}
+      \verb https://cn.investing.com/news/stock-market-news/article-3110001
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

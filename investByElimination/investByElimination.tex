@@ -16,16 +16,18 @@
 %----------------------------------------------------------------------------------------
 \chapter*{Preface}
 \thispagestyle{plain} % Ensure plain pagestyle is applied (with page numbers in footer)
-%\addcontentsline{toc}{chapter}{Preface}
+\addcontentsline{toc}{chapter}{Preface}
 \input{preface}
 
 %----------------------------------------------------------------------------------------
 %	Introduction
 %----------------------------------------------------------------------------------------
 \input{introduction}
-
+\input{obscure_business/main}
+\input{dishonest_management/main}
+\input{ebita_as_metric/main}
 \input{empty_content/main}
-\input{focus_on_score/main}
+\input{competition/main}
 
 %----------------------------------------------------------------------------------------
 %	GLOSSARY
@@ -35,6 +37,21 @@
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Glossary}}
 \printglossary[title={Glossary}]
 
+%----------------------------------------------------------------------------------------
+%	APPENDIX
+%----------------------------------------------------------------------------------------
+\appendix
+\chapter{Enron 2000 Annual Report} \label{appendix:enron_2000_annual_report}
+
+This appendix contains the complete text of Enron's 2000 Annual Report Letter to Shareholders and related sections. This document serves as a case study of how a company can present itself as successful while hiding fundamental problems. The report demonstrates many of the warning signs discussed in this book: vague language, focus on manipulable metrics, complex business models, and overconfidence.
+
+\input{appendix/enron_2000_appendix}
+
+\chapter{Alibaba Group Q3 2025 Earnings Call Transcript} \label{appendix:alibaba_2025_q3_earnings_call}
+
+This appendix contains the translated transcript of Alibaba Group's September 2025 quarter earnings conference call. This document serves as a case study of how companies communicate during earnings calls, particularly in the context of competitive markets and strategic investments. The transcript demonstrates various communication patterns and metrics discussed in this book.
+
+\input{appendix/alibaba_2025_q3_earnings_call}
 
 \def\IndexPageOffset{1}
 
