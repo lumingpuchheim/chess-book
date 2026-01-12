@@ -1,0 +1,39 @@
+\chapter{Using Benford's Law to Detect Cooked Numbers}
+
+In investment analysis, the problem is rarely the lack of information, but the excess of \emph{unreliable} information. Financial statements are carefully prepared narratives, and when incentives are misaligned, numbers may be smoothed, adjusted, or outright fabricated. One useful falsification tool is Benford's Law, a statistical regularity closely related to Zipf-type distributions.
+
+\section{Benford's Law}
+
+%Zipf's Law describes how many natural phenomena follow a power-law distribution: word frequencies, city sizes, firm sizes, and income all show a small number of large observations and a long tail of smaller ones. Financial data is no exception. Revenues, costs, invoice amounts, and transaction values typically grow through multiplicative processes rather than additive ones.
+
+Benford's Law emerges naturally from such multiplicative growth. It states that in many real-world datasets, the leading digits are not uniformly distributed. Instead, smaller digits appear more frequently. The probability that the first digit is \( d \in \{1,\dots,9\} \) is given by
+
+\[
+P(d) = \log_{10}\left(1 + \frac{1}{d}\right).
+\]
+
+As a result, about 30\% of naturally occurring numbers begin with the digit 1, while fewer than 5\% begin with 9.
+
+\section{Why Fabricated Numbers Look Different}
+
+Human beings are poor random number generators. When numbers are fabricated, adjusted, or excessively managed, people tend to distribute digits more evenly or favor ``round'' and psychologically comfortable digits. This unconscious bias flattens or distorts the leading-digit distribution.
+
+Because of this, fabricated financial data often deviates from Benford's expected logarithmic pattern. The deviation itself does not prove fraud, but it strongly suggests that the numbers did not arise from a natural economic process.
+
+\section{How to Apply Benford's Law}
+
+To apply Benford's Law in practice, one collects a large sample of numerical entries from financial statements, such as revenue line items, expense details, receivables, payables, or transaction-level data. For each value, the first digit is extracted and its frequency counted.
+
+The observed digit frequencies are then compared with Benford's theoretical distribution. A close match indicates that the data is statistically natural. Significant deviations act as a red flag and justify deeper qualitative and quantitative investigation.
+
+\section{When the Method Works and When It Fails}
+
+Benford's Law works best when applied to large datasets that span several orders of magnitude and arise from unconstrained economic activity. It is particularly effective on operational data rather than summary figures.
+
+It does not work well on small samples, on numbers that are fixed by design or regulation, on heavily rounded figures, or on values clustered around thresholds. In such cases, deviations from Benford's Law are expected and meaningless.
+
+\section{Investor's Perspective}
+
+For an investor, Benford's Law is not a detector of fraud but a tool of elimination. It helps answer a simpler and more important question: \emph{Do these numbers look like they come from reality?}
+
+Used correctly, it allows one to discard questionable cases quickly and focus attention where deeper analysis is warranted. In that sense, Benford's Law fits naturally into a disciplined investment process that prioritizes falsification over confirmation.
