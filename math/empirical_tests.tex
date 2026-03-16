@@ -1,0 +1,54 @@
+\chapter{Empirical Tests}
+ 
+An empirical test for randomness is a procedure that takes a sequence of
+observed draw outcomes and asks a single focused question about it.  Each
+question probes a different property that a truly random sequence should
+have --- such as whether all outcomes appear equally often, whether consecutive
+draws are independent of each other, or whether patterns of repetition arise
+at the right rate.
+ 
+The word \emph{empirical} simply means that the test is based entirely on
+the observed data.  No assumptions are made about how the draws were
+produced.  The data speaks for itself.
+ 
+\section{The Core Idea}
+ 
+The central idea behind all empirical tests is the same:
+ 
+\begin{enumerate}
+  \item \textbf{Choose a property} that a random sequence should have.
+  \item \textbf{Measure} how much the observed sequence agrees or disagrees
+        with that property.
+  \item \textbf{Decide} whether the disagreement is small enough to be
+        attributed to natural fluctuation, or large enough to suggest a
+        real problem.
+\end{enumerate}
+ 
+The measurement in step~2 always produces a single number --- the
+\emph{test statistic}.  Step~3 then compares this number to the range of
+values that would be typical for a genuinely random sequence.
+ 
+\section{No Test Can Prove Randomness}
+ 
+A crucial point that Knuth emphasises: no test, or even collection of tests,
+can \emph{prove} that a sequence is random.  All a test can do is
+\emph{fail to find} evidence of non-randomness in the specific property it
+examines.
+ 
+This means that passing a test is reassuring but not conclusive.  Failing a
+test, on the other hand, is meaningful --- it tells you that something in the
+sequence does not behave the way a fair process would.
+ 
+\section{Many Tests Are Needed}
+ 
+Because each test examines only one property, a sequence could look perfectly
+fine from one angle while hiding a problem that only another angle would
+reveal.  For example, a draw mechanism might produce each ball number the
+correct number of times overall, yet still favour drawing the same number
+twice in a row more often than chance allows.  The first property would pass
+one test; the second would be caught by a different test.
+ 
+For this reason, Knuth recommends applying a \emph{battery} of tests --- a
+collection of tests each targeting a different property.  The more tests a
+sequence passes, the more confidence we have in the fairness of the draw
+mechanism.

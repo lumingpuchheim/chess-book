@@ -1,0 +1,255 @@
+% -------------------------------------------------------------
+\chapter{The General Structure}
+% -------------------------------------------------------------
+ 
+% -------------------------------------------------------------
+\section{Two Levels of Testing}
+% -------------------------------------------------------------
+ 
+When Knuth describes empirical randomness testing, two distinct levels are
+at work, and it is important not to conflate them.
+ 
+At the \textbf{upper level} sit the \emph{empirical tests} themselves ---
+the frequency test, the serial test, the gap test, the poker test, the runs
+test, and so on.  Each of these tests focuses on a specific property of the
+draw sequence: how often each outcome appears, how pairs of consecutive
+draws relate, how long the gaps between specific outcomes are, and so forth.
+Applying one of these tests means extracting a particular numerical summary
+from the sequence that reflects that property.
+ 
+At the \textbf{lower level} sit two general-purpose statistical procedures:
+the \emph{chi-squared test} and the \emph{Kolmogorov--Smirnov test}.  These
+are not empirical tests in their own right.  They are the machinery that
+every empirical test relies on to reach a conclusion.  Once an empirical
+test has reduced the data to a test statistic, it is the chi-squared or KS
+procedure that converts that statistic into a $p$-value and a verdict.
+ 
+\begin{keyidea}[The Relationship Between the Two Levels]
+Every empirical randomness test described by Knuth ultimately delegates its
+final decision to one of two tools: the chi-squared test or the
+Kolmogorov--Smirnov test.  These two procedures are not members of the
+battery of empirical tests --- they are the statistical engine that all
+members of the battery run on.
+\end{keyidea}
+ 
+% -------------------------------------------------------------
+\section{The General Structure of a Statistical Test}
+% -------------------------------------------------------------
+ 
+Before examining the two procedures in detail, it is worth stating the
+logical structure they share.
+ 
+Each empirical test produces a \textbf{test statistic}: a single number
+computed from the observed data.  This statistic is designed so that, when
+the draw sequence truly is random, the statistic follows a \emph{known
+reference distribution}.  The chi-squared and KS procedures each provide
+one such reference distribution.
+ 
+The conclusion of a test is then expressed as a \textbf{$p$-value}: the
+probability that a genuinely random process would produce a test statistic
+at least as extreme as the one observed.  A very small $p$-value means the
+data is highly inconsistent with randomness; a $p$-value near one means the
+data fits the expected pattern suspiciously well.  Both extremes are cause
+for investigation.
+ 
+We choose a \textbf{significance level} $\alpha$ in advance.  If the
+$p$-value falls below $\alpha$, we reject the null hypothesis that the
+sequence is random.  Common choices are $\alpha = 0.05$ and $\alpha = 0.01$.
+ 
+% -------------------------------------------------------------
+\section{What Makes These Two Procedures Universal}
+% -------------------------------------------------------------
+ 
+One might ask: why do all empirical tests converge on the same two
+procedures?  The answer lies in a property that both the chi-squared and KS
+tests possess, which makes them applicable across a wide variety of
+situations without modification.
+ 
+\begin{keyidea}[Distribution-Free Property]
+The reference distributions of the chi-squared and Kolmogorov--Smirnov test
+statistics under $H_0$ do not depend on the specific probability
+distribution that the data is supposed to follow.  The same reference
+distribution, and the same tables of critical values, apply regardless of
+whether the underlying theoretical distribution is uniform, geometric,
+exponential, or any other shape.
+\end{keyidea}
+ 
+This is what allows the same two procedures to serve as the foundation for
+every empirical test.  Each empirical test examines a different property and
+therefore works with a different theoretical distribution --- the frequency
+test works with a uniform distribution over ball numbers, the gap test works
+with a geometric distribution of waiting times, the runs test works with a
+combinatorial distribution of run lengths, and so on.  Despite this variety,
+every one of these tests can hand its test statistic to either the
+chi-squared or the KS procedure and receive a valid $p$-value in return,
+because those procedures are indifferent to the shape of the underlying
+distribution.
+ 
+\begin{important}
+This distribution-free property is not trivial.  Most statistical tests are
+derived specifically for one type of distribution and cannot be reused
+elsewhere without re-derivation.  The chi-squared and KS tests are
+exceptions: their validity is guaranteed by general mathematical theorems
+that hold for any distribution, making them ideal as universal foundations.
+\end{important}
+ 
+% -------------------------------------------------------------
+\section{The Chi-Squared Test}
+% -------------------------------------------------------------
+ 
+\subsection{When It Is Used}
+ 
+The chi-squared procedure is used when the test statistic from an empirical
+test takes the form of \textbf{counts in discrete categories}.  The
+empirical test observes how many times each of several possible outcomes
+occurred and compares those counts to how many times each outcome was
+expected to occur.
+ 
+\subsection{The Test Statistic}
+ 
+Let there be $k$ categories.  For category $i$, let $O_i$ denote the
+observed count and $E_i$ the expected count under $H_0$.  The chi-squared
+statistic is:
+\[
+  \chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
+\]
+ 
+The normalisation by $E_i$ is essential: it places discrepancies from
+high-probability categories and low-probability categories on the same
+scale, so that each contributes comparably to the total.
+ 
+\subsection{The Reference Distribution and Its Independence from $E_i$}
+ 
+When $H_0$ is true, the statistic $\chi^2$ follows approximately the
+\emph{chi-squared distribution with $\nu = k - 1$ degrees of freedom}.
+The critical observation is that this reference distribution depends only
+on the number of categories $k$, and not at all on the individual expected
+values $E_1, E_2, \ldots, E_k$.
+ 
+This means that an empirical test with ten categories always consults the
+chi-squared distribution with nine degrees of freedom, regardless of whether
+those ten categories each have equal probability or wildly unequal
+probabilities.  The same table entry provides the $p$-value in every case.
+ 
+\begin{keyidea}
+The chi-squared statistic translates category counts --- measured against
+any theoretical distribution with any shape --- into a single universal
+scale.  The reference distribution depends only on how many categories there
+are, not on what those categories represent or how probable they are.
+\end{keyidea}
+ 
+\subsection{What It Is Sensitive To}
+ 
+The chi-squared test detects discrepancies that are \emph{distributed across
+many categories}.  It is powerful when multiple categories deviate
+moderately from their expected counts simultaneously.  Because the test
+sums contributions from all categories equally, it does not weight any
+particular category more heavily than another, and it discards any ordering
+among the categories.  As a result, it cannot detect trends where deviations
+are systematically arranged --- for example, consistently too high in one
+part of the range and too low in another.
+ 
+\subsection{A Requirement on Expected Counts}
+ 
+The chi-squared distribution is an approximation, and it requires each
+expected count $E_i$ to be sufficiently large to be reliable.  When an
+empirical test produces categories with very small expected counts, those
+categories must be merged with neighbouring ones until the requirement is
+met.  This changes $k$ and therefore the degrees of freedom.
+ 
+% -------------------------------------------------------------
+\section{The Kolmogorov--Smirnov Test}
+% -------------------------------------------------------------
+ 
+\subsection{When It Is Used}
+ 
+The KS procedure is used when the test statistic from an empirical test
+takes the form of \textbf{ordered numerical values} that can be compared to
+a continuous theoretical distribution.  Rather than grouping observations
+into bins, it uses the full resolution of the data.
+ 
+\subsection{The Empirical and Theoretical Cumulative Distribution Functions}
+ 
+For any value $x$, the theoretical cumulative distribution function (CDF)
+$F(x)$ gives the probability that a single observation falls at or below $x$
+under $H_0$.  The empirical CDF $F_n(x)$, built from the $n$ observed values,
+gives the fraction of observations that actually fell at or below $x$.
+ 
+Sorting the observations as $U_{(1)} \leq U_{(2)} \leq \cdots \leq U_{(n)}$,
+the KS test measures the largest vertical gap between these two curves.
+Knuth defines the two one-sided statistics:
+\[
+  K^+ = \max_{1 \leq i \leq n} \left( \frac{i}{n} - F(U_{(i)}) \right)
+\]
+\[
+  K^- = \max_{1 \leq i \leq n} \left( F(U_{(i)}) - \frac{i-1}{n} \right)
+\]
+ 
+$K^+$ is the largest point where the observed distribution exceeds the
+theoretical one; $K^-$ is the largest point where it falls short.  Knuth
+recommends reporting both separately, as they detect deviations in opposite
+directions.
+ 
+\subsection{The Reference Distribution and Its Independence from $F$}
+ 
+When $H_0$ is true, the scaled statistics $K^+\sqrt{n}$ and $K^-\sqrt{n}$
+follow the \emph{Kolmogorov distribution} --- a single tabulated reference
+that does not depend on the form of $F$.
+ 
+This universality follows from the \emph{probability integral transform}: if
+$U$ is a random variable with continuous CDF $F$, then $F(U)$ is uniformly
+distributed on $[0,1]$, for any $F$.  When the empirical test computes
+$F(U_{(i)})$, the result is always a uniform sample regardless of the
+original distribution $F$.  The KS test then compares this transformed
+sample to the uniform distribution, which is always the same comparison,
+making the reference distribution universal.
+ 
+\begin{keyidea}
+The KS procedure internally transforms the data so that it is always being
+compared against a uniform distribution, no matter what the original
+theoretical distribution $F$ is.  This transformation is exact and
+assumption-free, making the reference distribution genuinely universal
+rather than approximate.
+\end{keyidea}
+ 
+\subsection{What It Is Sensitive To}
+ 
+The KS test detects discrepancies that are \emph{concentrated at a single
+point} --- that is, a location where the empirical and theoretical CDFs
+diverge most sharply.  Because it preserves the ordering of the data and
+examines cumulative behaviour, it is sensitive to systematic trends: a
+gradual drift where values are consistently above or below the theoretical
+curve over a range.  Its focus on the single worst-case gap means it may
+underweight many smaller but widespread deviations spread across the range.
+ 
+Unlike the chi-squared test, the KS test requires no minimum expected count
+and is exact for any sample size, making it particularly suitable when data
+are sparse.
+ 
+% -------------------------------------------------------------
+\section{How the Two Procedures Complement Each Other}
+% -------------------------------------------------------------
+ 
+The chi-squared and KS tests are not redundant --- they are sensitive to
+different shapes of departure from $H_0$, and for this reason the empirical
+tests in Knuth's battery are designed to use whichever is better suited to
+the particular test statistic at hand.
+ 
+When an empirical test produces category counts, chi-squared is the natural
+choice.  When it produces ordered numerical values that can be compared
+directly to a theoretical CDF, KS is the natural choice.  Some empirical
+tests can be formulated either way, allowing both procedures to be applied
+and their conclusions compared.
+ 
+\begin{keyidea}[Why Two Foundations Are Better Than One]
+Chi-squared is powerful against distributed, category-wide discrepancies.
+KS is powerful against concentrated, location-specific discrepancies.
+Together, they cover the two most important shapes of departure from
+randomness.  Because both are distribution-free, the choice between them
+is driven purely by the form of the test statistic --- never by the shape
+of the theoretical distribution being tested against.
+\end{keyidea}
+ 
+These two procedures are therefore not just tools of convenience.  They are
+the mathematical foundation on which the entire structure of empirical
+randomness testing rests.
