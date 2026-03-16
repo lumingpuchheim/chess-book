@@ -139,6 +139,70 @@ scale.  The reference distribution depends only on how many categories there
 are, not on what those categories represent or how probable they are.
 \end{keyidea}
  
+\subsection{What the Chi-Squared Distribution Looks Like}
+
+For each fixed number of degrees of freedom $\nu$, there is a corresponding
+\emph{chi-squared distribution}.  You can think of it as a bell-shaped
+curve that has been pushed over so that it starts at $0$ and has a long
+tail out to the right:\index{Chi-squared Distribution}
+\begin{itemize}
+  \item $\chi^2$ can never be negative, because it is a sum of squared
+        discrepancies.
+  \item Values near $0$ correspond to counts that match the expectations
+        almost perfectly.
+  \item Larger values of $\chi^2$ correspond to counts that are
+        increasingly uneven.
+\end{itemize}
+
+There is also a more structural way to view this distribution.  Take a
+random variable $Z$ that follows a \emph{Gaussian} (or \emph{normal})
+distribution with mean $0$ and variance $1$, usually written
+$Z \sim \mathcal{N}(0,1)$.  This is the familiar bell-shaped curve: it is
+symmetrical around $0$, values close to $0$ are common, and very large
+positive or negative values are increasingly rare.  If you square such a
+variable, $Z^2$, the result follows a chi-squared distribution with
+one degree of freedom.  If you take several independent such variables
+$Z_1, Z_2, \dots, Z_\nu$ and add their squares,
+\[
+  \chi^2 = Z_1^2 + Z_2^2 + \cdots + Z_\nu^2,
+\]
+then $\chi^2$ has a chi-squared distribution with $\nu$ degrees of
+freedom.  In this sense, chi-squared distributions describe sums of
+squared Gaussian variables.
+
+For small $\nu$ the curve is strongly skewed; for large $\nu$ it becomes
+more and more symmetric and bell-like.  The important point is that, once
+$\nu$ is known, the entire shape of this curve is fixed, and so is the
+probability that $\chi^2$ will fall in any given range.
+
+\subsection{How the $p$-Value Is Obtained in Practice}
+
+Once you have computed $\chi^2$ and the degrees of freedom $\nu$, the
+$p$-value is simply the probability, under the chi-squared distribution
+with $\nu$ degrees of freedom, of seeing a value at least as large as the
+one you observed.  There are two practical ways to obtain it:
+\begin{itemize}
+  \item \textbf{Using tables.}  Traditional statistics books print
+        \emph{chi-squared tables} with rows for degrees of freedom and
+        columns for selected upper-tail probabilities (for example
+        $0.10$, $0.05$, $0.01$, $0.001$).  Given $\nu$ and your $\chi^2$
+        value, you look along the row for $\nu$ to see between which two
+        columns your statistic falls.  This tells you that the $p$-value
+        lies between the corresponding probabilities.
+  \item \textbf{Using a computer program.}  Any scientific computing
+        environment (R, Python, Julia, a spreadsheet, or a statistics
+        package) can evaluate the chi-squared CDF directly.  You give it
+        $\chi^2$ and $\nu$, and it returns the exact upper-tail
+        probability.  This is the most convenient option in modern work,
+        and is what we will assume when we quote numerical $p$-values in
+        later chapters.
+\end{itemize}
+
+Either way, the logic is the same: we place the observed $\chi^2$ on the
+chi-squared distribution with the correct degrees of freedom and read off
+how much probability lies to the right of it.  That right-hand probability
+is the $p$-value.
+ 
 \subsection{What It Is Sensitive To}
  
 The chi-squared test detects discrepancies that are \emph{distributed across
