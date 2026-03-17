@@ -1,0 +1,103 @@
+\chapter{The Central Limit Theorem}
+
+\section{Starting from Dice}
+Imagine rolling a single fair six-sided dice.  Each throw is simple and familiar: you see one of the numbers \(1,2,3,4,5,6\), all equally likely.  Now consider a slightly different experiment: roll the dice several times and \emph{add up} the results.
+
+For example:
+\begin{itemize}
+  \item with one throw, the result can only be \(1\) to \(6\), and all six outcomes are equally likely;
+  \item with two throws, the sum can range from \(2\) to \(12\), but not all sums are equally likely --- there are many ways to make \(7\), but only one way to make \(2\);
+  \item with ten throws, the sum can range from \(10\) to \(60\), and most of the probability mass is concentrated in the middle region.
+\end{itemize}
+
+If you repeat the ``sum of ten throws'' experiment many times and draw a histogram of the sums, you see a familiar shape begin to appear: a smooth, bell-like curve, highest in the middle and tapering off towards the extremes.  This is not an accident.  It is the first hint of the \emph{Central Limit Theorem}.
+
+\section{What the Theorem Says (Informally)}
+The Central Limit Theorem (CLT) can be stated informally as:
+\begin{quote}
+  \emph{Whenever you add up many independent random contributions of roughly similar size, the distribution of the sum tends to look more and more like a Gaussian (normal) bell curve, regardless of the original distribution of each contribution.}
+\end{quote}
+
+In the dice example, each throw is one ``contribution''.  When you add many throws, the sum behaves more and more like a Gaussian random variable --- its histogram becomes smoother and more symmetric, and the probability of being far away from the centre drops off in a way that resembles the Gaussian tail.
+
+This phenomenon is not limited to dice.  It appears whenever a quantity is the sum of many small influences: measurement errors, daily fluctuations in demand, tiny physical forces acting together, and so on.  The CLT explains why the Gaussian distribution shows up so often in nature and in data.
+
+\section{When the CLT Applies (and When to Be Careful)}
+The CLT does not require perfection, but it does have some conditions.  In practice, it works well when:
+\begin{itemize}
+  \item the contributions you add are \textbf{independent} (one draw does not heavily influence the next);
+  \item none of the contributions is \textbf{overwhelmingly larger} than the others (no single term dominates the sum);
+  \item the underlying distribution is not too wild in its tails (extremely heavy-tailed distributions need more care).
+\end{itemize}
+
+For many everyday distributions, such as the uniform distribution on an interval, the CLT starts to give a good approximation surprisingly quickly.  A useful rule of thumb for a \textbf{uniform} distribution is:
+\begin{quote}
+  \emph{If you add together around 20--30 independent uniform draws (for example, 20--30 dice or lottery-like draws of equal range), the distribution of the sum is already quite close to a Gaussian.}
+\end{quote}
+
+With even more terms, the approximation improves further.  The exact number is not magical and depends on how accurate you need the approximation to be, but this gives a practical sense of scale: tens of independent contributions are often enough for the CLT to be useful in modelling sums by a Gaussian distribution.
+
+\section{Mean and Spread in Layman Terms}
+To describe the bell curve that appears, we need two basic ideas.
+
+\subsection{The Mean (Expectation)}
+The \emph{mean}, or \emph{expectation}, of a random quantity is its long-run average value.  For the dice, each face from \(1\) to \(6\) has probability \(1/6\), so the expected value of one throw is
+\[
+  \mathbb{E}[\text{one throw}] = \frac{1\cdot 1 + 2\cdot 1 + 3\cdot 1 + 4\cdot 1 + 5\cdot 1 + 6\cdot 1}{6}
+  = \frac{1+2+3+4+5+6}{6} = 3.5.
+\]
+If you keep throwing the dice and averaging the results, your running average will wander around but gradually settle near \(3.5\).
+
+In general, if a random variable \(X\) can take values \(x_1, x_2, \dots, x_k\) with probabilities \(p_1, p_2, \dots, p_k\), its expectation is
+\[
+  \mathbb{E}[X] = \sum_{i=1}^{k} x_i\,p_i.
+\]
+
+For the sum of ten independent throws, the mean is simply ten times larger:
+\[
+  \mathbb{E}[\text{sum of ten throws}] = 10 \times \mathbb{E}[\text{one throw}] = 10 \times 3.5 = 35.
+\]
+This is why the histogram of sums is centred near \(35\).
+
+\subsection{How Much the Values Vary (Variance)}
+The second ingredient is how much the outcomes \emph{spread out} around the mean.  In everyday language we might say:
+\begin{itemize}
+  \item some quantities are ``tightly concentrated'' around their average;
+  \item others are ``very noisy'' or ``highly variable''.
+\end{itemize}
+
+Mathematically this spread is measured by the \emph{variance} or its square root, the \emph{standard deviation}.  For a random variable \(X\) with mean \(\mathbb{E}[X]\), the variance is defined as
+\[
+  \mathrm{Var}(X) = \mathbb{E}\bigl[(X - \mathbb{E}[X])^2\bigr],
+\]
+the expected value of the squared distance from the mean.  You can think of it as the average squared ``error'' between \(X\) and its own average.
+
+For our purposes it is enough to remember that:
+\begin{itemize}
+  \item a larger variance means the values are more spread out;
+  \item a smaller variance means they are more tightly clustered around the mean.
+\end{itemize}
+
+When we add many independent contributions, the mean of the sum grows in proportion to the number of terms, and the spread also grows, but in a more controlled way.  After the right rescaling, the CLT tells us that the shape we see tends towards the Gaussian bell curve.
+
+\section{The Parameters of a Gaussian Distribution}
+A Gaussian (normal) distribution is fully described by just two numbers:
+\begin{itemize}
+  \item its \textbf{mean} \(\mu\) (where the peak of the bell curve sits);
+  \item its \textbf{variance} \(\sigma^2\) (how wide the bell is).\index{Gaussian Distribution}\index{Normal Distribution}
+\end{itemize}
+
+We write this as
+\[
+  X \sim \mathcal{N}(\mu, \sigma^2),
+\]
+which should be read as: ``the random variable \(X\) follows a Gaussian distribution with mean \(\mu\) and variance \(\sigma^2\).''  Changing \(\mu\) shifts the whole curve left or right.  Changing \(\sigma^2\) stretches it out or squeezes it in: a larger variance means a flatter, wider bell; a smaller variance means a taller, narrower bell.
+
+In the dice example:
+\begin{itemize}
+  \item for one throw, the mean is \(3.5\) and the variance has some fixed value;
+  \item for the sum of many throws, the mean is larger and the variance is larger, but the overall \emph{shape} of the histogram becomes more and more like a Gaussian.
+\end{itemize}
+
+The Central Limit Theorem links these ideas together: it explains why sums of many small random effects are well modelled by a Gaussian distribution with an appropriate mean and variance, and therefore why the Gaussian curve lies at the heart of statistical testing, including the chi-squared methods used elsewhere in this book.
+
