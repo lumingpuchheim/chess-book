@@ -222,6 +222,27 @@ empirical test produces categories with very small expected counts, those
 categories must be merged with neighbouring ones until the requirement is
 met.  This changes $k$ and therefore the degrees of freedom.
  
+\subsection{How to Interpret the $p$-Value (Rule of Thumb)}
+\index{$p$-value}
+
+Knuth gives a practical interpretation scheme for the $p$-values produced by
+randomness tests.\cite{knuth:1997-taocp-2}  The idea is not to treat a single
+test run as a final verdict, but to classify outcomes by how extreme they are.
+
+\begin{itemize}
+  \item If $p < 1\%$ or $p > 99\%$, we \textbf{reject} the hypothesis that the
+        numbers are sufficiently random.
+  \item If $1\% \le p < 5\%$ or $95\% < p \le 99\%$, the numbers are
+        \textbf{suspect}.
+  \item If $5\% \le p < 10\%$ or $90\% < p \le 95\%$, the numbers are
+        \textbf{almost suspect}.
+\end{itemize}
+
+Knuth also emphasises repetition: the chi-squared test is often performed at
+least three times on different sets of data.  If at least two of the three
+results are \emph{suspect}, the numbers are regarded as not sufficiently
+random.\cite{knuth:1997-taocp-2}
+
 % -------------------------------------------------------------
 \section{The Kolmogorov--Smirnov Test}\label{sec:ks-test}
 % -------------------------------------------------------------
