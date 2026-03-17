@@ -1,0 +1,130 @@
+\chapter{The Serial Test}
+
+\section{Intuition from Dice}
+The frequency test asks whether each outcome appears often enough in the long
+run.  But a loaded process can hide in a different way: each face might appear
+with the \emph{right overall frequency}, yet the results might not be
+\emph{independent}.
+
+Here is a simple example that makes the point without any statistics.  In the
+real world, ``sunrise'' and ``sunset'' occur with the same overall frequency:
+one of each per day.  But that does not make the sequence random.  In fact it
+is almost perfectly predictable: a sunrise is followed by a sunset, and a
+sunset is followed by a sunrise.  The \emph{frequencies} are balanced, yet the
+\emph{order} is highly structured.
+
+The \textbf{serial test} targets exactly this kind of problem.  It asks:
+\begin{quote}
+  \emph{Do consecutive outcomes behave like independent draws, or do certain
+  short patterns (pairs, triples, \dots) occur too often or too rarely?}
+\end{quote}
+
+\section{What the Serial Test Checks}
+Instead of counting single outcomes, the serial test counts \emph{tuples}.
+For example:
+\begin{itemize}
+  \item a \textbf{2-tuple} (pair) test counts how often \((a,b)\) occurs in two
+        consecutive positions;
+  \item a \textbf{3-tuple} (triple) test counts how often \((a,b,c)\) occurs in
+        three consecutive positions.
+\end{itemize}
+
+If the mechanism is fair \emph{and independent}, then the probability of a tuple
+is the product of the individual probabilities.  For a fair dice, for example,
+\[
+  P(1,1) = P(1)\cdot P(1) = \frac{1}{6}\cdot\frac{1}{6} = \frac{1}{36}.
+\]
+The serial test compares the observed tuple counts to these product
+probabilities.
+
+\section{A PowerSpin Example: the 3-Wheel Serial Test}
+PowerSpin has \(27\) positions on the wheel: numbers \(1\)--\(24\) and 3 special
+symbols.  In the code below we treat the 3 symbols as one merged category
+called \texttt{symbol}.  This gives \(25\) categories in total:
+\[
+  \{1,2,\dots,24,\texttt{symbol}\}.
+\]
+
+The model used by the code is:
+\begin{itemize}
+  \item per wheel, each number \(1\)--\(24\) has probability \(1/27\);
+  \item per wheel, \texttt{symbol} has total probability \(3/27\).
+\end{itemize}
+
+If the three wheels are independent, the probability of a triple
+\((a,b,c)\) is the product of the three wheel probabilities.  For example:
+\[
+  P(\texttt{symbol},\texttt{symbol},\texttt{symbol}) = \left(\frac{3}{27}\right)^3 = \frac{1}{729}.
+\]
+
+The serial test then counts how often each of the \(25\times 25\times 25\)
+triples occurs in the data and runs a chi-squared goodness-of-fit test against
+this product distribution (Section~\ref{sec:chi-squared-test}).
+
+\section{A Practical Warning: Too Many Categories}
+This 3-wheel serial test is conceptually clean, but it creates a very large
+number of categories:
+\[
+  K = 25^3 = 15\,625.
+\]
+
+With only one month of data, the \emph{expected} count per category is often
+small.  For example, with \(N = 22\,320\) triples, the average expected count is
+about \(22\,320/15\,625 \approx 1.43\).  This matters because the usual
+chi-squared approximation is most reliable when expected counts are not too
+small (Section~\ref{sec:chi-squared-test}).
+
+In practice, when expected counts are tiny, you have three options:
+\begin{itemize}
+  \item collect much more data;
+  \item reduce the number of categories (for example, test 2-tuples instead of
+        3-tuples, or merge outcomes into coarser bins);
+  \item use a simulation-based calibration (generate many synthetic datasets
+        from the model and compare your statistic to that empirical reference).
+\end{itemize}
+
+\section{How to Perform the Test}
+\begin{enumerate}
+  \item \textbf{Normalize categories.}\\
+        Parse the CSV values.  If a value is an integer from 1 to 24, treat it
+        as that number; otherwise treat it as \texttt{symbol}.  (This matches
+        \texttt{normalize\_category} in the code.)
+
+  \item \textbf{Convert categories to indices.}\\
+        Map \(1\)--\(24\) to indices \(0\)--\(23\), and \texttt{symbol} to index
+        \(24\).  (This matches \texttt{category\_index}.)
+
+  \item \textbf{Count observed triples.}\\
+        For each row that contains all three wheel results, increment a
+        3-dimensional array \(\texttt{observed}[i,j,k]\).  At the end you have:
+        \begin{itemize}
+          \item a count table of shape \(25\times 25\times 25\);
+          \item the number of valid triples \(N\) (rows with all 3 results).
+        \end{itemize}
+
+  \item \textbf{Build the expected triple probabilities.}\\
+        Create a length-25 probability vector
+        \(\texttt{p} = (1/27,\dots,1/27,3/27)\).  Then compute the product
+        distribution
+        \[
+          \texttt{expected}[i,j,k] = \texttt{p}[i]\cdot \texttt{p}[j]\cdot \texttt{p}[k].
+        \]
+        (This matches \texttt{expected\_triple\_distribution}.)
+
+  \item \textbf{Run the chi-squared test and get a $p$-value.}\\
+        Feed \texttt{observed} and \texttt{expected} into the chi-squared
+        procedure to obtain a single $p$-value.  A typical implementation uses
+        \(\nu = K-1\) degrees of freedom, where \(K\) is the number of outcome
+        categories (here \(K = 25^3\)), and computes the upper-tail probability
+        from the chi-squared distribution.
+\end{enumerate}
+
+\section{One-Year Result}
+Using one year of PowerSpin data, the 3-wheel serial chi-squared test produced a
+$p$-value of \(0.911716\).  This is \emph{somehow suspicious}. Further tests from a broader battery will help determine whether this
+is simply good luck in the sample or whether the mechanism is not behaving like
+genuine randomness.
+
+
+
+
