@@ -95,8 +95,16 @@ In practice, when expected counts are tiny, you have three options:
         \(24\).  (This matches \texttt{category\_index}.)
 
   \item \textbf{Count observed triples.}\\
-        For each row that contains all three wheel results, increment a
-        3-dimensional array \(\texttt{observed}[i,j,k]\).  At the end you have:
+        For each draw, you read the three wheel outputs \emph{horizontally}
+        across the row, forming one 3-tuple:
+        \[
+          (w_1,w_2,w_3).
+        \]
+        For example, if a row contains \((7,\texttt{symbol},14)\), that is one
+        observed triple.  You then increment the corresponding cell in a
+        3-dimensional count table \(\texttt{observed}[i,j,k]\).
+
+        Repeating this for every draw row produces:
         \begin{itemize}
           \item a count table of shape \(25\times 25\times 25\);
           \item the number of valid triples \(N\) (rows with all 3 results).

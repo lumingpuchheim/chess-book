@@ -1,0 +1,11 @@
+\chapter{Random Variables}
+
+In everyday language we talk about ``random events'': a lottery draw, tomorrow's stock return, the time a bus arrives.  A \emph{random variable} is simply a way to assign a numerical value to the outcome of such an uncertain event.  For example:
+\begin{itemize}
+  \item let $X$ be ``the PowerSpin result'' (values $1$ to $24$ or a symbol);
+  \item let $Y$ be ``the number of winning tickets'' in a given draw;
+  \item let $R$ be ``tomorrow's daily return'' of a stock, measured in percent.
+\end{itemize}
+Each of these quantities can take different values from one trial to the next, and we do not know in advance which value we will see.  Thinking of them as random variables lets us talk precisely about their probabilities, their averages (expectations), and how much they fluctuate (variance).
+
+This is not just a theoretical game.  In finance, misunderstanding random variables has ruined real firms.  The hedge fund LTCM (Long-Term Capital Management) in the late 1990s built strategies on the assumption that certain price spreads were extremely unlikely to move beyond a narrow range.  In effect, they treated the relevant random variables as if large deviations were almost impossible.  When rare but perfectly possible moves \emph{did} occur, the losses were far outside what their models had prepared them for, and the fund collapsed.  Understanding random variables, and especially their tails and correlations, is therefore not only mathematically interesting; it can be the difference between a robust strategy and a disaster.

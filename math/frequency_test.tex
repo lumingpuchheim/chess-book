@@ -1,0 +1,116 @@
+\chapter{The Frequency Test}
+
+\section{Intuition from a Dice}
+Imagine a simple six-sided dice.  If it is fair and you roll it many times, each face should appear roughly the same number of times in the long run.  In particular, the face ``1'' should not be special: it should turn up about one sixth of all throws, no more and no less on average.
+
+If, however, you notice that the dice produces ``1'' far more often than the other faces, your instinct is that the dice is \emph{loaded}.  You did not need a formula to feel that something is wrong: your eyes see that one outcome appears too frequently.
+
+The \textbf{frequency test} formalises exactly this instinct.  It asks:
+\begin{quote}
+  \emph{Do all possible outcomes appear with roughly the same frequency, or does one of them occur suspiciously often (or suspiciously rarely)?}
+\end{quote}
+
+\section{A Glimpse of the Law of Large Numbers}
+Behind this idea sits the \emph{Law of Large Numbers}.  Informally, it says that:
+\begin{quote}
+  \emph{If you repeat a fair random experiment many times, the observed frequencies of each outcome will get closer and closer to their true probabilities.}
+\end{quote}
+
+For the dice, this means:
+\begin{itemize}
+  \item in 6 throws, you might see ``1'' zero times or 3 times --- wild swings are still possible;
+  \item in 600 or 6\,000 throws, it becomes more and more unlikely to see ``1'' extremely often or almost never;
+  \item over a very long sequence, the fraction of ``1'' outcomes should hover near \(1/6\).
+\end{itemize}
+
+The same principle applies to lottery draws.  If each ball number is supposed to be equally likely, then over thousands of draws, each number should appear roughly the same number of times.  Occasional streaks are allowed, but persistent over-use or under-use of a number is a warning sign.
+
+\section{What the Frequency Test Checks}
+The frequency test focuses on one simple question:
+\begin{quote}
+  \emph{Given how many draws we have observed, is the spread of counts across outcomes reasonable for a fair mechanism?}
+\end{quote}
+
+It does not try to prove that the mechanism is random.  Instead, it looks for clear \emph{contradictions} with randomness.  If such a contradiction is found, the test says:
+\begin{quote}
+  \emph{A fair mechanism would almost never produce counts this uneven.  Something is probably wrong.}
+\end{quote}
+
+\section{How to Perform the Frequency Test}
+Here is a practical, step-by-step way to apply the frequency test to a sequence of lottery draws or dice throws:
+
+\begin{enumerate}
+  \item \textbf{Collect a sequence of outcomes.}\\
+        Decide how many draws you will examine, and extract from your data just the outcome you care about.  For a six-sided dice, this is the face number on each throw.  For a lottery with numbers \(1\) to \(n\), this is the winning number on each draw.
+
+  \item \textbf{Count how often each outcome occurs.}\\
+        Make a table with one row per possible outcome.  In each row, record how many times that outcome appeared in your data.  For example, for a dice you would have counts for 1, 2, 3, 4, 5, and 6.
+
+  \item \textbf{Compute the expected counts under fairness.}\\
+        If there are \(k\) possible outcomes and you have observed \(N\) draws, a perfectly fair mechanism would give each outcome an average of
+        \[
+          \text{expected count per outcome} = N / k.
+        \]
+        You do not expect every outcome to hit this number exactly, but you do expect most of them to be in the same general range.
+
+  \item \textbf{Compare observed and expected counts.}\\
+        Look at how far each observed count is from \(N/k\).  If all counts are reasonably close, the data \emph{looks} compatible with fairness.  If one outcome is dramatically higher (or lower) than the rest, that is a red flag.
+
+  \item \textbf{Turn the discrepancies into a test statistic (chi-squared).}\\
+        In practice, we do not stop at eyeballing the table.  We feed the counts into the \emph{chi-squared procedure} described in Section~\ref{sec:chi-squared-test}.  This procedure combines all the differences between observed and expected counts into one number, the chi-squared statistic.  You do not need to remember the formula; what matters is that a larger statistic means ``more uneven'' counts.
+
+  \item \textbf{Ask how extreme this statistic is.}\\
+        Once the chi-squared statistic is computed, the same procedure also tells you how unusual this value would be if the mechanism were perfectly fair.  This is reported as a \emph{$p$-value}.  A large $p$-value means ``these counts are well within the normal fluctuation we expect''; a very small $p$-value means ``these counts are so uneven that a fair mechanism would almost never produce them''.
+
+  \item \textbf{Alternative view (KS test on cumulative counts).}\\
+        If you prefer to look at how the cumulative share of outcomes grows (for example, plotting the running fraction of each result), you can instead use the \emph{Kolmogorov--Smirnov (KS) procedure} from Section~\ref{sec:ks-test}.  It compares the cumulative pattern you observe with the perfectly even cumulative pattern a fair mechanism would produce, and again reports a $p$-value that measures how extreme the difference is.
+
+  \item \textbf{Draw a practical conclusion.}\\
+        If the differences between observed and expected counts are modest and the $p$-value is not unusually small, the frequency test \emph{does not find} evidence of bias.  If the differences are extreme or the $p$-value is tiny, the test warns that the mechanism may be biased or malfunctioning.
+\end{enumerate}
+
+\index{Chi-squared Test}
+\index{Kolmogorov--Smirnov Test}
+
+
+\section{A PowerSpin Example}
+To make this concrete, consider the Greek PowerSpin game.  The wheel has \(27\) positions: the numbers \(1\)--\(24\) and 3 special symbols.  Under the official rules, each spin should land on:
+\begin{itemize}
+  \item each number \(1\)--\(24\) with probability \(1/27\);
+  \item the symbol (any of the 3 symbol positions) with total probability \(3/27\).
+\end{itemize}
+
+Over one month we collect \(N = 22\,320\) spins and observe the following counts (relative frequencies in parentheses):
+\begin{center}
+\begin{tabular}{r r r@{\hspace{1em}}r r}
+1: & 831 & (0.0372) & 13: & 833 (0.0373) \\
+2: & 815 & (0.0365) & 14: & 921 (0.0413) \\
+3: & 833 & (0.0373) & 15: & 790 (0.0354) \\
+4: & 808 & (0.0362) & 16: & 881 (0.0395) \\
+5: & 837 & (0.0375) & 17: & 846 (0.0379) \\
+6: & 777 & (0.0348) & 18: & 812 (0.0364) \\
+7: & 849 & (0.0380) & 19: & 845 (0.0379) \\
+8: & 822 & (0.0368) & 20: & 812 (0.0364) \\
+9: & 843 & (0.0378) & 21: & 802 (0.0359) \\
+10: & 814 & (0.0365) & 22: & 825 (0.0370) \\
+11: & 847 & (0.0379) & 23: & 808 (0.0362) \\
+12: & 787 & (0.0353) & 24: & 850 (0.0381)
+\end{tabular}
+\end{center}
+and for the symbol:
+\[
+  \text{symbol: } 2\,432 \; (0.1090).
+\]
+
+Running the chi-squared frequency test with the model ``numbers 1..24 \(\to 1/27\) each, symbol \(\to 3/27\)'' gives:
+\begin{itemize}
+  \item total observations: \(22\,320\);
+  \item degrees of freedom: \(24\);
+  \item \(p\)-value: \(0.283523\).
+\end{itemize}
+
+In one sentence: this $p$-value indicates that the observed counts are well within the range of fluctuations we expect from a fair PowerSpin mechanism, so the frequency test does not see anything unusual here.
+
+\section{How to Read the Result}
+Remember, the frequency test is only one angle of attack.  A sequence that passes this test might still fail others (such as tests for streaks or for correlations between consecutive draws).  But the frequency test is often the first and most intuitive check: if a dice produces ``1'' far too often, or a lottery ball appears in far too many draws, we do not need advanced mathematics to feel that something is wrong.
+
