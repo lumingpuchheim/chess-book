@@ -1,0 +1,122 @@
+\chapter{The Vertical Serial Test}
+
+\section{Intention}
+The serial test in the previous chapter looked \emph{horizontally} within each
+draw: it checks whether \((w_1,w_2,w_3)\) behaves like three independent wheels.
+
+The \textbf{vertical serial test} looks \emph{vertically} through time.  Its
+intention is to check, for each wheel separately, whether the wheel's outcome
+in one draw is independent of its own outcome in the previous draw.
+
+In plain words:
+\begin{quote}
+  \emph{Does Wheel 1 ``remember'' what it produced last time?  Does Wheel 2?
+  Does Wheel 3?}
+\end{quote}
+
+\section{What the Test Checks}
+For each wheel, we take the sequence of outcomes across consecutive draws:
+\[
+  x_1, x_2, x_3, \dots
+\]
+and count how often we see each \textbf{consecutive pair}
+\((x_t, x_{t+1})\).  If draws are independent, then for any two outcomes
+\(a,b\),
+\[
+  P(x_{t}=a, x_{t+1}=b) = P(x_t=a)\,P(x_{t+1}=b).
+\]
+So the expected pair distribution is the \emph{outer product} of the single-draw
+probabilities.
+
+\section{PowerSpin Setup: 25 Categories}
+As in the horizontal serial test, we merge the three PowerSpin symbol positions
+into one category \texttt{symbol}.  Then each wheel output is one of \(25\)
+categories:
+\[
+  \{1,2,\dots,24,\texttt{symbol}\}.
+\]
+The per-draw model used by the code is:
+\begin{itemize}
+  \item each number \(1\)--\(24\) has probability \(1/27\);
+  \item \texttt{symbol} has probability \(3/27\).
+\end{itemize}
+
+\section{How to Perform the Test (following the code)}
+The script you provided implements a very concrete version of the vertical
+serial test:
+
+\begin{enumerate}
+  \item \textbf{Read each draw's three wheel results.}\\
+        For each CSV row where all three wheel results are present, the code
+        yields a 3-tuple \((w_1,w_2,w_3)\) for that draw (see
+        \texttt{iter\_draw\_wheels}).
+
+  \item \textbf{Normalize categories.}\\
+        Each wheel value is normalised to one of the 25 categories:
+        integers \(1\)--\(24\), or \texttt{symbol} otherwise.
+
+  \item \textbf{Form consecutive-draw pairs \emph{per wheel}.}\\
+        For each wheel independently, the code builds a stream of outcomes
+        through time and groups them into \textbf{non-overlapping pairs}:
+        \[
+          (x_0,x_1),\ (x_2,x_3),\ (x_4,x_5),\ \dots
+        \]
+        This is important: it does not use overlapping pairs \((x_0,x_1),
+        (x_1,x_2), \dots\); it skips one draw after each pair.  If a file ends
+        with an unpaired draw, it is paired with the first draw of the next
+        file.  (This is implemented by the \texttt{pending} mechanism in
+        \texttt{load\_observed\_pairs\_across\_files}.)
+
+  \item \textbf{Count observed pairs.}\\
+        For each wheel, we obtain a \(25\times 25\) count matrix
+        \(\texttt{observed}[a,b]\), where entry \((a,b)\) records how many times
+        the wheel produced outcome \(a\) followed by outcome \(b\) in the next
+        draw of the pair.
+
+  \item \textbf{Build the expected pair distribution under independence.}\\
+        Create a length-25 probability vector
+        \(\texttt{p} = (1/27,\dots,1/27,3/27)\).  Under $H_0$ (independence
+        between consecutive draws on the same wheel), the expected probability
+        of a pair is
+        \[
+          \texttt{expected}[a,b] = \texttt{p}[a]\cdot \texttt{p}[b],
+        \]
+        which is exactly \(\texttt{outer(p,p)}\) (see
+        \texttt{expected\_pair\_distribution}).
+
+  \item \textbf{Run a chi-squared test and report one $p$-value per wheel.}\\
+        Finally, the code runs a chi-squared goodness-of-fit test
+        (Section~\ref{sec:chi-squared-test}) separately for Wheel 1, Wheel 2,
+        and Wheel 3.  The output is three $p$-values --- one for each wheel's
+        vertical independence check.
+\end{enumerate}
+
+\section{Why ``Vertical'' Complements ``Horizontal''}
+These two tests look for different failure modes:
+\begin{itemize}
+  \item the \textbf{horizontal} serial test checks whether the three wheels are
+        independent \emph{within the same draw};
+  \item the \textbf{vertical} serial test checks whether each wheel is
+        independent \emph{across draws in time}.
+\end{itemize}
+
+Both can be true or false independently.  A mechanism might have wheels that are
+independent within a draw but show time dependence, or vice versa.  That is why
+it is valuable to run both.
+
+\section{A Practical Note on Non-Overlapping Pairs}
+Using non-overlapping pairs \((x_0,x_1),(x_2,x_3),\dots\) simplifies counting
+and reduces dependence between the pairs themselves.
+
+\section{One-Year Result}
+Using one year of data (43\,799 non-overlapping pairs per wheel), the vertical
+serial test produced the following $p$-values:
+\begin{itemize}
+  \item Wheel 1: \(p = 0.938107\) \ (pairs \(= 43\,799\))
+  \item Wheel 2: \(p = 0.655333\) \ (pairs \(= 43\,799\))
+  \item Wheel 3: \(p = 0.741826\) \ (pairs \(= 43\,799\))
+\end{itemize}
+
+Wheel 1 is \emph{almost suspicious}: its $p$-value is fairly close to the
+\(0.95\) boundary used in the rule-of-thumb interpretation
+(Section~\ref{sec:chi-squared-test}).

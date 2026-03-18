@@ -1,0 +1,54 @@
+\chapter{Common Distributions}
+
+\section{Uniform Distribution}
+The simplest distribution is the \emph{discrete uniform} distribution.  It
+describes a random variable that takes one of a finite set of values, all with
+equal probability.  Examples:
+\begin{itemize}
+  \item a fair six-sided dice: each of \(1,2,3,4,5,6\) has probability \(1/6\);
+  \item a single PowerSpin wheel result (ignoring the symbol grouping) when each
+        of the 27 positions is equally likely.
+\end{itemize}
+
+If a random variable \(X\) is uniformly distributed over
+\(\{1,2,\dots,n\}\), we write
+\[
+  P(X = k) = \frac{1}{n}, \quad k = 1,2,\dots,n.
+\]
+Its mean and variance are
+\[
+  \mathbb{E}[X] = \frac{n+1}{2}, \qquad
+  \mathrm{Var}(X) = \frac{n^2-1}{12}.
+\]
+
+Uniform distributions capture the ideal of ``no preference'' among outcomes.
+They are the starting point for most lottery and dice models in this book.
+
+\section{Geometric Distribution}
+The \emph{geometric} distribution describes the number of trials needed to get
+the first \emph{success} in a sequence of independent trials, each with the
+same success probability \(p\).  Typical stories:
+\begin{itemize}
+  \item ``How many tickets do I need to buy until I win once?''
+  \item ``How many times do I roll until I see my favourite number?''
+\end{itemize}
+
+Let \(X\) be the number of trials needed to get the first success.  Then
+\[
+  P(X = k) = (1-p)^{k-1}p, \quad k = 1,2,3,\dots
+\]
+That is, we fail \(k-1\) times (each with probability \(1-p\)) and then
+succeed on the \(k\)-th trial.
+
+The mean and variance of a geometric random variable are
+\[
+  \mathbb{E}[X] = \frac{1}{p}, \qquad
+  \mathrm{Var}(X) = \frac{1-p}{p^2}.
+\]
+
+The geometric distribution appears repeatedly in this book.  In the coupon
+collector's problem, each \(t_i\) (the waiting time for the next new coupon) is
+geometrically distributed with a suitable success probability \(p_i\).  In
+lottery testing, geometric waiting times can describe how long we expect to
+wait until a rare event occurs under a fair mechanism.
+
