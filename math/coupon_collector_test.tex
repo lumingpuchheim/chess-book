@@ -103,6 +103,7 @@ We want to count how many of these lists contain \emph{every} coupon type at
 least once.  A direct count is hard, but an inclusion--exclusion argument
 gives a clean formula (see, for example,\cite{693222-combinatorics-coupon}).
 
+\index{Inclusion--Exclusion Principle}
 \begin{itemize}
   \item Start with all \(n^m\) lists.
   \item Subtract the lists that miss at least one coupon type.  For each choice
@@ -190,3 +191,54 @@ Stirling numbers of the second kind) give the theoretical distribution of the
 number of spins needed to see all nine types.  From the PowerSpin data we can
 estimate the empirical distribution, and a chi-squared test can be used to
 check whether the observed behaviour is consistent with the theoretical model.
+
+\section{Empirical Results for 2025}
+Figure~\ref{fig:cc-all} shows, for the year 2025, the
+empirical distribution of the number of spins needed to collect all nine coupon
+types, together with the corresponding theoretical cumulative distribution
+function from the coupon collector model, for each of the three wheels.
+Visually, the theoretical curves track the empirical CDFs very closely.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat{%
+    \includegraphics[width=0.31\linewidth]{Images/coupon_cdf_wheel1.png}%
+  }\hfill
+  \subfloat{%
+    \includegraphics[width=0.31\linewidth]{Images/coupon_cdf_wheel1.png}%
+  }\hfill
+  \subfloat{%
+    \includegraphics[width=0.31\linewidth]{Images/coupon_cdf_wheel1.png}%
+  }
+  \caption{Coupon collector test, 2025: empirical CDF vs.\ theoretical CDF for each wheel.}
+  \label{fig:cc-all}
+\end{figure}
+
+In principle one might try to attach $p$-values by applying the Kolmogorov--Smirnov
+(KS) test to these CDFs.  In practice this is delicate for two reasons:
+\begin{itemize}
+  \item the usual KS reference distribution assumes a \emph{continuous} null
+        distribution and so only provides an approximation --- often a
+        conservative one --- when applied to discrete data like this;
+  \item standard Python libraries do not yet offer a KS implementation designed
+        specifically for arbitrary discrete CDFs, so an exact discrete KS
+        $p$-value would require custom code.
+\end{itemize}
+
+We have, however, checked $p$-values using chi-squared tests on binned data
+(bins of width~5, with a final tail bin for values $>50$).  The results for
+2025 are:
+\begin{itemize}
+  \item Wheel~1: $\chi^2 = 15.796492$, $\mathrm{dof}=9$, $p = 0.0712549$,
+        with 3\,432 complete coupon sets;
+  \item Wheel~2: $\chi^2 = 6.804881$, $\mathrm{dof}=9$, $p = 0.657426$,
+        with 3\,489 complete coupon sets;
+  \item Wheel~3: $\chi^2 = 13.003315$, $\mathrm{dof}=9$, $p = 0.162456$,
+        with 3\,423 complete coupon sets.
+\end{itemize}
+
+All three $p$-values lie comfortably away from the extreme tails.  Within the
+resolution of this coupon-collector test, we do not see evidence that the
+PowerSpin mechanism departs from the ideal random model.
+
+
