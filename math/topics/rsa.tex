@@ -1,0 +1,184 @@
+\chapter{RSA Cryptosystem}
+
+\section{What is RSA?}
+RSA is one of the most famous public-key cryptosystems. It lets people
+communicate securely without first sharing a secret key.
+
+The core idea is simple:
+\begin{itemize}
+  \item A \textbf{public key} is shared with everyone and is used to encrypt.
+  \item A \textbf{private key} is kept secret and is used to decrypt.
+\end{itemize}
+
+RSA is also used for digital signatures, but in this chapter we focus on
+encryption/decryption and the mathematical principle behind why it works.
+
+\subsection*{Alice, Bob, and Eve}
+Think of three people:
+\begin{itemize}
+  \item \textbf{Alice}: wants to receive a secret message.
+  \item \textbf{Bob}: wants to send the message.
+  \item \textbf{Eve}: can eavesdrop on every message sent over the network.
+\end{itemize}
+
+Alice publishes her \textbf{public key}. Bob uses that public key to encrypt.
+Eve can see the public key and the ciphertext, but cannot recover the plaintext
+without Alice's private key. Alice then uses her private key to decrypt.
+
+So the story is:
+\begin{enumerate}
+  \item Alice generates keys and publishes \((n,e)\).
+  \item Bob computes \(c\equiv m^e\pmod n\) and sends \(c\).
+  \item Eve sees \(c\), but should not be able to get \(m\).
+  \item Alice computes \(m\equiv c^d\pmod n\) and recovers the message.
+\end{enumerate}
+
+\section{Key Generation}
+Choose two large prime numbers \(p\) and \(q\), then define
+\[
+  n = pq.
+\]
+Compute
+\[
+  \varphi(n) = (p-1)(q-1).
+\]
+Choose an integer \(e\) such that
+\[
+  1 < e < \varphi(n), \qquad \gcd(e,\varphi(n))=1.
+\]
+Then choose \(d\) such that
+\[
+  ed \equiv 1 \pmod{\varphi(n)}.
+\]
+The public key is \((n,e)\), and the private key is \((n,d)\).
+
+\section{Encryption and Decryption}
+Represent a message as an integer \(m\) with \(0 \le m < n\).
+
+\textbf{Encryption:}
+\[
+  c \equiv m^e \pmod n.
+\]
+
+\textbf{Decryption:}
+\[
+  m \equiv c^d \pmod n.
+\]
+
+In words: raise to \(e\) to encrypt, raise to \(d\) to decrypt.
+
+In the Alice-Bob-Eve picture:
+\begin{itemize}
+  \item Bob uses Alice's public key \((n,e)\) to compute \(c\).
+  \item Eve can read \(c\), but she does not know Alice's \(d\).
+  \item Alice uses \(d\) to recover \(m\).
+\end{itemize}
+
+\section{Small Numerical Example}
+For teaching, we use small numbers (in practice, primes are much larger):
+\[
+  p=61,\quad q=53.
+\]
+Then
+\[
+  n = pq = 3233,\qquad \varphi(n)=(61-1)(53-1)=3120.
+\]
+Pick
+\[
+  e=17,\qquad \gcd(17,3120)=1.
+\]
+Find \(d\) from \(ed\equiv 1 \pmod{3120}\), which gives
+\[
+  d=2753
+\]
+because \(17\cdot 2753 = 46801 = 3120\cdot 15 + 1\).
+
+So:
+\begin{itemize}
+  \item Public key: \((n,e)=(3233,17)\)
+  \item Private key: \((n,d)=(3233,2753)\)
+\end{itemize}
+
+Encrypt message \(m=65\):
+\[
+  c \equiv 65^{17} \pmod{3233} = 2790.
+\]
+
+Decrypt:
+\[
+  m \equiv 2790^{2753} \pmod{3233} = 65.
+\]
+So the original message is recovered.
+
+\section{Why RSA Works (Fermat-Style Proof)}
+The proof of correctness is based on Fermat's little theorem:
+if \(p\) is prime and \(p\nmid a\), then
+\[
+  a^{p-1}\equiv 1 \pmod p.
+\]
+
+We want to show
+\[
+  (m^e)^d \equiv m \pmod{pq}
+\]
+for every integer \(m\), where \(p\) and \(q\) are distinct primes, and \(e,d\)
+satisfy
+\[
+  ed \equiv 1 \pmod{\varphi(pq)}.
+\]
+
+
+\begin{enumerate}
+  \item gcd(m, pq) \neq 1, 
+
+  Both p and q are primes. m must be multiple of p or q. let's assume m is multiple of p. m = pk. m is multiple
+  \[
+    m^{ed}
+    =(pk)^{ed}
+    \equiv 0 
+    \equiv m \pmod p
+  \]
+
+  \[
+    m^{ed}
+    =m^{ed-1}m
+    =m^{k(q-1)}m
+    \equiv m \pmod q
+  \]
+
+  We have therefore
+  \[
+    m^{ed}=qx+m
+  \]
+  Since $m^{ed}$ is multiple of p, m is multiple of p, we have x is multiple of p.
+  \[
+    m^{ed}=pq(x/p)+m
+    \equiv m \pmod {pq}
+  \]
+
+  \item gcd(m, pq) = 1, 
+  We can use Euler's theorem to prove directly.
+  \[
+    m^{ed}
+    =m^{ed-1}m
+    =m^{k\varphi(pq)}m
+    \equiv 1^k m
+    \equiv m
+    \pmod {pq}
+  \]
+\end{enumerate}
+
+Therefore \(m^{ed}\equiv m\pmod p\) and \(m^{ed}\equiv m\pmod q\), so
+\[
+  (m^e)^d \equiv m \pmod{pq}.
+\]
+This proves correctness for every integer \(m\).
+
+\section{Practical Notes}
+\begin{itemize}
+  \item Real RSA uses very large primes (typically 2048-bit keys or larger).
+  \item RSA security relies on the difficulty of factoring large integers.
+\end{itemize}
+
+\section*{Reference}
+This chapter follows the standard RSA description in \cite{wiki:rsa-cryptosystem}.
