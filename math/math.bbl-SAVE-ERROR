@@ -1,0 +1,101 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{693222-combinatorics-coupon}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{note}{Math StackExchange question 693222; inclusion--exclusion derivation of the exact count of sequences using all coupons}
+      \field{title}{Combinatorics of the coupon collector's problem}
+      \field{urlday}{18}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://math.stackexchange.com/questions/693222/combinatorics-of-the-coupon-collectors-problem
+      \endverb
+      \verb{url}
+      \verb https://math.stackexchange.com/questions/693222/combinatorics-of-the-coupon-collectors-problem
+      \endverb
+    \endentry
+    \entry{wiki:coupon-collector}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{note}{Online; accessed 11 March 2026}
+      \field{title}{Coupon collector's problem}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Coupon_collector\%27s_problem
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Coupon_collector%5C%27s_problem
+      \endverb
+    \endentry
+    \entry{knuth:1997-taocp-2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{The Art of Computer Programming, Volume 2: Seminumerical Algorithms}
+      \field{year}{1997}
+    \endentry
+    \entry{wiki:stirling-second-kind}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{note}{Online; definition and notation of Stirling numbers of the second kind}
+      \field{title}{Stirling numbers of the second kind}
+      \field{urlday}{18}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

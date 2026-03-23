@@ -1,0 +1,179 @@
+\chapter{Fitch Cheney's Card Trick}
+
+\section{The Story}
+You are the magician. A volunteer shuffles a normal deck. Your partner stands
+next to the table. You leave the room for a moment.
+
+When you come back, you glance at four face-up cards and immediately name the
+fifth card that is hidden face down. The audience freezes for a second, then
+starts laughing, shouting, and accusing you of witchcraft.
+
+But there is no mirror, no marked deck, and no secret talking. The miracle is
+pure structure: a tiny encoding system hidden in card order.
+
+For clarity, we will still call your partner \textbf{Alice} and the magician
+\textbf{Bob}.
+
+\section{What the Audience Sees}
+\begin{enumerate}
+  \item A volunteer shuffles the deck and randomly chooses \(5\) cards.
+  \item Bob leaves the room, so he cannot see anything.
+  \item Alice looks at the \(5\) chosen cards, hides one card face down, and
+  lays the other \(4\) cards face up in a specific order.
+  \item Bob comes back, looks only at those \(4\) visible cards, and names the
+  hidden fifth card exactly.
+\end{enumerate}
+
+To the audience, it looks impossible. There is no marked deck, no mirrors, and
+no code words. The secret is pure combinatorics.
+
+\section{Reveal: How the Trick Works}
+\subsection*{Key idea}
+With \(4\) visible cards, Alice can arrange them in \(4! = 24\) different ways.
+So she can encode one of \(24\) possibilities by order alone.
+
+\subsection*{Step 1: Find two cards of the same suit}
+Among \(5\) cards and only \(4\) suits, at least two cards share a suit
+(pigeonhole principle). Call those two same-suit cards \(X\) and \(Y\).
+
+One of them will be shown first (the \emph{key card}), and the other one will
+be hidden (the \emph{target card}).
+
+\subsection*{Step 2: Use circular rank distance}
+Within one suit, order ranks in a cycle:
+\[
+2,3,\dots,10,J,Q,K,A.
+\]
+From the key card's rank to the target card's rank, count forward distance
+\(1\) to \(12\). For any two distinct ranks, one direction is at most \(6\).
+
+Alice chooses which card is key and which is target so the forward distance is
+in \(\{1,2,3,4,5,6\}\). She places the key card first.
+
+\subsection*{Step 3: Encode distances \(1\) to \(6\) with \(3!\) orders}
+After fixing the first visible card, three cards remain. Their order can be one
+of \(3!=6\) permutations, perfect for encoding distances \(1\) through \(6\).
+
+Use this fixed comparison rule:
+\begin{itemize}
+  \item Compare rank first: \(2<3<\cdots<K<A\).
+  \item If ranks are equal, compare suit:
+  \(\clubsuit<\diamondsuit<\heartsuit<\spadesuit\).
+\end{itemize}
+Sort the three non-key cards from small to large by this rule, and call them
+\(a<b<c\).
+
+Then agree on this encoding table:
+\begin{center}
+\begin{tabular}{c l}
+\hline
+\textbf{Distance} & \textbf{Order of last three cards} \\
+\hline
+1 & \(a,b,c\) \\
+2 & \(a,c,b\) \\
+3 & \(b,a,c\) \\
+4 & \(b,c,a\) \\
+5 & \(c,a,b\) \\
+6 & \(c,b,a\) \\
+\hline
+\end{tabular}
+\end{center}
+
+Bob sees:
+\begin{itemize}
+  \item the first card \(\Rightarrow\) suit of the hidden card,
+  \item the order of the last three \(\Rightarrow\) distance \(1\) to \(6\).
+\end{itemize}
+So he reconstructs the exact hidden card.
+
+\section{Mini Example}
+Suppose the five selected cards are
+\[
+9\heartsuit,\ K\heartsuit,\ 3\spadesuit,\ J\diamondsuit,\ 5\clubsuit.
+\]
+Alice decides:
+\begin{itemize}
+  \item key card \(=9\heartsuit\) (shown first),
+  \item hidden card \(=K\heartsuit\),
+  \item remaining three cards: \(3\spadesuit,\ J\diamondsuit,\ 5\clubsuit\).
+\end{itemize}
+
+From \(9\) to \(K\), the forward distance is \(4\)
+\((9\to10\to J\to Q\to K)\), so Alice must encode \(4\).
+
+Using the fixed rule above:
+\[
+3\spadesuit < 5\clubsuit < J\diamondsuit,
+\]
+so
+\[
+a=3\spadesuit,\quad b=5\clubsuit,\quad c=J\diamondsuit.
+\]
+Distance \(4\) corresponds to order \(b,c,a\), so the four visible cards are
+\[
+9\heartsuit,\ 5\clubsuit,\ J\diamondsuit,\ 3\spadesuit.
+\]
+This means Bob sees the cards in this exact left-to-right order:
+\[
+\boxed{9\heartsuit}\ ,\ \boxed{5\clubsuit}\ ,\ \boxed{J\diamondsuit}\ ,\ \boxed{3\spadesuit}.
+\]
+From the first card, Bob gets the hidden suit \(\heartsuit\). From
+\(5\clubsuit,J\diamondsuit,3\spadesuit\), he reads order \(b,c,a\), so distance
+\(=4\). Therefore Bob announces \(K\heartsuit\).
+
+\subsection*{Another Example (Hide the Lower Card)}
+Now consider the same-suit pair \(2\clubsuit\) and \(K\clubsuit\). If Alice used
+\(2\clubsuit\) as key and tried to hide \(K\clubsuit\), the forward distance
+would be \(11\), which is too large for our \(1\) to \(6\) code.
+
+Take a full hand:
+\[
+2\clubsuit,\ K\clubsuit,\ 7\heartsuit,\ 4\spadesuit,\ Q\diamondsuit.
+\]
+So Alice reverses the direction: she \emph{shows} \(K\clubsuit\) first and
+\emph{hides} \(2\clubsuit\). Then the forward distance is
+\[
+K\to A\to 2,
+\]
+which is distance \(2\).
+
+The remaining three are \(7\heartsuit,\ 4\spadesuit,\ Q\diamondsuit\). Under
+the same fixed rule:
+\[
+4\spadesuit < 7\heartsuit < Q\diamondsuit,
+\]
+so
+\[
+a=4\spadesuit,\quad b=7\heartsuit,\quad c=Q\diamondsuit.
+\]
+Distance \(2\) corresponds to order \(a,c,b\), so Alice lays out:
+\[
+K\clubsuit,\ 4\spadesuit,\ Q\diamondsuit,\ 7\heartsuit
+\]
+with \(2\clubsuit\) hidden.
+So Bob sees, in exact order:
+\[
+\boxed{K\clubsuit}\ ,\ \boxed{4\spadesuit}\ ,\ \boxed{Q\diamondsuit}\ ,\ \boxed{7\heartsuit}.
+\]
+From the first card he gets suit \(\clubsuit\). From
+\(4\spadesuit,Q\diamondsuit,7\heartsuit\), he reads \(a,c,b\), so distance
+\(=2\). Starting at \(K\clubsuit\), two steps forward in the cycle gives
+\(2\clubsuit\), which is the hidden card.
+
+This example is important: sometimes Alice must hide the numerically lower card
+to keep the distance in \(\{1,2,3,4,5,6\}\).
+
+\section{Perform It at Home}
+You can learn this in one evening. Practice with a friend:
+\begin{enumerate}
+  \item Memorize the distance table \(1\) to \(6\).
+  \item Agree on one strict ordering rule for comparing cards.
+  \item Drill 20 random hands of 5 cards and time yourselves.
+  \item Start slow and accurate, then speed up.
+\end{enumerate}
+
+After a little practice, you can perform this at dinner or a party. It is a
+great example of how mathematics can feel like mind reading.
+
+\section*{Reference}
+The explanation follows the MIT note by Kleber \cite{kleber:fitch-cheney}.
