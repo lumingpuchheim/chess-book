@@ -174,6 +174,140 @@ Therefore \(m^{ed}\equiv m\pmod p\) and \(m^{ed}\equiv m\pmod q\), so
 \]
 This proves correctness for every integer \(m\).
 
+\section{Modular Exponentiation}
+At this point, a practical question appears:
+\[
+  m \equiv 2790^{2753} \pmod{3233}.
+\]
+How can we compute this without multiplying \(2790\) by itself 2753 times?
+
+The naive method is too slow for real RSA. In practice, exponents are huge
+(hundreds or thousands of bits), so we must use a smarter method.
+
+The standard trick is \textbf{binary exponentiation} (also called
+square-and-multiply). It uses:
+\[
+  a^b=
+  \begin{cases}
+    (a^{b/2})^2, & b \text{ even},\\[2mm]
+    a\,(a^{(b-1)/2})^2, & b \text{ odd}.
+  \end{cases}
+\]
+So instead of reducing the exponent by \(1\) each step, we roughly halve it
+each step. That is why the complexity is \(O(\log b)\), not \(O(b)\).
+
+We also reduce modulo \(n\) at every multiplication:
+\[
+  (xy)\bmod n = \bigl((x\bmod n)(y\bmod n)\bigr)\bmod n.
+\]
+This keeps numbers small during the whole computation.
+
+Here is a clean recursive implementation:
+\begin{lstlisting}[language=Python]
+def fast_expo_modulo(base: int, exp: int, modulo: int):
+    if exp==1:
+        return base%modulo
+    if exp ==0:
+        return 1
+    if exp % 2 == 1:
+        return (fast_expo_modulo(base, (exp-1)/2, modulo) %modulo* 
+            fast_expo_modulo(base, (exp-1)/2, modulo) %modulo 
+            * (base%modulo))%modulo
+    else:
+        return (fast_expo_modulo(base, exp/2, modulo) %modulo* 
+            fast_expo_modulo(base, exp/2, modulo) %modulo) %modulo
+\end{lstlisting}
+
+\section{Computing the Private Key with Extended Euclid}
+In RSA key generation, after choosing \(e\), we must compute the private key
+exponent \(d\) from
+\[
+  ed \equiv 1 \pmod{\varphi(n)}
+\]
+(or modulo \(\lambda(n)\) in many implementations). So \(d\) is the
+\textbf{modular multiplicative inverse} of \(e\).
+
+The Extended Euclidean Algorithm gives exactly this inverse. Since
+\(\gcd(e,\varphi(n))=1\), it finds integers \(x,y\) such that
+\[
+  ex+\varphi(n)y=1.
+\]
+Taking both sides modulo \(\varphi(n)\):
+\[
+  ex \equiv 1 \pmod{\varphi(n)}.
+\]
+Therefore \(x\) is an inverse of \(e\), so we can take
+\[
+  d \equiv x \pmod{\varphi(n)}.
+\]
+If \(x<0\), convert it to a positive representative by adding \(\varphi(n)\).
+This is the standard method used in RSA implementations \cite{wiki:rsa-cryptosystem,wiki:modular-multiplicative-inverse}.
+
+\subsection*{How the algorithm works (and why)}
+The ordinary Euclidean algorithm repeatedly applies division with remainder:
+\[
+a=bq+r,\qquad 0\le r<b.
+\]
+Then \(\gcd(a,b)=\gcd(b,r)\). Repeating this step makes numbers smaller until
+the remainder is \(0\), and the last nonzero remainder is the gcd.
+
+The \emph{extended} Euclidean algorithm keeps extra bookkeeping: at each step,
+it remembers how the current remainder is written as a linear combination of
+the original two numbers. So every remainder has the form
+\[
+r_i = s_i a + t_i b.
+\]
+When the gcd is \(1\), this finally gives
+\[
+1 = sa+tb.
+\]
+This identity is called a B\'{e}zout identity.
+
+Now apply it to RSA with \(a=e\) and \(b=\varphi(n)\):
+\[
+1 = se + t\varphi(n).
+\]
+Reduce modulo \(\varphi(n)\):
+\[
+se \equiv 1 \pmod{\varphi(n)}.
+\]
+So \(s\) is exactly \(e^{-1}\bmod \varphi(n)\), i.e. the private exponent
+\(d\) (up to adding multiples of \(\varphi(n)\)).
+
+\subsection*{Worked Example}
+Use the chapter's RSA toy parameters:
+\[
+  e=17,\qquad \varphi(n)=3120.
+\]
+Euclidean steps:
+\[
+3120=183\cdot17+9,\quad
+17=1\cdot9+8,\quad
+9=1\cdot8+1.
+\]
+Back-substitute:
+\[
+\begin{aligned}
+1&=9-1\cdot8\\
+ &=9-(17-1\cdot9)=2\cdot9-17\\
+ &=2(3120-183\cdot17)-17\\
+ &=2\cdot3120-367\cdot17.
+\end{aligned}
+\]
+So
+\[
+17(-367)+3120(2)=1.
+\]
+Hence
+\[
+17(-367)\equiv1\pmod{3120},
+\]
+and the private exponent is
+\[
+d\equiv -367\equiv 2753\pmod{3120}.
+\]
+This is exactly the \(d\) used earlier in the chapter.
+
 \section{Practical Notes}
 \begin{itemize}
   \item Real RSA uses very large primes (typically 2048-bit keys or larger).
