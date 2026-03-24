@@ -64,7 +64,7 @@ Why the last \(+\) term?
         so we add it back once.
 \end{itemize}
 
-\section{From Three Sets to the General Pattern}
+\section{General Formula}
 The jump from three sets to \(n\) sets is just the same correction process,
 repeated one level further each time.
 
@@ -76,20 +76,6 @@ Think about an element \(x\) that belongs to exactly \(r\) of the sets
   \item \(+\binom{r}{3}\) times in the triple-intersection part,
   \item and so on, with alternating signs.
 \end{itemize}
-
-So the net coefficient of \(x\) becomes
-\[
-  \binom{r}{1} - \binom{r}{2} + \binom{r}{3} - \cdots + (-1)^{r+1}\binom{r}{r}.
-\]
-By the binomial identity \((1-1)^r=0\), this alternating sum equals \(1\).
-That means every element in the union is counted exactly once, no matter how
-many sets contain it.
-
-This is the key reason the general formula works: each stage corrects the
-over-correction made by the previous stage, and the alternating signs are
-forced by this logic.
-
-\section{General Formula}
 For \(n\) sets \(A_1,\dots,A_n\):
 \[
   \left|\bigcup_{i=1}^{n} A_i\right|
