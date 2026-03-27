@@ -1,0 +1,94 @@
+\chapter{RSA Security and the Shared-Prime Failure}
+
+\section{A Story About Ideal RSA vs. Real RSA}
+In the ideal RSA story, each user generates two secret primes \(p\) and \(q\),
+builds
+\[
+n=pq,
+\]
+and publishes \(n\) as part of the public key. Security then relies on one
+assumption: given only \(n\), factoring it into \(p\) and \(q\) is hard.
+
+If that assumption holds, the private key is safe. If it fails, RSA fails.
+
+Now comes the real-world danger: two different public keys may accidentally
+share a prime factor because of weak randomness during key generation. In that
+case, the attack is no longer hard at all.
+
+\section{How Shared Primes Break RSA}
+Suppose two public moduli are
+\[
+n_1=pq_1,\qquad n_2=pq_2,
+\]
+with the same prime \(p\) reused by mistake.
+
+Then an attacker computes
+\[
+\gcd(n_1,n_2)=p.
+\]
+Once \(p\) is known, both moduli are factored immediately:
+\[
+q_1=\frac{n_1}{p},\qquad q_2=\frac{n_2}{p}.
+\]
+After that, the private exponents can be recovered in the usual RSA way.
+
+So the security collapse is dramatic: instead of solving a hard factoring
+problem for each key, the attacker only computes a greatest common divisor.
+
+\section{Why This Is Practical at Scale}
+
+The key lesson is simple:
+\begin{itemize}
+  \item RSA mathematics is strong.
+  \item RSA implementations can still fail if randomness is weak.
+  \item Shared-prime detection with GCD is fast and devastating.
+\end{itemize}
+
+\section{How the Euclidean Algorithm Finds \(\gcd(n_1,n_2)\)}
+\epigraph{The Euclidean algorithm is the granddaddy of all algorithms, because it is the oldest nontrivial algorithm that has survived to the present day.}{\textit{Donald Knuth}}
+
+\index{Euclidean Algorithm}
+Ironically, this same ``granddaddy'' algorithm is still a frontline tool more
+than two thousand years later.
+
+The 2012 study ``Ron was wrong, Whit is right'' analyzed large collections of
+public keys and found many vulnerable keys due to shared factors, mostly caused
+by insufficient entropy in embedded systems \cite{lenstra:ron-was-wrong}.
+
+The Euclidean algorithm computes \(\gcd(a,b)\) efficiently by repeated
+division-with-remainder:
+\[
+a=bq_0+r_0,\quad
+b=r_0q_1+r_1,\quad
+r_0=r_1q_2+r_2,\ \dots
+\]
+until the remainder becomes \(0\). The last nonzero remainder is the GCD.
+
+\subsection*{Small worked example}
+Take
+\[
+a=1071,\qquad b=462.
+\]
+Then
+\[
+1071=462\cdot2+147,
+\]
+\[
+462=147\cdot3+21,
+\]
+\[
+147=21\cdot7+0.
+\]
+Therefore
+\[
+\gcd(1071,462)=21.
+\]
+
+This is exactly the same operation used in the RSA shared-prime attack:
+replace \(a,b\) by \(n_1,n_2\), and if the result is greater than 1, the two
+keys share a factor and are broken.
+
+
+\section*{References}
+This chapter follows the large-scale RSA key study \cite{lenstra:ron-was-wrong}
+and the Euclidean algorithm description in \cite{wiki:euclidean-algorithm}.
