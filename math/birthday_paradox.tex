@@ -1,0 +1,228 @@
+\chapter{The Birthday Paradox}
+
+\section{The Problem}
+In a room with \(n\) randomly chosen people, what is the probability that
+\emph{at least two} people share the same birthday?
+
+The surprising fact (the ``birthday paradox'' \cite{wiki:birthday-problem}) is
+that this probability becomes large even when \(n\) is not very big. For
+example, with \(n=23\) it already exceeds \(50\%\) under a simple model.
+
+Throughout this chapter we make the following assumptions:
+\begin{itemize}
+  \item there are \(365\) equally likely birthdays (ignore leap years),
+  \item each person's birthday is independent of the others.
+\end{itemize}
+
+\section{How to calculate the probability}
+Let \(B\) be the event that \emph{at least two} people share a birthday.
+It is easier to compute the complementary event \(A\): \emph{all birthdays are
+distinct}. Then
+\[
+  \Pr(B)=1-\Pr(A).
+\]
+
+\subsection*{Step 1: Compute \(\Pr(A)\)}
+Imagine the people enter the room one by one.
+\begin{itemize}
+  \item The first person can have any birthday: probability \(1\).
+  \item The second person must avoid the first person's birthday: probability
+  \(\frac{364}{365}\).
+  \item The third person must avoid the first two birthdays: probability
+  \(\frac{363}{365}\).
+  \item \(\cdots\)
+  \item The \(n\)-th person must avoid the previous \(n-1\) birthdays:
+  probability \(\frac{365-(n-1)}{365}\).
+\end{itemize}
+
+Multiplying these conditional probabilities gives
+\[
+  \Pr(A)
+  = 1\cdot \frac{364}{365}\cdot \frac{363}{365}\cdots
+  \frac{365-(n-1)}{365}
+  = \prod_{k=0}^{n-1}\frac{365-k}{365}.
+\]
+Equivalently,
+\[
+  \Pr(A)=\frac{365\cdot 364\cdot 363\cdots (365-n+1)}{365^n}
+  =\frac{365!}{(365-n)!\,365^n},
+\]
+valid for \(n\le 365\). (For \(n\ge 366\), \(\Pr(A)=0\) by the pigeonhole
+principle.)
+
+\subsection*{Step 2: Take the complement}
+Therefore, the probability of at least one shared birthday is
+\[
+  \Pr(B)=1-\Pr(A)
+  = 1-\prod_{k=0}^{n-1}\frac{365-k}{365}.
+\]
+
+\section{Approximation}
+Now replace 365 by \(m\) to treat a general ``birthday space'' of size \(m\).
+\[
+\Pr(A) = \prod_{k=0}^{n-1}\frac{m-k}{m}.
+       = \prod_{k=0}^{n-1}(1-\frac{k}{m})
+       \approx \prod_{k=0}^{n-1}e^{-\frac{k}{m}}
+       =e^{-\sum_{k=0}^{n-1}\frac{k}{m}}
+       =e^{-\frac{n(n-1)}{2m}}
+       \approx e^{-\frac{n^2}{2m}}
+\]
+\[
+n\approx \sqrt{-\frac{2m}{ln(p)}}
+\]
+For \(m=365\) and \(\Pr(A) = 0.01\), we have \(n=57.98\).
+This means that, in a room with 59 people, there is only a 1\% chance that
+everyone has a distinct birthday (equivalently, a 99\% chance that at least two
+people share a birthday).
+
+\subsection*{Table for \(p=0.01\) and different sample spaces \(m\)}
+Using
+\[
+n\approx \sqrt{-\frac{2m}{\ln(p)}}
+\qquad\text{with}\qquad p=0.01,
+\]
+we obtain the following values:
+\begin{center}
+\begin{tabular}{l r r}
+\hline
+\textbf{Case} & \textbf{\(m\)} & \textbf{\(n \approx \sqrt{-2m/\ln(0.01)}\)} \\
+\hline
+Birthdays (days in a year) & \(365\) & \(58\) \\
+6/49 lottery & \(13{,}983{,}816\) & \(11349\) \\
+EuroMillions \(5/50\) combinations & \(139{,}838{,}160\) & \(35884\) \\
+\hline
+\end{tabular}
+\end{center}
+Readers must be careful how to interpret the results before investing in lotteries.
+For example, for the 6/49 lottery, after 11349 draws, there is a 1\% chance that 
+all the results are distinct.
+
+\section{Hash Collisions and the Expected Number of Collisions}
+The same counting logic applies to hash functions.
+
+Assume a hash function outputs a uniform random integer in
+\(\{1,2,\dots,n\}\). Hash \(m\) independent inputs. This is the birthday problem
+with ``days'' replaced by hash values.
+
+\subsection*{Collision probability}
+The probability of at least one collision among the \(m\) hash outputs is
+\[
+1-\prod_{k=0}^{m-1}\frac{n-k}{n},
+\]
+for \(m\le n\). (If \(m\ge n+1\), a collision is guaranteed by the pigeonhole
+principle.)
+
+\subsection*{Expected number of collisions}
+Now we ask a different question: what is the \emph{expected number of
+collisions}?
+
+We count ``collisions'' as follows: when the \(k\)-th hash value is produced,
+it is a collision if it matches \emph{any} of the previous \(k-1\) hash values.
+(So if three values are equal, this counts as two collisions: the second repeat
+and the third repeat.)
+
+For the \(k\)-th output to \emph{avoid} a collision, it must avoid matching each
+of the previous \(k-1\) outputs. Under the uniform model, the probability of no
+match with a particular previous output is \((n-1)/n\), so the probability of
+no match with all \(k-1\) previous outputs is
+\[
+\left(\frac{n-1}{n}\right)^{k-1}.
+\]
+Therefore, the probability that the \(k\)-th output \emph{is} a collision is
+\[
+1-\left(\frac{n-1}{n}\right)^{k-1}.
+\]
+
+Let \(X\) be the total number of collisions in this sense among \(m\) outputs.
+By linearity of expectation,
+\[
+\mathbb{E}[X]
+=\sum_{k=1}^{m}\left[1-\left(\frac{n-1}{n}\right)^{k-1}\right]
+= m-\sum_{k=0}^{m-1}\left(\frac{n-1}{n}\right)^k.
+\]
+The remaining sum is a geometric series:
+\[
+\sum_{k=0}^{m-1}r^k=\frac{1-r^{m}}{1-r}\qquad (r\ne 1).
+\]
+With \(r=(n-1)/n\),
+\[
+\sum_{k=0}^{m-1}\left(\frac{n-1}{n}\right)^k
+=\frac{1-\left(\frac{n-1}{n}\right)^m}{1-\frac{n-1}{n}}
+=n\left(1-\left(\frac{n-1}{n}\right)^m\right).
+\]
+So the expected number of collisions is
+\[
+\boxed{
+\mathbb{E}[X]
+= m-n+n\left(\frac{n-1}{n}\right)^m.
+}
+\]
+This derivation follows \cite{might:hash-collisions}.
+
+\section{Approximation by Binomial Distribution}
+There are \(n\) people and \(m\) possible birthdays.
+If we pair a person with a birthday, there are \(n\times m\) possible
+person--birthday pairs.
+
+There are \(binom{n}{2}\) possible pairs of people.
+So the probability that one person shares a birthday with another person is
+
+\[p=\frac{\binom{n}{2}}{n\times m-1}
+\approx \frac{\binom{n}{2}}{n\times m}
+\].
+
+Let \(X\) be the number of collisions. 
+
+We choose \(k\) from \(n\) people. There are \(\binom{n}{k}\) different ways to
+choose them. There are \(k\) ``collision'' outcomes each with probability \(p\),
+and \(n-k\) ``non-collision'' outcomes each with probability \(1-p\). Therefore
+the probability is
+\[
+\Pr(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+\]
+
+This distribution is called the \emph{binomial distribution}.
+Since there are \(n\) people, the expected number of collisions is
+\(\frac{\binom{n}{2}}{m}\).
+
+\subsection*{Poisson limit theorem (why binomial \(\to\) Poisson)}
+\[
+\Pr(X_n=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+\]
+We now show that this converges to a Poisson\(\!\left(\frac{\binom{n}{2}}{m}\right)\)
+probability.
+
+Let \[
+\lambda=\frac{\binom{n}{2}}{m}.
+\]
+\[
+\binom{n}{k}
+=\frac{n(n-1)\cdots(n-k+1)}{k!}
+=\frac{n^k+O(n^{k-1})}{k!}.
+\]
+So
+\[
+\binom{n}{k}p^k(1-p)^{n-k}
+=\left(\frac{n^k+O(n^{k-1})}{k!}\right)
+\left(\frac{\lambda}{n}(1+o(1))\right)^k
+(1-p)^{n-k}.
+\]
+The first two factors simplify to \(\frac{\lambda^k}{k!}(1+o(1))\). For the last
+factor, split:
+\[
+(1-p)^{n-k}=(1-p)^n(1-p)^{-k}.
+\]
+As \(n\to\infty\), we have \((1-p)^{-k}\to 1\) and
+\[
+(1-p)^n
+=\left(1-\frac{\lambda}{n}(1+o(1))\right)^n
+\to e^{-\lambda}.
+\]
+Therefore,
+\[
+\Pr(X_n=k)=\binom{n}{k}p^k(1-p)^{n-k}\to e^{-\lambda}\frac{\lambda^k}{k!}.
+\]
+So \(X_n\) is well-approximated by \(\mathrm{Pois}(\lambda)\) when \(n\) is large
+and \(p\) is small with \(np\approx \lambda\). This is the Poisson limit
+theorem (law of rare events) \cite{wiki:poisson-limit-theorem}.
+
