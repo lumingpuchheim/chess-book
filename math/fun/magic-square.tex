@@ -1,0 +1,157 @@
+\chapter{The Magic Square}
+
+\section{What to do}
+You get a \(3\times 3\) empty grid and nine little cards labelled
+\(1,2,3,4,5,6,7,8,9\). Place each number in its own cell so that every
+\emph{row}, every \emph{column}, and the two \emph{diagonals} add up to the
+\emph{same} total. That matching total is the ``magic sum.''
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\phantom{0} & \phantom{0} & \phantom{0} \\
+\hline
+\phantom{0} & \phantom{0} & \phantom{0} \\
+\hline
+\phantom{0} & \phantom{0} & \phantom{0} \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent
+Try it with pencil and paper before you read on---it is a good puzzle for a
+rainy afternoon, and you can check your answer by adding the three lines through
+the middle in more than one way.
+
+\section{Two puzzles for you}
+\begin{enumerate}
+  \item Which number \emph{must} sit in the very centre cell?
+  \item What is the magic sum---the number that every row, every column, and
+  each diagonal should add to?
+\end{enumerate}
+
+The next sections think about these questions slowly, using symmetry and
+fairness, not letter-maths.
+
+\section{Thinking step by step: the middle number}
+Picture the numbers \(1\) through \(9\) written in order. The smallest and the
+largest can be paired as friends that balance: \(1\) with \(9\), \(2\) with
+\(8\), \(3\) with \(7\), \(4\) with \(6\). Each pair has the same feel: two
+numbers that sit the same distance from the middle of the list. The only number
+left without a partner is the one \emph{in the middle} of the list---the fifth
+number when you count \(1,2,3,4,5,6,7,8,9\)---and that is~\(5\).
+
+Now look at the empty square. The centre cell is special because four different
+lines cross there: the middle row, the middle column, and both diagonals. Those
+lines should all behave the same way if the square is to stay balanced when you
+picture turning it or flipping it. The number that belongs in such a ``balancing
+seat'' is not a tiny number stuck on an edge and not a huge number pushed into
+a corner; it is the number that already sits in the middle of the pack
+\(1,\ldots,9\). So, by symmetry, the centre should hold~\(5\).
+
+\section{Thinking step by step: the magic sum}
+Every number from \(1\) to \(9\) is used exactly once. If you add them all
+together, you get \(45\). (You can check by pairing \(1\) with \(9\), \(2\) with
+\(8\), and so on---each pair makes \(10\)---and then the middle \(5\) is left
+over.)
+
+Now think about the three \emph{rows}. They fill the whole square without overlap,
+so the three row-totals, taken together, use every number once and therefore add
+up to~\(45\). The three rows are supposed to be \emph{equal}, so each row must
+get the same share of that \(45\). Picture three piggy-banks that should hold
+matching amounts: only \(15\), \(15\), and \(15\) work.
+
+Here is another symmetry picture once you know the centre holds~\(5\). Any line
+through the centre (a row, a column, or a diagonal) has two other cells. Those
+two numbers should match the pattern of the pairs above: they ought to add to
+\(10\) so that, together with the middle \(5\), the line adds to \(15\). So the
+magic sum is \(15\).
+
+The same \(15\) works for the columns and diagonals when the square is built
+fairly.
+
+\section{The final answer}
+Here is the answer to the two puzzles, all in one place:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|}
+\hline
+\textbf{The middle cell must be \(5\).}\\[0.35em]
+\textbf{Every row, column, and diagonal adds to \(15\).}\\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent
+One completed square that works is below (you can rotate or flip the pattern and
+still get a valid magic square):
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+8 & 1 & 6 \\
+\hline
+3 & 5 & 7 \\
+\hline
+4 & 9 & 2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent
+Check: each line through the grid adds to \(15\), and \(5\) sits in the centre.
+Have fun building your own version!
+
+\section{Number Scrabble (Pick 15)}
+\emph{Number Scrabble} is also called \emph{Pick~15} or ``3~to~15.'' The rules
+are simple:
+
+\begin{itemize}
+  \item Two players take turns.
+  \item On each turn, a player chooses one of the numbers \(1,2,\ldots,9\) that
+  has \emph{not} been chosen before.
+  \item As soon as one player owns \emph{three} numbers whose sum is exactly
+  \(15\), that player wins.
+  \item If all nine numbers have been taken and nobody has a winning triple,
+  the game is a draw.
+\end{itemize}
+
+\noindent
+A readable overview appears on Wikipedia under ``Number Scrabble''; see
+\url{https://en.wikipedia.org/wiki/Number_Scrabble}.
+
+\subsection*{Why this is the same game as tic-tac-toe}
+Write the numbers \(1\)--\(9\) into a \(3\times 3\) magic square---for instance
+the one we already met:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+8 & 1 & 6 \\
+\hline
+3 & 5 & 7 \\
+\hline
+4 & 9 & 2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent
+Every row, column, and diagonal adds to \(15\). So a ``line'' of three cells in
+this picture is exactly a set of three numbers that sum to \(15\), and nothing
+else does. Choosing a number in Number Scrabble is the same as putting your mark
+in the matching cell of this square; getting three numbers that sum to \(15\)
+is the same as getting three cells in a row, column, or diagonal. In other
+words, Number Scrabble and tic-tac-toe are the same game in disguise---only the
+drawing looks different.
+
+\subsection*{Optimum play}
+Because the games match, every good idea for tic-tac-toe becomes a good idea here.
+The first player should usually take~\(\mathbf{5}\) (the centre of the square),
+since that number appears in the most winning triples. The second player should
+answer in a \emph{corner} number (\(2\), \(4\), \(6\), or \(8\)) rather than an
+\emph{edge} number (\(1\), \(3\), \(7\), or \(9\)), for the same geometric
+reason as in tic-tac-toe. If both sides keep playing as well as they can, neither
+player can force a win: the game ends in a \emph{draw}. That is the optimum
+outcome when nobody slips.
