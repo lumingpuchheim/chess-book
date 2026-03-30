@@ -1,0 +1,89 @@
+\chapter{Reductio ad Absurdum}
+\index{Reductio ad Absurdum}
+\section{What is this method?}
+\emph{Reductio ad absurdum} means ``reduction to absurdity.'' In plain language:
+\begin{enumerate}
+  \item Assume the opposite of what you want to prove.
+  \item Follow the logic carefully.
+  \item Reach an impossibility (a contradiction).
+  \item Conclude your opposite assumption was wrong.
+  \item Therefore, the original statement must be true.
+\end{enumerate}
+
+This method is also called \emph{proof by contradiction}.
+
+\section{Euclid's classic example: infinitely many primes}
+\index{Infinitely many primes}
+We will use this method to prove:
+\begin{quote}
+There are infinitely many prime numbers.
+\end{quote}
+
+\subsection*{Step 1: Assume the opposite}
+Assume there are only finitely many primes. Then we can list all of them:
+\[
+p_1,\ p_2,\ p_3,\ \ldots,\ p_n.
+\]
+This list is supposed to contain \emph{every} prime.
+
+\subsection*{Step 2: Build a new number}
+Now make the number
+\[
+N=p_1p_2p_3\cdots p_n+1.
+\]
+So \(N\) is one more than the product of all primes in the list.
+
+\subsection*{Step 3: Check divisibility}
+Take any prime \(p_i\) from the list. Since \(p_i\) divides the product
+\(p_1p_2\cdots p_n\), dividing \(N\) by \(p_i\) leaves remainder \(1\), not \(0\).
+
+So none of \(p_1,p_2,\ldots,p_n\) divides \(N\).
+
+\subsection*{Step 4: Contradiction}
+Every integer greater than \(1\) is either prime or has a prime factor.
+\begin{itemize}
+  \item If \(N\) is prime, then it is a prime not in our ``complete'' list.
+  \item If \(N\) is composite, it has a prime factor, but that prime factor is
+  not in the list either (because none of the listed primes divides \(N\)).
+\end{itemize}
+
+Either way, we get a new prime outside the list. This contradicts our assumption
+that the list already had all primes.
+
+\subsection*{Step 5: Conclusion}
+Our assumption (``only finitely many primes exist'') is false. Therefore:
+\[
+\text{There are infinitely many prime numbers.}
+\]
+
+\section{Why this proof is beautiful}
+The proof is short, but very powerful:
+\begin{itemize}
+  \item It does not try to find all primes.
+  \item It shows that any finite list of primes can always be beaten.
+  \item So the process never ends.
+\end{itemize}
+
+\section{15 Puzzle: Sam Loyd's Offer}
+Loyd's offer of a $1,000 prize (equivalent to $35,833 in 2025) to anyone 
+who could provide a solution for achieving a particular combination specified by Loyd, 
+namely reversing the 14 and 15. 
+
+We now prove, by reductio ad absurdum, that this target position is impossible.
+
+Assume for contradiction that it \emph{is} possible, and that it can be reached
+in \(n\) moves.
+
+On the one hand, every move changes the empty cell by one square: either one
+row up/down or one column left/right. In Loyd's start and target positions, the
+empty cell is in the same place, so after \(n\) moves it must have made an even
+number of such one-step changes. Therefore \(n\) is even.
+
+On the other hand, label the empty cell as tile \(16\). Each move is then a
+single swap between tile \(16\) and one neighboring tile. So each move performs
+exactly one swap. From the start position to Loyd's target position, only tiles
+\(14\) and \(15\) are exchanged, which is one swap in total. Therefore the total
+number of swaps---hence the number of moves \(n\)---must be odd.
+
+So \(n\) would have to be both even and odd, which is impossible. This
+contradiction shows that Loyd's target position cannot be solved. \index{15 Puzzle}
