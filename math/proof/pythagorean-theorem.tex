@@ -59,17 +59,17 @@ In this chapter, \(a\) and \(b\) are the two shorter sides that meet at the
 square corner, and \(c\) is the longest side across from that corner.
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-Example & \(a\) & \(b\) & \(c\) (measured) \\
+Example & \(a\) & \(b\) & \(c\) & \(a^2\) & \(b^2\) & \(a^2+b^2\) & \(c^2\) \\
 \hline
-1 & 3 & 4 & 5 \\
+1 & 3 & 4 & 5 & 9 & 16 & 25 & 25 \\
 \hline
-2 & 5 & 12 & 13 \\
+2 & 5 & 12 & 13 & 25 & 144 & 169 & 169 \\
 \hline
-3 & 8 & 15 & 17 \\
+3 & 8 & 15 & 17 & 64 & 225 & 289 & 289 \\
 \hline
-4 & 7 & 24 & 25 \\
+4 & 7 & 24 & 25 & 49 & 576 & 625 & 625 \\
 \hline
 \end{tabular}
 \end{center}
@@ -145,4 +145,70 @@ Arrangement B, the leftover is \(a^2+b^2\). Therefore the leftovers match:
 \[
 a^2+b^2=c^2.
 \]
+
+\section{Second Proof: Using Similar Triangles}
+This proof is another classic one (also listed on the Wikipedia page): draw an
+altitude from the right-angle corner to the hypotenuse, then use triangle
+similarity.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+  % Main right triangle ABC
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (7,0);
+  \coordinate (C) at (2,3.2);
+  % Foot of altitude from C to AB
+  \coordinate (H) at (2,0);
+
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[dashed] (C)--(H);
+
+  % right-angle marks
+  \draw (A) ++(0.35,0) -- ++(0,0.35) -- ++(-0.35,0);
+  \draw (H) ++(0.22,0) -- ++(0,0.22) -- ++(-0.22,0);
+
+  % side labels
+  \node[left] at (0.95,1.6) {\(b=AC\)};
+  \node[above right] at (4.6,1.9) {\(a=BC\)};
+
+  % segment labels on hypotenuse split
+  \node[below] at (1,0) {\(AH\)};
+  \node[below] at (4.6,0) {\(HB\)};
+
+  % point labels
+  \node[below left] at (A) {\(A\)};
+  \node[below right] at (B) {\(B\)};
+  \node[above] at (C) {\(C\)};
+  \node[below] at (H) {\(H\)};
+\end{tikzpicture}
+\end{center}
+
+\noindent
+In this picture:
+\begin{itemize}
+  \item \(\triangle ABC\) is right-angled at \(C\);
+  \item \(CH\) is perpendicular to \(AB\);
+  \item the big triangle and the two smaller triangles are similar.
+\end{itemize}
+
+From similarity, we get these two key relations:
+\[
+BC^2=AB\cdot HB,\qquad AC^2=AB\cdot AH.
+\]
+Now add them:
+\[
+BC^2+AC^2=AB\cdot HB+AB\cdot AH
+=AB\,(HB+AH).
+\]
+But \(HB+AH=AB\), so
+\[
+BC^2+AC^2=AB^2.
+\]
+Rename \(BC=a\), \(AC=b\), and \(AB=c\):
+\[
+a^2+b^2=c^2.
+\]
+
+So the theorem is proved again, this time by similarity instead of rearranging
+areas.
 
