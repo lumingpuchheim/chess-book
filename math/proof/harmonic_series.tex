@@ -1,0 +1,82 @@
+\chapter{The Harmonic Series}
+
+\section{What is the harmonic series?}
+The harmonic series is the endless sum
+\[
+1+\frac12+\frac13+\frac14+\frac15+\cdots
+\]
+It keeps adding reciprocals of positive whole numbers.
+
+At first, the terms become small very quickly, so it is natural to wonder:
+does this sum settle down to a fixed number?
+
+\section{A quick guess from partial sums}
+Let us add a few terms:
+\[
+1=1,\quad
+1+\frac12=1.5,\quad
+1+\frac12+\frac13\approx1.833,\quad
+1+\frac12+\frac13+\frac14\approx2.083.
+\]
+It grows slowly, but it does keep growing.
+
+\section{Proof of divergence: Comparison Test}
+Now we prove that it never settles to a finite limit.
+
+Start from
+\[
+1+\frac12+\frac13+\frac14+\frac15+\frac16+\frac17+\frac18+\cdots
+\]
+and group terms like this:
+\[
+1
+\left(\frac12\right)
+\left(\frac13+\frac14\right)
+\left(\frac15+\frac16+\frac17+\frac18\right)
+\cdots
+\]
+
+In each group, every term is at least as large as the last one in that group:
+\begin{itemize}
+  \item In \(\frac13+\frac14\), each term is at least \(\frac14\), so the group is at least
+  \[
+  \frac14+\frac14=\frac12.
+  \]
+  \item In \(\frac15+\frac16+\frac17+\frac18\), each term is at least \(\frac18\), so the group is at least
+  \[
+  \frac18+\frac18+\frac18+\frac18=\frac12.
+  \]
+\end{itemize}
+
+The same pattern continues: each new group has twice as many terms as the previous
+one, and each full group contributes at least \(\frac12\).
+
+So the harmonic series is bigger than
+\[
+1+\frac12+\frac12+\frac12+\frac12+\cdots
+\]
+But this comparison sum clearly grows without bound. Therefore the harmonic
+series also grows without bound.
+
+\section{Proof of divergence: Alternativ Method}
+Each integer \(n\) greater than 1 can be written as a product of primes:
+\[
+n=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}
+\]
+
+\[
+    1+\frac12+\frac13+\frac14+\frac15+\cdots
+    = (1+\frac1{2}+\frac1{2^2}+...)(1+\frac1{3}+\frac1{3^2}+...)(1+\frac1{5}+\frac1{5^2}+...)...
+\]
+
+This identity becomes clear when you expand the product on the right: every
+positive integer appears exactly once through its prime-factor form.
+
+Because there are infinitely many prime numbers, the product has infinitely
+many factors, and it cannot collapse to a finite value.
+Therefore, the harmonic series is divergent.
+
+We can see here the unexpected connection between the harmonic series and the prime numbers.
+That is the beauty of mathematics: different concepts can be connected in unexpected ways.
+Dear reader, it will be thrilling to discover more such connections in your future studies.
+Have fun!
