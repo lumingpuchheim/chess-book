@@ -1,0 +1,120 @@
+\chapter{Cayley's Theorem}
+I am not happy with many textbook proofs of this theorem.
+Some presentations introduce extra definitions too early
+(for example, group actions), which can be an unnecessary burden
+for beginners.
+
+Many group theory books are very abstract. They introduce many
+definitions quickly, and the motivation is not always clear.
+Sometimes a new group is defined without clearly stating
+what the multiplication is.
+
+Think of me as a compiler: if a proof is not precise, it does not compile.
+A programmer improves code until it compiles. In mathematics, readers are
+often expected to adapt to unclear writing instead.
+
+So I decided to prove the theorem myself until I fully understand it.
+
+
+\section{The Theorem}
+Every group is isomorphic to a collection of permutations.
+
+\section{Proof}
+We will construct a permutation from a given group. 
+Every group has a multiplication table. We define permutations
+from the columns of that table.
+
+To keep notation simple, number the group's elements
+\(1\) through \(n\), with \(1\) as the identity.
+Also number the permutations from \(p_1\) through \(p_n\).
+
+Next we create a multiplication table from the permutations.
+\[
+p_1=(1, 2, 3, 4 \dots n)
+\]
+being the identity permutation.
+\[
+p_i = (i, 2i, 3i, 4i, \dots ni)
+\]
+Consider the cell in the column \(p_i\) and row \(p_j\).
+It is the permutation obtained by applying \(p_j\) to \(p_i\).
+Let the result be \(p_k\). We will prove
+\[k = i \cdot j\]
+
+We call \(p_{i,m}\) the \(m\)-th element of the permutation \(p_i\).
+The first element of \(p_k\) is the \(p_{j,1}\)-th element of \(p_i\).
+The second element of \(p_k\) is the \(p_{j,2}\)-th element of \(p_i\).
+...
+
+The elements of \(p_j\) are \((j, 2j, 3j, 4j, \dots nj)\), meaning
+\[
+p_{j,m} = mj
+\]
+The elements of \(p_i\) are \((i, 2i, 3i, 4i, \dots ni)\).
+
+\[
+p_i\cdot p_j = (ij, 2ij, 3ij, 4ij, \dots nij)
+\]
+
+Therefore, any equation like \(p_i\cdot p_j = p_k\) mirrors
+an equation in the original group, \(i\cdot j = k\).
+
+\section{Numerical Example}
+We start with a group given by the following table:
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+     & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+    \hline
+    \textbf{1} & 1 & 2 & 3 & 4 \\
+    \hline
+    \textbf{2} & 2 & 3 & 4 & 1 \\
+    \hline
+    \textbf{3} & 3 & 4 & 1 & 2 \\
+    \hline
+    \textbf{4} & 4 & 1 & 2 & 3 \\
+    \hline
+    \end{tabular}
+\end{center}
+We get the permutations from the columns:
+\[
+p_1=(1,2,3,4)\\
+p_2=(2,3,4,1)\\
+p_3=(3,4,1,2)\\
+p_4=(4,1,2,3)\\
+\]
+
+Now check, for example, the result of \(p_2\cdot p_3\).
+\[
+p_2\cdot p_3 = (2,3,4,1) \cdot (3,4,1,2) = (4,1,2,3)
+\]
+In the original table we have:
+\[
+2 \cdot 3 = 4\\
+2 \cdot 2 \cdot 3 = 1\\
+3 \cdot 2 \cdot 3 = 2\\
+4 \cdot 2 \cdot 3 = 3\\
+\]
+
+You can repeat the same check for all other cells.
+So the original table can indeed be reconstructed from the permutations.
+\begin{table}[ht]
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+     & \textbf{(\textbf{1},2,3,4)} & \textbf{(\textbf{2},3,4,1)} & \textbf{(\textbf{3},4,1,2)} & \textbf{(\textbf{4},1,2,3)} \\
+    \hline
+    \textbf{(\textbf{1},2,3,4)} & (\textbf{1},2,3,4) & (\textbf{2},3,4,1) & (\textbf{3},4,1,2) & (\textbf{4},1,2,3) \\
+    \hline
+    \textbf{(\textbf{2},3,4,1)} & (\textbf{2},3,4,1) & (\textbf{3},4,1,2) & (\textbf{4},1,2,3) & (\textbf{1},2,3,4) \\
+    \hline
+    \textbf{(\textbf{3},4,1,2)} & (\textbf{3},4,1,2) & (\textbf{4},1,2,3) & (\textbf{1},2,3,4) & (\textbf{2},3,4,1) \\
+    \hline
+    \textbf{(\textbf{4},1,2,3)} & (\textbf{4},1,2,3) & (\textbf{1},2,3,4) & (\textbf{2},3,4,1) & (\textbf{3},4,1,2) \\
+    \hline
+    \end{tabular}
+    \caption{The multiplication table from the permutations. Using 
+    the first element of each permutation, we recover the original multiplication table.}
+\end{table}
+
