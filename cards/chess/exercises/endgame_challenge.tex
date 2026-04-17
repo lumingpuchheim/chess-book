@@ -1,0 +1,83 @@
+\section{Endgame Challenge by Nunn}
+\begin{multicols}{2}
+    \section*{1}
+    \newchessgame[setfen=8/2p5/6K1/8/8/5k2/P7/8]
+    \chessboard
+
+    \mythoughts{
+        \variation{1. a4 c5} leads to a draw: both pawns promote.
+    }
+
+    So I must play \mainline[level=1]{1. Kf5} 
+
+    \mainline[level=1]{1... Ke3}
+
+    \mythoughts{
+        \variation{2. a4} is still a draw, for the same reason as on the previous move. I have no better try.
+    }
+
+    \mainline[level=1]{2. Ke5 c6}
+
+    \variation{2... c5 3. Kd5} is an easy win for White.
+
+    \mainline[level=1]{3. a4 Kd3}
+
+    Both pawns now race to promotion:
+    
+    \mainline[level=1]{
+        4. a5 c5 5. a6 c4 6. a7 c3 7. a8=Q c2 
+    }
+
+    \chessboard
+
+    \mythoughts{
+       Queen against a c-pawn is often drawn. If Black's king reaches d2,
+       the game is dead drawn. I must not allow that setup.
+    }
+
+    \mainline[level=1]{8. Qd5+ Ke3}
+    
+    \mainline[level=1]{9. Qg2 Kd3 10. Qg5 Kc3 11. Qc1 Kd3 12. Qb2 Kd2 13. Ke4 Kd1 14. Kd3 c1=Q 15. Qe2# }
+    
+    \myreflection{
+        This is far from a simple position. Up to the queen-versus-pawn phase I
+        found the right moves by elimination, but once the queen appeared the winning plan was no longer obvious---I did not see the correct continuation.
+
+        A useful handle for such endgames is a reference fortress: Black's king on d2 with the pawn still on c2.
+        If Black reaches that pattern, a draw is usual; to play for a win, White must keep that formation off the board.
+    }
+
+    \section*{2}
+    \newchessgame[setfen=8/8/1KP5/3r4/8/8/8/k7 w - - 0 1]
+    \chessboard
+
+    \mythoughts{
+        This is a rare motif: a lone pawn outwits a rook. The first
+        move is clear.
+    }
+
+    \mainline[level=1]{1. c7 Rd6+}
+
+    \mythoughts{
+        I cannot play \variation{2. Kc5 Rd2}: Black has perpetual
+        checks on the a- and b-files. To escape the checks, White must bring the king
+        to c3 (otherwise Rd2+ wins the pawn on c2). Black can then tuck the king on b1 and follow with \symrook c2, picking off the pawn.
+
+        White must therefore march the king down the board while Black keeps checking from behind.
+    }
+
+    \mainline[level=1]{
+2. Kb5 Rd5+ 3. Kb4 Rd4+ 4. Kb3 Rd3+ 5. Kc2 Rd4 
+    }
+
+    The remainder is study-like:
+    \mainline[level=1]{
+        6. c8=R Rd2+ 7. Kxd2 Kb2 8. Rc3 Kb1 9. Rb3+ Ka1 10. Kc2 Ka2 11. Rd3 Ka1 12. Ra3# 
+    }
+
+    \myreflection{
+        Black is not obliged to follow this line; for instance, White might be allowed to queen the pawn instead.
+        In over-the-board play I would be unlikely to convert queen versus rook from scratch. More study needed.
+    }
+
+\end{multicols}

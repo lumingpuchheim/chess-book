@@ -1,0 +1,58 @@
+\section{Calculation by Aagaard}
+\begin{multicols}{2}
+    \subsection*{1. Romanko - Shulakova}
+    \newchessgame[
+        setfen=r4rk1/pb3pp1/1p1ppq1p/8/2PR3n/P1N1P1P1/1PQ1BP1P/5RK1 b,
+        moveid=1b
+    ]
+    \chessboard
+
+    \mythoughts{
+        Clearly Black has something along the long diagonal. 
+        \variation{
+            1... Nf3+ 2. Kg2 Nxd4+ 3. Kg1 Nxc2
+        } Black wins a lot of material.
+        White can however improve his play:
+        \variation{
+            1... Nf3+ 2. Bxf3 Qxf3 3. e4
+        } Black gains nothing. 
+
+        Often it is a good idea to switch the order of the moves. Let's try:
+        \mainline{
+            1... Qf3 2. Bxf3 Nxf3+ 3. Kg2 Nxd4+ 4. Kg1 Nxc2
+        } Black wins material so that's the move!
+    }
+
+    \subsection*{2. Hunt - Galdunts}
+    \newchessgame[
+        setfen=1br3k1/5pp1/p3p2p/1bBn4/N7/1P3PP1/5R1P/2R3K1 b,
+        moveid=1b
+    ]
+    \chessboard
+
+    \mythoughts{
+        White's pieces are not well placed. His king, rook and bishop are on the same diagonal.
+        His bishop and another rook are pinned on the same file. So there should be 
+        some pin here.  
+
+        The knight on a4 should be removed as soon as possible since it protects the bishop on c5.
+
+        \mainline{
+            1... Bxa4 2. bxa4 Ba7 3. Rfc2 
+        } are natural moves.
+    }
+
+    \chessboard
+
+    \mythoughts{
+        Going further: \mainline{3... Nb4 } Black threatens to take the rook on c5
+        and fork with his knight on d3. Black wins material.
+    }
+
+    \subsection*{3 Baklan - Getz}
+    \newchessgame[
+        setfen=4rrk1/R5pp/3qp3/1p1b1p1P/5n2/2P1QN2/1PB2PP1/3R2K1 w,
+        moveid=1w
+    ]
+    \chessboard
+\end{multicols}
