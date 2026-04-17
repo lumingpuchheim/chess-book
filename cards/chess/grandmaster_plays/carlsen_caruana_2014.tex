@@ -1,0 +1,606 @@
+\newpage
+\section{M. Carlsen - F.Caruana, Vugar Gashimov Memorial 2014}
+\begin{multicols}{2}
+    \newchessgame
+    \chessgameinfo{Vugar Gashimov Memorial}{M. Carlsen}{F. Caruana}{}{}{1-0}
+    \mainline[level=1]{
+        1. d4 Nf6 2. Nf3 g6 3. g3 Bg7 4. Bg2 c5 5. c3 d5 6. dxc5 O-O
+    }
+    \chessboard
+
+    \mythoughts{
+        Magnus took the pawn on move 6; he could equally have castled with \variation[invar]{6. O-O}.
+        I am unsure whether \variation{7. b4} is sound here---White has an extra tempo in a Catalan-style
+        setup. In the main Catalan Black often posts the kingside bishop on e7; here White's stands on g2 rather than e2, so it is the more active piece.
+
+        I prefer \variation{7. O-O}.
+    }
+
+    \mainline[level=1]{
+        7. O-O a5
+    }
+
+    \mythoughts{
+        \variation[invar]{
+            8. b4 axb4 9. cxb4 Ne4
+        } is bad: White drops a rook.
+
+        In Ruy Lopez or Benoni lines where Black has pawns on a6, b5 and c4, a knight on d3 often
+        cramps White.
+
+        White's structure is analogous: the extra pawn sits on c5, and a knight on d6 would be tempting if Black pushes ...e5 and seizes the center.
+
+        Black's last move also weakens b5. I would like \variation{8. Na3}.
+    }
+
+    \myreflection{
+        \variation[invar]{8. Na3} is playable. Then I play \variation{9. Be3} transpires.
+    }
+
+    \mainline[level=1]{8. Be3 Nc6}
+
+    \mythoughts{
+        I still want \variation{9. Na3}, developing the queenside.
+    }
+    \mainline[level=1]{9. Na3 a4}
+
+    \mythoughts{
+        I am not sure what Black wants from ...a4. Perhaps \symknight a5-c4, eyeing the loose b2-pawn,
+        or a trade against the bishop on e3 that spoils White's structure.
+
+        \variation[invar]{10. Nd4 e5 11. Nxc6 bxc6} leaves Black with a firm center and an open b-file.
+
+        \variation[invar]{10. Nb5} is premature: the d6 outpost is not yet secure.
+
+        Black stands well in the center; crude lunges with h4 or f4 are unlikely to work.
+
+        Karpov has observed that sometimes doing nothing is fine: you let the opponent act,
+        and their plans may create weaknesses you can exploit.
+
+        I would happily wait, but I must still choose a move.
+        \variation{10. h3} worries me because it softens g3. If Black builds ...e4, striking the center with f3 will be awkward while the g3-pawn remains tender.
+
+        Black may try \variation{10... Ng4} to gain a tempo, then \variation{10... f5}.
+        \variation{10. Qc1} prevents that idea and looks strong.
+    }
+
+    \myreflection{
+        \variation[invara]{
+            10. Nd4 e5 11. Ndb5 Be6 12. Nd6 e4 13. Nab5 Ne8 14. Nxe8 Rxe8 15. b4 
+        } White is better. I don't have to take the knight on c6 as I have calculated.
+
+        \variation[invar]{
+            10. Nb5 Ng4
+        } is indeed premature. The knight on b5 doesn't have a target.
+
+        \variation[invar]{
+            10. h3 e5 11. Nb5
+        } White still has an advantage.My worry about weakening g3 was unsound. 
+    }
+
+    \mainline[level=1]{10. Qc1 e5}
+
+
+
+    \chessboard
+
+    \mythoughts{
+        Black intends \variation[invar]{
+            11... d4 12. cxd4 exd4 13. Bf4 Re8 14. Re1 Ne4
+        }, regaining the pawn with the more active army.
+        
+        I dislike \variation{11. Nb5 Qa5 12. Nd6 Nd7}: Black recovers the pawn and keeps the livelier pieces.
+
+        \variation{11. Rd1} addresses the point. I keep ideas such as \symbishop g5, \symknight xe5, and \symrook xd5 in reserve.
+    }
+
+    \myreflection{
+        Black actually doesn't threat with \variation[invar]{
+            11... d4?! 12. Rd1
+        } since the pawn is pinned.
+
+        Also \variation[invar]{
+            11. Nb5 Qa5?! 12. Nd6 Nd7? 13. Rd1 
+        } White has an advantage. 
+
+        I realize now how I miss the ``obvious'' move \symrook d1 in the other variations, which 
+        I exactly planned as a first move. I don't know why this happens. Certainly it 
+        is something to be aware of.
+    }
+
+
+    \mainline[level=1]{
+        11. Rd1 Qe7
+    }
+
+
+
+    \mythoughts{
+        \variation{12. Bh6 Bxh6 13. Qxh6 Qxc5} is poor: Black seizes firmer control of the center.
+
+        \variation{12. c4 d4 13. Nxd4 exd4 14. Bxd4 Nxd4 15. Rxd4} also occurs to me,
+        but I distrust it after \variation{15... Qxe2}, \variation{15... Be6}, and similar annoyances.
+        I need not decide which reply is most painful---that is the spirit of alpha-beta pruning.
+
+        \variation{12. Nb5}, eyeing d6, looks tempting. Even from a passive shell I would get some counterplay.
+    }
+
+    \myreflection{
+        \variation[invar]{
+            12. Bh6
+        } is indeed bad and my calculation is correct.
+
+        \variation[invar]{
+            12. c4?! d4 13. Nxd4?
+        } is indeed poor. After \variation{13. Bf4 Qxc5}, Black has some slight advantage.
+    }
+
+    \mainline[level=1]{
+        12. Nb5 Be6
+    }
+
+    \mythoughts{
+        Black plans \variation{13... Ra5 14. Nd6 Nc5}. After ...\symknight xc5, the light-squared bishop has left c8; White's knight on d6 may be trapped, while the bishop on e6 still covers d5.
+
+        Black may also try \variation{13... Nd7 14. Nd6 f5}.
+        
+        \variation{13. Ng5 h6} is awkward for White: trading the bishop opens the f-file,
+        and retreating the knight squanders two tempi.
+
+        \variation{13. Nd6} looks strong.
+    }
+
+    \myreflection{
+        The assessment is incorrect. \variation{13. Ng5 h6? 14. Nxe6 fxe6 15. c4} White 
+        has some advantage. Opening the f-file is not promissing for Black since he 
+        has no target there.
+
+        \variation{13. Nd6 Ng4 14. Ng5} is indeed good.
+    }
+
+    \mainline[level=1]{13. Ng5 Bg4}
+
+    \mythoughts{
+        I still want \variation{14. Nd6}.
+    }
+    \mainline[level=1]{14. Nd6 h6}
+
+    \mythoughts{
+        \variation{15. Nf3} looks natural.
+    }
+
+    \mainline[level=1]{
+        15. Nf3 Kh7
+    }
+
+    \mythoughts{
+        Black aims for \variation{16... e4 17. Nd2 Bxe2}, when his game looks more comfortable;
+        hence \variation{16. h3}.
+    }
+
+    \mainline[level=1]{
+        16. h3 Be6
+    }
+
+    \mythoughts{
+        \variation{17. b4} stirs counterplay; \variation{17. Kh2} is equally reasonable.
+        Order hardly matters---Black cannot prevent both.
+
+        I would choose \variation{17. Kh2}.
+    }
+
+    \myreflection{
+        \variation[invar]{
+            17. Kh2?! Ne8 
+        } is too passive. Black starts a counterstrike with \variation{18... f5} while 
+        White was just waiting.
+    }
+
+    \mainline[level=1]{
+        17. b4 axb3 18. axb3 Rxa1 19. Qxa1 Ne4
+    }
+
+    \mythoughts{
+        I did not see ...Ne4 coming. Capturing on e4 feels limp:
+        \variation{20. Nxe4 dxe4 21. Ne1 f5 22. Ne1 Rd8 23. Rxd8 Qxd8}. Both queens
+        command open files, and Black should drum up enough counterplay.
+
+        \variation{20. b5 Nd8 21. Nxe4 dxe4 22. Ne1 f5} leaves me stuck on the queenside while Black's center still offers resources.
+        
+        \variation{20. c4 Nxd6 21. cxd6 Qxd6 22. cxd5 Bxd5 23. Bxh6 Bxh6 24. e4}
+        regains the piece and sets the queenside pawns rolling. Black no longer enjoys the same central clamp as in the earlier lines, so White should keep an edge.
+
+        I play \variation{20. c4}.
+    }
+
+    \myreflection{
+        \variation[invar]{20. c4 Nxd6 21. cxd6 Qxd6? 22. cxd5 Bxd5? 23. Rxd5 Qxd5 24. Ng5+ hxg5 25. Bxd5} White is winning. 
+        \variation[invar]{20. c4 d4! 21. Bxd4 Nxg3 22. fxg3 Nxd4 23. Nxd4 exd4 24. Qa7 Bxh3 25. Bxh3 Qxe2 } Black is piece 
+        down but has enough counterplay because White's king is exposed.
+    
+        The move b5 doesn't exist!
+    }
+    \mainline[level=1]{
+        20. Nd2 f5?!
+    }
+
+    \mythoughts{
+        Black now has concrete threats:
+        \variation{21... f4 22. gxf4 exf4 23. Bd4 Bxd4 24. cxd4 Qh4}, after which he should be winning before long.
+
+        White must watch f2 and h3. Trading the knight and tucking the king to h2 covers both ideas.
+
+        I take \variation{21. N2xe4}.
+    }
+
+    \mainline[level=1]{
+        21. N2xe4 dxe4
+    }
+
+    \chessboard
+
+    \mythoughts{
+        The b3-pawn is loose, and \variation{22... f4} must be answered.
+        
+        \variation{22. Qb1} looks forced.
+    }
+
+    \mainline[level=1]{
+        22. Qb1 f4
+    }
+
+    \mythoughts{
+        I dare not allow \variation{23... f3}: Black can break through with ...h5-h4.
+        Even if I seal the kingside with g4, a sacrifice on that square remains hard to rule out.
+
+        Thus \variation{23. gxf4} is obligatory.
+    }
+
+    \myreflection{
+        \variation[invar]{
+            23. gxf4 exf4 24. Bd2 f3 25. exf3 exf3 26. Bf1 Bh3
+        } White lost the advantage. Ironically, it happens exactly as I have feared.
+
+        \variation[invar]{
+            23. Bd2 f3? 24. Bf1 fxe2 25. Bxe2 Bxh3 26. Nxe4
+        } Black has no more attack. 
+
+        I was panicking too much. When facing a scary attack, it is 
+        helpful to work out what the exact threat was. Only then can 
+        I have a calm mind.
+    }
+
+    \mainline[level=1]{
+        23. Bd2 e3
+    }
+
+    \mythoughts{
+        Black has a scary attack. I dislike \variation{24. Be1 fxg3} because 
+        the pawn on e3 clamps my position.
+
+        I suspect Black intends \variation{24... e4} then \variation{25... Be5}.
+
+        \variation{24. fxe3 fxg3 25. Be1} wins the pawn on g3. My bishops shelter the king,
+        and I may yet hold.
+
+        I decide on \variation{24. fxe3}.
+    }
+
+    \myreflection{
+        \variation[invar]{
+            24. fxe3 fxg3 25. Be1 Qh4 26. Ne4
+        } White still has advantage.
+
+        My fear was unrealistic. \variation{24. Be1 fxg3 25. fxg3 h5 26. b4 } Black has no further attack.
+        Using computer it is clear that Black has no attack. I need to work out without a computer when 
+        defending.
+    }
+
+    \mainline[level=1] {
+        24. Be1 Bf5
+    }
+
+    \mythoughts{
+        \variation{25. Nxf5 gxf5} gives Black an open g-file, which feels too dangerous.
+        After \variation{25. Be4 Bxh3 26. Bxg6 Kh8}, my king is too exposed.
+        \variation{25. Qc1 Qe6 26. Nxf5 gxf5 27. Rd6 Qe7 28. Qd1} may offer some counterplay.
+
+        I decide on \variation{25. Qc1}.
+    }
+
+    \myreflection{
+        After \variation[invar]{ 25. Nxf5 gxf5 26. g4 Qxc5 
+        27. gxf5 Kh8 28. f6 Rxf6 29. Qd3 e4 30. Bxe4  }, Black has no open g-file as I feared.
+
+        Even after \variation[invar]{25. Be4 Bxh3 26. Bxg6 Kh8 27. f3} White also has advantage.
+    }
+
+    \mainline[level=1] {
+        25. Qc1 h5
+    }
+
+    \mythoughts{
+        Black intends ...h4. I decide on \variation{26. fxe3} to shore up against that thrust.
+    }
+
+    \mainline[level=1]{
+        26. fxe3 fxg3
+    }
+
+    \mythoughts{
+        I must take on g3; otherwise Black creates a protected passed pawn after ...h4.
+        I might survive the middlegame, but not the resulting endgame.
+    }
+
+    \mainline[level=1]{
+        27. Bxg3 Qg5
+    }
+
+    \mythoughts{
+        After retreating the bishop from g3, I will lose the h3-pawn.
+        \variation{28. e4 Qxg3 29. exf5 gxf5}: Black crashes through on the g-file, and I have no satisfactory defense.
+        \variation{28. Nxf5} is my only try.
+    }
+
+    \myreflection{
+        The comment regarding e4 was exaggerated because White is able to attack even though 
+        Black has an open g-file.
+
+        \variation{28. Nxf5 gxf5 29. Bh2} is indeed good. 
+
+        Amazingly, all the variations allows Black to open the g-file. What was I scared of?
+    }
+
+    \mainline[level=1]{
+        28. e4 Qxg3
+    }
+
+    \chessboard
+
+    \myreflection{
+        I miss the text move, an intermediate move.
+    }
+    \mainline[level=1]{
+        29. Rd3 Qh4 30. exf5 gxf5
+    }
+
+    \mythoughts{
+        Black intends \variation{31... Ne7}; the knight joins the attack via g6 and f4.
+        I want \variation{31. Bxc6 bxc6 32. Qe3}, angling for \symqueen g3 and \symrook d7 for counterplay.
+    }
+
+    \myreflection{
+        \variation[invar]{
+            31. Bxc6 e4!
+        } suddenly Black is winning. It makes no sense to trade my important defender for a 
+        knight that doesn't do too much.
+    }
+    \mainline[level=1]{
+        31. e4 fxe4
+    }
+
+    \mythoughts{
+        \variation{32. Bxe4+} followed by \variation{33. Rf3}, and White should be winning.
+    }
+
+    \mainline[level=1]{
+        32. Bxe4+ Kh8 33. Qe3 Rf4
+    }
+
+    \myreflection{
+        my previous \variation{33. Rf3 Rxf3 34. Bxf3 Qxh3 35. Bg2 Qg4} loses a pawn. The 
+        position would be a draw. 
+
+        In defending I am eager to trade pieces, missing sometimes simple tactics.
+    }
+
+    \chessboard
+
+    \mythoughts{
+        I feel I have an advantage. I prefer not to trade queens, since 
+        endgames with opposite-colored bishops favor the defender. \variation{34. Nf5 Qf6 35. Rd7} and then 
+        \variation{36. Qg3} should be decisive.
+    }
+
+    \myreflection{
+        \variation[invar]{34. Nf5? Qg5+} White loses material.
+    }
+
+    \mainline[level=1]{
+        34. Bg2 Qe7
+    }
+
+    \mythoughts{
+        My worst piece is the rook on d3. I want to improve it with \variation{35. Rd2}, heading for a2.
+    }
+
+    \myreflection{
+        \variation[invar]{35.Rd2 Bh6 36. Rf2 Qf6 37. Rxf4 Bxf4 38. Qd3 } White should be indeed winning.
+    }
+
+    \mainline[level=1]{
+        35. Qe2 Qh4
+    }
+
+    \mythoughts{
+        The rook is still my worst piece, so I offer an exchange with \variation{36. Rf3}.
+        After \variation{36... Rxf3 37. Qxf3}, my structure improves and my king is safer.
+    }
+
+    \myreflection{
+        The idea is in principle correct. I have indeed big material advantage and 
+        will be able to exchange the rooks. According to computer, I am still winning. I am however not sure if I have a clear plan 
+        to win the game because opposite-colored bishops favors the attacker and 
+        clearly Black is the attacker.
+    }
+
+    \mainline[level=1]{
+        36. b4 e4
+    }
+
+    \mythoughts{
+        \variation{37. Nxe4 Be5 38. Rf3 Rxf3 39. Qxf3 Qe1}: Black should have a perpetual.
+        \variation{37. Re3 Nd4 38. cxd4 Bxd4 39. Kh1 Bxe3 40. Qxe3 Rf3}: I see no mating net while Black threatens a perpetual.
+        \variation{37. Rd5 Ne5}: I do not see a good follow-up.
+        I want \variation{37. Rd1} intending \variation{38. Rf1}. Trading rooks on f1 is 
+        cleaner than on f3, since it does not open checks against my king.
+    }
+
+    \myreflection{
+        \variation[invar]{37. Nxe4 Be5 38. Rf3?} leads indeed to perpetual check. Instead White should 
+        play \variation[invar]{38. Rd5}. I have considered the move as candidate and here I forgot it completely,
+        as if the move only exist as a first move, not as a follow-up move.
+
+        \variation[invar]{
+            37. Re3 Nd4 38. cxd4 Bxd4 39. Kh1 Bxe3 40. Qxe3 Rf3 41. Qh6+ Kg8 42. Qg6+ Kf8 43. Bxf3 Qxh3+ 44. Kg1 
+        } White is winning. True, White doesn't have a mating threat. I was unable to see 
+        some intermediate moves to win material for White.
+
+        \variation[invar]{
+            37. Rd5 Ne5 38. Nxe4
+        } White is winning. The same topic comes again and again. It seems that I always 
+        fail to combine moves. A move in another line can certainly be used. Why did I miss it so often?
+    }
+
+    \mainline[level=1]{
+        37. Nxe4 Ne5
+    }
+
+    \chessboard 
+
+    \mythoughts{
+        \variation{38. Rg3 Rxe4} drops material.
+        I must reroute the rook. Black's attack has lost its immediate sting.
+        \variation{38. Rd1} followed by \variation{39. Rf1} is a natural exchange of rooks.
+        I cannot simply retreat the knight from e4 because Black has \variation{40... Qg3}.
+        The counterattack along the dark squares is awkward.
+
+        After \variation{38. Rd5}, I do not see a clear plan.
+
+        I want \variation{38. Re3} intending \variation{39. Nd6}. Once the b7-pawn 
+        falls, I can advance the queenside pawns for the full point.
+    } 
+
+    \myreflection{
+        The idea regarding \variation{38. Re3} is OK.
+    }
+
+    \mainline[level=1]{
+        38. Rd5 Kg8
+    }
+
+    \mythoughts{
+        Now I see the idea: \variation{39. b5} then \variation{40. c6}. The h5-pawn should fall 
+        if Black captures on c6.
+    }
+
+    \mainline[level=1]{
+        39. b5 Rf5
+    }
+
+    \mythoughts{
+        Black intends \variation{40... Nf3}. \variation{40. Kh1} is very natural.
+    }
+
+    \mainline[level=1]{
+        40. c6 bxc6
+    }
+
+    \mythoughts{
+        I now see the tactical point if \variation{40... Nf3 41. Bxf3 Rxd5 Nf6}, winning the rook.
+        \variation{41. bxc6} is natural.
+    }
+
+    \mainline[level=1]{
+        41. bxc6 Qe7
+    }
+
+    \mythoughts{
+        \variation{42. Qa2} threatens a discovered check, but after \variation{42... Kh8} I achieve little.
+
+        I dislike letting the rook slip to the back rank, so I try \variation{42. Ng3}. The rook cannot 
+        retreat because the h5-pawn hangs. After \variation{42... Rg5}, however, \variation{43. Qa2} fails:
+        the knight hangs.
+
+        Refining further, I consider \variation{42. Nd6}. After \variation{42... Rg5 43. Qa2 Kh8 44. Qa8+ Kh7},
+        \variation{45. Be4} is unavailable because the bishop is pinned.
+        
+        \variation{45. Kh1} still looks strong; I do not see a defense for Black.
+        
+        I decide on \variation{42. Nd6}.
+    }
+
+    \myreflection{
+        I like the process. Interestingly, computer says the text move is not precise.
+        My first candidate \variation{42. Qa2 Kh8 43. Kh1} is the best. I don't fully understand why.
+    }
+
+    \mainline[level=1]{
+        42. Nd6 Rg5
+    }
+
+    \mythoughts{
+        My earlier calculation was wrong: \variation{43. Qa2 Nf3} loses for White. If I can force c7, however,
+        the picture improves.
+        So I decide on \variation{43. Nb5}.
+    }
+
+    \mainline[level=1]{
+        43. Nb5 Qe6
+    }
+
+    \mythoughts{
+        My rook is loose because the bishop is pinned. I play \variation{44. Kf1} to 
+        break the pin.
+    }
+
+    \myreflection{
+        There is no need to play a waiting move, if a concrete move is available.
+    }
+
+    \mainline[level=1]{
+        44. Rd8+ Kh7
+    }
+
+    \mythoughts{
+        I still would love to play \variation{45. Kh1} because I did't want to calculate in detail
+        what would happen when Black takes my h3 pawn.
+        I was not sure about \variation{45. Qe4+ Rg6}, until I found \variation{46. Rd6}
+    }
+
+    \myreflection{
+        My idea \variation[invar]{
+            45. Qe4+ Rg6 46. Rd6
+        } exchanges the material and wins. Magnus played a more direct one. 
+    }
+    \mainline[level=1]{
+        45. Qe4+ Rg6 46. c7 Qa6
+    }
+
+    \mythoughts{
+        Black threatens \variation{47... Qa1+ 48. Kh2 Nf3+ 49. Qxf3 Be5} with mate to follow.
+        \variation{47. Ra8} parries the attack, after which \variation{48. c8=Q} decides.
+    }
+
+    \myreflection{
+        I like my idea, quite simple. If I am winning, I don't want to check if 
+        my opponent has a perpetual check. Exchanging the queens is the most effective way.
+    }
+    \mainline[level=1]{
+        47. c8=Q Qa1+ 48. Kf2 Qb2+ 49. Ke1
+    }
+
+    \myreflection{
+        Beyond the concrete blunders, this game shows that I still need to improve my defensive technique.
+        In several moments I reacted to Black's attacking ideas too emotionally, and that led me to overestimate
+        the danger. I should first identify the exact threat, then compare candidate defenses calmly.
+
+        I also noticed a recurring calculation weakness: I can find a good candidate move as the first move in one
+        line, but I fail to recognize the same move as a follow-up move in a related variation. This breaks the
+        consistency of my analysis and makes me miss strong continuations. I need to train this specifically:
+        when I evaluate candidate moves, I should actively check whether they can reappear one move later in
+        neighboring lines.
+    }
+
+    \chessboard
+\end{multicols}
