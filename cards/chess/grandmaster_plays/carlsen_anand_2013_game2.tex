@@ -2,7 +2,7 @@
 \section{M.Carlsen - W.Anand, World Chess Championship}
 \begin{multicols}{2}
     \newchessgame
-    \chessgameinfo{World Chess Championship}{M.Carlsen}{W.Anand}{}{}{1-0}
+    \chessgameinfo{World Chess Championship Game 2}{M.Carlsen}{W.Anand}{}{2014}{1-0}
     \mainline[level=1]{
         1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. d3 Bc5 5. O-O d6 6. Re1 O-O
     }
@@ -17,6 +17,8 @@
     }
 
     \myreflection{
+        My move is playable, but the claim that ``Black's c7-pawn can become a target'' is wrong:
+        the bishop can simply protect it from b6.
     }
 
     \mainline[level=1]{
@@ -27,6 +29,13 @@
         Candidate moves are \symknight bd2, c3, and h3. \variation{8. h3} is less relevant,
         because Black is unlikely to play \symbishop g4 and exchange that knight, as it
         would help White open the g-file. I would choose \variation{8. Nbd2}.
+    }
+
+    \myreflection{
+        My move is not good.
+        True, Black is unlikely to play \symbishop g4, but he can play \symknight g4,
+        so h3 does have its merits.
+        Also, \variation[invar]{8. c3 Ng4 9. d4} is playable.
     }
 
     \mainline[level=1]{
@@ -50,6 +59,14 @@
         So I need to hurry with \variation{10. c3}.
     }
 
+    \myreflection{
+        My move is playable. Once I can match the position to something in my knowledge base,
+        I can play a series of moves without calculating each one.
+
+        Magnus Carlsen thinks only when he cannot find a similar position;
+        otherwise he simply reuses an existing solution.
+    }
+
     \mainline[level=1]{
         10. Nc4 Bb6
     }
@@ -62,6 +79,20 @@
         After \variation{11. a4 a5}, I don't get anything since I have no access to b5.
         
         I want to play \variation{11. b3}.
+    }
+
+    \myreflection{
+        My claim that ``after \variation{11. a4 a5}, I don't get anything since I have no access to b5''
+        is wrong. After the exchange on b6, Black can no longer recapture with the a-pawn,
+        which opens the a-file. Such an exchange therefore favors White.
+
+        My move is playable.
+        However, the plan of placing the bishop on b2 is not realistic: White
+        must reckon with Black's central strike d5:
+        \variation[invar]{
+            11. b3 d5 12. exd5 cxd5 13. Ncxe5 Nxe5 14. Nxe5 Rxe5 15. Rxe5 Bxf2+ 16. Kh2 Bd4 17. Bf4 Bxe5 18. Bxe5 
+        }
+        The line is almost forced, and I had not calculated it at all.
     }
 
     \mainline[level=1]{
@@ -103,7 +134,7 @@
         permanently.
 
         Clearly I need another idea. I wanted to play d4 anyway, so what about doing it now?
-        \variation{13. d4 exd4 14. Nd4} hitting c6 and f5. It looks good for me.
+        \variation{13. d4 exd4 14. Nxd4} hitting c6 and f5. It looks good for me.
         I also intend to play \variation{14. dxe5}, \variation{15. Be3} targeting the b6 pawn.
         
     }
@@ -113,12 +144,25 @@
         In practice, I should not spend much time calculating such lines, because it is
         unlikely that I will get much from them.
 
-        I was mixing ideas from the game Carlsen vs. Wang Hao. 
-        % TODO add fen here for the game!!
+        I was mixing ideas from the game Carlsen vs. Wang Hao, Tata Steel 2011.
+
+        \chessboard{
+            setfen=2rqkb1r/1p1n1pp1/p1n1p1p1/2ppP3/3P4/2P1BN2/PP2BPPP/R2Q1RK1 w k - 0 13
+        }
+
+        There, the center is completely closed, so the pawn thrusts g3 and h4 are effective
+        because Black cannot cover the weakness with his rooks.
+
+        In the actual game, even if I open lines successfully, Black can simply place
+        his rooks on the 7th rank and my attack is over.
 
         A more subtle approach is to focus on the opponent's weaknesses:
-        tie the opponent down to one weakness, then strike somewhere else where the defense
+        tie him down to defending one weakness, then strike somewhere else where the defense
         is thin. Alekhine won many games with this idea.
+
+        As for the concrete move, after \variation[invar]{13. h4 c5} Black is better, because White
+        can never set up the center. The lesson here, clichéd as it is: pay attention
+        to a central counterstrike whenever you plan to play on the flank.
     }
 
     \mainline[level=1]{
@@ -146,7 +190,11 @@
     }
 
     \myreflection{
-        Yes, I found the move like Carlsen!
+        Yes, I found the same move as Carlsen!
+
+        By the way, the engine recommends \variation[invar]{
+            14. c4
+        }, which is the same idea as my next move.
     }
 
     \mainline[level=1]{
@@ -174,6 +222,18 @@
         I decide to play \variation{15. c4}.
     }
 
+    \myreflection{
+        \variation[invar]{
+            15. Rd3
+        } is playable, but White should then close the center with d5.
+
+        After \variation[invar]{
+            15. Rd3 Ng6 16. dxe5?! dxe5
+        }, Black need not exchange pieces, for the same reason: White's
+        heavy pieces have no targets. It is therefore unsound to speculate about an endgame
+        that would not actually arise here.
+    }
+
     \mainline[level=1]{
         15. dxe5 dxe5
     }
@@ -188,6 +248,9 @@
 
         \variation{16. Nh4 Rd8 17. Qh5} is natural. All my pieces can join the 
         attack soon.
+
+        There is a clear lesson here: occupying an open file does not always bring
+        an advantage when the rooks have no targets.
     }
 
     \mainline[level=1]{
@@ -200,9 +263,17 @@
         bishop. I feel I have some advantage now.
     }
 
-    \mainline[level=1]{
-        18. Nf5! Be6
+    \myreflection{
+        The statement above is wrong:
+        \variation[invar]{18. Nf5 g6? 19. Rg3 Kh8 20. Qh4 Bxf5 21. Qxf6+ Qg7 22. Qxg7+ Kxg7 23. exf5 }.
+
+        My intended move is still good, however, since I can follow up with \variation{19. Nf5}.
     }
+    \mainline[level=1]{
+        18. Nf5! Be6?!
+    }
+
+    Incidentally, this is a poor move: the e6 square belongs to the knight, not the bishop.
 
     \mythoughts{
         I don't need to worry about \variation{19... Bxf5}. In the endgame 
@@ -210,6 +281,7 @@
         I will have a winning endgame. 
 
         I still want to play \variation{19. Rg3}.
+
     }
 
     \mainline[level=1]{
@@ -243,12 +315,31 @@
         I decide to play \variation{20. Qg4}.
     }
 
+    \myreflection{
+        I like that I am making logical decisions, even if the conclusion is not entirely correct.
+        After \variation[invar]{
+            20. Qg4 Kh8 21. h4 Bxf5
+        } I should recapture with the queen rather than the e-pawn, because otherwise Black
+        can play \variation{22... Rd4}.
+
+        After \variation{
+            20. Qg4 Kh8 21. h4 Bxf5 22. Qxf5 Nxh4 23. Qh5 g5 24. Bxg5 fxg5 25. Rxg5 Nxg2 26. Rxg2 Rg8 
+        }
+        the game is equal.
+        So here it does not matter whether I place the queen on g4 or f3, as both lead
+        to the same variation.
+    }
+
     \mainline[level=1]{
         20. h4 Bxf5
     }
 
     \mythoughts{
-        I decide to play \variation{21. exf5}. It drives the knight away. A pawn
+        This is indeed a strange move. Black has already lost a tempo
+        with the bishop, and exchanging it for my knight is also a bad idea,
+        since I have established that the endgame favors me.
+
+        I decide to play \variation{21. exf5}. It drives the knight away, and a pawn
         on f5 will also help me after I play h6 and Black responds with g6.
     }
 
@@ -259,6 +350,17 @@
     \mythoughts{
         I decide to play \variation{22. Qg4}. I want my queen on the kingside for the attack.
         I don't see any other squares for her.
+    }
+
+    \myreflection{
+        The queen on h5 is actually well placed: as we will see, it controls
+        both the e8 and the d1 squares. I failed to reason soundly here.
+        Even though the queen needed a better square, g4 is not it, since
+        I had already established that I do not have enough attackers against g7.
+
+        The text move is quite logical: remove the best defender.
+        Besides, my bishop has not moved at all, and the knight on f4 cost Black
+        a lot of tempi, so I have a clear lead in development.
     }
 
     \mainline[level=1]{
@@ -282,14 +384,28 @@
         I must play \variation{23. Rc3}; it is the least painful option.
     }
 
+    \myreflection{
+        \variation[invar]{23. Rc3 Rd5 24. Re8 Rxe8 25. Qe8#} mate! As we will see,
+        this is not the only time I miss this simple tactic.
+
+        \variation[invar]{23. Rf3 }
+    }
+
     \mainline[level=1]{
         23. Rc3 c5
     }
+
+    \chessboard
 
     \mythoughts{
         My queen on h5 doesn't do much and therefore I want to improve it. 
         \variation{24. Qf3} is a natural move. \variation{25. Rc4} will be the next move, 
         winning the f4 pawn.
+    }
+
+    \myreflection{
+        The f4-pawn is not important at all. The queen on f3 is worse than on h5,
+        as we have already established.
     }
 
     \mainline[level=1]{
@@ -316,6 +432,14 @@
         cannot stay on d4 because I can play b3 and then c3, kick it away.
     }
 
+    \myreflection{
+        ``I do not see how \variation[invar]{26. Kh2 Qd1+ 27. Qxd1 Rxd1} helps me.'' It is
+        painful to miss a simple mate in two: \variation{27.Re8 Rxe8 28. Qe8#}.
+
+        My calculation is correct, but my evaluation of the rook endgame is also wrong.
+        After \variation{26. Rce4 Qd1+ 27. Qxd1 Rxd1+ 28. Kh2 Rd2 29. R1e2 Rxe2 30. Rxe2 b5}, the endgame is equal.
+    }
+
     \mainline[level=1]{
         26. Kh2 Rf8
     }
@@ -334,6 +458,10 @@
         I decide to play \variation{27. Rce4}.
     }
 
+    \myreflection{
+        I am glad to see that I recognized the f4-pawn is not the focus of the game.
+    }
+
     \mainline[level=1]{
         27. Rce4 Rb7
     }
@@ -344,7 +472,21 @@
     }
 
     \mainline[level=1]{
-        28. Qe2 b5 29. b3 bxa4
+        28. Qe2 b5 }
+    
+    \mythoughts{
+        I do not see what Black is up to. I want to carry out my planned
+        \variation{29. Re7}.
+    }
+
+    \myreflection{
+        I could not calculate the whole line:
+        \variation[invar]{
+            29. Re7 Qd6 30. f3! Rxe7 31. Rxe7 bxa4 32. Qe4 Qb8 33. Qxa4 Qd6 34. Re4 h6 35. Qxa5 Kh7 
+        }
+        Here f3 is an important prophylactic move.
+    }
+    \mainline[level=1]{29. b3 bxa4
     }
 
     \chessboard
@@ -353,6 +495,15 @@
         I will take the pawn with \variation{30. Rxa4}. Allowing Black to play ...a3 
         does not make sense since I do not have a mating attack. Taking with the b-pawn opens
         the b-file.
+    }
+
+    \myreflection{
+        My move keeps the b-file closed, but misses the more important e-file:
+        \variation[invar]{
+            30. Rxa4 f3 31. Qxf3 Rb4 32. Ra6!
+        }
+        White still has enough advantage, but I am not sure I would find the winning line after
+        \variation{31... Rb4}.
     }
     \mainline[level=1]{
         30. bxa4 Rb4
@@ -380,4 +531,17 @@
     \mainline[level=1]{
         32. Qf3 Rxe4 33. Qxe4 f3+ 34. g3 h5 35. Qb7
     }
+
+    \subsection*{My Reflection}
+    I am glad I was able to make moves based on logic. This way, I can arrive at
+    good decisions without calculating a lot.
+
+    During the game I also learned that occupying an open file is not always a good idea
+    when the rooks have no target. With this in mind, I should no longer assume that
+    occupying an open file is automatically the right move.
+
+    Missing the back-rank tactic was painful: because of that oversight, I was forced
+    to settle for suboptimal moves.
+
+
 \end{multicols}
