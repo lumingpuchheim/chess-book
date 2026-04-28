@@ -178,7 +178,7 @@
     \chessboard
 
     \mythoughts{
-        \variation{1. bxa6 b5} both pawns queen. The position is a draw.
+        After \variation{1. bxa6 b5}, both pawns queen and the position is a draw.
 
         The first move is obvious.
     }
@@ -187,9 +187,8 @@
         1. b6+ 
     }
 
-    Black cannot take the pawn because when White promotes, White's queen
-    also controls the promotion square for the a pawn. The resulting endgame is loss 
-    for Black.
+    Black cannot take the pawn: once White promotes, the new queen also controls
+    the promotion square of the a-pawn, and the resulting endgame is lost for Black.
 
     \mainline[level=1]{
         1... Kb8
@@ -203,12 +202,12 @@
     \chessboard
 
     \mythoughts{
-        Taking the queen is stalemate. 
+        Taking the queen would be stalemate.
     }
 
-    Here I fail to find the right move. White's queen should stay 
-    on the 8th rank. Threatening a checkmate by a king move. Black cannot 
-    prevent it with a check. The only move is therefore
+    Here I fail to find the right move. White's queen should stay on the 8th rank,
+    threatening mate with a king move. Black cannot prevent this with a check,
+    so the only move is
 
     \mainline[level=1]{
         7. Qg8 Qa2
@@ -216,9 +215,11 @@
 
     \mythoughts{
        \variation[invar]{8. Qf8 Qa3}
-    } fails. Moving the queen away allows Black to check on d6. Taking the queen is again stalemate.
-    
-    White's queen must still stay on the 8th rank. The only move is therefore
+    }
+    fails, as moving the queen off the 8th rank allows Black to check on d6,
+    and taking the queen is again stalemate.
+
+    The white queen must therefore stay on the 8th rank. The only move is
 
     \mainline[level=1]{
         8. Qe8 Qa4
@@ -226,7 +227,7 @@
 
     \chessboard
 
-    Going back to h8 doesn't make any progress because Black can repeat by moving 
+    Going back to h8 makes no progress, because Black can simply repeat by moving
     the queen to a1.
 
     \mainline[level=1]{
@@ -239,4 +240,223 @@
         10... Qf4 11. Qa1 Kb8 12. Qa7#
     } 
 
+    \section*{5}
+    \newchessgame[
+        setfen=8/5r2/8/PP6/2K1k3/8/8/8 w - - 0 1
+    ]
+    \chessboard
+
+    \mythoughts{
+        Pawns against rook occur frequently in practical play.
+
+        \variation{
+            1. Kc5 Rf5+
+        } If White's king steps forward, he cannot escape the checks;
+        if he retreats, he makes no progress. In practice this cannot be a good move.
+
+        \variation{
+            1. a6 Rc7+
+        } Here it feels like Black gets the check for free. \variation{1. b6} at least prevents
+        the check and should therefore be better.
+
+        Let us calculate further:
+        \variation{
+            1. a6 Rc7+ 2. Kb4 Kd5 3. b6 Rc4! 4. Kb3? Rc6
+        } Black wins a pawn.
+
+        \variation{
+            4. Kb5 Rc1 5. a7 Rb1+ 6. Ka6 Ra1+ 7. Kb7 Kc5
+        } This is a typical ``pawns in the crosshairs'' defense: White cannot make any further progress.
+    }
+
+    We can actually choose a move by logic: the other moves are bad and we can give
+    plausible reasons against them. Such a shortcut is not always reliable, but it
+    saves time and is often useful.
+
+    \mainline[level=1]{
+        1. b6 Rf1
+    }
+
+    \mythoughts{
+        \variation{2. Kc5 Ra1 3. Kc6 Rxa5 4. b7 Ra6+ 5. Kb5 Ra1}
+
+        White cannot promote because of the check on b1.
+        White also cannot get rid of the rook: \variation{
+            5. Kc7 Ra7
+        } and
+        \variation{
+            5. Kd7 Rb6
+        }.
+
+        \variation{2. Kc3 Rb1} or \variation{2... Rf8}: Black is even winning.
+        This move can likewise be rejected by logic: it does not improve anything,
+        while Black can improve his position. In practice I do not need to decide
+        whether the move loses outright or merely misses a winning chance---let me
+        look for other moves.
+
+        The same holds for any other king move. For example, \variation{2. Kb4 Kd4}
+        simply makes White's position worse.
+
+        \variation{2. b7} is rejected because \variation{2... Rc1} followed by \variation{3... Rb1} wins
+        the pawn.
+
+        That leaves only one move.
+    } 
+
+    \myreflection{
+        I made a mistake above: ``\variation{2. b7} is rejected because \variation{2... Rc1} followed
+        by \variation{3... Rb1} wins the pawn.''
+        In fact:
+        \variation{
+          2. b7 Rc1+ 3. Kb5 Kd5 4. Kb6 Rb1+ 5. Kc7 Rc1+ 6. Kb6 Rb1+ 7. Kc7 Rc1+ 8. Kd7 Rb1 9. a6 Rb6 10. Kd8 Rd6+ 11. Kc7 Rc6+ 12. Kd8 
+        }
+    }
+
+    \mainline[level=1]{
+        2. a6 Rc1+
+    }
+
+    \mythoughts{
+        \variation{
+            3. Kb3
+        } obviously loses a pawn.
+
+        \variation{
+            3. Kb5 Kd5 4. a6 Rb1+ 5. Ka6
+        } We already know this is a draw due to the pawns-in-the-crosshairs idea.
+
+        Only one move is left.
+    }
+
+    \mainline[level=1]{
+        3. Kb4 Kd4
+    }
+    
+    There is another beautiful line:
+    \variation[invar]{3... Rb1+ 4. Kc5 Rc1+ 5. Kd6 Ra1 6. a7 Kd4}
+
+    \chessboard[
+        setfen= 8/P7/1P1K4/8/3k4/8/8/r7 w - - 1 7
+    ]
+
+    White cannot play b7 yet, because of 7... \symrook a6+ followed by 8... \symrook xa7.
+    Black must oppose kings to prevent White from playing b7.
+    White can still march his king up to the eighth rank without the b6-pawn being
+    attacked by Black's king.
+
+    \variation{7. Ke6 Ke4 8. Kd7 Kd5 9. Kc8 Kc6 10. b7 
+    }
+
+    Now we return to the main line.
+
+    \chessboard
+
+    \mythoughts{
+        \variation{
+            4. Kb5 Kd5 5. Kb4? Kc6
+        } Black is winning.
+        \variation{
+            5. a7
+        } is a draw, as we already know.
+
+        Any king move to the a-file merely wastes a tempo and lets Black threaten
+        mate with a king move.
+
+        \variation{
+            5. Kb3
+        } loses a pawn.
+
+        After eliminating all king moves, only two pawn moves remain.
+        I am not sure which one is better.
+    }
+
+    \myreflection{
+        In such situations, comparison is helpful.
+        Black will obviously answer with \variation{6... Rb1} and \variation{7... Kc3}.
+        The pawn on b7 cannot promote, so it makes no further progress.
+        Black's defense is very instructive, however: chase the king with checks or mate threats.
+
+        \variation[invar]{
+            4. b7 Rb1+ 5. Ka4 Kc4 6. Ka3 Kc3 7. Ka2 Rb2+ 8. Ka1 Rb4 9. a7 Ra4+ 10. Kb1 Rb4+ 11. Kc1 Rh4 12. Kd1 Kd3 13. Ke1 Ke3 14. Kf1 Kf3 15. Kg1 Rg4+ 16. Kf1 Rh4 17. Kg1 Rg4+ 
+       }
+
+    }
+
+    \mainline[level=1]{
+        4. a7 Rb1 5. Ka3 Kc3 6. Ka2 Rb2+ 7. Ka1 
+    } Black cannot stop the promotion.
+
+    \myreflection{
+        I really enjoyed this problem. Through a process of elimination, I can often
+        find the right move. The techniques from this study are useful for practical
+        endgames. It also leaves me with one more task: study the queen-versus-rook endgame!
+    }
+
+    \section*{6}
+    \newchessgame[
+        setfen=k7/8/1p6/p1p5/2P4K/8/PP6/8 w - - 0 1
+    ]
+    \chessboard
+
+    \mythoughts{
+        \variation{
+            1. a4 
+        } must be played, otherwise Black plays ...a4. There 
+        is no way to drive Black's king out of the a-file.
+    }
+
+    \mainline[level=1]{
+        1. a4 Kb7
+    }
+    
+    The result of the game will be decided if White can drive Black's king out of the a-file
+    using zugzwang. For such positions often it is confusing to calculate the concrete 
+    lines. One may easily forget where the pieces are and whose turn it is.
+
+    \vocab{mined-squares}{Mined Squares}{A pair of squares that are dangerous to step on:
+    the side who enters one falls into zugzwang, as if the square had exploded beneath him.
+    Both players must therefore avoid these squares. If the opponent does step on one,
+    the other side must immediately occupy the paired square to exploit the zugzwang.}
+    \index{Zugzwang}
+    \index{Mined Squares}
+
+    Let us identify some mined squares while the b-pawn is still on b2.
+    Taking opposition on d7 and f7 and then outflanking to the 8th rank does not help White,
+    because he has a weakness on the queenside. Imagine White's king on f7 and Black's king
+    on d7, with Black to move:
+    \variation{1... Kd6 2. Ke8 Ke5 3. Kd7 Kd4 4. Kc6 Kxc4 5. Kxb6 Kb4 } and the position is equal.
+
+    Outflanking to the 5th rank does not help either. Imagine Black's king on d7 and
+    White's king on f6: \variation{1. Ke5 Ke7 2. Kd5 Kd7}.
+
+    Anti-opposition, on the other hand, does help. When Black's king is on d7, White's king
+    should be on f6. Black cannot play ...\symking f7 because of b3: White removes his
+    weakness, takes the opposition, and is ready to outflank.
+
+    So d7 and f6 form a pair of mined squares, and d6 and f5 form another.
+    Both d6 and d7 are adjacent to c7; both f5 and f6 are adjacent to g6. So when Black's
+    king is on c7, White's king should be on g6, ready to exploit any step Black makes onto
+    a mined square.
+
+    That gives us two further pairs: c7/g6 and c6/g5. Extending the adjacent-square argument
+    once more, we also find b7/h5.
+
+    The mined squares above exist only while the pawn is still on b2.
+    Black cannot sit and wait forever, because otherwise White's king will approach.
+    White plays b3 at the moment Black is forced to take the opposition (for instance when
+    the kings are on d7 and f7, or c6 and g6).
+
+    \chessboard
+
+    We know that g5 is mined and that Black's king can reach the corresponding square c7,
+    so White must avoid g5.
+
+    \mainline[level=1]{2. Kh5 Kb8 3. Kh6 Kb7 4. Kh5 Kc6 5. Kg5 Kd6 6. Kf5 Kd7 7. Kf6 Kd6 8. b3 Kd7 9. Kf7 Kd6 10. Ke8 Ke6 11. Kd8 Ke5 12. Kc7 Kd4 13. Kxb6 }
+
+    \myreflection{
+        Thinking in terms of mined squares is quite different from calculating concrete lines.
+        It is a useful tool for endgames: ideas such as triangulation, opposition, and
+        anti-opposition are all related to mined squares.
+        I am very pleased that I worked this out on my own.
+    }
 \end{multicols}     
